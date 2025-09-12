@@ -1,0 +1,131 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "base_left",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "base_right",
+      "at": [1000, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_end",
+      "at": [1000, 1000, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_end",
+      "at": [0, 1000, 0]
+    },
+    {
+      "type": "line",
+      "id": "base_line",
+      "p1": "base_left",
+      "p2": "base_right"
+    },
+    {
+      "type": "line",
+      "id": "arm1_lower",
+      "p1": "base_left",
+      "p2": "arm1_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm1_upper",
+      "p1": "arm1_mid",
+      "p2": "arm1_end"
+    },
+    {
+      "type": "line",
+      "id": "arm2_lower",
+      "p1": "base_right",
+      "p2": "arm2_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm2_upper",
+      "p1": "arm2_mid",
+      "p2": "arm2_end"
+    },
+    {
+      "type": "line",
+      "id": "top_bar",
+      "p1": "arm1_end",
+      "p2": "arm2_end"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "base_left"
+    },
+    {
+      "type": "fixed",
+      "entity": "base_right"
+    },
+    {
+      "type": "horizontal",
+      "a": "base_line"
+    },
+    {
+      "type": "distance",
+      "between": ["base_left", "arm1_mid"],
+      "value": 750
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_mid", "arm1_end"],
+      "value": 750
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_lower",
+      "b": "arm2_lower"
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_upper",
+      "b": "arm2_upper"
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_end", "arm2_end"],
+      "value": 1000
+    },
+    {
+      "type": "angle",
+      "between": ["base_line", "arm1_lower"],
+      "value": 10
+    },
+    {
+      "type": "parallel",
+      "a": "arm1_lower",
+      "b": "arm2_lower"
+    },
+    {
+      "type": "parallel",
+      "a": "arm1_upper",
+      "b": "arm2_upper"
+    },
+    {
+      "type": "parallel",
+      "a": "base_line",
+      "b": "top_bar"
+    }
+  ]
+}

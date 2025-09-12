@@ -1,0 +1,250 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth1",
+      "at": [50, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth2",
+      "at": [35.35, 35.35, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth3",
+      "at": [0, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth4",
+      "at": [-35.35, 35.35, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth5",
+      "at": [-50, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth6",
+      "at": [-35.35, -35.35, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth7",
+      "at": [0, -50, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear1_tooth8",
+      "at": [35.35, -35.35, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_center",
+      "at": [100, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth1",
+      "at": [130, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth2",
+      "at": [121.21, 21.21, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth3",
+      "at": [100, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth4",
+      "at": [78.79, 21.21, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth5",
+      "at": [70, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth6",
+      "at": [78.79, -21.21, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth7",
+      "at": [100, -30, 0]
+    },
+    {
+      "type": "point",
+      "id": "gear2_tooth8",
+      "at": [121.21, -21.21, 0]
+    },
+    {
+      "type": "line",
+      "id": "gear1_spoke1",
+      "between": ["center", "gear1_tooth1"]
+    },
+    {
+      "type": "line",
+      "id": "gear1_spoke2",
+      "between": ["center", "gear1_tooth3"]
+    },
+    {
+      "type": "line",
+      "id": "gear1_spoke3",
+      "between": ["center", "gear1_tooth5"]
+    },
+    {
+      "type": "line",
+      "id": "gear1_spoke4",
+      "between": ["center", "gear1_tooth7"]
+    },
+    {
+      "type": "line",
+      "id": "gear2_spoke1",
+      "between": ["gear2_center", "gear2_tooth1"]
+    },
+    {
+      "type": "line",
+      "id": "gear2_spoke2",
+      "between": ["gear2_center", "gear2_tooth3"]
+    },
+    {
+      "type": "line",
+      "id": "gear2_spoke3",
+      "between": ["gear2_center", "gear2_tooth5"]
+    },
+    {
+      "type": "line",
+      "id": "gear2_spoke4",
+      "between": ["gear2_center", "gear2_tooth7"]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
+      "entity": "gear2_center"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth1"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth2"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth3"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth4"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth5"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth6"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth7"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "gear1_tooth8"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth1"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth2"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth3"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth4"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth5"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth6"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth7"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["gear2_center", "gear2_tooth8"],
+      "value": 30
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear1_spoke1", "gear1_spoke2"]
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear1_spoke2", "gear1_spoke3"]
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear1_spoke3", "gear1_spoke4"]
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear2_spoke1", "gear2_spoke2"]
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear2_spoke2", "gear2_spoke3"]
+    },
+    {
+      "type": "perpendicular",
+      "entities": ["gear2_spoke3", "gear2_spoke4"]
+    }
+  ]
+}

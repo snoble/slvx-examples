@@ -1,0 +1,113 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "p1",
+      "at": [0, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "p2",
+      "at": [95.11, 30.9, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3",
+      "at": [58.78, -80.9, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4",
+      "at": [-58.78, -80.9, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5",
+      "at": [-95.11, 30.9, 0]
+    },
+    {
+      "type": "line",
+      "id": "star1",
+      "p1": "p1",
+      "p2": "p3"
+    },
+    {
+      "type": "line",
+      "id": "star2",
+      "p1": "p3",
+      "p2": "p5"
+    },
+    {
+      "type": "line",
+      "id": "star3",
+      "p1": "p5",
+      "p2": "p2"
+    },
+    {
+      "type": "line",
+      "id": "star4",
+      "p1": "p2",
+      "p2": "p4"
+    },
+    {
+      "type": "line",
+      "id": "star5",
+      "p1": "p4",
+      "p2": "p1"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p1"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p2"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p3"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p4"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p5"],
+      "value": 100
+    },
+    {
+      "type": "equal_length",
+      "entities": ["star1", "star2"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["star2", "star3"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["star3", "star4"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["star4", "star5"]
+    }
+  ]
+}

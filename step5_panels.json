@@ -1,0 +1,178 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "base_left",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "base_right",
+      "at": [1000, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_end",
+      "at": [1000, 1000, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_end",
+      "at": [0, 1000, 0]
+    },
+    {
+      "type": "point",
+      "id": "panel1_mount",
+      "at": [250, 250, 0]
+    },
+    {
+      "type": "point",
+      "id": "panel2_mount",
+      "at": [750, 250, 0]
+    },
+    {
+      "type": "point",
+      "id": "panel3_mount",
+      "at": [250, 750, 0]
+    },
+    {
+      "type": "point",
+      "id": "panel4_mount",
+      "at": [750, 750, 0]
+    },
+    {
+      "type": "line",
+      "id": "base_line",
+      "p1": "base_left",
+      "p2": "base_right"
+    },
+    {
+      "type": "line",
+      "id": "arm1_lower",
+      "p1": "base_left",
+      "p2": "arm1_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm1_upper",
+      "p1": "arm1_mid",
+      "p2": "arm1_end"
+    },
+    {
+      "type": "line",
+      "id": "arm2_lower",
+      "p1": "base_right",
+      "p2": "arm2_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm2_upper",
+      "p1": "arm2_mid",
+      "p2": "arm2_end"
+    },
+    {
+      "type": "line",
+      "id": "top_bar",
+      "p1": "arm1_end",
+      "p2": "arm2_end"
+    },
+    {
+      "type": "line",
+      "id": "panel_rail1",
+      "p1": "panel1_mount",
+      "p2": "panel2_mount"
+    },
+    {
+      "type": "line",
+      "id": "panel_rail2",
+      "p1": "panel3_mount",
+      "p2": "panel4_mount"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "base_left"
+    },
+    {
+      "type": "fixed",
+      "entity": "base_right"
+    },
+    {
+      "type": "horizontal",
+      "a": "base_line"
+    },
+    {
+      "type": "distance",
+      "between": ["base_left", "arm1_mid"],
+      "value": 750
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_mid", "arm1_end"],
+      "value": 750
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_lower",
+      "b": "arm2_lower"
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_upper",
+      "b": "arm2_upper"
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_end", "arm2_end"],
+      "value": 1000
+    },
+    {
+      "type": "distance",
+      "between": ["base_left", "panel1_mount"],
+      "value": 375
+    },
+    {
+      "type": "distance",
+      "between": ["base_right", "panel2_mount"],
+      "value": 375
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_end", "panel3_mount"],
+      "value": 375
+    },
+    {
+      "type": "distance",
+      "between": ["arm2_end", "panel4_mount"],
+      "value": 375
+    },
+    {
+      "type": "parallel",
+      "a": "panel_rail1",
+      "b": "base_line"
+    },
+    {
+      "type": "parallel",
+      "a": "panel_rail2",
+      "b": "top_bar"
+    },
+    {
+      "type": "equal_length",
+      "a": "panel_rail1",
+      "b": "panel_rail2"
+    }
+  ]
+}

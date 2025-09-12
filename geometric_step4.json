@@ -1,0 +1,254 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "A",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "B",
+      "at": [1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "C",
+      "at": [0, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "D",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "E",
+      "at": [0.5, 0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "F",
+      "at": [1.5, 0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "G",
+      "at": [0.5, 1.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "H",
+      "at": [2, 2, 0]
+    },
+    {
+      "type": "point",
+      "id": "I",
+      "at": [2.5, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "J",
+      "at": [-1, 0.5, 0]
+    },
+    {
+      "type": "line",
+      "id": "L1",
+      "p1": "A",
+      "p2": "B"
+    },
+    {
+      "type": "line",
+      "id": "L2",
+      "p1": "A",
+      "p2": "C"
+    },
+    {
+      "type": "line",
+      "id": "L3",
+      "p1": "C",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "L4",
+      "p1": "B",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "L5",
+      "p1": "E",
+      "p2": "F"
+    },
+    {
+      "type": "line",
+      "id": "L6",
+      "p1": "E",
+      "p2": "G"
+    },
+    {
+      "type": "line",
+      "id": "L7",
+      "p1": "F",
+      "p2": "G"
+    },
+    {
+      "type": "line",
+      "id": "L8",
+      "p1": "H",
+      "p2": "I"
+    },
+    {
+      "type": "line",
+      "id": "L9",
+      "p1": "J",
+      "p2": "E"
+    },
+    {
+      "type": "line",
+      "id": "diagonal1",
+      "p1": "A",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "diagonal2",
+      "p1": "B",
+      "p2": "C"
+    },
+    {
+      "type": "circle",
+      "id": "C1",
+      "center": "E",
+      "radius": 30
+    },
+    {
+      "type": "circle",
+      "id": "C2",
+      "center": "H",
+      "radius": 25
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "A"
+    },
+    {
+      "type": "horizontal",
+      "a": "L1"
+    },
+    {
+      "type": "distance",
+      "between": ["A", "B"],
+      "value": 100
+    },
+    {
+      "type": "perpendicular",
+      "a": "L1",
+      "b": "L2"
+    },
+    {
+      "type": "parallel",
+      "a": "L1",
+      "b": "L3"
+    },
+    {
+      "type": "parallel",
+      "a": "L2",
+      "b": "L4"
+    },
+    {
+      "type": "equal_length",
+      "a": "L1",
+      "b": "L2"
+    },
+    {
+      "type": "equal_length",
+      "a": "L3",
+      "b": "L4"
+    },
+    {
+      "type": "equal_length",
+      "a": "diagonal1",
+      "b": "diagonal2"
+    },
+    {
+      "type": "parallel",
+      "a": "L5",
+      "b": "L1"
+    },
+    {
+      "type": "equal_length",
+      "a": "L5",
+      "b": "L6"
+    },
+    {
+      "type": "equal_length",
+      "a": "L6",
+      "b": "L7"
+    },
+    {
+      "type": "perpendicular",
+      "a": "L5",
+      "b": "L6"
+    },
+    {
+      "type": "coincident",
+      "entity": "E",
+      "on": "diagonal1"
+    },
+    {
+      "type": "coincident",
+      "entity": "F",
+      "on": "L4"
+    },
+    {
+      "type": "coincident",
+      "entity": "G",
+      "on": "L3"
+    },
+    {
+      "type": "parallel",
+      "a": "L8",
+      "b": "diagonal2"
+    },
+    {
+      "type": "equal_length",
+      "a": "L8",
+      "b": "L5"
+    },
+    {
+      "type": "tangent",
+      "entity": "L7",
+      "to": "C1"
+    },
+    {
+      "type": "tangent",
+      "entity": "L8",
+      "to": "C2"
+    },
+    {
+      "type": "perpendicular",
+      "a": "L9",
+      "b": "L2"
+    },
+    {
+      "type": "equal_radius",
+      "a": "C1",
+      "b": "C2"
+    },
+    {
+      "type": "coincident",
+      "entity": "I",
+      "on": "L7"
+    },
+    {
+      "type": "symmetric",
+      "entities": ["J", "F"],
+      "about": "L2"
+    }
+  ]
+}

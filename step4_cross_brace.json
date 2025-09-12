@@ -1,0 +1,155 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "base_left",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "base_right",
+      "at": [1000, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm1_end",
+      "at": [1000, 1000, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_mid",
+      "at": [500, 500, 0]
+    },
+    {
+      "type": "point",
+      "id": "arm2_end",
+      "at": [0, 1000, 0]
+    },
+    {
+      "type": "point",
+      "id": "cross_center",
+      "at": [500, 750, 0]
+    },
+    {
+      "type": "line",
+      "id": "base_line",
+      "p1": "base_left",
+      "p2": "base_right"
+    },
+    {
+      "type": "line",
+      "id": "arm1_lower",
+      "p1": "base_left",
+      "p2": "arm1_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm1_upper",
+      "p1": "arm1_mid",
+      "p2": "arm1_end"
+    },
+    {
+      "type": "line",
+      "id": "arm2_lower",
+      "p1": "base_right",
+      "p2": "arm2_mid"
+    },
+    {
+      "type": "line",
+      "id": "arm2_upper",
+      "p1": "arm2_mid",
+      "p2": "arm2_end"
+    },
+    {
+      "type": "line",
+      "id": "top_bar",
+      "p1": "arm1_end",
+      "p2": "arm2_end"
+    },
+    {
+      "type": "line",
+      "id": "cross1",
+      "p1": "arm1_mid",
+      "p2": "cross_center"
+    },
+    {
+      "type": "line",
+      "id": "cross2",
+      "p1": "arm2_mid",
+      "p2": "cross_center"
+    },
+    {
+      "type": "line",
+      "id": "cross3",
+      "p1": "arm1_end",
+      "p2": "cross_center"
+    },
+    {
+      "type": "line",
+      "id": "cross4",
+      "p1": "arm2_end",
+      "p2": "cross_center"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "base_left"
+    },
+    {
+      "type": "fixed",
+      "entity": "base_right"
+    },
+    {
+      "type": "horizontal",
+      "a": "base_line"
+    },
+    {
+      "type": "distance",
+      "between": ["base_left", "arm1_mid"],
+      "value": 750
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_mid", "arm1_end"],
+      "value": 750
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_lower",
+      "b": "arm2_lower"
+    },
+    {
+      "type": "equal_length",
+      "a": "arm1_upper",
+      "b": "arm2_upper"
+    },
+    {
+      "type": "equal_length",
+      "a": "cross1",
+      "b": "cross2"
+    },
+    {
+      "type": "equal_length",
+      "a": "cross3",
+      "b": "cross4"
+    },
+    {
+      "type": "coincident",
+      "entity": "cross_center",
+      "on": "top_bar"
+    },
+    {
+      "type": "distance",
+      "between": ["arm1_end", "arm2_end"],
+      "value": 1000
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "A",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "B",
+      "at": [1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "C",
+      "at": [0.5, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "D",
+      "at": [2, 1, 0]
+    },
+    {
+      "type": "line",
+      "id": "AB",
+      "p1": "A",
+      "p2": "B"
+    },
+    {
+      "type": "line",
+      "id": "BC",
+      "p1": "B",
+      "p2": "C"
+    },
+    {
+      "type": "line",
+      "id": "CA",
+      "p1": "C",
+      "p2": "A"
+    },
+    {
+      "type": "line",
+      "id": "CD",
+      "p1": "C",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "BD",
+      "p1": "B",
+      "p2": "D"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "A"
+    },
+    {
+      "type": "horizontal",
+      "a": "AB"
+    },
+    {
+      "type": "distance",
+      "between": ["A", "B"],
+      "value": 50
+    },
+    {
+      "type": "equal_length",
+      "a": "AB",
+      "b": "BC"
+    },
+    {
+      "type": "equal_length",
+      "a": "BC",
+      "b": "CA"
+    },
+    {
+      "type": "perpendicular",
+      "a": "BC",
+      "b": "CD"
+    },
+    {
+      "type": "equal_length",
+      "a": "CD",
+      "b": "BD"
+    },
+    {
+      "type": "distance",
+      "between": ["C", "D"],
+      "value": 60
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "p1",
+      "at": [0, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "p2",
+      "at": [1, 0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3",
+      "at": [1, -0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4",
+      "at": [0, -1, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5",
+      "at": [-1, -0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p6",
+      "at": [-1, 0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "inner1",
+      "at": [0, 0.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "inner2",
+      "at": [0.5, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "inner3",
+      "at": [-0.5, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "r1",
+      "p1": "center",
+      "p2": "p1"
+    },
+    {
+      "type": "line",
+      "id": "r2",
+      "p1": "center",
+      "p2": "p2"
+    },
+    {
+      "type": "line",
+      "id": "r3",
+      "p1": "center",
+      "p2": "p3"
+    },
+    {
+      "type": "line",
+      "id": "r4",
+      "p1": "center",
+      "p2": "p4"
+    },
+    {
+      "type": "line",
+      "id": "r5",
+      "p1": "center",
+      "p2": "p5"
+    },
+    {
+      "type": "line",
+      "id": "r6",
+      "p1": "center",
+      "p2": "p6"
+    },
+    {
+      "type": "line",
+      "id": "s12",
+      "p1": "p1",
+      "p2": "p2"
+    },
+    {
+      "type": "line",
+      "id": "s23",
+      "p1": "p2",
+      "p2": "p3"
+    },
+    {
+      "type": "line",
+      "id": "i1",
+      "p1": "inner1",
+      "p2": "inner2"
+    },
+    {
+      "type": "line",
+      "id": "i2",
+      "p1": "inner2",
+      "p2": "inner3"
+    },
+    {
+      "type": "line",
+      "id": "i3",
+      "p1": "inner3",
+      "p2": "inner1"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "vertical",
+      "a": "r1"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p1"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p2"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p3"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p4"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p5"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p6"],
+      "value": 100
+    },
+    {
+      "type": "angle",
+      "between": ["r1", "r2"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["r2", "r3"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["r3", "r4"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["r4", "r5"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["r5", "r6"],
+      "value": 60
+    },
+    {
+      "type": "distance",
+      "between": ["p1", "inner1"],
+      "value": 40
+    },
+    {
+      "type": "distance",
+      "between": ["inner1", "inner2"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["inner2", "inner3"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["inner3", "inner1"],
+      "value": 50
+    },
+    {
+      "type": "perpendicular",
+      "a": "r1",
+      "b": "i2"
+    },
+    {
+      "type": "equal_length",
+      "a": "s12",
+      "b": "s23"
+    },
+    {
+      "type": "distance",
+      "between": ["p2", "inner2"],
+      "value": 35
+    },
+    {
+      "type": "distance",
+      "between": ["p6", "inner3"],
+      "value": 35
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "points": {
+    "A": {"x": 0, "y": 0, "fixed": true},
+    "B": {"x": 10, "y": 0, "fixed": true},
+    "C": {"x": 5, "y": 5}
+  },
+  "constraints": [
+    {"type": "distance", "points": ["A", "C"], "value": 7.07},
+    {"type": "distance", "points": ["B", "C"], "value": 7.07}
+  ]
+}

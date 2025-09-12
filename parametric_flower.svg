@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-62.4 -70.0 124.7 140.0" width="800" height="800">
+  <circle id="petal6_left" cx="-27.143300" cy="0.705512" r="2" fill="black"/>
+  <circle id="petal4_left" cx="15.434873" cy="-24.275212" r="2" fill="black"/>
+  <circle id="petal6_right" cx="-15.225025" cy="13.771408" r="2" fill="black"/>
+  <circle id="petal4_right" cx="-15.434873" cy="-24.275212" r="2" fill="black"/>
+  <circle id="petal3_left" cx="27.143300" cy="-0.705512" r="2" fill="black"/>
+  <circle id="petal1_left" cx="-15.434873" cy="24.275212" r="2" fill="black"/>
+  <circle id="petal5_left" cx="-15.225025" cy="-13.771408" r="2" fill="black"/>
+  <circle id="petal6_tip" cx="-42.363729" cy="26.557756" r="2" fill="black"/>
+  <circle id="petal2_right" cx="27.143300" cy="0.705512" r="2" fill="black"/>
+  <line id="petal1_left_line" x1="0.000000" y1="0.000000" x2="-15.434873" y2="24.275212" stroke="black"/>
+  <line id="petal1_right_line" x1="0.000000" y1="0.000000" x2="15.434873" y2="24.275212" stroke="black"/>
+  <line id="petal1_tip_line" x1="0.000000" y1="0.000000" x2="-0.000000" y2="50.000000" stroke="black"/>
+  <circle id="petal5_right" cx="-27.143300" cy="-0.705512" r="2" fill="black"/>
+  <circle id="petal3_right" cx="15.225025" cy="-13.771408" r="2" fill="black"/>
+  <circle id="petal1_right" cx="15.434873" cy="24.275212" r="2" fill="black"/>
+  <circle id="petal2_tip" cx="42.363729" cy="26.557756" r="2" fill="black"/>
+  <circle id="petal2_left" cx="15.225025" cy="13.771408" r="2" fill="black"/>
+  <circle id="petal4_tip" cx="-0.000000" cy="-50.000000" r="2" fill="black"/>
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="petal1_tip" cx="-0.000000" cy="50.000000" r="2" fill="black"/>
+  <circle id="petal3_tip" cx="42.363729" cy="-26.557756" r="2" fill="black"/>
+  <circle id="petal5_tip" cx="-42.363729" cy="-26.557756" r="2" fill="black"/>
+</svg>

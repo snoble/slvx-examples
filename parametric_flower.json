@@ -1,0 +1,215 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal1_tip",
+      "at": [0, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal1_left",
+      "at": [-15, 25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal1_right",
+      "at": [15, 25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal2_tip",
+      "at": [43.3, 25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal2_left",
+      "at": [18.3, 15, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal2_right",
+      "at": [30, 5, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal3_tip",
+      "at": [43.3, -25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal3_left",
+      "at": [30, -5, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal3_right",
+      "at": [18.3, -15, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal4_tip",
+      "at": [0, -50, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal4_left",
+      "at": [15, -25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal4_right",
+      "at": [-15, -25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal5_tip",
+      "at": [-43.3, -25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal5_left",
+      "at": [-18.3, -15, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal5_right",
+      "at": [-30, -5, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal6_tip",
+      "at": [-43.3, 25, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal6_left",
+      "at": [-30, 5, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal6_right",
+      "at": [-18.3, 15, 0]
+    },
+    {
+      "type": "line",
+      "id": "petal1_left_line",
+      "p1": "center",
+      "p2": "petal1_left"
+    },
+    {
+      "type": "line",
+      "id": "petal1_right_line",
+      "p1": "center",
+      "p2": "petal1_right"
+    },
+    {
+      "type": "line",
+      "id": "petal1_tip_line",
+      "p1": "center",
+      "p2": "petal1_tip"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal1_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal2_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal3_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal4_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal5_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal6_tip"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["petal1_tip", "petal1_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal1_tip", "petal1_right"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal2_tip", "petal2_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal2_tip", "petal2_right"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal3_tip", "petal3_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal3_tip", "petal3_right"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal4_tip", "petal4_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal4_tip", "petal4_right"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal5_tip", "petal5_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal5_tip", "petal5_right"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal6_tip", "petal6_left"],
+      "value": 30
+    },
+    {
+      "type": "distance",
+      "between": ["petal6_tip", "petal6_right"],
+      "value": 30
+    }
+  ]
+}

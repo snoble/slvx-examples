@@ -1,0 +1,131 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal1",
+      "at": [0, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal2",
+      "at": [1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal3",
+      "at": [0, -1, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal4",
+      "at": [-1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal5",
+      "at": [0.7, 0.7, 0]
+    },
+    {
+      "type": "point",
+      "id": "petal6",
+      "at": [0.7, -0.7, 0]
+    },
+    {
+      "type": "line",
+      "id": "r1",
+      "p1": "center",
+      "p2": "petal1"
+    },
+    {
+      "type": "line",
+      "id": "r2",
+      "p1": "center",
+      "p2": "petal2"
+    },
+    {
+      "type": "line",
+      "id": "r3",
+      "p1": "center",
+      "p2": "petal3"
+    },
+    {
+      "type": "line",
+      "id": "r4",
+      "p1": "center",
+      "p2": "petal4"
+    },
+    {
+      "type": "line",
+      "id": "r5",
+      "p1": "center",
+      "p2": "petal5"
+    },
+    {
+      "type": "line",
+      "id": "r6",
+      "p1": "center",
+      "p2": "petal6"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "vertical",
+      "a": "r1"
+    },
+    {
+      "type": "horizontal",
+      "a": "r2"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal1"],
+      "value": 60
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal2"],
+      "value": 40
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal3"],
+      "value": 60
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal4"],
+      "value": 40
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal5"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "petal6"],
+      "value": 50
+    },
+    {
+      "type": "angle",
+      "between": ["r1", "r5"],
+      "value": 45
+    },
+    {
+      "type": "angle",
+      "between": ["r2", "r6"],
+      "value": 45
+    }
+  ]
+}
