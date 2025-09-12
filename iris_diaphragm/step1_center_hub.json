@@ -1,0 +1,37 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "reference",
+      "at": [1, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "ref_line",
+      "p1": "center",
+      "p2": "reference"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "horizontal",
+      "a": "ref_line"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "reference"],
+      "value": 100
+    }
+  ]
+}
