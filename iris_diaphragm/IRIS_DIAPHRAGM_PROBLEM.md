@@ -59,6 +59,41 @@ The solver handles all of this automatically!
 ```
 **Problem**: Blades must rotate! Fixing them breaks the mechanism.
 
+## Critical Implementation Lessons (Added After First Attempt)
+
+### Lesson 1: Start with JUST the Pivot Circle
+Don't add blades yet! First verify that N pivots arrange correctly at 360°/N intervals. Test with 2, 3, 4 pivots before moving on.
+
+### Lesson 2: One Blade First, Perfect It
+Add blade structure to ONLY one blade. Make sure it rotates correctly with a single angle constraint. Only then add blade #2.
+
+### Lesson 3: Use Parameters for Synchronized Motion
+All blades must reference the SAME angle parameter. Don't give each blade its own angle constraint:
+```json
+// WRONG - Independent angles (what I did first time):
+{"type": "angle", "between": ["pivot1_line", "blade1"], "value": 110},
+{"type": "angle", "between": ["pivot2_line", "blade2"], "value": 110},
+
+// RIGHT - Shared parameter:
+"parameters": {"blade_angle": 110},
+"constraints": [
+  {"type": "angle", "between": ["pivot1_line", "blade1"], "value": "$blade_angle"},
+  {"type": "angle", "between": ["pivot2_line", "blade2"], "value": "$blade_angle"}
+]
+```
+
+### Lesson 4: Test with 2 Blades Exhaustively
+Before adding blades 3-6, verify that:
+- Both blades rotate together
+- Changing the parameter affects both
+- The mechanism doesn't lock up
+
+### Lesson 5: Debug Immediately When Constraints Don't Propagate
+If dummy positions don't update, STOP. Don't add more complexity. The solver is telling you something is wrong.
+
+### Lesson 6: All Dummy Positions Can Be Identical
+Use [1,1,0] for EVERYTHING. If you're varying dummy positions, you're still thinking about location instead of relationships.
+
 ## The RIGHT Approach - Step by Step
 
 ### Step 1: Create the Center Hub
@@ -183,6 +218,28 @@ The key: Each blade is constrained relative to the previous one, creating a chai
 - Modify the blade length parameter
 - Overlap pattern should adjust automatically
 - Aperture range changes accordingly
+
+## Common Failure Patterns (From Real Implementation)
+
+### Pattern 1: "It Works for One Blade, Ship It!"
+**What happens**: You get blade 1 working, immediately add 5 more, and blades 2-6 don't move.
+**Why**: The constraints aren't propagating. You need to debug with 2 blades first.
+
+### Pattern 2: "Each Blade Gets Its Own Angle"
+**What happens**: You give each blade an independent angle constraint.
+**Problem**: Now you need to update 6+ constraints to open/close instead of one parameter.
+
+### Pattern 3: "I'll Calculate the Starting Positions"
+**What happens**: You use [50, 86.6, 0] for 60° position.
+**Problem**: When you change to 8 blades, nothing works because your "helpful" positions are now wrong.
+
+### Pattern 4: "Add Everything, Then Test"
+**What happens**: You add pivots, blades, inner points, all constraints, then test.
+**Problem**: When it fails, you have no idea which part is broken.
+
+### Pattern 5: "The Dummy Positions Matter"
+**What happens**: You carefully place dummies at [1,0,0], [0,1,0], [-1,0,0].
+**Problem**: You're still thinking in coordinates! Use [1,1,0] for everything.
 
 ## Common Mistakes and Why They Fail
 
