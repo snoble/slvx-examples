@@ -1,0 +1,53 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot1",
+      "at": [100, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot2",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke1",
+      "p1": "center",
+      "p2": "pivot1"
+    },
+    {
+      "type": "line",
+      "id": "spoke2",
+      "p1": "center",
+      "p2": "pivot2"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot1"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot2"],
+      "value": 100
+    },
+    {
+      "type": "angle",
+      "between": ["spoke1", "spoke2"],
+      "value": 60
+    }
+  ]
+}

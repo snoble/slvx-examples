@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.9 -174.9 322.1 326.1" width="800" height="800">
+  <circle id="blade1_tip" cx="33.791238" cy="57.929813" r="2" fill="black"/>
+  <circle id="blade4_tip" cx="-135.376100" cy="13.963458" r="2" fill="black"/>
+  <circle id="pivot7" cx="-5.964461" cy="-99.821968" r="2" fill="black"/>
+  <circle id="blade6_tip" cx="-127.279221" cy="-127.279221" r="2" fill="black"/>
+  <line id="spoke4" x1="0.000000" y1="0.000000" x2="-74.866442" y2="66.294915" stroke="black"/>
+  <line id="spoke8" x1="0.000000" y1="0.000000" x2="70.710678" y2="-70.710678" stroke="black"/>
+  <line id="spoke7" x1="0.000000" y1="0.000000" x2="-5.964461" y2="-99.821968" stroke="black"/>
+  <circle id="pivot4" cx="-74.866442" cy="66.294915" r="2" fill="black"/>
+  <circle id="blade8_tip" cx="127.279221" cy="-127.279221" r="2" fill="black"/>
+  <circle id="pivot1" cx="99.279650" cy="11.981278" r="2" fill="black"/>
+  <circle id="pivot5" cx="-99.821968" cy="-5.964461" r="2" fill="black"/>
+  <circle id="blade3_tip" cx="-75.003074" cy="100.000000" r="2" fill="black"/>
+  <line id="spoke3" x1="0.000000" y1="0.000000" x2="4.996828" y2="99.875081" stroke="black"/>
+  <line id="blade3" x1="4.996828" y1="99.875081" x2="-75.003074" y2="100.000000" stroke="black"/>
+  <circle id="pivot8" cx="70.710678" cy="-70.710678" r="2" fill="black"/>
+  <line id="spoke6" x1="0.000000" y1="0.000000" x2="-70.710678" y2="-70.710678" stroke="black"/>
+  <line id="blade7" x1="-5.964461" y1="-99.821968" x2="-64.019134" y2="-154.864268" stroke="black"/>
+  <line id="blade4" x1="-74.866442" y1="66.294915" x2="-135.376100" y2="13.963458" stroke="black"/>
+  <line id="blade8" x1="70.710678" y1="-70.710678" x2="127.279221" y2="-127.279221" stroke="black"/>
+  <circle id="blade5_tip" cx="-154.864268" cy="-64.019134" r="2" fill="black"/>
+  <line id="spoke5" x1="0.000000" y1="0.000000" x2="-99.821968" y2="-5.964461" stroke="black"/>
+  <circle id="pivot6" cx="-70.710678" cy="-70.710678" r="2" fill="black"/>
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="blade7_tip" cx="-64.019134" cy="-154.864268" r="2" fill="black"/>
+  <line id="spoke1" x1="0.000000" y1="0.000000" x2="99.279650" y2="11.981278" stroke="black"/>
+  <line id="spoke2" x1="0.000000" y1="0.000000" x2="60.836720" y2="79.365568" stroke="black"/>
+  <circle id="pivot2" cx="60.836720" cy="79.365568" r="2" fill="black"/>
+  <circle id="blade2_tip" cx="-0.032004" cy="131.278942" r="2" fill="black"/>
+  <line id="blade1" x1="99.279650" y1="11.981278" x2="33.791238" y2="57.929813" stroke="black"/>
+  <line id="blade2" x1="60.836720" y1="79.365568" x2="-0.032004" y2="131.278942" stroke="black"/>
+  <circle id="pivot3" cx="4.996828" cy="99.875081" r="2" fill="black"/>
+  <line id="blade6" x1="-70.710678" y1="-70.710678" x2="-127.279221" y2="-127.279221" stroke="black"/>
+  <line id="blade5" x1="-99.821968" y1="-5.964461" x2="-154.864268" y2="-64.019134" stroke="black"/>
+</svg>
