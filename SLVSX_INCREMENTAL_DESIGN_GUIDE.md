@@ -31,6 +31,28 @@ This is nearly impossible to design all at once because:
 
 ## The Incremental Approach
 
+### CRITICAL RULES - NEVER VIOLATE THESE!
+
+1. **NEVER hardcode exact positions** - Use dummy coordinates like [0,0,0], [1,0,0], [0,1,0]
+2. **Fix ONLY 1-2 points maximum** - Usually just one origin point
+3. **Let the solver discover ALL other positions** - That's its job!
+4. **Use constraints to define relationships** - Not coordinates
+5. **If you're calculating angles or positions, STOP** - Add a constraint instead
+
+### Why This Matters
+
+When you hardcode positions:
+- Modifications become impossible without recalculation
+- You've defeated the purpose of the solver
+- You accumulate rounding errors
+- You can't explore different configurations
+
+When you use constraints:
+- Change one parameter, everything updates
+- Insert new elements anywhere
+- Solver guarantees geometric consistency
+- Explore configurations by changing single values
+
 ### Core Concept: Build One Relationship at a Time
 
 Instead of trying to solve everything simultaneously, you'll:
@@ -43,6 +65,9 @@ Instead of trying to solve everything simultaneously, you'll:
 ### Step-by-Step Building Process
 
 #### Step 1: Create the Base Frame (fixed_base.json)
+
+**CRITICAL RULE: Use approximate positions (0,0,0 or 1,1,0) for ALL points. The solver will find the real positions!**
+
 ```json
 {
   "schema": "slvs-json/1",
@@ -56,7 +81,13 @@ Instead of trying to solve everything simultaneously, you'll:
     {
       "type": "point",
       "id": "base_right",
-      "at": [1000, 0, 0]
+      "at": [1, 0, 0]  // Just a guess! Solver will fix it
+    },
+    {
+      "type": "line",
+      "id": "base",
+      "p1": "base_left",
+      "p2": "base_right"
     }
   ],
   "constraints": [
@@ -65,36 +96,54 @@ Instead of trying to solve everything simultaneously, you'll:
       "entity": "base_left"
     },
     {
-      "type": "fixed",
-      "entity": "base_right"
+      "type": "horizontal",
+      "a": "base"
+    },
+    {
+      "type": "distance",
+      "between": ["base_left", "base_right"],
+      "value": 1000
     }
   ]
 }
 ```
 
+Note: base_right is NOT fixed! Only ONE point is fixed, everything else comes from constraints.
+
 Test: `./slvsx solve fixed_base.json`
 
 #### Step 2: Add First Folding Arm (add_arm1.json)
 Copy previous file and add:
-- Two new points: `arm1_mid`, `arm1_end`
-- Distance constraints for arm segments
-- The arm can now rotate around base_left
+- Two new points with DUMMY coordinates
+- Lines to represent the arm segments
+- Distance constraints ONLY - no fixed positions!
 
 ```json
+// Add to entities:
 {
   "type": "point",
   "id": "arm1_mid",
-  "at": [500, 500, 0]
+  "at": [0, 1, 0]  // DUMMY position - solver will calculate!
 },
 {
   "type": "point", 
   "id": "arm1_end",
-  "at": [1000, 1000, 0]
+  "at": [1, 1, 0]  // DUMMY position - solver will calculate!
+},
+{
+  "type": "line",
+  "id": "arm1_lower",
+  "p1": "base_left",
+  "p2": "arm1_mid"
+},
+{
+  "type": "line",
+  "id": "arm1_upper",
+  "p1": "arm1_mid",
+  "p2": "arm1_end"
 }
-```
 
-Add constraints:
-```json
+// Add constraints:
 {
   "type": "distance",
   "between": ["base_left", "arm1_mid"],
@@ -106,6 +155,8 @@ Add constraints:
   "value": 750
 }
 ```
+
+**The arm can now rotate freely! Add an angle constraint later to control deployment.**
 
 #### Step 3: Add Parallel Folding Arm (add_arm2.json)
 - Add matching arm from base_right
@@ -217,6 +268,47 @@ Use sparingly - usually only 1-2 points
 4. **Test frequently**: Run solver after each addition
 5. **Save working versions**: Keep each successful step as a separate file
 6. **Let the solver work**: Don't pre-calculate positions - use rough estimates and let solver fix them
+
+## Example: The RIGHT Way vs WRONG Way
+
+### ❌ WRONG - Hardcoding Positions
+```json
+{
+  "entities": [
+    {"type": "point", "id": "A", "at": [0, 0, 0]},
+    {"type": "point", "id": "B", "at": [100, 0, 0]},
+    {"type": "point", "id": "C", "at": [50, 86.6, 0]}  // Calculated √3/2 * 100
+  ],
+  "constraints": [
+    {"type": "fixed", "entity": "A"},
+    {"type": "fixed", "entity": "B"},
+    {"type": "fixed", "entity": "C"}  // Everything is fixed!
+  ]
+}
+```
+Problems: Can't modify, can't scale, can't rotate, defeats the solver
+
+### ✅ RIGHT - Using Constraints
+```json
+{
+  "entities": [
+    {"type": "point", "id": "A", "at": [0, 0, 0]},
+    {"type": "point", "id": "B", "at": [1, 0, 0]},  // Dummy position
+    {"type": "point", "id": "C", "at": [0, 1, 0]},  // Dummy position
+    {"type": "line", "id": "AB", "p1": "A", "p2": "B"},
+    {"type": "line", "id": "BC", "p1": "B", "p2": "C"},
+    {"type": "line", "id": "CA", "p1": "C", "p2": "A"}
+  ],
+  "constraints": [
+    {"type": "fixed", "entity": "A"},  // Only ONE fixed point!
+    {"type": "horizontal", "a": "AB"},
+    {"type": "distance", "between": ["A", "B"], "value": 100},
+    {"type": "equal_length", "a": "AB", "b": "BC"},
+    {"type": "equal_length", "a": "BC", "b": "CA"}
+  ]
+}
+```
+Benefits: Change the 100 to 200, triangle scales. Remove horizontal, it rotates. Solver finds C automatically!
 
 ## Example Problem Progression
 
