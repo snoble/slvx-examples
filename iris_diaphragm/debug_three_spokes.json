@@ -1,0 +1,79 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "p1",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "p2",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "line",
+      "id": "s1",
+      "p1": "center",
+      "p2": "p1"
+    },
+    {
+      "type": "line",
+      "id": "s2",
+      "p1": "center",
+      "p2": "p2"
+    },
+    {
+      "type": "line",
+      "id": "s3",
+      "p1": "center",
+      "p2": "p3"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "horizontal",
+      "a": "s1"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p1"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p2"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p3"],
+      "value": 100
+    },
+    {
+      "type": "angle",
+      "between": ["s1", "s2"],
+      "value": 120
+    },
+    {
+      "type": "angle",
+      "between": ["s2", "s3"],
+      "value": 120
+    }
+  ]
+}

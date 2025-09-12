@@ -1,0 +1,142 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot1",
+      "at": [1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot2",
+      "at": [1, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot3",
+      "at": [0, 1, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot4",
+      "at": [-1, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot5",
+      "at": [-1, -1, 0]
+    },
+    {
+      "type": "point",
+      "id": "pivot6",
+      "at": [0, -1, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke1",
+      "p1": "center",
+      "p2": "pivot1"
+    },
+    {
+      "type": "line",
+      "id": "spoke2",
+      "p1": "center",
+      "p2": "pivot2"
+    },
+    {
+      "type": "line",
+      "id": "spoke3",
+      "p1": "center",
+      "p2": "pivot3"
+    },
+    {
+      "type": "line",
+      "id": "spoke4",
+      "p1": "center",
+      "p2": "pivot4"
+    },
+    {
+      "type": "line",
+      "id": "spoke5",
+      "p1": "center",
+      "p2": "pivot5"
+    },
+    {
+      "type": "line",
+      "id": "spoke6",
+      "p1": "center",
+      "p2": "pivot6"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "horizontal",
+      "a": "spoke1"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot1"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot2"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot3"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot4"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot5"],
+      "value": 100
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot6"],
+      "value": 100
+    },
+    {
+      "type": "angle",
+      "between": ["spoke1", "spoke2"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke2", "spoke3"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke3", "spoke4"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke4", "spoke5"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke5", "spoke6"],
+      "value": 60
+    }
+  ]
+}

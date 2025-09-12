@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.9 -178.8 294.1 319.4" width="800" height="800">
+  <line id="blade1" x1="99.279650" y1="11.981278" x2="33.791238" y2="57.929813" stroke="black"/>
+  <circle id="blade6_tip" cx="84.139324" cy="-158.830327" r="2" fill="black"/>
+  <line id="spoke5" x1="0.000000" y1="0.000000" x2="-51.003424" y2="-86.015410" stroke="black"/>
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="spoke4" x1="0.000000" y1="0.000000" x2="-99.821968" y2="-5.964461" stroke="black"/>
+  <circle id="pivot4" cx="-99.821968" cy="-5.964461" r="2" fill="black"/>
+  <circle id="blade3_tip" cx="-94.711074" cy="79.347865" r="2" fill="black"/>
+  <line id="spoke6" x1="0.000000" y1="0.000000" x2="51.003424" y2="-86.015410" stroke="black"/>
+  <line id="spoke1" x1="0.000000" y1="0.000000" x2="99.279650" y2="11.981278" stroke="black"/>
+  <circle id="pivot2" cx="59.905845" cy="80.070529" r="2" fill="black"/>
+  <circle id="pivot3" cx="-17.046406" cy="98.536389" r="2" fill="black"/>
+  <circle id="blade1_tip" cx="33.791238" cy="57.929813" r="2" fill="black"/>
+  <line id="blade3" x1="-17.046406" y1="98.536389" x2="-94.711074" y2="79.347865" stroke="black"/>
+  <circle id="pivot5" cx="-51.003424" cy="-86.015410" r="2" fill="black"/>
+  <line id="blade4" x1="-99.821968" y1="-5.964461" x2="-154.864268" y2="-64.019134" stroke="black"/>
+  <circle id="pivot6" cx="51.003424" cy="-86.015410" r="2" fill="black"/>
+  <circle id="blade4_tip" cx="-154.864268" cy="-64.019134" r="2" fill="black"/>
+  <circle id="blade5_tip" cx="-84.139324" cy="-158.830327" r="2" fill="black"/>
+  <line id="spoke2" x1="0.000000" y1="0.000000" x2="59.905845" y2="80.070529" stroke="black"/>
+  <line id="blade5" x1="-51.003424" y1="-86.015410" x2="-84.139324" y2="-158.830327" stroke="black"/>
+  <line id="spoke3" x1="0.000000" y1="0.000000" x2="-17.046406" y2="98.536389" stroke="black"/>
+  <line id="blade6" x1="51.003424" y1="-86.015410" x2="84.139324" y2="-158.830327" stroke="black"/>
+  <circle id="pivot1" cx="99.279650" cy="11.981278" r="2" fill="black"/>
+  <circle id="blade2_tip" cx="-9.056864" cy="120.618584" r="2" fill="black"/>
+  <line id="blade2" x1="59.905845" y1="80.070529" x2="-9.056864" y2="120.618584" stroke="black"/>
+</svg>
