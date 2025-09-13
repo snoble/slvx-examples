@@ -1,87 +1,110 @@
-# Fun Geometry Project with SLVSX
+# SLVSX Constraint Solver Examples
 
-This project demonstrates creative uses of the SLVSX constraint solver for generating parametric geometric designs.
+A collection of examples demonstrating the power of the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
 
-## What We Created
+## What is SLVSX?
 
-### 1. **Parametric Star Polygon Generator** (`geometry_animator.py`)
-A Python script that creates various star polygons with adjustable parameters:
-- Pentagon stars (5 points)
-- Hexagon stars (6 points)  
-- Octagon stars (8 points)
-- Rotating stars with angular offsets
-- Gear mechanisms with meshing constraints
+SLVSX is a command-line interface to the SolveSpace constraint solver. It allows you to define geometric relationships declaratively and have the solver calculate actual positions automatically.
 
-### 2. **Key Features**
-- **Parametric Design**: Change a single parameter (like inner_radius) to morph the entire shape
-- **Constraint-Based**: Uses geometric constraints (distances, angles, tangency) instead of explicit coordinates
-- **Animation Ready**: Parameters can be varied over time to create animations
-- **Multiple Formats**: Can export to SVG, DXF, STL when using slvsx
+## Key Examples
 
-## How It Works
+### 🔧 [Iris Diaphragm](iris_diaphragm/)
+A sophisticated mechanical iris (like a camera aperture) with tapered blades. This example showcases:
+- Complex geometric constraints (perpendicular, coincident)
+- Parametric control (single parameter controls entire mechanism)
+- Why constraint solvers are essential for complex mechanical design
 
-The constraint solver takes a JSON description of:
-1. **Entities**: Points, lines, circles
-2. **Constraints**: Relationships between entities (fixed positions, distances, angles, tangency)
-3. **Parameters**: Named values that can be varied
+### ⚙️ [Gear Mechanism](gear_mechanism.json)
+Interlocking gears with proper tooth meshing demonstrating mechanical constraints.
 
-The solver finds positions for all entities that satisfy all constraints simultaneously.
+### 🔗 [Four-Bar Linkage](four_bar_linkage.json)
+Classic mechanical linkage showing motion constraints and degrees of freedom.
 
-## Example: Creating a 5-Point Star
+### 🌸 [Parametric Flower](parametric_flower.json)
+Artistic example showing how constraints can create organic patterns.
 
-```python
-star = create_star_polygon(
-    n_points=5,      # Pentagon base
-    outer_radius=100, # Outer points distance from center
-    inner_radius=40,  # Inner points distance (controls "sharpness")
-    rotation=0        # Rotation angle
-)
+### 📐 Basic Geometry Examples
+- `triangle.json` - Simple triangle with constraints
+- `square_pure_constraints.json` - Square defined entirely by constraints
+- `hexagon_pure_constraints.json` - Hexagon using rotational symmetry
+- `pentagon_star.json` - Star pattern with angular constraints
+
+## Installation
+
+1. Install SLVSX:
+```bash
+curl -fsSL https://raw.githubusercontent.com/snoble/slvsx-cli/main/install.sh | bash
 ```
 
-This generates constraints like:
-- Center point fixed at origin
-- 5 outer points at 100mm from center
-- 5 inner points at 40mm from center
-- Angular spacing of 72° between adjacent outer points
+2. Clone this repository:
+```bash
+git clone https://github.com/snoble/slvx-examples.git
+cd slvx-examples
+```
 
-## Running the Project
+## Usage
 
-1. **Generate the constraint files**:
-   ```bash
-   python3 geometry_animator.py
-   ```
+### Solve a constraint system:
+```bash
+slvsx solve iris_diaphragm/sophisticated_8blade.json
+```
 
-2. **Solve constraints** (when slvsx is available):
-   ```bash
-   ./slvsx solve pentagon_star.json
-   ```
+### Export to SVG:
+```bash
+slvsx export -f svg iris_diaphragm/sophisticated_8blade.json > output.svg
+```
 
-3. **Export to SVG**:
-   ```bash
-   ./slvsx export -f svg pentagon_star.json -o star.svg
-   ```
+### Validate a file:
+```bash
+slvsx validate gear_mechanism.json
+```
 
-## Fun Variations to Try
+## Key Concepts
 
-1. **Animated Spirograph**: Vary the rotation parameter from 0 to 360 degrees
-2. **Morphing Stars**: Animate inner_radius from 10 to 90 to see the star "breathe"
-3. **Gear Train**: Create multiple meshing gears with specific ratios
-4. **Kaleidoscope Patterns**: Use symmetry constraints to create complex patterns
+### Constraints vs Coordinates
+Instead of specifying exact positions:
+```json
+{"type": "point", "id": "p1", "at": [86.6, 50, 0]}  // Hard-coded
+```
 
-## Why This is Cool
+Use constraints to define relationships:
+```json
+{"type": "distance", "between": ["center", "p1"], "value": 100},
+{"type": "angle", "between": ["ref_line", "spoke1"], "value": 30}
+```
 
-- **Mathematical Beauty**: The shapes emerge from constraints, not explicit calculations
-- **Engineering Applications**: Same principles used in CAD for mechanical design
-- **Creative Coding**: Combine programming with geometric art
-- **Educational**: Teaches constraint-based thinking and parametric design
+### Parametric Design
+Define parameters once, use everywhere:
+```json
+"parameters": {
+  "blade_angle": 45,
+  "blade_length": 100
+}
+```
 
-## Next Steps
+### Constraint Types
+- `fixed` - Anchor a point or entity
+- `distance` - Set distance between points
+- `angle` - Set angle between lines
+- `perpendicular` - Make lines perpendicular
+- `parallel` - Make lines parallel
+- `coincident` - Place point on line
+- `horizontal`/`vertical` - Align to axes
 
-1. Add more complex mechanisms (linkages, cams, etc.)
-2. Create a web visualizer using the WASM version
-3. Generate animation frames by varying parameters
-4. Export to 3D formats for printing/modeling
+## Contributing
 
-## Technical Notes
+Feel free to add more examples! The best examples:
+1. Demonstrate why a constraint solver is needed
+2. Would be difficult to calculate manually
+3. Show parametric behavior (changing one value updates everything)
+4. Are well-documented
 
-The project uses the SLVSX constraint solver which wraps the SolveSpace geometric kernel. This provides industrial-strength constraint solving in a simple JSON interface perfect for programmatic generation of geometric designs.
+## Resources
+
+- [SLVSX CLI Documentation](https://github.com/snoble/slvsx-cli)
+- [SolveSpace](https://solvespace.com) - The underlying constraint solver
+- [Constraint Programming](https://en.wikipedia.org/wiki/Constraint_programming) - General concepts
+
+## License
+
+Examples are provided as-is for educational purposes.
