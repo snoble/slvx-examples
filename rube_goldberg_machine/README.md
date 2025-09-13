@@ -37,12 +37,24 @@ Without a constraint solver, building this machine would require:
 ## Files
 
 ### Main Example
-- `complete_machine.json` - Full machine with ramp, catcher, lever, dominoes, pulley, and weight
-- `complete_machine.svg` - Visual representation
+- `rube_goldberg_machine.json` - Visual Rube Goldberg machine with recognizable components
+- `rube_goldberg_machine.svg` - SVG visualization showing all machine components
 
 ### Documentation
 - `SPEC.md` - Original specification for the example
 - `DEBUGGING_LESSONS.md` - **IMPORTANT**: Lessons learned about coordinate systems and visualization
+
+## Visual Components
+
+The machine includes recognizable visual elements:
+- **Ramp**: Inclined track with rails for the marble to roll down
+- **Marble**: Octagonal outline approximating a ball
+- **Bucket**: Rectangular container to catch the marble
+- **Seesaw**: Lever with visible thickness and triangular pivot support
+- **Dominoes**: Three rectangular blocks arranged in sequence
+- **Pulley**: Octagonal wheel with string attached to weight
+- **Weight**: Rectangular box that drops when triggered
+- **Bell**: Heptagonal bell shape with clapper inside
 
 ## Key Features Demonstrated
 
