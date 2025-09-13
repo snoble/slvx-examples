@@ -1,0 +1,95 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "marble_radius": 10,
+    "ramp_angle": 30,
+    "ramp_length": 300,
+    "table_height": 1000,
+    "ramp_start_height": 200
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "origin",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "table_top",
+      "at": [0, "$table_height", 0]
+    },
+    {
+      "type": "point",
+      "id": "ramp_start",
+      "at": [0, "$table_height + $ramp_start_height", 0]
+    },
+    {
+      "type": "point",
+      "id": "ramp_end",
+      "at": [250, 950, 0]
+    },
+    {
+      "type": "line",
+      "id": "ramp",
+      "p1": "ramp_start",
+      "p2": "ramp_end"
+    },
+    {
+      "type": "point",
+      "id": "horizontal_ref_end",
+      "at": [100, "$table_height", 0]
+    },
+    {
+      "type": "line",
+      "id": "horizontal_ref",
+      "p1": "table_top",
+      "p2": "horizontal_ref_end"
+    },
+    {
+      "type": "point",
+      "id": "marble_start",
+      "at": [0, "$table_height + $ramp_start_height + $marble_radius", 0]
+    },
+    {
+      "type": "point",
+      "id": "marble_path_end",
+      "at": [250, 960, 0]
+    },
+    {
+      "type": "line",
+      "id": "marble_path",
+      "p1": "marble_start",
+      "p2": "marble_path_end"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "origin"
+    },
+    {
+      "type": "fixed",
+      "entity": "table_top"
+    },
+    {
+      "type": "fixed",
+      "entity": "ramp_start"
+    },
+    {
+      "type": "distance",
+      "between": ["ramp_start", "ramp_end"],
+      "value": "$ramp_length"
+    },
+    {
+      "type": "angle",
+      "between": ["horizontal_ref", "ramp"],
+      "value": "-$ramp_angle"
+    },
+    {
+      "type": "distance",
+      "between": ["marble_start", "marble_path_end"],
+      "value": "$ramp_length"
+    }
+  ]
+}

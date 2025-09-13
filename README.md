@@ -14,6 +14,13 @@ A sophisticated mechanical iris (like a camera aperture) with tapered blades. Th
 - Parametric control (single parameter controls entire mechanism)
 - Why constraint solvers are essential for complex mechanical design
 
+### 🎢 [Rube Goldberg Machine](rube_goldberg_machine/)
+A chain-reaction machine with cascading mechanisms. This example demonstrates:
+- Sequential dependencies (each component triggers the next)
+- Physics constraints (ramps, levers, drops)
+- Why manual calculation is impractical for complex systems
+- Incremental development workflow
+
 ### ⚙️ [Gear Mechanism](gear_mechanism.json)
 Interlocking gears with proper tooth meshing demonstrating mechanical constraints.
 

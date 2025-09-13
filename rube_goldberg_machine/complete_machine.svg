@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 890.0 1240.0" width="800" height="800">
+  <circle id="weight_bottom" cx="696.946899" cy="597.178572" r="2" fill="black"/>
+  <circle id="origin" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="lever" x1="300.112277" y1="802.420512" x2="499.877280" y2="792.728074" stroke="black"/>
+  <circle id="lever_right" cx="499.877280" cy="792.728074" r="2" fill="black"/>
+  <line id="bell_arm" x1="700.000000" y1="700.000000" x2="815.233192" y2="796.027660" stroke="black"/>
+  <circle id="domino3_base" cx="588.975235" cy="800.093500" r="2" fill="black"/>
+  <circle id="bell_position" cx="850.000000" cy="800.000000" r="2" fill="black"/>
+  <line id="domino1" x1="528.978105" y1="800.470902" x2="520.096791" y2="839.472469" stroke="black"/>
+  <circle id="domino4_base" cx="617.200337" cy="789.927694" r="2" fill="black"/>
+  <line id="weight_string" x1="668.037258" y1="692.908571" x2="696.946899" y2="597.178572" stroke="black"/>
+  <line id="domino2" x1="558.978084" y1="800.506942" x2="550.079930" y2="839.504671" stroke="black"/>
+  <circle id="bell_striker" cx="815.233192" cy="796.027660" r="2" fill="black"/>
+  <circle id="table_top" cx="0.000000" cy="1000.000000" r="2" fill="black"/>
+  <circle id="horizontal_ref_end" cx="100.000000" cy="1000.000000" r="2" fill="black"/>
+  <circle id="next_trigger" cx="484.525565" cy="793.472927" r="2" fill="black"/>
+  <circle id="domino2_base" cx="558.978084" cy="800.506942" r="2" fill="black"/>
+  <circle id="lever_left" cx="300.112277" cy="802.420512" r="2" fill="black"/>
+  <line id="horizontal_ref" x1="0.000000" y1="1000.000000" x2="100.000000" y2="1000.000000" stroke="black"/>
+  <circle id="domino2_top" cx="550.079930" cy="839.504671" r="2" fill="black"/>
+  <line id="domino3" x1="588.975235" y1="800.093500" x2="580.165018" y2="839.111190" stroke="black"/>
+  <circle id="catcher_right" cx="378.380556" cy="847.779575" r="2" fill="black"/>
+  <circle id="pulley_center" cx="700.000000" cy="700.000000" r="2" fill="black"/>
+  <circle id="marble_exit" cx="267.107581" cy="992.379673" r="2" fill="black"/>
+  <circle id="catcher_left" cx="318.411045" cy="849.692091" r="2" fill="black"/>
+  <circle id="lever_marble_target" cx="325.384398" cy="801.194329" r="2" fill="black"/>
+  <line id="ramp" x1="0.000000" y1="1200.000000" x2="243.357048" y2="1024.565262" stroke="black"/>
+  <circle id="domino1_top" cx="520.096791" cy="839.472469" r="2" fill="black"/>
+  <circle id="domino1_base" cx="528.978105" cy="800.470902" r="2" fill="black"/>
+  <circle id="catcher_center" cx="313.819666" cy="849.838517" r="2" fill="black"/>
+  <circle id="domino4_top" cx="611.571389" cy="829.529650" r="2" fill="black"/>
+  <circle id="ramp_end" cx="243.357048" cy="1024.565262" r="2" fill="black"/>
+  <circle id="ramp_start" cx="0.000000" cy="1200.000000" r="2" fill="black"/>
+  <circle id="lever_pivot" cx="350.000000" cy="800.000000" r="2" fill="black"/>
+  <line id="domino4" x1="617.200337" y1="789.927694" x2="611.571389" y2="829.529650" stroke="black"/>
+  <circle id="domino5_top" cx="639.438852" cy="805.500296" r="2" fill="black"/>
+  <line id="catcher" x1="318.411045" y1="849.692091" x2="378.380556" y2="847.779575" stroke="black"/>
+  <circle id="domino3_top" cx="580.165018" cy="839.111190" r="2" fill="black"/>
+  <circle id="domino5_base" cx="634.962987" cy="765.751502" r="2" fill="black"/>
+  <line id="domino5" x1="634.962987" y1="765.751502" x2="639.438852" y2="805.500296" stroke="black"/>
+  <circle id="weight_top" cx="668.037258" cy="692.908571" r="2" fill="black"/>
+</svg>
