@@ -36,14 +36,13 @@ Without a constraint solver, building this machine would require:
 
 ## Files
 
-### Incremental Development Steps
-1. `step1_ramp.json` - Basic inclined ramp with marble path
-2. `step2_drop.json` - Adds catcher below ramp exit
-3. `step3_lever.json` - Adds seesaw mechanism
-4. `complete_machine.json` - Full machine with dominoes, pulley, and bell
+### Main Example
+- `complete_machine.json` - Full machine with ramp, catcher, lever, dominoes, pulley, and weight
+- `complete_machine.svg` - Visual representation
 
-### Visualizations
-- `*.svg` - Visual representations of each step
+### Documentation
+- `SPEC.md` - Original specification for the example
+- `DEBUGGING_LESSONS.md` - **IMPORTANT**: Lessons learned about coordinate systems and visualization
 
 ## Key Features Demonstrated
 
@@ -59,10 +58,12 @@ Each mechanism depends on the previous one's output position and timing. The con
 ### 3. Parametric Design
 ```json
 "parameters": {
-  "marble_radius": 10,
+  "marble_radius": 5,
   "ramp_angle": 30,
-  "lever_ratio": 3,
-  "domino_spacing": 30
+  "ramp_height": 80,
+  "lever_length": 100,
+  "domino_spacing": 20,
+  "weight_drop": 50
 }
 ```
 Change any parameter and the entire machine reconfigures.

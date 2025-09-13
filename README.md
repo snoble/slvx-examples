@@ -8,18 +8,18 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 
 ## Key Examples
 
+### 🌟 [Islamic Star Pattern](geometric_art/)
+A stunning 8-pointed Islamic geometric pattern with 192 precisely positioned points and 88 connecting lines. This example showcases:
+- Complex intersection calculations that would take hours by hand
+- Perfect mathematical symmetry from just 4 parameters
+- Coincident constraints creating intricate interlacing
+- Why constraint solvers make the impossible possible
+
 ### 🔧 [Iris Diaphragm](iris_diaphragm/)
-A sophisticated mechanical iris (like a camera aperture) with tapered blades. This example showcases:
+A sophisticated mechanical iris (like a camera aperture) with tapered blades. This example demonstrates:
 - Complex geometric constraints (perpendicular, coincident)
 - Parametric control (single parameter controls entire mechanism)
 - Why constraint solvers are essential for complex mechanical design
-
-### 🎢 [Rube Goldberg Machine](rube_goldberg_machine/)
-A chain-reaction machine with cascading mechanisms. This example demonstrates:
-- Sequential dependencies (each component triggers the next)
-- Physics constraints (ramps, levers, drops)
-- Why manual calculation is impractical for complex systems
-- Incremental development workflow
 
 ### ⚙️ [Gear Mechanism](gear_mechanism.json)
 Interlocking gears with proper tooth meshing demonstrating mechanical constraints.

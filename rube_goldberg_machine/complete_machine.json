@@ -2,23 +2,18 @@
   "schema": "slvs-json/1",
   "units": "mm",
   "parameters": {
-    "marble_radius": 10,
+    "marble_radius": 5,
     "ramp_angle": 30,
-    "ramp_length": 300,
-    "table_height": 1000,
-    "ramp_start_height": 200,
-    "drop_height": 150,
-    "catcher_width": 60,
-    "lever_length": 200,
-    "lever_ratio": 3,
-    "lever_height": 800,
-    "domino_spacing": 30,
-    "domino_count": 5,
-    "domino_height": 40,
-    "domino_width": 10,
-    "pulley_height": 700,
-    "weight_drop": 100,
-    "bell_distance": 150
+    "ramp_length": 150,
+    "ramp_height": 80,
+    "drop_height": 60,
+    "catcher_width": 40,
+    "lever_length": 100,
+    "lever_height": -20,
+    "domino_spacing": 20,
+    "domino_height": 30,
+    "pulley_radius": 15,
+    "weight_drop": 50
   },
   "entities": [
     {
@@ -28,18 +23,13 @@
     },
     {
       "type": "point",
-      "id": "table_top",
-      "at": [0, "$table_height", 0]
-    },
-    {
-      "type": "point",
       "id": "ramp_start",
-      "at": [0, "$table_height + $ramp_start_height", 0]
+      "at": [0, "$ramp_height", 0]
     },
     {
       "type": "point",
       "id": "ramp_end",
-      "at": [250, 1050, 0]
+      "at": [130, 5, 0]
     },
     {
       "type": "line",
@@ -50,33 +40,28 @@
     {
       "type": "point",
       "id": "horizontal_ref_end",
-      "at": [100, "$table_height", 0]
+      "at": [100, 0, 0]
     },
     {
       "type": "line",
       "id": "horizontal_ref",
-      "p1": "table_top",
+      "p1": "origin",
       "p2": "horizontal_ref_end"
     },
     {
       "type": "point",
       "id": "marble_exit",
-      "at": [280, 1040, 0]
-    },
-    {
-      "type": "point",
-      "id": "catcher_center",
-      "at": [350, 850, 0]
+      "at": [150, 0, 0]
     },
     {
       "type": "point",
       "id": "catcher_left",
-      "at": [320, 850, 0]
+      "at": [145, -60, 0]
     },
     {
       "type": "point",
       "id": "catcher_right",
-      "at": [380, 850, 0]
+      "at": [185, -60, 0]
     },
     {
       "type": "line",
@@ -86,18 +71,23 @@
     },
     {
       "type": "point",
+      "id": "catcher_center",
+      "at": [165, -60, 0]
+    },
+    {
+      "type": "point",
       "id": "lever_pivot",
-      "at": [350, "$lever_height", 0]
+      "at": [200, "$lever_height", 0]
     },
     {
       "type": "point",
       "id": "lever_left",
-      "at": [300, 800, 0]
+      "at": [170, -20, 0]
     },
     {
       "type": "point",
       "id": "lever_right",
-      "at": [500, 800, 0]
+      "at": [270, -20, 0]
     },
     {
       "type": "line",
@@ -107,23 +97,13 @@
     },
     {
       "type": "point",
-      "id": "lever_marble_target",
-      "at": [320, 810, 0]
-    },
-    {
-      "type": "point",
-      "id": "next_trigger",
-      "at": [480, 790, 0]
-    },
-    {
-      "type": "point",
       "id": "domino1_base",
-      "at": [520, "$lever_height", 0]
+      "at": [290, "$lever_height", 0]
     },
     {
       "type": "point",
       "id": "domino1_top",
-      "at": [520, 840, 0]
+      "at": [290, 10, 0]
     },
     {
       "type": "line",
@@ -134,12 +114,12 @@
     {
       "type": "point",
       "id": "domino2_base",
-      "at": [550, "$lever_height", 0]
+      "at": [310, "$lever_height", 0]
     },
     {
       "type": "point",
       "id": "domino2_top",
-      "at": [550, 840, 0]
+      "at": [310, 10, 0]
     },
     {
       "type": "line",
@@ -150,12 +130,12 @@
     {
       "type": "point",
       "id": "domino3_base",
-      "at": [580, "$lever_height", 0]
+      "at": [330, "$lever_height", 0]
     },
     {
       "type": "point",
       "id": "domino3_top",
-      "at": [580, 840, 0]
+      "at": [330, 10, 0]
     },
     {
       "type": "line",
@@ -166,12 +146,12 @@
     {
       "type": "point",
       "id": "domino4_base",
-      "at": [610, "$lever_height", 0]
+      "at": [350, "$lever_height", 0]
     },
     {
       "type": "point",
       "id": "domino4_top",
-      "at": [610, 840, 0]
+      "at": [350, 10, 0]
     },
     {
       "type": "line",
@@ -181,34 +161,18 @@
     },
     {
       "type": "point",
-      "id": "domino5_base",
-      "at": [640, "$lever_height", 0]
-    },
-    {
-      "type": "point",
-      "id": "domino5_top",
-      "at": [640, 840, 0]
-    },
-    {
-      "type": "line",
-      "id": "domino5",
-      "p1": "domino5_base",
-      "p2": "domino5_top"
-    },
-    {
-      "type": "point",
       "id": "pulley_center",
-      "at": [700, "$pulley_height", 0]
+      "at": [380, 20, 0]
     },
     {
       "type": "point",
       "id": "weight_top",
-      "at": [700, "$pulley_height - 50", 0]
+      "at": [380, 0, 0]
     },
     {
       "type": "point",
       "id": "weight_bottom",
-      "at": [700, 550, 0]
+      "at": [380, -50, 0]
     },
     {
       "type": "line",
@@ -219,28 +183,13 @@
     {
       "type": "point",
       "id": "bell_position",
-      "at": [850, "$lever_height", 0]
-    },
-    {
-      "type": "point",
-      "id": "bell_striker",
-      "at": [820, "$lever_height", 0]
-    },
-    {
-      "type": "line",
-      "id": "bell_arm",
-      "p1": "pulley_center",
-      "p2": "bell_striker"
+      "at": [450, 0, 0]
     }
   ],
   "constraints": [
     {
       "type": "fixed",
       "entity": "origin"
-    },
-    {
-      "type": "fixed",
-      "entity": "table_top"
     },
     {
       "type": "fixed",
@@ -259,7 +208,7 @@
     {
       "type": "distance",
       "between": ["ramp_end", "marble_exit"],
-      "value": "40"
+      "value": "25"
     },
     {
       "type": "horizontal",
@@ -273,7 +222,7 @@
     {
       "type": "distance",
       "between": ["marble_exit", "catcher_center"],
-      "value": "$drop_height"
+      "value": "$drop_height + 15"
     },
     {
       "type": "coincident",
@@ -295,21 +244,6 @@
       "value": "$lever_length"
     },
     {
-      "type": "coincident",
-      "at": "lever_marble_target",
-      "of": ["lever"]
-    },
-    {
-      "type": "coincident",
-      "at": "next_trigger",
-      "of": ["lever"]
-    },
-    {
-      "type": "distance",
-      "between": ["catcher_center", "lever_marble_target"],
-      "value": "50"
-    },
-    {
       "type": "vertical",
       "entity": "domino1"
     },
@@ -324,10 +258,6 @@
     {
       "type": "vertical",
       "entity": "domino4"
-    },
-    {
-      "type": "vertical",
-      "entity": "domino5"
     },
     {
       "type": "distance",
@@ -351,13 +281,8 @@
     },
     {
       "type": "distance",
-      "between": ["domino5_base", "domino5_top"],
-      "value": "$domino_height"
-    },
-    {
-      "type": "distance",
-      "between": ["next_trigger", "domino1_base"],
-      "value": "45"
+      "between": ["lever_right", "domino1_base"],
+      "value": "25"
     },
     {
       "type": "distance",
@@ -375,15 +300,6 @@
       "value": "$domino_spacing"
     },
     {
-      "type": "distance",
-      "between": ["domino4_base", "domino5_base"],
-      "value": "$domino_spacing"
-    },
-    {
-      "type": "horizontal",
-      "entity": "bell_arm"
-    },
-    {
       "type": "fixed",
       "entity": "pulley_center"
     },
@@ -398,17 +314,12 @@
     },
     {
       "type": "distance",
-      "between": ["domino5_base", "weight_top"],
-      "value": "80"
+      "between": ["domino4_base", "weight_top"],
+      "value": "35"
     },
     {
       "type": "fixed",
       "entity": "bell_position"
-    },
-    {
-      "type": "distance",
-      "between": ["pulley_center", "bell_striker"],
-      "value": "$bell_distance"
     }
   ]
 }
