@@ -9,111 +9,139 @@
     },
     {
       "type": "point",
-      "id": "petal1_tip",
-      "at": [0, 50, 0]
+      "id": "petal1",
+      "at": [0, 1, 0]
     },
     {
       "type": "point",
-      "id": "petal1_left",
-      "at": [-15, 25, 0]
+      "id": "petal2",
+      "at": [1, 1, 0]
     },
     {
       "type": "point",
-      "id": "petal1_right",
-      "at": [15, 25, 0]
+      "id": "petal3",
+      "at": [1, 0, 0]
     },
     {
       "type": "point",
-      "id": "petal2_tip",
-      "at": [43.3, 25, 0]
+      "id": "petal4",
+      "at": [1, -1, 0]
     },
     {
       "type": "point",
-      "id": "petal2_left",
-      "at": [18.3, 15, 0]
+      "id": "petal5",
+      "at": [0, -1, 0]
     },
     {
       "type": "point",
-      "id": "petal2_right",
-      "at": [30, 5, 0]
+      "id": "petal6",
+      "at": [-1, -1, 0]
     },
     {
       "type": "point",
-      "id": "petal3_tip",
-      "at": [43.3, -25, 0]
+      "id": "petal7",
+      "at": [-1, 0, 0]
     },
     {
       "type": "point",
-      "id": "petal3_left",
-      "at": [30, -5, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal3_right",
-      "at": [18.3, -15, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal4_tip",
-      "at": [0, -50, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal4_left",
-      "at": [15, -25, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal4_right",
-      "at": [-15, -25, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal5_tip",
-      "at": [-43.3, -25, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal5_left",
-      "at": [-18.3, -15, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal5_right",
-      "at": [-30, -5, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal6_tip",
-      "at": [-43.3, 25, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal6_left",
-      "at": [-30, 5, 0]
-    },
-    {
-      "type": "point",
-      "id": "petal6_right",
-      "at": [-18.3, 15, 0]
+      "id": "petal8",
+      "at": [-1, 1, 0]
     },
     {
       "type": "line",
-      "id": "petal1_left_line",
+      "id": "radius1",
       "p1": "center",
-      "p2": "petal1_left"
+      "p2": "petal1"
     },
     {
       "type": "line",
-      "id": "petal1_right_line",
+      "id": "radius2",
       "p1": "center",
-      "p2": "petal1_right"
+      "p2": "petal2"
     },
     {
       "type": "line",
-      "id": "petal1_tip_line",
+      "id": "radius3",
       "p1": "center",
-      "p2": "petal1_tip"
+      "p2": "petal3"
+    },
+    {
+      "type": "line",
+      "id": "radius4",
+      "p1": "center",
+      "p2": "petal4"
+    },
+    {
+      "type": "line",
+      "id": "radius5",
+      "p1": "center",
+      "p2": "petal5"
+    },
+    {
+      "type": "line",
+      "id": "radius6",
+      "p1": "center",
+      "p2": "petal6"
+    },
+    {
+      "type": "line",
+      "id": "radius7",
+      "p1": "center",
+      "p2": "petal7"
+    },
+    {
+      "type": "line",
+      "id": "radius8",
+      "p1": "center",
+      "p2": "petal8"
+    },
+    {
+      "type": "line",
+      "id": "chord12",
+      "p1": "petal1",
+      "p2": "petal2"
+    },
+    {
+      "type": "line",
+      "id": "chord23",
+      "p1": "petal2",
+      "p2": "petal3"
+    },
+    {
+      "type": "line",
+      "id": "chord34",
+      "p1": "petal3",
+      "p2": "petal4"
+    },
+    {
+      "type": "line",
+      "id": "chord45",
+      "p1": "petal4",
+      "p2": "petal5"
+    },
+    {
+      "type": "line",
+      "id": "chord56",
+      "p1": "petal5",
+      "p2": "petal6"
+    },
+    {
+      "type": "line",
+      "id": "chord67",
+      "p1": "petal6",
+      "p2": "petal7"
+    },
+    {
+      "type": "line",
+      "id": "chord78",
+      "p1": "petal7",
+      "p2": "petal8"
+    },
+    {
+      "type": "line",
+      "id": "chord81",
+      "p1": "petal8",
+      "p2": "petal1"
     }
   ],
   "constraints": [
@@ -122,94 +150,83 @@
       "entity": "center"
     },
     {
+      "type": "vertical",
+      "a": "radius1"
+    },
+    {
       "type": "distance",
-      "between": ["center", "petal1_tip"],
+      "between": ["center", "petal1"],
       "value": 50
     },
     {
-      "type": "distance",
-      "between": ["center", "petal2_tip"],
-      "value": 50
+      "type": "equal_length",
+      "a": "radius1",
+      "b": "radius2"
     },
     {
-      "type": "distance",
-      "between": ["center", "petal3_tip"],
-      "value": 50
+      "type": "equal_length",
+      "a": "radius2",
+      "b": "radius3"
     },
     {
-      "type": "distance",
-      "between": ["center", "petal4_tip"],
-      "value": 50
+      "type": "equal_length",
+      "a": "radius3",
+      "b": "radius4"
     },
     {
-      "type": "distance",
-      "between": ["center", "petal5_tip"],
-      "value": 50
+      "type": "equal_length",
+      "a": "radius4",
+      "b": "radius5"
     },
     {
-      "type": "distance",
-      "between": ["center", "petal6_tip"],
-      "value": 50
+      "type": "equal_length",
+      "a": "radius5",
+      "b": "radius6"
     },
     {
-      "type": "distance",
-      "between": ["petal1_tip", "petal1_left"],
-      "value": 30
+      "type": "equal_length",
+      "a": "radius6",
+      "b": "radius7"
     },
     {
-      "type": "distance",
-      "between": ["petal1_tip", "petal1_right"],
-      "value": 30
+      "type": "equal_length",
+      "a": "radius7",
+      "b": "radius8"
     },
     {
-      "type": "distance",
-      "between": ["petal2_tip", "petal2_left"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord12",
+      "b": "chord23"
     },
     {
-      "type": "distance",
-      "between": ["petal2_tip", "petal2_right"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord23",
+      "b": "chord34"
     },
     {
-      "type": "distance",
-      "between": ["petal3_tip", "petal3_left"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord34",
+      "b": "chord45"
     },
     {
-      "type": "distance",
-      "between": ["petal3_tip", "petal3_right"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord45",
+      "b": "chord56"
     },
     {
-      "type": "distance",
-      "between": ["petal4_tip", "petal4_left"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord56",
+      "b": "chord67"
     },
     {
-      "type": "distance",
-      "between": ["petal4_tip", "petal4_right"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord67",
+      "b": "chord78"
     },
     {
-      "type": "distance",
-      "between": ["petal5_tip", "petal5_left"],
-      "value": 30
-    },
-    {
-      "type": "distance",
-      "between": ["petal5_tip", "petal5_right"],
-      "value": 30
-    },
-    {
-      "type": "distance",
-      "between": ["petal6_tip", "petal6_left"],
-      "value": 30
-    },
-    {
-      "type": "distance",
-      "between": ["petal6_tip", "petal6_right"],
-      "value": 30
+      "type": "equal_length",
+      "a": "chord78",
+      "b": "chord81"
     }
   ]
 }

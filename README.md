@@ -1,116 +1,144 @@
 # SLVSX Constraint Solver Examples
 
-A collection of examples demonstrating the power of the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
+A collection of visually impressive examples demonstrating the power of the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
+
+## 📖 **IMPORTANT**: [Visual Design Guide](VISUAL_DESIGN_GUIDE.md)
+**Before creating examples, read the Visual Design Guide to understand what makes a "wow" example.**
 
 ## What is SLVSX?
 
 SLVSX is a command-line interface to the SolveSpace constraint solver. It allows you to define geometric relationships declaratively and have the solver calculate actual positions automatically.
 
-## Key Examples
+## Showcase Examples
 
 ### 🌟 [Islamic Star Pattern](geometric_art/)
-A stunning 8-pointed Islamic geometric pattern with 192 precisely positioned points and 88 connecting lines. This example showcases:
-- Complex intersection calculations that would take hours by hand
-- Perfect mathematical symmetry from just 4 parameters
-- Coincident constraints creating intricate interlacing
-- Why constraint solvers make the impossible possible
+**192 points, 88 lines, 4 parameters**
+- Intricate geometric pattern with perfect mathematical precision
+- Complex intersections calculated automatically
+- Would take hours to calculate by hand
+- **View:** `geometric_art/islamic_star.svg`
 
-### 🔧 [Iris Diaphragm](iris_diaphragm/)
-A sophisticated mechanical iris (like a camera aperture) with tapered blades. This example demonstrates:
-- Complex geometric constraints (perpendicular, coincident)
-- Parametric control (single parameter controls entire mechanism)
-- Why constraint solvers are essential for complex mechanical design
+### 🔧 [Iris Diaphragm](iris_diaphragm/)  
+**Mechanical aperture with tapered blades**
+- Sophisticated mechanism like a camera aperture
+- Single parameter controls entire mechanism
+- Perpendicular constraints create proper blade geometry
+- **View:** `iris_diaphragm/sophisticated_8blade.svg`
 
-### ⚙️ [Gear Mechanism](gear_mechanism.json)
-Interlocking gears with proper tooth meshing demonstrating mechanical constraints.
+### 🎢 [Rube Goldberg Machine](rube_goldberg_machine/)
+**Chain-reaction machine with visual components**
+- Recognizable mechanical components (marble, bucket, lever, dominoes)
+- Sequential dependencies between mechanisms
+- Shows why manual calculation is impractical
+- **View:** `rube_goldberg_machine/rube_goldberg_machine.svg`
 
-### 🔗 [Four-Bar Linkage](four_bar_linkage.json)
-Classic mechanical linkage showing motion constraints and degrees of freedom.
+## Additional Examples
 
-### 🌸 [Parametric Flower](parametric_flower.json)
-Artistic example showing how constraints can create organic patterns.
+### Mechanical Systems
+- [Four-Bar Linkage](four_bar_linkage.json) - Classic mechanical linkage
+- [Gear Mechanism](gear_mechanism.json) - Interlocking gears with proper meshing
 
-### 📐 Basic Geometry Examples
-- `triangle.json` - Simple triangle with constraints
-- `square_pure_constraints.json` - Square defined entirely by constraints
-- `hexagon_pure_constraints.json` - Hexagon using rotational symmetry
-- `pentagon_star.json` - Star pattern with angular constraints
+### Artistic Patterns
+- [Parametric Flower](parametric_flower.json) - Organic patterns from constraints
+- [Spirograph](spirograph.json) - Mathematical art patterns
 
-## Installation
+### [Basic Shapes](basic_shapes/)
+Simple learning examples for understanding constraint basics
 
-1. Install SLVSX:
+## Quick Start
+
+### Installation
 ```bash
+# Install SLVSX
 curl -fsSL https://raw.githubusercontent.com/snoble/slvsx-cli/main/install.sh | bash
-```
 
-2. Clone this repository:
-```bash
+# Clone examples
 git clone https://github.com/snoble/slvx-examples.git
 cd slvx-examples
 ```
 
-## Usage
-
-### Solve a constraint system:
+### Try It Out
 ```bash
-slvsx solve iris_diaphragm/sophisticated_8blade.json
+# Solve the Islamic star pattern
+slvsx solve geometric_art/islamic_star.json
+
+# Export to SVG and view
+slvsx export -f svg geometric_art/islamic_star.json > star.svg
+open star.svg  # or use your SVG viewer
 ```
 
-### Export to SVG:
-```bash
-slvsx export -f svg iris_diaphragm/sophisticated_8blade.json > output.svg
-```
+## Creating Your Own Examples
 
-### Validate a file:
-```bash
-slvsx validate gear_mechanism.json
-```
+### The Golden Rule
+**Always export to SVG and visually inspect at every step.**
 
-## Key Concepts
+### Good Example Checklist
+- [ ] Visually recognizable components (not abstract lines)
+- [ ] Reasonable coordinate system (< 200 units from origin)
+- [ ] Parameters that make sense (human-scale values)
+- [ ] Complex enough to show solver power
+- [ ] SVG output that makes people say "wow"
 
-### Constraints vs Coordinates
-Instead of specifying exact positions:
+### Example Structure
 ```json
-{"type": "point", "id": "p1", "at": [86.6, 50, 0]}  // Hard-coded
-```
-
-Use constraints to define relationships:
-```json
-{"type": "distance", "between": ["center", "p1"], "value": 100},
-{"type": "angle", "between": ["ref_line", "spoke1"], "value": 30}
-```
-
-### Parametric Design
-Define parameters once, use everywhere:
-```json
-"parameters": {
-  "blade_angle": 45,
-  "blade_length": 100
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "key_dimension": 50,
+    "angle": 30
+  },
+  "entities": [
+    // Points, lines, etc.
+  ],
+  "constraints": [
+    // Relationships between entities
+  ]
 }
 ```
 
-### Constraint Types
-- `fixed` - Anchor a point or entity
-- `distance` - Set distance between points
-- `angle` - Set angle between lines
-- `perpendicular` - Make lines perpendicular
-- `parallel` - Make lines parallel
-- `coincident` - Place point on line
-- `horizontal`/`vertical` - Align to axes
+## Key Constraint Types
+
+| Constraint | Purpose | Example Use |
+|------------|---------|-------------|
+| `fixed` | Anchor a point | Origin, pivot points |
+| `distance` | Set distance between points | Lengths, radii |
+| `angle` | Set angle between lines | Rotations, slopes |
+| `perpendicular` | Make lines 90° | Right angles |
+| `parallel` | Make lines parallel | Rails, guides |
+| `coincident` | Point on line | Intersections |
+| `horizontal`/`vertical` | Align to axes | Level surfaces |
+
+## Development Workflow
+
+1. **Start Simple**: Basic shape with few constraints
+2. **Test Visually**: Export to SVG after each change
+3. **Add Complexity**: Layer additional constraints
+4. **Check Scale**: Ensure viewBox is reasonable
+5. **Parametrize**: Replace hard values with parameters
+6. **Document**: Explain why it needs a solver
 
 ## Contributing
 
-Feel free to add more examples! The best examples:
-1. Demonstrate why a constraint solver is needed
-2. Would be difficult to calculate manually
-3. Show parametric behavior (changing one value updates everything)
-4. Are well-documented
+### What Makes a Good Contribution
+- **Visually Impressive**: Should make viewers say "wow"
+- **Demonstrates Solver Power**: Too complex for manual calculation
+- **Well Documented**: Clear explanation of constraints used
+- **Properly Scaled**: Reasonable coordinate system
+- **Parametric**: Key dimensions controlled by parameters
+
+### Before Submitting
+1. Read the [Visual Design Guide](VISUAL_DESIGN_GUIDE.md)
+2. Test all incremental steps
+3. Ensure SVG output looks impressive
+4. Document why a solver is needed
+5. Use human-scale parameters
 
 ## Resources
 
 - [SLVSX CLI Documentation](https://github.com/snoble/slvsx-cli)
+- [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) - **Must read for contributors**
 - [SolveSpace](https://solvespace.com) - The underlying constraint solver
-- [Constraint Programming](https://en.wikipedia.org/wiki/Constraint_programming) - General concepts
 
 ## License
 

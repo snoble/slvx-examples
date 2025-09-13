@@ -1,0 +1,33 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*_old.*
+test_*
+tmp_*
+
+# SLVSX binary (if downloaded locally)
+slvsx
+slvsx-*
+
+# Node modules (for generators)
+node_modules/
+package-lock.json
