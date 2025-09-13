@@ -1,0 +1,92 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "point",
+      "id": "origin",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "p1",
+      "at": [50, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "p2",
+      "at": [25, 25, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3",
+      "at": [0, 50, 0]
+    },
+    {
+      "type": "line",
+      "id": "guide_line",
+      "p1": "origin",
+      "p2": "p1"
+    },
+    {
+      "type": "circle",
+      "id": "path_circle",
+      "center": [0, 0, 0],
+      "diameter": 80
+    },
+    {
+      "type": "point",
+      "id": "slider",
+      "at": [30, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "orbiter",
+      "at": [40, 0, 0]
+    },
+    {
+      "type": "circle",
+      "id": "circle1",
+      "center": [60, 0, 0],
+      "diameter": 30
+    },
+    {
+      "type": "circle",
+      "id": "circle2",
+      "center": [60, 30, 0],
+      "diameter": 30
+    },
+    {
+      "type": "line",
+      "id": "tangent_line",
+      "p1": "p2",
+      "p2": "p3"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "origin"
+    },
+    {
+      "type": "point_on_line",
+      "point": "slider",
+      "line": "guide_line"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "orbiter",
+      "circle": "path_circle"
+    },
+    {
+      "type": "tangent",
+      "a": "circle1",
+      "b": "tangent_line"
+    },
+    {
+      "type": "equal_radius",
+      "a": "circle1",
+      "b": "circle2"
+    }
+  ]
+}
