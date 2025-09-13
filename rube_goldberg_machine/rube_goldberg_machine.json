@@ -672,7 +672,8 @@
     },
     {
       "type": "parallel",
-      "entities": ["ramp_left", "ramp_right"]
+      "a": "ramp_left",
+      "b": "ramp_right"
     },
     {
       "type": "distance",
@@ -719,15 +720,15 @@
     },
     {
       "type": "horizontal",
-      "entity": "bucket_bottom"
+      "a": "bucket_bottom"
     },
     {
       "type": "vertical",
-      "entity": "bucket_left"
+      "a": "bucket_left"
     },
     {
       "type": "vertical",
-      "entity": "bucket_right"
+      "a": "bucket_right"
     },
     {
       "type": "fixed",
@@ -750,11 +751,11 @@
     },
     {
       "type": "horizontal",
-      "entity": "lever_top"
+      "a": "lever_top"
     },
     {
       "type": "horizontal",
-      "entity": "lever_bottom"
+      "a": "lever_bottom"
     },
     {
       "type": "coincident",
@@ -789,11 +790,11 @@
     },
     {
       "type": "vertical",
-      "entity": "domino1_left"
+      "a": "domino1_left"
     },
     {
       "type": "vertical",
-      "entity": "domino1_right"
+      "a": "domino1_right"
     },
     {
       "type": "fixed",
@@ -811,11 +812,11 @@
     },
     {
       "type": "vertical",
-      "entity": "domino2_left"
+      "a": "domino2_left"
     },
     {
       "type": "vertical",
-      "entity": "domino2_right"
+      "a": "domino2_right"
     },
     {
       "type": "fixed",
@@ -833,11 +834,11 @@
     },
     {
       "type": "vertical",
-      "entity": "domino3_left"
+      "a": "domino3_left"
     },
     {
       "type": "vertical",
-      "entity": "domino3_right"
+      "a": "domino3_right"
     },
     {
       "type": "fixed",
@@ -879,15 +880,15 @@
     },
     {
       "type": "vertical",
-      "entity": "weight_left"
+      "a": "weight_left"
     },
     {
       "type": "vertical",
-      "entity": "weight_right"
+      "a": "weight_right"
     },
     {
       "type": "vertical",
-      "entity": "pulley_string"
+      "a": "pulley_string"
     },
     {
       "type": "fixed",

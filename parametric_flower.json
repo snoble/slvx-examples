@@ -9,224 +9,357 @@
     },
     {
       "type": "point",
-      "id": "petal1",
-      "at": [0, 1, 0]
+      "id": "p1_outer",
+      "at": [0, 60, 0]
     },
     {
       "type": "point",
-      "id": "petal2",
-      "at": [1, 1, 0]
+      "id": "p1_left",
+      "at": [-15, 45, 0]
     },
     {
       "type": "point",
-      "id": "petal3",
-      "at": [1, 0, 0]
+      "id": "p1_right",
+      "at": [15, 45, 0]
     },
     {
       "type": "point",
-      "id": "petal4",
-      "at": [1, -1, 0]
+      "id": "p1_inner",
+      "at": [0, 20, 0]
     },
     {
       "type": "point",
-      "id": "petal5",
-      "at": [0, -1, 0]
+      "id": "p2_outer",
+      "at": [51.96, 30, 0]
     },
     {
       "type": "point",
-      "id": "petal6",
-      "at": [-1, -1, 0]
+      "id": "p2_left",
+      "at": [39, 37.5, 0]
     },
     {
       "type": "point",
-      "id": "petal7",
-      "at": [-1, 0, 0]
+      "id": "p2_right",
+      "at": [39, 22.5, 0]
     },
     {
       "type": "point",
-      "id": "petal8",
-      "at": [-1, 1, 0]
+      "id": "p2_inner",
+      "at": [17.32, 10, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3_outer",
+      "at": [51.96, -30, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3_left",
+      "at": [39, -22.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3_right",
+      "at": [39, -37.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p3_inner",
+      "at": [17.32, -10, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4_outer",
+      "at": [0, -60, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4_left",
+      "at": [15, -45, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4_right",
+      "at": [-15, -45, 0]
+    },
+    {
+      "type": "point",
+      "id": "p4_inner",
+      "at": [0, -20, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5_outer",
+      "at": [-51.96, -30, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5_left",
+      "at": [-39, -37.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5_right",
+      "at": [-39, -22.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p5_inner",
+      "at": [-17.32, -10, 0]
+    },
+    {
+      "type": "point",
+      "id": "p6_outer",
+      "at": [-51.96, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "p6_left",
+      "at": [-39, 22.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p6_right",
+      "at": [-39, 37.5, 0]
+    },
+    {
+      "type": "point",
+      "id": "p6_inner",
+      "at": [-17.32, 10, 0]
     },
     {
       "type": "line",
-      "id": "radius1",
+      "id": "petal1_left",
       "p1": "center",
-      "p2": "petal1"
+      "p2": "p1_left"
     },
     {
       "type": "line",
-      "id": "radius2",
+      "id": "petal1_right",
       "p1": "center",
-      "p2": "petal2"
+      "p2": "p1_right"
     },
     {
       "type": "line",
-      "id": "radius3",
+      "id": "petal1_outer_left",
+      "p1": "p1_left",
+      "p2": "p1_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal1_outer_right",
+      "p1": "p1_right",
+      "p2": "p1_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal1_inner",
+      "p1": "p1_left",
+      "p2": "p1_right"
+    },
+    {
+      "type": "line",
+      "id": "petal2_left",
       "p1": "center",
-      "p2": "petal3"
+      "p2": "p2_left"
     },
     {
       "type": "line",
-      "id": "radius4",
+      "id": "petal2_right",
       "p1": "center",
-      "p2": "petal4"
+      "p2": "p2_right"
     },
     {
       "type": "line",
-      "id": "radius5",
+      "id": "petal2_outer_left",
+      "p1": "p2_left",
+      "p2": "p2_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal2_outer_right",
+      "p1": "p2_right",
+      "p2": "p2_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal2_inner",
+      "p1": "p2_left",
+      "p2": "p2_right"
+    },
+    {
+      "type": "line",
+      "id": "petal3_left",
       "p1": "center",
-      "p2": "petal5"
+      "p2": "p3_left"
     },
     {
       "type": "line",
-      "id": "radius6",
+      "id": "petal3_right",
       "p1": "center",
-      "p2": "petal6"
+      "p2": "p3_right"
     },
     {
       "type": "line",
-      "id": "radius7",
+      "id": "petal3_outer_left",
+      "p1": "p3_left",
+      "p2": "p3_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal3_outer_right",
+      "p1": "p3_right",
+      "p2": "p3_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal3_inner",
+      "p1": "p3_left",
+      "p2": "p3_right"
+    },
+    {
+      "type": "line",
+      "id": "petal4_left",
       "p1": "center",
-      "p2": "petal7"
+      "p2": "p4_left"
     },
     {
       "type": "line",
-      "id": "radius8",
+      "id": "petal4_right",
       "p1": "center",
-      "p2": "petal8"
+      "p2": "p4_right"
     },
     {
       "type": "line",
-      "id": "chord12",
-      "p1": "petal1",
-      "p2": "petal2"
+      "id": "petal4_outer_left",
+      "p1": "p4_left",
+      "p2": "p4_outer"
     },
     {
       "type": "line",
-      "id": "chord23",
-      "p1": "petal2",
-      "p2": "petal3"
+      "id": "petal4_outer_right",
+      "p1": "p4_right",
+      "p2": "p4_outer"
     },
     {
       "type": "line",
-      "id": "chord34",
-      "p1": "petal3",
-      "p2": "petal4"
+      "id": "petal4_inner",
+      "p1": "p4_left",
+      "p2": "p4_right"
     },
     {
       "type": "line",
-      "id": "chord45",
-      "p1": "petal4",
-      "p2": "petal5"
+      "id": "petal5_left",
+      "p1": "center",
+      "p2": "p5_left"
     },
     {
       "type": "line",
-      "id": "chord56",
-      "p1": "petal5",
-      "p2": "petal6"
+      "id": "petal5_right",
+      "p1": "center",
+      "p2": "p5_right"
     },
     {
       "type": "line",
-      "id": "chord67",
-      "p1": "petal6",
-      "p2": "petal7"
+      "id": "petal5_outer_left",
+      "p1": "p5_left",
+      "p2": "p5_outer"
     },
     {
       "type": "line",
-      "id": "chord78",
-      "p1": "petal7",
-      "p2": "petal8"
+      "id": "petal5_outer_right",
+      "p1": "p5_right",
+      "p2": "p5_outer"
     },
     {
       "type": "line",
-      "id": "chord81",
-      "p1": "petal8",
-      "p2": "petal1"
+      "id": "petal5_inner",
+      "p1": "p5_left",
+      "p2": "p5_right"
+    },
+    {
+      "type": "line",
+      "id": "petal6_left",
+      "p1": "center",
+      "p2": "p6_left"
+    },
+    {
+      "type": "line",
+      "id": "petal6_right",
+      "p1": "center",
+      "p2": "p6_right"
+    },
+    {
+      "type": "line",
+      "id": "petal6_outer_left",
+      "p1": "p6_left",
+      "p2": "p6_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal6_outer_right",
+      "p1": "p6_right",
+      "p2": "p6_outer"
+    },
+    {
+      "type": "line",
+      "id": "petal6_inner",
+      "p1": "p6_left",
+      "p2": "p6_right"
+    },
+    {
+      "type": "line",
+      "id": "connect_1_2",
+      "p1": "p1_inner",
+      "p2": "p2_inner"
+    },
+    {
+      "type": "line",
+      "id": "connect_2_3",
+      "p1": "p2_inner",
+      "p2": "p3_inner"
+    },
+    {
+      "type": "line",
+      "id": "connect_3_4",
+      "p1": "p3_inner",
+      "p2": "p4_inner"
+    },
+    {
+      "type": "line",
+      "id": "connect_4_5",
+      "p1": "p4_inner",
+      "p2": "p5_inner"
+    },
+    {
+      "type": "line",
+      "id": "connect_5_6",
+      "p1": "p5_inner",
+      "p2": "p6_inner"
+    },
+    {
+      "type": "line",
+      "id": "connect_6_1",
+      "p1": "p6_inner",
+      "p2": "p1_inner"
+    },
+    {
+      "type": "circle",
+      "id": "inner_circle",
+      "center": [0, 0, 0],
+      "diameter": 30
+    },
+    {
+      "type": "circle",
+      "id": "outer_guide",
+      "center": [0, 0, 0],
+      "diameter": 120
     }
   ],
   "constraints": [
     {
       "type": "fixed",
       "entity": "center"
-    },
-    {
-      "type": "vertical",
-      "a": "radius1"
-    },
-    {
-      "type": "distance",
-      "between": ["center", "petal1"],
-      "value": 50
-    },
-    {
-      "type": "equal_length",
-      "a": "radius1",
-      "b": "radius2"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius2",
-      "b": "radius3"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius3",
-      "b": "radius4"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius4",
-      "b": "radius5"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius5",
-      "b": "radius6"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius6",
-      "b": "radius7"
-    },
-    {
-      "type": "equal_length",
-      "a": "radius7",
-      "b": "radius8"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord12",
-      "b": "chord23"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord23",
-      "b": "chord34"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord34",
-      "b": "chord45"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord45",
-      "b": "chord56"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord56",
-      "b": "chord67"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord67",
-      "b": "chord78"
-    },
-    {
-      "type": "equal_length",
-      "a": "chord78",
-      "b": "chord81"
     }
   ]
 }

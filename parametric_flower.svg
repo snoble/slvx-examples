@@ -1,24 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-62.4 -70.0 124.7 140.0" width="800" height="800">
-  <circle id="petal6_left" cx="-27.143300" cy="0.705512" r="2" fill="black"/>
-  <circle id="petal4_left" cx="15.434873" cy="-24.275212" r="2" fill="black"/>
-  <circle id="petal6_right" cx="-15.225025" cy="13.771408" r="2" fill="black"/>
-  <circle id="petal4_right" cx="-15.434873" cy="-24.275212" r="2" fill="black"/>
-  <circle id="petal3_left" cx="27.143300" cy="-0.705512" r="2" fill="black"/>
-  <circle id="petal1_left" cx="-15.434873" cy="24.275212" r="2" fill="black"/>
-  <circle id="petal5_left" cx="-15.225025" cy="-13.771408" r="2" fill="black"/>
-  <circle id="petal6_tip" cx="-42.363729" cy="26.557756" r="2" fill="black"/>
-  <circle id="petal2_right" cx="27.143300" cy="0.705512" r="2" fill="black"/>
-  <line id="petal1_left_line" x1="0.000000" y1="0.000000" x2="-15.434873" y2="24.275212" stroke="black"/>
-  <line id="petal1_right_line" x1="0.000000" y1="0.000000" x2="15.434873" y2="24.275212" stroke="black"/>
-  <line id="petal1_tip_line" x1="0.000000" y1="0.000000" x2="-0.000000" y2="50.000000" stroke="black"/>
-  <circle id="petal5_right" cx="-27.143300" cy="-0.705512" r="2" fill="black"/>
-  <circle id="petal3_right" cx="15.225025" cy="-13.771408" r="2" fill="black"/>
-  <circle id="petal1_right" cx="15.434873" cy="24.275212" r="2" fill="black"/>
-  <circle id="petal2_tip" cx="42.363729" cy="26.557756" r="2" fill="black"/>
-  <circle id="petal2_left" cx="15.225025" cy="13.771408" r="2" fill="black"/>
-  <circle id="petal4_tip" cx="-0.000000" cy="-50.000000" r="2" fill="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-80.0 -80.0 160.0 160.0" width="800" height="800">
+  <line id="petal6_left" x1="0.000000" y1="0.000000" x2="-39.000000" y2="22.500000" stroke="black"/>
+  <line id="petal2_outer_left" x1="39.000000" y1="37.500000" x2="51.960000" y2="30.000000" stroke="black"/>
+  <line id="petal2_outer_right" x1="39.000000" y1="22.500000" x2="51.960000" y2="30.000000" stroke="black"/>
+  <line id="connect_2_3" x1="17.320000" y1="10.000000" x2="17.320000" y2="-10.000000" stroke="black"/>
+  <line id="petal3_outer_right" x1="39.000000" y1="-37.500000" x2="51.960000" y2="-30.000000" stroke="black"/>
+  <circle id="p2_right" cx="39.000000" cy="22.500000" r="2" fill="black"/>
+  <line id="petal6_inner" x1="-39.000000" y1="22.500000" x2="-39.000000" y2="37.500000" stroke="black"/>
+  <circle id="p5_inner" cx="-17.320000" cy="-10.000000" r="2" fill="black"/>
+  <line id="petal6_right" x1="0.000000" y1="0.000000" x2="-39.000000" y2="37.500000" stroke="black"/>
+  <line id="petal4_outer_right" x1="-15.000000" y1="-45.000000" x2="0.000000" y2="-60.000000" stroke="black"/>
+  <line id="petal2_inner" x1="39.000000" y1="37.500000" x2="39.000000" y2="22.500000" stroke="black"/>
+  <line id="connect_5_6" x1="-17.320000" y1="-10.000000" x2="-17.320000" y2="10.000000" stroke="black"/>
+  <circle id="p2_left" cx="39.000000" cy="37.500000" r="2" fill="black"/>
+  <line id="petal3_outer_left" x1="39.000000" y1="-22.500000" x2="51.960000" y2="-30.000000" stroke="black"/>
+  <line id="petal1_outer_right" x1="15.000000" y1="45.000000" x2="0.000000" y2="60.000000" stroke="black"/>
+  <line id="petal1_inner" x1="-15.000000" y1="45.000000" x2="15.000000" y2="45.000000" stroke="black"/>
+  <circle id="p2_inner" cx="17.320000" cy="10.000000" r="2" fill="black"/>
+  <line id="petal2_right" x1="0.000000" y1="0.000000" x2="39.000000" y2="22.500000" stroke="black"/>
+  <line id="petal4_right" x1="0.000000" y1="0.000000" x2="-15.000000" y2="-45.000000" stroke="black"/>
+  <circle id="p3_right" cx="39.000000" cy="-37.500000" r="2" fill="black"/>
+  <line id="petal4_outer_left" x1="15.000000" y1="-45.000000" x2="0.000000" y2="-60.000000" stroke="black"/>
+  <line id="petal1_outer_left" x1="-15.000000" y1="45.000000" x2="0.000000" y2="60.000000" stroke="black"/>
+  <line id="petal5_outer_left" x1="-39.000000" y1="-37.500000" x2="-51.960000" y2="-30.000000" stroke="black"/>
+  <line id="connect_3_4" x1="17.320000" y1="-10.000000" x2="0.000000" y2="-20.000000" stroke="black"/>
+  <circle id="p3_inner" cx="17.320000" cy="-10.000000" r="2" fill="black"/>
+  <circle id="inner_circle" cx="0.000000" cy="0.000000" r="15.000000" fill="none" stroke="black"/>
+  <line id="petal4_left" x1="0.000000" y1="0.000000" x2="15.000000" y2="-45.000000" stroke="black"/>
+  <circle id="p4_outer" cx="0.000000" cy="-60.000000" r="2" fill="black"/>
+  <circle id="p4_left" cx="15.000000" cy="-45.000000" r="2" fill="black"/>
+  <line id="petal5_left" x1="0.000000" y1="0.000000" x2="-39.000000" y2="-37.500000" stroke="black"/>
+  <circle id="outer_guide" cx="0.000000" cy="0.000000" r="60.000000" fill="none" stroke="black"/>
+  <line id="petal5_outer_right" x1="-39.000000" y1="-22.500000" x2="-51.960000" y2="-30.000000" stroke="black"/>
+  <circle id="p6_left" cx="-39.000000" cy="22.500000" r="2" fill="black"/>
+  <circle id="p3_outer" cx="51.960000" cy="-30.000000" r="2" fill="black"/>
+  <line id="petal3_left" x1="0.000000" y1="0.000000" x2="39.000000" y2="-22.500000" stroke="black"/>
+  <circle id="p6_right" cx="-39.000000" cy="37.500000" r="2" fill="black"/>
+  <line id="petal1_left" x1="0.000000" y1="0.000000" x2="-15.000000" y2="45.000000" stroke="black"/>
+  <line id="petal3_inner" x1="39.000000" y1="-22.500000" x2="39.000000" y2="-37.500000" stroke="black"/>
+  <circle id="p4_right" cx="-15.000000" cy="-45.000000" r="2" fill="black"/>
+  <line id="petal2_left" x1="0.000000" y1="0.000000" x2="39.000000" y2="37.500000" stroke="black"/>
+  <line id="connect_4_5" x1="0.000000" y1="-20.000000" x2="-17.320000" y2="-10.000000" stroke="black"/>
+  <circle id="p1_inner" cx="0.000000" cy="20.000000" r="2" fill="black"/>
+  <circle id="p5_outer" cx="-51.960000" cy="-30.000000" r="2" fill="black"/>
+  <circle id="p1_right" cx="15.000000" cy="45.000000" r="2" fill="black"/>
+  <line id="petal6_outer_right" x1="-39.000000" y1="37.500000" x2="-51.960000" y2="30.000000" stroke="black"/>
+  <circle id="p1_outer" cx="0.000000" cy="60.000000" r="2" fill="black"/>
+  <circle id="p2_outer" cx="51.960000" cy="30.000000" r="2" fill="black"/>
+  <line id="connect_6_1" x1="-17.320000" y1="10.000000" x2="0.000000" y2="20.000000" stroke="black"/>
+  <circle id="p6_inner" cx="-17.320000" cy="10.000000" r="2" fill="black"/>
+  <circle id="p5_right" cx="-39.000000" cy="-22.500000" r="2" fill="black"/>
+  <circle id="p3_left" cx="39.000000" cy="-22.500000" r="2" fill="black"/>
+  <circle id="p4_inner" cx="0.000000" cy="-20.000000" r="2" fill="black"/>
+  <line id="petal6_outer_left" x1="-39.000000" y1="22.500000" x2="-51.960000" y2="30.000000" stroke="black"/>
+  <line id="petal3_right" x1="0.000000" y1="0.000000" x2="39.000000" y2="-37.500000" stroke="black"/>
+  <line id="petal5_inner" x1="-39.000000" y1="-37.500000" x2="-39.000000" y2="-22.500000" stroke="black"/>
+  <line id="connect_1_2" x1="0.000000" y1="20.000000" x2="17.320000" y2="10.000000" stroke="black"/>
+  <line id="petal1_right" x1="0.000000" y1="0.000000" x2="15.000000" y2="45.000000" stroke="black"/>
+  <circle id="p1_left" cx="-15.000000" cy="45.000000" r="2" fill="black"/>
   <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="petal1_tip" cx="-0.000000" cy="50.000000" r="2" fill="black"/>
-  <circle id="petal3_tip" cx="42.363729" cy="-26.557756" r="2" fill="black"/>
-  <circle id="petal5_tip" cx="-42.363729" cy="-26.557756" r="2" fill="black"/>
+  <circle id="p5_left" cx="-39.000000" cy="-37.500000" r="2" fill="black"/>
+  <line id="petal5_right" x1="0.000000" y1="0.000000" x2="-39.000000" y2="-22.500000" stroke="black"/>
+  <line id="petal4_inner" x1="15.000000" y1="-45.000000" x2="-15.000000" y2="-45.000000" stroke="black"/>
+  <circle id="p6_outer" cx="-51.960000" cy="30.000000" r="2" fill="black"/>
 </svg>

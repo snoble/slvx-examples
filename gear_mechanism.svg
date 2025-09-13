@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70.0 -70.0 220.0 140.0" width="800" height="800">
+  <circle id="gear1_tooth1" cx="50.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="gear2_spoke1" x1="100.000000" y1="0.000000" x2="130.000000" y2="0.000000" stroke="black"/>
+  <circle id="gear1_tooth8" cx="35.355339" cy="-35.355339" r="2" fill="black"/>
+  <line id="gear1_spoke1" x1="0.000000" y1="0.000000" x2="50.000000" y2="0.000000" stroke="black"/>
+  <circle id="gear2_tooth1" cx="130.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="gear1_tooth2" cx="35.355339" cy="35.355339" r="2" fill="black"/>
+  <line id="gear1_spoke2" x1="0.000000" y1="0.000000" x2="0.000000" y2="50.000000" stroke="black"/>
+  <circle id="gear1_tooth6" cx="-35.355339" cy="-35.355339" r="2" fill="black"/>
+  <circle id="gear2_tooth5" cx="70.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="gear2_spoke3" x1="100.000000" y1="0.000000" x2="70.000000" y2="0.000000" stroke="black"/>
+  <line id="gear2_spoke4" x1="100.000000" y1="0.000000" x2="100.000000" y2="-30.000000" stroke="black"/>
+  <line id="gear1_spoke3" x1="0.000000" y1="0.000000" x2="-50.000000" y2="0.000000" stroke="black"/>
+  <circle id="gear2_tooth7" cx="100.000000" cy="-30.000000" r="2" fill="black"/>
+  <circle id="gear1_tooth3" cx="0.000000" cy="50.000000" r="2" fill="black"/>
+  <circle id="gear1_tooth5" cx="-50.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="gear2_center" cx="100.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="gear2_tooth2" cx="121.213203" cy="21.213203" r="2" fill="black"/>
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="gear2_tooth4" cx="78.786797" cy="21.213203" r="2" fill="black"/>
+  <circle id="gear2_tooth8" cx="121.213203" cy="-21.213203" r="2" fill="black"/>
+  <line id="gear2_spoke2" x1="100.000000" y1="0.000000" x2="100.000000" y2="30.000000" stroke="black"/>
+  <circle id="gear1_tooth7" cx="0.000000" cy="-50.000000" r="2" fill="black"/>
+  <line id="gear1_spoke4" x1="0.000000" y1="0.000000" x2="0.000000" y2="-50.000000" stroke="black"/>
+  <circle id="gear1_tooth4" cx="-35.355339" cy="35.355339" r="2" fill="black"/>
+  <circle id="gear2_tooth6" cx="78.786797" cy="-21.213203" r="2" fill="black"/>
+  <circle id="gear2_tooth3" cx="100.000000" cy="30.000000" r="2" fill="black"/>
+</svg>

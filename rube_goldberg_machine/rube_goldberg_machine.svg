@@ -1,118 +1,118 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -65.0 380.0 137.1" width="800" height="800">
-  <circle id="pulley_p3" cx="260.000000" cy="22.000000" r="2" fill="black"/>
-  <circle id="domino2_top_right" cx="223.000000" cy="-10.000000" r="2" fill="black"/>
-  <circle id="pulley_p2" cx="268.500000" cy="18.500000" r="2" fill="black"/>
-  <circle id="lever_pivot" cx="140.000000" cy="-30.000000" r="2" fill="black"/>
-  <line id="pulley_l3" x1="260.000000" y1="22.000000" x2="251.500000" y2="18.500000" stroke="black"/>
-  <line id="pulley_l7" x1="260.000000" y1="-2.000000" x2="268.500000" y2="1.500000" stroke="black"/>
-  <line id="marble_l1" x1="36.000000" y1="45.000000" x2="34.240000" y2="49.240000" stroke="black"/>
-  <circle id="domino3_top_right" cx="238.000000" cy="-10.000000" r="2" fill="black"/>
-  <line id="pulley_l8" x1="268.500000" y1="1.500000" x2="272.000000" y2="10.000000" stroke="black"/>
-  <line id="bell_l6" x1="340.000000" y1="0.000000" x2="335.000000" y2="15.000000" stroke="black"/>
-  <line id="weight_top" x1="252.000000" y1="-5.000000" x2="267.000000" y2="-5.000000" stroke="black"/>
-  <line id="pulley_l6" x1="251.500000" y1="1.500000" x2="260.000000" y2="-2.000000" stroke="black"/>
-  <line id="marble_l8" x1="34.240000" y1="40.760000" x2="36.000000" y2="45.000000" stroke="black"/>
-  <circle id="domino2_bottom_right" cx="223.000000" cy="-35.000000" r="2" fill="black"/>
-  <line id="marble_l2" x1="34.240000" y1="49.240000" x2="30.000000" y2="51.000000" stroke="black"/>
-  <line id="bucket_bottom" x1="85.000000" y1="-40.000000" x2="110.000000" y2="-40.000000" stroke="black"/>
-  <circle id="marble_p8" cx="34.240000" cy="40.760000" r="2" fill="black"/>
-  <line id="pulley_l4" x1="251.500000" y1="18.500000" x2="248.000000" y2="10.000000" stroke="black"/>
-  <circle id="pivot_triangle_left" cx="135.000000" cy="-45.000000" r="2" fill="black"/>
-  <circle id="bucket_top_left" cx="85.000000" cy="-20.000000" r="2" fill="black"/>
-  <line id="weight_left" x1="252.000000" y1="-5.000000" x2="252.000000" y2="-23.000000" stroke="black"/>
-  <line id="marble_l5" x1="24.000000" y1="45.000000" x2="25.760000" y2="40.760000" stroke="black"/>
-  <line id="domino1_bottom" x1="200.000000" y1="-35.000000" x2="208.000000" y2="-35.000000" stroke="black"/>
-  <circle id="clapper" cx="320.000000" cy="-8.000000" r="2" fill="black"/>
-  <circle id="domino3_bottom_right" cx="238.000000" cy="-35.000000" r="2" fill="black"/>
-  <circle id="marble_p6" cx="25.760000" cy="40.760000" r="2" fill="black"/>
-  <circle id="marble_p3" cx="30.000000" cy="51.000000" r="2" fill="black"/>
-  <line id="domino3_right" x1="238.000000" y1="-10.000000" x2="238.000000" y2="-35.000000" stroke="black"/>
-  <line id="bell_l7" x1="335.000000" y1="15.000000" x2="320.000000" y2="20.000000" stroke="black"/>
-  <line id="domino3_left" x1="230.000000" y1="-10.000000" x2="230.000000" y2="-35.000000" stroke="black"/>
-  <circle id="domino3_top_left" cx="230.000000" cy="-10.000000" r="2" fill="black"/>
-  <circle id="bell_left_bottom" cx="305.000000" cy="-15.000000" r="2" fill="black"/>
-  <circle id="string_top" cx="260.000000" cy="22.000000" r="2" fill="black"/>
-  <line id="pulley_string" x1="260.000000" y1="22.000000" x2="260.000000" y2="-5.000000" stroke="black"/>
-  <circle id="lever_left_bottom" cx="109.999491" cy="-34.880494" r="2" fill="black"/>
-  <line id="domino1_top" x1="200.000000" y1="-10.000000" x2="208.000000" y2="-10.000000" stroke="black"/>
-  <line id="lever_left_edge" x1="110.055273" y1="-30.880883" x2="109.999491" y2="-34.880494" stroke="black"/>
-  <circle id="domino2_top_left" cx="215.000000" cy="-10.000000" r="2" fill="black"/>
-  <circle id="lever_left_top" cx="110.055273" cy="-30.880883" r="2" fill="black"/>
-  <circle id="bucket_bottom_right" cx="110.000000" cy="-40.000000" r="2" fill="black"/>
-  <line id="bucket_right" x1="110.000000" y1="-20.000000" x2="110.000000" y2="-40.000000" stroke="black"/>
-  <circle id="marble_p1" cx="36.000000" cy="45.000000" r="2" fill="black"/>
-  <line id="ramp_bottom" x1="99.935305" y1="6.277683" x2="114.794488" y2="8.328217" stroke="black"/>
-  <line id="domino2_left" x1="215.000000" y1="-10.000000" x2="215.000000" y2="-35.000000" stroke="black"/>
-  <circle id="weight_bottom_left" cx="252.000000" cy="-23.000000" r="2" fill="black"/>
-  <circle id="domino1_top_right" cx="208.000000" cy="-10.000000" r="2" fill="black"/>
-  <line id="bell_l2" x1="305.000000" y1="15.000000" x2="300.000000" y2="0.000000" stroke="black"/>
-  <circle id="ramp_bottom_right" cx="114.794488" cy="8.328217" r="2" fill="black"/>
-  <line id="marble_l3" x1="30.000000" y1="51.000000" x2="25.760000" y2="49.240000" stroke="black"/>
-  <line id="domino3_top" x1="230.000000" y1="-10.000000" x2="238.000000" y2="-10.000000" stroke="black"/>
-  <circle id="weight_bottom_right" cx="267.000000" cy="-23.000000" r="2" fill="black"/>
-  <circle id="marble_p7" cx="30.000000" cy="39.000000" r="2" fill="black"/>
-  <line id="domino2_right" x1="223.000000" y1="-10.000000" x2="223.000000" y2="-35.000000" stroke="black"/>
-  <circle id="bell_right_top" cx="335.000000" cy="15.000000" r="2" fill="black"/>
-  <line id="pulley_l1" x1="272.000000" y1="10.000000" x2="268.500000" y2="18.500000" stroke="black"/>
-  <circle id="bell_right_bottom" cx="335.000000" cy="-15.000000" r="2" fill="black"/>
-  <line id="ramp_right" x1="24.859183" y1="52.050533" x2="114.794488" y2="8.328217" stroke="black"/>
-  <line id="bell_l5" x1="335.000000" y1="-15.000000" x2="340.000000" y2="0.000000" stroke="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -65.0 380.0 136.0" width="800" height="800">
   <line id="domino3_bottom" x1="230.000000" y1="-35.000000" x2="238.000000" y2="-35.000000" stroke="black"/>
-  <line id="weight_right" x1="267.000000" y1="-5.000000" x2="267.000000" y2="-23.000000" stroke="black"/>
   <line id="marble_l7" x1="30.000000" y1="39.000000" x2="34.240000" y2="40.760000" stroke="black"/>
-  <circle id="pulley_center" cx="260.000000" cy="10.000000" r="2" fill="black"/>
-  <circle id="bucket_bottom_left" cx="85.000000" cy="-40.000000" r="2" fill="black"/>
-  <circle id="pulley_p8" cx="268.500000" cy="1.500000" r="2" fill="black"/>
-  <circle id="bell_top" cx="320.000000" cy="20.000000" r="2" fill="black"/>
-  <line id="pulley_l2" x1="268.500000" y1="18.500000" x2="260.000000" y2="22.000000" stroke="black"/>
-  <circle id="weight_top_left" cx="252.000000" cy="-5.000000" r="2" fill="black"/>
-  <line id="bell_l4" x1="305.000000" y1="-15.000000" x2="335.000000" y2="-15.000000" stroke="black"/>
-  <line id="bell_l1" x1="320.000000" y1="20.000000" x2="305.000000" y2="15.000000" stroke="black"/>
-  <line id="pivot_t1" x1="140.000000" y1="-35.000000" x2="135.000000" y2="-45.000000" stroke="black"/>
-  <line id="ramp_left" x1="10.000000" y1="50.000000" x2="99.935305" y2="6.277683" stroke="black"/>
-  <circle id="domino2_bottom_left" cx="215.000000" cy="-35.000000" r="2" fill="black"/>
-  <circle id="origin" cx="0.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="marble_l4" x1="25.760000" y1="49.240000" x2="24.000000" y2="45.000000" stroke="black"/>
-  <circle id="lever_right_top" cx="190.020681" cy="-28.528544" r="2" fill="black"/>
-  <line id="lever_top" x1="110.055273" y1="-30.880883" x2="190.020681" y2="-28.528544" stroke="black"/>
-  <line id="lever_right_edge" x1="190.020681" y1="-28.528544" x2="189.999691" y2="-32.528489" stroke="black"/>
-  <line id="bell_l3" x1="300.000000" y1="0.000000" x2="305.000000" y2="-15.000000" stroke="black"/>
-  <circle id="weight_top_right" cx="267.000000" cy="-5.000000" r="2" fill="black"/>
-  <circle id="marble_p2" cx="34.240000" cy="49.240000" r="2" fill="black"/>
-  <circle id="domino1_bottom_left" cx="200.000000" cy="-35.000000" r="2" fill="black"/>
-  <circle id="pulley_p7" cx="260.000000" cy="-2.000000" r="2" fill="black"/>
-  <circle id="bell_left_top" cx="305.000000" cy="15.000000" r="2" fill="black"/>
-  <circle id="domino1_top_left" cx="200.000000" cy="-10.000000" r="2" fill="black"/>
-  <line id="pulley_l5" x1="248.000000" y1="10.000000" x2="251.500000" y2="1.500000" stroke="black"/>
-  <circle id="ramp_top_left" cx="10.000000" cy="50.000000" r="2" fill="black"/>
-  <circle id="marble_p4" cx="25.760000" cy="49.240000" r="2" fill="black"/>
-  <line id="marble_l6" x1="25.760000" y1="40.760000" x2="30.000000" y2="39.000000" stroke="black"/>
-  <line id="lever_bottom" x1="109.999491" y1="-34.880494" x2="189.999691" y2="-32.528489" stroke="black"/>
-  <circle id="pivot_triangle_top" cx="140.000000" cy="-35.000000" r="2" fill="black"/>
-  <line id="bucket_left" x1="85.000000" y1="-20.000000" x2="85.000000" y2="-40.000000" stroke="black"/>
-  <circle id="lever_right_bottom" cx="189.999691" cy="-32.528489" r="2" fill="black"/>
   <circle id="marble_p5" cx="24.000000" cy="45.000000" r="2" fill="black"/>
-  <line id="weight_bottom" x1="252.000000" y1="-23.000000" x2="267.000000" y2="-23.000000" stroke="black"/>
-  <line id="clapper_string" x1="320.000000" y1="20.000000" x2="320.000000" y2="-8.000000" stroke="black"/>
-  <circle id="ramp_bottom_left" cx="99.935305" cy="6.277683" r="2" fill="black"/>
-  <circle id="pivot_triangle_right" cx="145.000000" cy="-45.000000" r="2" fill="black"/>
-  <circle id="domino3_bottom_left" cx="230.000000" cy="-35.000000" r="2" fill="black"/>
-  <line id="domino2_top" x1="215.000000" y1="-10.000000" x2="223.000000" y2="-10.000000" stroke="black"/>
-  <circle id="domino1_bottom_right" cx="208.000000" cy="-35.000000" r="2" fill="black"/>
-  <line id="domino2_bottom" x1="215.000000" y1="-35.000000" x2="223.000000" y2="-35.000000" stroke="black"/>
+  <line id="pulley_l4" x1="251.500000" y1="18.500000" x2="248.000000" y2="10.000000" stroke="black"/>
+  <circle id="marble_p8" cx="34.240000" cy="40.760000" r="2" fill="black"/>
+  <circle id="pulley_p3" cx="260.000000" cy="22.000000" r="2" fill="black"/>
+  <circle id="bell_top" cx="320.000000" cy="20.000000" r="2" fill="black"/>
+  <line id="pulley_l5" x1="248.000000" y1="10.000000" x2="251.500000" y2="1.500000" stroke="black"/>
+  <line id="bell_l1" x1="320.000000" y1="20.000000" x2="305.000000" y2="15.000000" stroke="black"/>
+  <line id="bell_l4" x1="305.000000" y1="-15.000000" x2="335.000000" y2="-15.000000" stroke="black"/>
   <circle id="bell_left_mid" cx="300.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="ramp_top_right" cx="24.859183" cy="52.050533" r="2" fill="black"/>
-  <circle id="bell_right_mid" cx="340.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="lever_right_top" cx="190.000000" cy="-28.000000" r="2" fill="black"/>
+  <circle id="marble_p7" cx="30.000000" cy="39.000000" r="2" fill="black"/>
+  <circle id="bucket_top_left" cx="85.000000" cy="-20.000000" r="2" fill="black"/>
   <circle id="pulley_p5" cx="248.000000" cy="10.000000" r="2" fill="black"/>
-  <circle id="bucket_top_right" cx="110.000000" cy="-20.000000" r="2" fill="black"/>
-  <line id="pivot_t2" x1="135.000000" y1="-45.000000" x2="145.000000" y2="-45.000000" stroke="black"/>
-  <line id="domino1_left" x1="200.000000" y1="-10.000000" x2="200.000000" y2="-35.000000" stroke="black"/>
-  <circle id="pulley_p1" cx="272.000000" cy="10.000000" r="2" fill="black"/>
-  <line id="ramp_top" x1="10.000000" y1="50.000000" x2="24.859183" y2="52.050533" stroke="black"/>
-  <circle id="marble_center" cx="30.000000" cy="45.000000" r="2" fill="black"/>
-  <circle id="pulley_p6" cx="251.500000" cy="1.500000" r="2" fill="black"/>
-  <line id="domino1_right" x1="208.000000" y1="-10.000000" x2="208.000000" y2="-35.000000" stroke="black"/>
+  <circle id="domino3_top_left" cx="230.000000" cy="-10.000000" r="2" fill="black"/>
+  <circle id="marble_p6" cx="25.760000" cy="40.760000" r="2" fill="black"/>
+  <line id="domino3_top" x1="230.000000" y1="-10.000000" x2="238.000000" y2="-10.000000" stroke="black"/>
   <circle id="string_bottom" cx="260.000000" cy="-5.000000" r="2" fill="black"/>
+  <circle id="pivot_triangle_left" cx="135.000000" cy="-45.000000" r="2" fill="black"/>
   <line id="pivot_t3" x1="145.000000" y1="-45.000000" x2="140.000000" y2="-35.000000" stroke="black"/>
+  <circle id="domino3_top_right" cx="238.000000" cy="-10.000000" r="2" fill="black"/>
+  <line id="bell_l6" x1="340.000000" y1="0.000000" x2="335.000000" y2="15.000000" stroke="black"/>
+  <circle id="pulley_p1" cx="272.000000" cy="10.000000" r="2" fill="black"/>
+  <circle id="weight_top_right" cx="267.000000" cy="-5.000000" r="2" fill="black"/>
+  <circle id="weight_bottom_right" cx="267.000000" cy="-23.000000" r="2" fill="black"/>
+  <line id="ramp_left" x1="10.000000" y1="50.000000" x2="98.277771" y2="3.020908" stroke="black"/>
+  <line id="ramp_bottom" x1="98.277771" y1="3.020908" x2="111.828074" y2="9.454359" stroke="black"/>
+  <circle id="domino2_bottom_left" cx="215.000000" cy="-35.000000" r="2" fill="black"/>
+  <circle id="domino2_bottom_right" cx="223.000000" cy="-35.000000" r="2" fill="black"/>
+  <line id="pulley_l6" x1="251.500000" y1="1.500000" x2="260.000000" y2="-2.000000" stroke="black"/>
+  <circle id="origin" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="ramp_top_left" cx="10.000000" cy="50.000000" r="2" fill="black"/>
+  <line id="domino1_left" x1="200.000000" y1="-10.000000" x2="200.000000" y2="-35.000000" stroke="black"/>
+  <circle id="bucket_bottom_right" cx="110.000000" cy="-40.000000" r="2" fill="black"/>
+  <circle id="domino1_bottom_right" cx="208.000000" cy="-35.000000" r="2" fill="black"/>
+  <line id="weight_left" x1="252.000000" y1="-5.000000" x2="252.000000" y2="-23.000000" stroke="black"/>
+  <circle id="weight_bottom_left" cx="252.000000" cy="-23.000000" r="2" fill="black"/>
+  <circle id="pivot_triangle_right" cx="145.000000" cy="-45.000000" r="2" fill="black"/>
+  <line id="bucket_right" x1="110.000000" y1="-20.000000" x2="110.000000" y2="-40.000000" stroke="black"/>
+  <line id="pulley_l7" x1="260.000000" y1="-2.000000" x2="268.500000" y2="1.500000" stroke="black"/>
+  <circle id="pulley_p7" cx="260.000000" cy="-2.000000" r="2" fill="black"/>
+  <circle id="marble_p4" cx="25.760000" cy="49.240000" r="2" fill="black"/>
+  <line id="pulley_string" x1="260.000000" y1="22.000000" x2="260.000000" y2="-5.000000" stroke="black"/>
+  <circle id="marble_p3" cx="30.000000" cy="51.000000" r="2" fill="black"/>
+  <circle id="domino1_top_right" cx="208.000000" cy="-10.000000" r="2" fill="black"/>
+  <line id="pulley_l2" x1="268.500000" y1="18.500000" x2="260.000000" y2="22.000000" stroke="black"/>
+  <circle id="marble_p2" cx="34.240000" cy="49.240000" r="2" fill="black"/>
+  <circle id="domino1_top_left" cx="200.000000" cy="-10.000000" r="2" fill="black"/>
+  <line id="domino1_bottom" x1="200.000000" y1="-35.000000" x2="208.000000" y2="-35.000000" stroke="black"/>
+  <circle id="domino2_top_left" cx="215.000000" cy="-10.000000" r="2" fill="black"/>
+  <circle id="bucket_bottom_left" cx="85.000000" cy="-40.000000" r="2" fill="black"/>
+  <line id="domino2_left" x1="215.000000" y1="-10.000000" x2="215.000000" y2="-35.000000" stroke="black"/>
+  <circle id="weight_top_left" cx="252.000000" cy="-5.000000" r="2" fill="black"/>
+  <circle id="bucket_top_right" cx="110.000000" cy="-20.000000" r="2" fill="black"/>
+  <line id="domino3_left" x1="230.000000" y1="-10.000000" x2="230.000000" y2="-35.000000" stroke="black"/>
+  <line id="bell_l7" x1="335.000000" y1="15.000000" x2="320.000000" y2="20.000000" stroke="black"/>
+  <line id="bucket_left" x1="85.000000" y1="-20.000000" x2="85.000000" y2="-40.000000" stroke="black"/>
+  <line id="pulley_l3" x1="260.000000" y1="22.000000" x2="251.500000" y2="18.500000" stroke="black"/>
+  <line id="ramp_top" x1="10.000000" y1="50.000000" x2="25.000000" y2="50.000000" stroke="black"/>
+  <circle id="string_top" cx="260.000000" cy="22.000000" r="2" fill="black"/>
+  <circle id="ramp_bottom_right" cx="111.828074" cy="9.454359" r="2" fill="black"/>
+  <circle id="pivot_triangle_top" cx="140.000000" cy="-35.000000" r="2" fill="black"/>
+  <line id="weight_right" x1="267.000000" y1="-5.000000" x2="267.000000" y2="-23.000000" stroke="black"/>
+  <circle id="lever_right_bottom" cx="190.000000" cy="-32.000000" r="2" fill="black"/>
+  <line id="ramp_right" x1="25.000000" y1="50.000000" x2="111.828074" y2="9.454359" stroke="black"/>
+  <line id="domino2_right" x1="223.000000" y1="-10.000000" x2="223.000000" y2="-35.000000" stroke="black"/>
+  <circle id="ramp_top_right" cx="25.000000" cy="50.000000" r="2" fill="black"/>
+  <line id="lever_right_edge" x1="190.000000" y1="-28.000000" x2="190.000000" y2="-32.000000" stroke="black"/>
+  <line id="domino1_right" x1="208.000000" y1="-10.000000" x2="208.000000" y2="-35.000000" stroke="black"/>
+  <line id="domino2_top" x1="215.000000" y1="-10.000000" x2="223.000000" y2="-10.000000" stroke="black"/>
+  <circle id="ramp_bottom_left" cx="98.277771" cy="3.020908" r="2" fill="black"/>
+  <line id="domino3_right" x1="238.000000" y1="-10.000000" x2="238.000000" y2="-35.000000" stroke="black"/>
+  <line id="pulley_l1" x1="272.000000" y1="10.000000" x2="268.500000" y2="18.500000" stroke="black"/>
+  <line id="pivot_t1" x1="140.000000" y1="-35.000000" x2="135.000000" y2="-45.000000" stroke="black"/>
+  <circle id="pulley_p2" cx="268.500000" cy="18.500000" r="2" fill="black"/>
+  <line id="pulley_l8" x1="268.500000" y1="1.500000" x2="272.000000" y2="10.000000" stroke="black"/>
+  <line id="marble_l6" x1="25.760000" y1="40.760000" x2="30.000000" y2="39.000000" stroke="black"/>
+  <line id="domino1_top" x1="200.000000" y1="-10.000000" x2="208.000000" y2="-10.000000" stroke="black"/>
+  <circle id="clapper" cx="320.000000" cy="-8.000000" r="2" fill="black"/>
+  <line id="marble_l1" x1="36.000000" y1="45.000000" x2="34.240000" y2="49.240000" stroke="black"/>
+  <line id="weight_top" x1="252.000000" y1="-5.000000" x2="267.000000" y2="-5.000000" stroke="black"/>
+  <circle id="marble_p1" cx="36.000000" cy="45.000000" r="2" fill="black"/>
+  <line id="marble_l3" x1="30.000000" y1="51.000000" x2="25.760000" y2="49.240000" stroke="black"/>
+  <circle id="domino3_bottom_right" cx="238.000000" cy="-35.000000" r="2" fill="black"/>
+  <line id="clapper_string" x1="320.000000" y1="20.000000" x2="320.000000" y2="-8.000000" stroke="black"/>
+  <circle id="pulley_p8" cx="268.500000" cy="1.500000" r="2" fill="black"/>
+  <circle id="domino1_bottom_left" cx="200.000000" cy="-35.000000" r="2" fill="black"/>
+  <line id="lever_bottom" x1="110.000000" y1="-32.000000" x2="190.000000" y2="-32.000000" stroke="black"/>
   <circle id="pulley_p4" cx="251.500000" cy="18.500000" r="2" fill="black"/>
+  <circle id="bell_left_top" cx="305.000000" cy="15.000000" r="2" fill="black"/>
+  <line id="marble_l8" x1="34.240000" y1="40.760000" x2="36.000000" y2="45.000000" stroke="black"/>
+  <circle id="pulley_center" cx="260.000000" cy="10.000000" r="2" fill="black"/>
+  <line id="bell_l3" x1="300.000000" y1="0.000000" x2="305.000000" y2="-15.000000" stroke="black"/>
+  <line id="bell_l5" x1="335.000000" y1="-15.000000" x2="340.000000" y2="0.000000" stroke="black"/>
+  <line id="lever_left_edge" x1="110.000000" y1="-28.000000" x2="110.000000" y2="-32.000000" stroke="black"/>
+  <line id="pivot_t2" x1="135.000000" y1="-45.000000" x2="145.000000" y2="-45.000000" stroke="black"/>
+  <line id="marble_l2" x1="34.240000" y1="49.240000" x2="30.000000" y2="51.000000" stroke="black"/>
+  <circle id="lever_left_top" cx="110.000000" cy="-28.000000" r="2" fill="black"/>
+  <circle id="pulley_p6" cx="251.500000" cy="1.500000" r="2" fill="black"/>
+  <circle id="lever_pivot" cx="140.000000" cy="-30.000000" r="2" fill="black"/>
+  <circle id="domino3_bottom_left" cx="230.000000" cy="-35.000000" r="2" fill="black"/>
+  <circle id="bell_right_mid" cx="340.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="bell_l2" x1="305.000000" y1="15.000000" x2="300.000000" y2="0.000000" stroke="black"/>
+  <line id="marble_l5" x1="24.000000" y1="45.000000" x2="25.760000" y2="40.760000" stroke="black"/>
+  <circle id="bell_right_top" cx="335.000000" cy="15.000000" r="2" fill="black"/>
+  <circle id="domino2_top_right" cx="223.000000" cy="-10.000000" r="2" fill="black"/>
+  <circle id="bell_left_bottom" cx="305.000000" cy="-15.000000" r="2" fill="black"/>
+  <circle id="bell_right_bottom" cx="335.000000" cy="-15.000000" r="2" fill="black"/>
+  <line id="marble_l4" x1="25.760000" y1="49.240000" x2="24.000000" y2="45.000000" stroke="black"/>
+  <circle id="marble_center" cx="30.000000" cy="45.000000" r="2" fill="black"/>
+  <line id="bucket_bottom" x1="85.000000" y1="-40.000000" x2="110.000000" y2="-40.000000" stroke="black"/>
+  <line id="domino2_bottom" x1="215.000000" y1="-35.000000" x2="223.000000" y2="-35.000000" stroke="black"/>
+  <line id="lever_top" x1="110.000000" y1="-28.000000" x2="190.000000" y2="-28.000000" stroke="black"/>
+  <line id="weight_bottom" x1="252.000000" y1="-23.000000" x2="267.000000" y2="-23.000000" stroke="black"/>
+  <circle id="lever_left_bottom" cx="110.000000" cy="-32.000000" r="2" fill="black"/>
 </svg>

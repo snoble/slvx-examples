@@ -95,42 +95,50 @@
     {
       "type": "line",
       "id": "gear1_spoke1",
-      "between": ["center", "gear1_tooth1"]
+      "p1": "center",
+      "p2": "gear1_tooth1"
     },
     {
       "type": "line",
       "id": "gear1_spoke2",
-      "between": ["center", "gear1_tooth3"]
+      "p1": "center",
+      "p2": "gear1_tooth3"
     },
     {
       "type": "line",
       "id": "gear1_spoke3",
-      "between": ["center", "gear1_tooth5"]
+      "p1": "center",
+      "p2": "gear1_tooth5"
     },
     {
       "type": "line",
       "id": "gear1_spoke4",
-      "between": ["center", "gear1_tooth7"]
+      "p1": "center",
+      "p2": "gear1_tooth7"
     },
     {
       "type": "line",
       "id": "gear2_spoke1",
-      "between": ["gear2_center", "gear2_tooth1"]
+      "p1": "gear2_center",
+      "p2": "gear2_tooth1"
     },
     {
       "type": "line",
       "id": "gear2_spoke2",
-      "between": ["gear2_center", "gear2_tooth3"]
+      "p1": "gear2_center",
+      "p2": "gear2_tooth3"
     },
     {
       "type": "line",
       "id": "gear2_spoke3",
-      "between": ["gear2_center", "gear2_tooth5"]
+      "p1": "gear2_center",
+      "p2": "gear2_tooth5"
     },
     {
       "type": "line",
       "id": "gear2_spoke4",
-      "between": ["gear2_center", "gear2_tooth7"]
+      "p1": "gear2_center",
+      "p2": "gear2_tooth7"
     }
   ],
   "constraints": [
@@ -224,27 +232,33 @@
     },
     {
       "type": "perpendicular",
-      "entities": ["gear1_spoke1", "gear1_spoke2"]
+      "a": "gear1_spoke1",
+      "b": "gear1_spoke2"
     },
     {
       "type": "perpendicular",
-      "entities": ["gear1_spoke2", "gear1_spoke3"]
+      "a": "gear1_spoke2",
+      "b": "gear1_spoke3"
     },
     {
       "type": "perpendicular",
-      "entities": ["gear1_spoke3", "gear1_spoke4"]
+      "a": "gear1_spoke3",
+      "b": "gear1_spoke4"
     },
     {
       "type": "perpendicular",
-      "entities": ["gear2_spoke1", "gear2_spoke2"]
+      "a": "gear2_spoke1",
+      "b": "gear2_spoke2"
     },
     {
       "type": "perpendicular",
-      "entities": ["gear2_spoke2", "gear2_spoke3"]
+      "a": "gear2_spoke2",
+      "b": "gear2_spoke3"
     },
     {
       "type": "perpendicular",
-      "entities": ["gear2_spoke3", "gear2_spoke4"]
+      "a": "gear2_spoke3",
+      "b": "gear2_spoke4"
     }
   ]
 }

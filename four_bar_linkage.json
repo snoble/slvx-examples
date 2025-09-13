@@ -1,75 +1,319 @@
 {
   "schema": "slvs-json/1",
   "units": "mm",
+  "parameters": {
+    "crank_length": 30,
+    "coupler_length": 70,
+    "rocker_length": 60,
+    "ground_length": 100,
+    "crank_angle": 45
+  },
   "entities": [
     {
       "type": "point",
-      "id": "A",
+      "id": "ground_left",
       "at": [0, 0, 0]
     },
     {
       "type": "point",
-      "id": "B",
+      "id": "ground_right",
       "at": [100, 0, 0]
     },
     {
       "type": "point",
-      "id": "C",
-      "at": [80, 60, 0]
+      "id": "crank_end",
+      "at": [21.21, 21.21, 0]
     },
     {
       "type": "point",
-      "id": "D",
-      "at": [20, 40, 0]
-    },
-    {
-      "type": "line",
-      "id": "link1",
-      "p1": "A",
-      "p2": "D"
-    },
-    {
-      "type": "line",
-      "id": "link2",
-      "p1": "D",
-      "p2": "C"
-    },
-    {
-      "type": "line",
-      "id": "link3",
-      "p1": "C",
-      "p2": "B"
+      "id": "rocker_end",
+      "at": [80, 45, 0]
     },
     {
       "type": "line",
       "id": "ground",
-      "p1": "A",
-      "p2": "B"
+      "p1": "ground_left",
+      "p2": "ground_right"
+    },
+    {
+      "type": "line",
+      "id": "crank",
+      "p1": "ground_left",
+      "p2": "crank_end"
+    },
+    {
+      "type": "line",
+      "id": "coupler",
+      "p1": "crank_end",
+      "p2": "rocker_end"
+    },
+    {
+      "type": "line",
+      "id": "rocker",
+      "p1": "rocker_end",
+      "p2": "ground_right"
+    },
+    {
+      "type": "point",
+      "id": "coupler_mid",
+      "at": [50, 33, 0]
+    },
+    {
+      "type": "line",
+      "id": "coupler_trace1",
+      "p1": "crank_end",
+      "p2": "coupler_mid"
+    },
+    {
+      "type": "line",
+      "id": "coupler_trace2",
+      "p1": "coupler_mid",
+      "p2": "rocker_end"
+    },
+    {
+      "type": "point",
+      "id": "crank_mid",
+      "at": [10.6, 10.6, 0]
+    },
+    {
+      "type": "point",
+      "id": "rocker_mid",
+      "at": [90, 22.5, 0]
+    },
+    {
+      "type": "circle",
+      "id": "crank_circle",
+      "center": [0, 0, 0],
+      "diameter": 60
+    },
+    {
+      "type": "circle",
+      "id": "rocker_circle",
+      "center": [100, 0, 0],
+      "diameter": 120
+    },
+    {
+      "type": "point",
+      "id": "crank_pos2",
+      "at": [30, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "rocker_pos2",
+      "at": [70, 52, 0]
+    },
+    {
+      "type": "line",
+      "id": "crank_ghost2",
+      "p1": "ground_left",
+      "p2": "crank_pos2"
+    },
+    {
+      "type": "line",
+      "id": "coupler_ghost2",
+      "p1": "crank_pos2",
+      "p2": "rocker_pos2"
+    },
+    {
+      "type": "line",
+      "id": "rocker_ghost2",
+      "p1": "rocker_pos2",
+      "p2": "ground_right"
+    },
+    {
+      "type": "point",
+      "id": "crank_pos3",
+      "at": [0, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "rocker_pos3",
+      "at": [60, 40, 0]
+    },
+    {
+      "type": "line",
+      "id": "crank_ghost3",
+      "p1": "ground_left",
+      "p2": "crank_pos3"
+    },
+    {
+      "type": "line",
+      "id": "coupler_ghost3",
+      "p1": "crank_pos3",
+      "p2": "rocker_pos3"
+    },
+    {
+      "type": "line",
+      "id": "rocker_ghost3",
+      "p1": "rocker_pos3",
+      "p2": "ground_right"
+    },
+    {
+      "type": "point",
+      "id": "crank_pos4",
+      "at": [-21.21, 21.21, 0]
+    },
+    {
+      "type": "point",
+      "id": "rocker_pos4",
+      "at": [55, 20, 0]
+    },
+    {
+      "type": "line",
+      "id": "crank_ghost4",
+      "p1": "ground_left",
+      "p2": "crank_pos4"
+    },
+    {
+      "type": "line",
+      "id": "coupler_ghost4",
+      "p1": "crank_pos4",
+      "p2": "rocker_pos4"
+    },
+    {
+      "type": "line",
+      "id": "rocker_ghost4",
+      "p1": "rocker_pos4",
+      "p2": "ground_right"
+    },
+    {
+      "type": "point",
+      "id": "pin_A",
+      "at": [0, -5, 0]
+    },
+    {
+      "type": "point",
+      "id": "pin_A_top",
+      "at": [0, 5, 0]
+    },
+    {
+      "type": "circle",
+      "id": "pin_A_circle",
+      "center": [0, 0, 0],
+      "diameter": 8
+    },
+    {
+      "type": "point",
+      "id": "pin_D",
+      "at": [100, -5, 0]
+    },
+    {
+      "type": "point",
+      "id": "pin_D_top",
+      "at": [100, 5, 0]
+    },
+    {
+      "type": "circle",
+      "id": "pin_D_circle",
+      "center": [100, 0, 0],
+      "diameter": 8
+    },
+    {
+      "type": "circle",
+      "id": "pin_B_circle",
+      "center": [21.21, 21.21, 0],
+      "diameter": 6
+    },
+    {
+      "type": "circle",
+      "id": "pin_C_circle",
+      "center": [80, 45, 0],
+      "diameter": 6
+    },
+    {
+      "type": "point",
+      "id": "trace_p1",
+      "at": [50, 33, 0]
+    },
+    {
+      "type": "point",
+      "id": "trace_p2",
+      "at": [55, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "trace_p3",
+      "at": [58, 35, 0]
+    },
+    {
+      "type": "point",
+      "id": "trace_p4",
+      "at": [53, 38, 0]
+    },
+    {
+      "type": "point",
+      "id": "trace_p5",
+      "at": [48, 36, 0]
+    },
+    {
+      "type": "point",
+      "id": "trace_p6",
+      "at": [45, 31, 0]
+    },
+    {
+      "type": "line",
+      "id": "trace_l1",
+      "p1": "trace_p1",
+      "p2": "trace_p2"
+    },
+    {
+      "type": "line",
+      "id": "trace_l2",
+      "p1": "trace_p2",
+      "p2": "trace_p3"
+    },
+    {
+      "type": "line",
+      "id": "trace_l3",
+      "p1": "trace_p3",
+      "p2": "trace_p4"
+    },
+    {
+      "type": "line",
+      "id": "trace_l4",
+      "p1": "trace_p4",
+      "p2": "trace_p5"
+    },
+    {
+      "type": "line",
+      "id": "trace_l5",
+      "p1": "trace_p5",
+      "p2": "trace_p6"
+    },
+    {
+      "type": "line",
+      "id": "trace_l6",
+      "p1": "trace_p6",
+      "p2": "trace_p1"
     }
   ],
   "constraints": [
     {
       "type": "fixed",
-      "entity": "A"
+      "entity": "ground_left"
     },
     {
       "type": "fixed",
-      "entity": "B"
+      "entity": "ground_right"
     },
     {
       "type": "distance",
-      "between": ["A", "D"],
-      "value": 50
+      "between": ["ground_left", "crank_end"],
+      "value": "$crank_length"
     },
     {
       "type": "distance",
-      "between": ["D", "C"],
-      "value": 70
+      "between": ["crank_end", "rocker_end"],
+      "value": "$coupler_length"
     },
     {
       "type": "distance",
-      "between": ["C", "B"],
-      "value": 60
+      "between": ["rocker_end", "ground_right"],
+      "value": "$rocker_length"
+    },
+    {
+      "type": "horizontal",
+      "a": "ground"
     }
   ]
 }
