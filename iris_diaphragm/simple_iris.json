@@ -18,6 +18,12 @@
       "at": [60, 0, 0]
     },
     {
+      "type": "line",
+      "id": "radial1",
+      "p1": "center",
+      "p2": "pivot1"
+    },
+    {
       "type": "point",
       "id": "blade1_tip",
       "at": [30, 30, 0]
@@ -31,7 +37,13 @@
     {
       "type": "point",
       "id": "pivot2",
-      "at": [30, 51.96, 0]
+      "at": [30, 50, 0]
+    },
+    {
+      "type": "line",
+      "id": "radial2",
+      "p1": "center",
+      "p2": "pivot2"
     },
     {
       "type": "point",
@@ -47,7 +59,13 @@
     {
       "type": "point",
       "id": "pivot3",
-      "at": [-30, 51.96, 0]
+      "at": [-30, 50, 0]
+    },
+    {
+      "type": "line",
+      "id": "radial3",
+      "p1": "center",
+      "p2": "pivot3"
     },
     {
       "type": "point",
@@ -66,6 +84,12 @@
       "at": [-60, 0, 0]
     },
     {
+      "type": "line",
+      "id": "radial4",
+      "p1": "center",
+      "p2": "pivot4"
+    },
+    {
       "type": "point",
       "id": "blade4_tip",
       "at": [-30, -30, 0]
@@ -79,7 +103,13 @@
     {
       "type": "point",
       "id": "pivot5",
-      "at": [-30, -51.96, 0]
+      "at": [-30, -50, 0]
+    },
+    {
+      "type": "line",
+      "id": "radial5",
+      "p1": "center",
+      "p2": "pivot5"
     },
     {
       "type": "point",
@@ -95,7 +125,13 @@
     {
       "type": "point",
       "id": "pivot6",
-      "at": [30, -51.96, 0]
+      "at": [30, -50, 0]
+    },
+    {
+      "type": "line",
+      "id": "radial6",
+      "p1": "center",
+      "p2": "pivot6"
     },
     {
       "type": "point",
@@ -127,28 +163,68 @@
       "entity": "center"
     },
     {
-      "type": "fixed",
-      "entity": "pivot1"
+      "type": "horizontal",
+      "a": "radial1"
     },
     {
-      "type": "fixed",
-      "entity": "pivot2"
+      "type": "distance",
+      "between": ["center", "pivot1"],
+      "value": "$pivot_radius"
     },
     {
-      "type": "fixed",
-      "entity": "pivot3"
+      "type": "distance",
+      "between": ["center", "pivot2"],
+      "value": "$pivot_radius"
     },
     {
-      "type": "fixed",
-      "entity": "pivot4"
+      "type": "distance",
+      "between": ["center", "pivot3"],
+      "value": "$pivot_radius"
     },
     {
-      "type": "fixed",
-      "entity": "pivot5"
+      "type": "distance",
+      "between": ["center", "pivot4"],
+      "value": "$pivot_radius"
     },
     {
-      "type": "fixed",
-      "entity": "pivot6"
+      "type": "distance",
+      "between": ["center", "pivot5"],
+      "value": "$pivot_radius"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pivot6"],
+      "value": "$pivot_radius"
+    },
+    {
+      "type": "angle",
+      "between": ["radial1", "radial2"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["radial2", "radial3"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["radial3", "radial4"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["radial4", "radial5"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["radial5", "radial6"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["radial6", "radial1"],
+      "value": 60
     },
     {
       "type": "distance",
@@ -179,6 +255,36 @@
       "type": "distance",
       "between": ["pivot6", "blade6_tip"],
       "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": ["radial1", "blade1"],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["radial2", "blade2"],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["radial3", "blade3"],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["radial4", "blade4"],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["radial5", "blade5"],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["radial6", "blade6"],
+      "value": "$blade_angle"
     }
   ]
 }
