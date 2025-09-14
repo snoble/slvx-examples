@@ -79,10 +79,17 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
   });
   
   // Create first blade
+  // Initial guess for blade1_tip based on blade angle
+  const blade1TipRadius = 35; // Approximate aperture radius
+  const blade1TipAngle = bladeAngle * Math.PI / 180;
   doc.entities.push({
     type: "point",
     id: "blade1_tip",
-    at: [pivotRadius + 30, 20, 0]  // Initial guess
+    at: [
+      blade1TipRadius * Math.cos(blade1TipAngle),
+      blade1TipRadius * Math.sin(blade1TipAngle),
+      0
+    ]
   });
   
   doc.entities.push({
@@ -101,11 +108,16 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
   
   // Create remaining pivots and blades
   for (let i = 2; i <= numBlades; i++) {
-    // Add pivot point (initial guess position)
+    // Add pivot point (initial guess position - spread around circle)
+    const guessAngle = (i - 1) * angleStep * Math.PI / 180;
     doc.entities.push({
       type: "point",
       id: `pivot${i}`,
-      at: [pivotRadius * 0.5, pivotRadius * 0.5, 0]  // Just a guess
+      at: [
+        pivotRadius * Math.cos(guessAngle),
+        pivotRadius * Math.sin(guessAngle),
+        0
+      ]
     });
     
     // Add radial line
@@ -130,11 +142,17 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
       value: angleStep
     });
     
-    // Add blade tip
+    // Add blade tip (initial guess based on blade angle)
+    const bladeTipGuessAngle = guessAngle + bladeAngle * Math.PI / 180;
+    const bladeTipRadius = 35; // Approximate aperture radius
     doc.entities.push({
       type: "point",
       id: `blade${i}_tip`,
-      at: [30, 30, 0]  // Initial guess
+      at: [
+        bladeTipRadius * Math.cos(bladeTipGuessAngle),
+        bladeTipRadius * Math.sin(bladeTipGuessAngle),
+        0
+      ]
     });
     
     // Add blade line

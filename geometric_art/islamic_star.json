@@ -372,38 +372,31 @@
     },
     {
       "type": "equal_length",
-      "a": "star1",
-      "b": "star2"
+      "entities": ["star1", "star2"]
     },
     {
       "type": "equal_length",
-      "a": "star2",
-      "b": "star3"
+      "entities": ["star2", "star3"]
     },
     {
       "type": "equal_length",
-      "a": "star3",
-      "b": "star4"
+      "entities": ["star3", "star4"]
     },
     {
       "type": "equal_length",
-      "a": "star4",
-      "b": "star5"
+      "entities": ["star4", "star5"]
     },
     {
       "type": "equal_length",
-      "a": "star5",
-      "b": "star6"
+      "entities": ["star5", "star6"]
     },
     {
       "type": "equal_length",
-      "a": "star6",
-      "b": "star7"
+      "entities": ["star6", "star7"]
     },
     {
       "type": "equal_length",
-      "a": "star7",
-      "b": "star8"
+      "entities": ["star7", "star8"]
     }
   ]
 }
