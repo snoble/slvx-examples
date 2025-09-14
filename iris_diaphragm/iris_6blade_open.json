@@ -1,0 +1,347 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "pivot_radius": 60,
+    "blade_length": 50,
+    "blade_angle": 15,
+    "aperture_size": 38.63703305156273
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "circle",
+      "id": "pivot_circle",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "diameter": 120
+    },
+    {
+      "type": "circle",
+      "id": "aperture_guide",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "diameter": 77.27406610312546
+    },
+    {
+      "type": "point",
+      "id": "pivot1",
+      "at": [
+        60,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial1",
+      "p1": "center",
+      "p2": "pivot1"
+    },
+    {
+      "type": "point",
+      "id": "blade1_tip",
+      "at": [
+        93.8074039201174,
+        9.058666578588225,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade1",
+      "p1": "pivot1",
+      "p2": "blade1_tip"
+    },
+    {
+      "type": "point",
+      "id": "pivot2",
+      "at": [
+        30.000000000000007,
+        51.96152422706631,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial2",
+      "p1": "center",
+      "p2": "pivot2"
+    },
+    {
+      "type": "point",
+      "id": "blade2_tip",
+      "at": [
+        39.05866657858823,
+        85.7689281471837,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade2",
+      "p1": "pivot2",
+      "p2": "blade2_tip"
+    },
+    {
+      "type": "point",
+      "id": "pivot3",
+      "at": [
+        -29.999999999999986,
+        51.96152422706632,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial3",
+      "p1": "center",
+      "p2": "pivot3"
+    },
+    {
+      "type": "point",
+      "id": "blade3_tip",
+      "at": [
+        -54.74873734152914,
+        76.71026156859548,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade3",
+      "p1": "pivot3",
+      "p2": "blade3_tip"
+    },
+    {
+      "type": "point",
+      "id": "pivot4",
+      "at": [
+        -60,
+        7.34788079488412e-15,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial4",
+      "p1": "center",
+      "p2": "pivot4"
+    },
+    {
+      "type": "point",
+      "id": "blade4_tip",
+      "at": [
+        -93.8074039201174,
+        -9.058666578588204,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade4",
+      "p1": "pivot4",
+      "p2": "blade4_tip"
+    },
+    {
+      "type": "point",
+      "id": "pivot5",
+      "at": [
+        -30.00000000000003,
+        -51.961524227066306,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial5",
+      "p1": "center",
+      "p2": "pivot5"
+    },
+    {
+      "type": "point",
+      "id": "blade5_tip",
+      "at": [
+        -39.05866657858825,
+        -85.76892814718369,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade5",
+      "p1": "pivot5",
+      "p2": "blade5_tip"
+    },
+    {
+      "type": "point",
+      "id": "pivot6",
+      "at": [
+        30.000000000000007,
+        -51.96152422706631,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "radial6",
+      "p1": "center",
+      "p2": "pivot6"
+    },
+    {
+      "type": "point",
+      "id": "blade6_tip",
+      "at": [
+        54.748737341529164,
+        -76.71026156859548,
+        0
+      ]
+    },
+    {
+      "type": "line",
+      "id": "blade6",
+      "p1": "pivot6",
+      "p2": "blade6_tip"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot1"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot1",
+        "blade1_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial1",
+        "blade1"
+      ],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot2"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot2",
+        "blade2_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial2",
+        "blade2"
+      ],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot3"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot3",
+        "blade3_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial3",
+        "blade3"
+      ],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot4"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot4",
+        "blade4_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial4",
+        "blade4"
+      ],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot5"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot5",
+        "blade5_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial5",
+        "blade5"
+      ],
+      "value": "$blade_angle"
+    },
+    {
+      "type": "fixed",
+      "entity": "pivot6"
+    },
+    {
+      "type": "distance",
+      "between": [
+        "pivot6",
+        "blade6_tip"
+      ],
+      "value": "$blade_length"
+    },
+    {
+      "type": "angle",
+      "between": [
+        "radial6",
+        "blade6"
+      ],
+      "value": "$blade_angle"
+    }
+  ]
+}
