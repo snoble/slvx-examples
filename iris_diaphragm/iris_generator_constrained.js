@@ -92,12 +92,7 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
     p2: "blade1_tip"
   });
   
-  doc.constraints.push({
-    type: "distance",
-    between: ["pivot1", "blade1_tip"],
-    value: "$blade_length"
-  });
-  
+  // Blade tip must be on aperture circle (no distance constraint needed)
   doc.constraints.push({
     type: "angle",
     between: ["radial1", "blade1"],
@@ -150,14 +145,7 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
       p2: `blade${i}_tip`
     });
     
-    // Constrain blade length
-    doc.constraints.push({
-      type: "distance",
-      between: [`pivot${i}`, `blade${i}_tip`],
-      value: "$blade_length"
-    });
-    
-    // Constrain blade angle from radial
+    // Constrain blade angle from radial (no distance constraint needed)
     doc.constraints.push({
       type: "angle",
       between: [`radial${i}`, `blade${i}`],
@@ -172,14 +160,23 @@ function generateConstrainedIris(numBlades = 6, bladeAngle = 30, outputFile = nu
     value: angleStep
   });
   
-  // Add aperture visualization circle
+  // Add aperture circle that blade tips must touch
   const aperture = Math.cos(bladeAngle * Math.PI / 180) * bladeLength * 0.8;
   doc.entities.push({
     type: "circle",
-    id: "aperture_guide",
+    id: "aperture",
     center: [0, 0, 0],
     diameter: aperture * 2
   });
+  
+  // Constrain all blade tips to lie on aperture circle
+  for (let i = 1; i <= numBlades; i++) {
+    doc.constraints.push({
+      type: "point_on_circle",
+      point: `blade${i}_tip`,
+      circle: "aperture"
+    });
+  }
   
   if (outputFile) {
     const fs = require('fs');

@@ -227,34 +227,34 @@
       "value": 60
     },
     {
-      "type": "distance",
-      "between": ["pivot1", "blade1_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade1_tip",
+      "circle": "aperture_guide"
     },
     {
-      "type": "distance",
-      "between": ["pivot2", "blade2_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade2_tip",
+      "circle": "aperture_guide"
     },
     {
-      "type": "distance",
-      "between": ["pivot3", "blade3_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade3_tip",
+      "circle": "aperture_guide"
     },
     {
-      "type": "distance",
-      "between": ["pivot4", "blade4_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade4_tip",
+      "circle": "aperture_guide"
     },
     {
-      "type": "distance",
-      "between": ["pivot5", "blade5_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade5_tip",
+      "circle": "aperture_guide"
     },
     {
-      "type": "distance",
-      "between": ["pivot6", "blade6_tip"],
-      "value": "$blade_length"
+      "type": "point_on_circle",
+      "point": "blade6_tip",
+      "circle": "aperture_guide"
     },
     {
       "type": "angle",
