@@ -53,6 +53,11 @@ Updating all examples to work with slvsx-cli v0.2.0 API changes.
 - [x] iris_diaphragm/simple_iris.json (fixed - 2D with horizontal, angle)
 - [x] parametric_flower/parametric_flower.json (already worked)
 - [x] spirograph/spirograph.json (fixed equal_length)
+- [x] chebyshev_linkage/chebyshev_linkage.json (new - classic 4-bar linkage)
+- [x] 3d_structures/tetrahedron.json (new - 3D regular tetrahedron)
+- [x] 3d_structures/octahedron.json (new - 3D regular octahedron)
+- [x] 3d_structures/square_pyramid.json (new - 3D pyramid with equal edges)
+- [x] 3d_structures/space_truss.json (new - 3D space frame cell)
 
 ### Needs Work 🔧
 - [ ] constraint_showcase/constraint_showcase.json - crashes (bug #21)
@@ -62,7 +67,10 @@ Updating all examples to work with slvsx-cli v0.2.0 API changes.
 - Issue #21: Crash with point_on_circle constraint ("Cannot find handle" assertion)
 - Issue #22: Crash with symmetric constraint
 - Issue #23: Crash with tangent constraint
-- Issue #25: CLI crash with many entities ("Handle isn't unique" assertion)
+- Issue #25: CLI crash with multiple equal_length constraints ("Handle isn't unique" assertion)
+  - **Workaround**: Use a single `equal_length` constraint with all edges instead of multiple constraints
+  - Example: `{"type": "equal_length", "entities": ["e1", "e2", "e3", "e4"]}` works
+  - But two separate constraints like `{"entities": ["e1", "e2"]}` and `{"entities": ["e3", "e4"]}` crashes
 
 ## Constraint Types Status
 

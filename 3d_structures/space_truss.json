@@ -1,0 +1,32 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "strut_length": 40
+  },
+  "entities": [
+    {"type": "point", "id": "a1", "at": [0, 0, 0]},
+    {"type": "point", "id": "b1", "at": [40, 0, 0]},
+    {"type": "point", "id": "c1", "at": [20, 35, 0]},
+    {"type": "point", "id": "a2", "at": [0, 11.5, 32.7]},
+    {"type": "point", "id": "b2", "at": [40, 11.5, 32.7]},
+    {"type": "point", "id": "c2", "at": [20, 46.5, 32.7]},
+    {"type": "line", "id": "base1", "p1": "a1", "p2": "b1"},
+    {"type": "line", "id": "base2", "p1": "b1", "p2": "c1"},
+    {"type": "line", "id": "base3", "p1": "c1", "p2": "a1"},
+    {"type": "line", "id": "top1", "p1": "a2", "p2": "b2"},
+    {"type": "line", "id": "top2", "p1": "b2", "p2": "c2"},
+    {"type": "line", "id": "top3", "p1": "c2", "p2": "a2"},
+    {"type": "line", "id": "vert1", "p1": "a1", "p2": "a2"},
+    {"type": "line", "id": "vert2", "p1": "b1", "p2": "b2"},
+    {"type": "line", "id": "vert3", "p1": "c1", "p2": "c2"},
+    {"type": "line", "id": "diag1", "p1": "a1", "p2": "b2"},
+    {"type": "line", "id": "diag2", "p1": "b1", "p2": "c2"},
+    {"type": "line", "id": "diag3", "p1": "c1", "p2": "a2"}
+  ],
+  "constraints": [
+    {"type": "fixed", "entity": "a1"},
+    {"type": "fixed", "entity": "b1"},
+    {"type": "equal_length", "entities": ["base1", "base2", "base3", "top1", "top2", "top3", "vert1", "vert2", "vert3", "diag1", "diag2", "diag3"]}
+  ]
+}

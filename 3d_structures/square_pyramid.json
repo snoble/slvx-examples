@@ -1,0 +1,27 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "base_edge": 50
+  },
+  "entities": [
+    {"type": "point", "id": "apex", "at": [25, 25, 35.36]},
+    {"type": "point", "id": "b1", "at": [0, 0, 0]},
+    {"type": "point", "id": "b2", "at": [50, 0, 0]},
+    {"type": "point", "id": "b3", "at": [50, 50, 0]},
+    {"type": "point", "id": "b4", "at": [0, 50, 0]},
+    {"type": "line", "id": "base1", "p1": "b1", "p2": "b2"},
+    {"type": "line", "id": "base2", "p1": "b2", "p2": "b3"},
+    {"type": "line", "id": "base3", "p1": "b3", "p2": "b4"},
+    {"type": "line", "id": "base4", "p1": "b4", "p2": "b1"},
+    {"type": "line", "id": "slant1", "p1": "b1", "p2": "apex"},
+    {"type": "line", "id": "slant2", "p1": "b2", "p2": "apex"},
+    {"type": "line", "id": "slant3", "p1": "b3", "p2": "apex"},
+    {"type": "line", "id": "slant4", "p1": "b4", "p2": "apex"}
+  ],
+  "constraints": [
+    {"type": "fixed", "entity": "b1"},
+    {"type": "fixed", "entity": "b2"},
+    {"type": "equal_length", "entities": ["base1", "base2", "base3", "base4", "slant1", "slant2", "slant3", "slant4"]}
+  ]
+}

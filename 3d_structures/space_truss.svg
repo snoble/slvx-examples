@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -24.5 80.0 78.4" width="800" height="800">
+  <circle id="a1" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="a2" cx="0.000000" cy="29.396737" r="2" fill="black"/>
+  <circle id="b1" cx="40.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="b2" cx="20.000000" cy="-4.482766" r="2" fill="black"/>
+  <line id="base1" x1="0.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+  <line id="base2" x1="40.000000" y1="0.000000" x2="20.000000" y2="33.879503" stroke="black"/>
+  <line id="base3" x1="20.000000" y1="33.879503" x2="0.000000" y2="0.000000" stroke="black"/>
+  <circle id="c1" cx="20.000000" cy="33.879503" r="2" fill="black"/>
+  <circle id="c2" cx="40.000000" cy="29.396737" r="2" fill="black"/>
+  <line id="diag1" x1="0.000000" y1="0.000000" x2="20.000000" y2="-4.482766" stroke="black"/>
+  <line id="diag2" x1="40.000000" y1="0.000000" x2="40.000000" y2="29.396737" stroke="black"/>
+  <line id="diag3" x1="20.000000" y1="33.879503" x2="0.000000" y2="29.396737" stroke="black"/>
+  <line id="top1" x1="0.000000" y1="29.396737" x2="20.000000" y2="-4.482766" stroke="black"/>
+  <line id="top2" x1="20.000000" y1="-4.482766" x2="40.000000" y2="29.396737" stroke="black"/>
+  <line id="top3" x1="40.000000" y1="29.396737" x2="0.000000" y2="29.396737" stroke="black"/>
+  <line id="vert1" x1="0.000000" y1="0.000000" x2="0.000000" y2="29.396737" stroke="black"/>
+  <line id="vert2" x1="40.000000" y1="0.000000" x2="20.000000" y2="-4.482766" stroke="black"/>
+  <line id="vert3" x1="20.000000" y1="33.879503" x2="40.000000" y2="29.396737" stroke="black"/>
+</svg>

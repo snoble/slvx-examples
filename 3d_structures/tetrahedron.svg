@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 100.0 92.0" width="800" height="800">
+  <line id="e1" x1="0.000000" y1="0.000000" x2="60.000000" y2="0.000000" stroke="black"/>
+  <line id="e2" x1="60.000000" y1="0.000000" x2="30.000000" y2="51.958800" stroke="black"/>
+  <line id="e3" x1="30.000000" y1="51.958800" x2="0.000000" y2="0.000000" stroke="black"/>
+  <line id="e4" x1="0.000000" y1="0.000000" x2="30.000000" y2="17.821284" stroke="black"/>
+  <line id="e5" x1="60.000000" y1="0.000000" x2="30.000000" y2="17.821284" stroke="black"/>
+  <line id="e6" x1="30.000000" y1="51.958800" x2="30.000000" y2="17.821284" stroke="black"/>
+  <circle id="v1" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="v2" cx="60.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="v3" cx="30.000000" cy="51.958800" r="2" fill="black"/>
+  <circle id="v4" cx="30.000000" cy="17.821284" r="2" fill="black"/>
+</svg>

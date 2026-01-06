@@ -1,0 +1,79 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "edge_length": 60
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "v1",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "v2",
+      "at": [60, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "v3",
+      "at": [30, 52, 0]
+    },
+    {
+      "type": "point",
+      "id": "v4",
+      "at": [30, 17, 45]
+    },
+    {
+      "type": "line",
+      "id": "e1",
+      "p1": "v1",
+      "p2": "v2"
+    },
+    {
+      "type": "line",
+      "id": "e2",
+      "p1": "v2",
+      "p2": "v3"
+    },
+    {
+      "type": "line",
+      "id": "e3",
+      "p1": "v3",
+      "p2": "v1"
+    },
+    {
+      "type": "line",
+      "id": "e4",
+      "p1": "v1",
+      "p2": "v4"
+    },
+    {
+      "type": "line",
+      "id": "e5",
+      "p1": "v2",
+      "p2": "v4"
+    },
+    {
+      "type": "line",
+      "id": "e6",
+      "p1": "v3",
+      "p2": "v4"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "v1"
+    },
+    {
+      "type": "fixed",
+      "entity": "v2"
+    },
+    {
+      "type": "equal_length",
+      "entities": ["e1", "e2", "e3", "e4", "e5", "e6"]
+    }
+  ]
+}
