@@ -1,0 +1,157 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Peaucellier-Lipkin Linkage (1864) - The first planar linkage capable of transforming rotary motion into perfect straight-line motion. As point B traces a circle around P, point D traces an exact straight line. This solved a fundamental problem in mechanical engineering.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Peaucellier%E2%80%93Lipkin_linkage",
+    "https://solvespace.github.io/solvespace-web/examples.html",
+    "https://www.ams.org/publicoutreach/feature-column/fcarc-linkages4"
+  ],
+  "units": "mm",
+  "parameters": {
+    "long_arm": 80,
+    "rhombus_side": 45,
+    "crank_radius": 25,
+    "fixed_distance": 25
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "O",
+      "at": [0, 0, 0],
+      "description": "Fixed pivot - origin, anchor for long arms"
+    },
+    {
+      "type": "point",
+      "id": "P",
+      "at": [25, 0, 0],
+      "description": "Fixed pivot for input crank"
+    },
+    {
+      "type": "point",
+      "id": "B",
+      "at": [45, 15, 0],
+      "description": "Input point - traces circle around P"
+    },
+    {
+      "type": "point",
+      "id": "A",
+      "at": [70, 40, 0],
+      "description": "Top of rhombus, connected to long arm OA"
+    },
+    {
+      "type": "point",
+      "id": "C",
+      "at": [70, -40, 0],
+      "description": "Bottom of rhombus, connected to long arm OC"
+    },
+    {
+      "type": "point",
+      "id": "D",
+      "at": [110, 0, 0],
+      "description": "OUTPUT - traces exact straight line!"
+    },
+    {
+      "type": "line",
+      "id": "OA",
+      "p1": "O",
+      "p2": "A",
+      "description": "Long arm from origin to A"
+    },
+    {
+      "type": "line",
+      "id": "OC",
+      "p1": "O",
+      "p2": "C",
+      "description": "Long arm from origin to C"
+    },
+    {
+      "type": "line",
+      "id": "PB",
+      "p1": "P",
+      "p2": "B",
+      "description": "Input crank"
+    },
+    {
+      "type": "line",
+      "id": "AB",
+      "p1": "A",
+      "p2": "B",
+      "description": "Rhombus side AB"
+    },
+    {
+      "type": "line",
+      "id": "BD",
+      "p1": "B",
+      "p2": "D",
+      "description": "Rhombus side BD"
+    },
+    {
+      "type": "line",
+      "id": "DC",
+      "p1": "D",
+      "p2": "C",
+      "description": "Rhombus side DC"
+    },
+    {
+      "type": "line",
+      "id": "CA",
+      "p1": "C",
+      "p2": "A",
+      "description": "Rhombus side CA"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "O",
+      "description": "Origin pivot is fixed"
+    },
+    {
+      "type": "fixed",
+      "entity": "P",
+      "description": "Crank pivot is fixed"
+    },
+    {
+      "type": "distance",
+      "between": ["P", "B"],
+      "value": "$crank_radius",
+      "description": "Input crank radius"
+    },
+    {
+      "type": "distance",
+      "between": ["O", "A"],
+      "value": "$long_arm",
+      "description": "Long arm OA"
+    },
+    {
+      "type": "distance",
+      "between": ["O", "C"],
+      "value": "$long_arm",
+      "description": "Long arm OC (equal to OA)"
+    },
+    {
+      "type": "distance",
+      "between": ["A", "B"],
+      "value": "$rhombus_side",
+      "description": "Rhombus side AB"
+    },
+    {
+      "type": "distance",
+      "between": ["B", "D"],
+      "value": "$rhombus_side",
+      "description": "Rhombus side BD"
+    },
+    {
+      "type": "distance",
+      "between": ["D", "C"],
+      "value": "$rhombus_side",
+      "description": "Rhombus side DC"
+    },
+    {
+      "type": "distance",
+      "between": ["C", "A"],
+      "value": "$rhombus_side",
+      "description": "Rhombus side CA"
+    }
+  ]
+}

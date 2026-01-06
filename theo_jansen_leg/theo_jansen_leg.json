@@ -1,0 +1,199 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Theo Jansen Strandbeest Leg Mechanism - A walking linkage invented by Dutch artist Theo Jansen. The link lengths are the famous 'holy numbers' discovered through genetic algorithm optimization in 1990. As the crank rotates, point F (the foot) traces an oval path that mimics natural walking motion.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Jansen%27s_linkage",
+    "https://www.strandbeest.com/",
+    "https://solvespace.com/linkage.pl",
+    "https://javalab.org/en/theo_jansen_en/"
+  ],
+  "units": "mm",
+  "parameters": {
+    "crank": 15,
+    "link_AB": 50,
+    "link_BC": 41.5,
+    "link_MC": 40.1,
+    "link_CD": 55.8,
+    "link_MD": 39.4,
+    "link_BE": 36.7,
+    "link_DE": 39.3,
+    "link_EF": 65.7,
+    "link_BF": 49
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "O",
+      "at": [0, 0, 0],
+      "description": "Fixed crank pivot (motor attachment)"
+    },
+    {
+      "type": "point",
+      "id": "M",
+      "at": [38, -7.8, 0],
+      "description": "Fixed frame pivot"
+    },
+    {
+      "type": "point",
+      "id": "A",
+      "at": [7.8, -12.8, 0],
+      "description": "Crank endpoint (rotates around O)"
+    },
+    {
+      "type": "point",
+      "id": "B",
+      "at": [50, 13, 0],
+      "description": "Main joint connecting multiple links"
+    },
+    {
+      "type": "point",
+      "id": "C",
+      "at": [76, -19, 0],
+      "description": "Joint C - part of upper triangle"
+    },
+    {
+      "type": "point",
+      "id": "D",
+      "at": [27, -46, 0],
+      "description": "Joint D - part of lower triangle"
+    },
+    {
+      "type": "point",
+      "id": "E",
+      "at": [20, -7, 0],
+      "description": "Joint E - connects to foot"
+    },
+    {
+      "type": "point",
+      "id": "F",
+      "at": [84, -23, 0],
+      "description": "FOOT - traces walking path!"
+    },
+    {
+      "type": "line",
+      "id": "crank",
+      "p1": "O",
+      "p2": "A",
+      "description": "Input crank (driven by motor)"
+    },
+    {
+      "type": "line",
+      "id": "AB",
+      "p1": "A",
+      "p2": "B"
+    },
+    {
+      "type": "line",
+      "id": "BC",
+      "p1": "B",
+      "p2": "C"
+    },
+    {
+      "type": "line",
+      "id": "MC",
+      "p1": "M",
+      "p2": "C"
+    },
+    {
+      "type": "line",
+      "id": "CD",
+      "p1": "C",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "MD",
+      "p1": "M",
+      "p2": "D"
+    },
+    {
+      "type": "line",
+      "id": "BE",
+      "p1": "B",
+      "p2": "E"
+    },
+    {
+      "type": "line",
+      "id": "DE",
+      "p1": "D",
+      "p2": "E"
+    },
+    {
+      "type": "line",
+      "id": "EF",
+      "p1": "E",
+      "p2": "F",
+      "description": "Lower leg to foot"
+    },
+    {
+      "type": "line",
+      "id": "BF",
+      "p1": "B",
+      "p2": "F",
+      "description": "Upper leg to foot"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "O",
+      "description": "Crank pivot is fixed to frame"
+    },
+    {
+      "type": "fixed",
+      "entity": "M",
+      "description": "Frame pivot is fixed"
+    },
+    {
+      "type": "distance",
+      "between": ["O", "A"],
+      "value": "$crank",
+      "description": "Crank length"
+    },
+    {
+      "type": "distance",
+      "between": ["A", "B"],
+      "value": "$link_AB"
+    },
+    {
+      "type": "distance",
+      "between": ["B", "C"],
+      "value": "$link_BC"
+    },
+    {
+      "type": "distance",
+      "between": ["M", "C"],
+      "value": "$link_MC"
+    },
+    {
+      "type": "distance",
+      "between": ["C", "D"],
+      "value": "$link_CD"
+    },
+    {
+      "type": "distance",
+      "between": ["M", "D"],
+      "value": "$link_MD"
+    },
+    {
+      "type": "distance",
+      "between": ["B", "E"],
+      "value": "$link_BE"
+    },
+    {
+      "type": "distance",
+      "between": ["D", "E"],
+      "value": "$link_DE"
+    },
+    {
+      "type": "distance",
+      "between": ["E", "F"],
+      "value": "$link_EF"
+    },
+    {
+      "type": "distance",
+      "between": ["B", "F"],
+      "value": "$link_BF"
+    }
+  ]
+}
