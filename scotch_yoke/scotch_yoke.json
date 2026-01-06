@@ -1,0 +1,108 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Scotch Yoke Mechanism - Converts rotary motion to pure sinusoidal linear motion. Unlike a crank-slider which produces non-sinusoidal motion, the Scotch yoke produces exact simple harmonic motion. The pin slides within a slot that is constrained perpendicular to the output rail.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Scotch_yoke",
+    "https://solvespace.com/linkage.pl"
+  ],
+  "units": "mm",
+  "parameters": {
+    "crank_radius": 30,
+    "slot_length": 50
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0],
+      "description": "Fixed center of crank rotation"
+    },
+    {
+      "type": "point",
+      "id": "pin",
+      "at": [25, 15, 0],
+      "description": "Crank pin - slides within yoke slot"
+    },
+    {
+      "type": "point",
+      "id": "yoke",
+      "at": [25, 0, 0],
+      "description": "Yoke base - constrained to move along rail"
+    },
+    {
+      "type": "point",
+      "id": "yoke_top",
+      "at": [25, 50, 0],
+      "description": "Top of yoke slot"
+    },
+    {
+      "type": "point",
+      "id": "rail_end",
+      "at": [50, 0, 0],
+      "description": "End of output rail"
+    },
+    {
+      "type": "line",
+      "id": "crank",
+      "p1": "center",
+      "p2": "pin",
+      "description": "Rotating crank arm"
+    },
+    {
+      "type": "line",
+      "id": "slot",
+      "p1": "yoke",
+      "p2": "yoke_top",
+      "description": "Yoke slot - pin slides within this"
+    },
+    {
+      "type": "line",
+      "id": "rail",
+      "p1": "center",
+      "p2": "rail_end",
+      "description": "Output rail (yoke slides along this)"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center",
+      "description": "Crank center is fixed"
+    },
+    {
+      "type": "fixed",
+      "entity": "rail_end",
+      "description": "Rail end is fixed"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "pin"],
+      "value": "$crank_radius",
+      "description": "Crank radius"
+    },
+    {
+      "type": "point_on_line",
+      "point": "pin",
+      "line": "slot",
+      "description": "Pin constrained within slot"
+    },
+    {
+      "type": "point_on_line",
+      "point": "yoke",
+      "line": "rail",
+      "description": "Yoke base slides on rail"
+    },
+    {
+      "type": "perpendicular",
+      "a": "slot",
+      "b": "rail",
+      "description": "Slot is perpendicular to rail"
+    },
+    {
+      "type": "distance",
+      "between": ["yoke", "yoke_top"],
+      "value": "$slot_length",
+      "description": "Slot length"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Crank-Slider Mechanism - Converts rotary motion to reciprocating linear motion. This is the fundamental mechanism used in internal combustion engines, pumps, and compressors. As the crank rotates, the piston slides back and forth along the rail.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Slider-crank_linkage",
+    "https://solvespace.com/linkage.pl"
+  ],
+  "units": "mm",
+  "parameters": {
+    "crank_radius": 30,
+    "conrod_length": 80
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "crank_center",
+      "at": [0, 0, 0],
+      "description": "Fixed center of crank rotation (motor shaft)"
+    },
+    {
+      "type": "point",
+      "id": "crank_pin",
+      "at": [25, 15, 0],
+      "description": "Crank pin - rotates around crank_center"
+    },
+    {
+      "type": "point",
+      "id": "piston",
+      "at": [103, 0, 0],
+      "description": "Piston - slides along rail"
+    },
+    {
+      "type": "point",
+      "id": "rail_end",
+      "at": [150, 0, 0],
+      "description": "End of piston rail (defines slide axis)"
+    },
+    {
+      "type": "line",
+      "id": "crank",
+      "p1": "crank_center",
+      "p2": "crank_pin",
+      "description": "Rotating crank arm"
+    },
+    {
+      "type": "line",
+      "id": "conrod",
+      "p1": "crank_pin",
+      "p2": "piston",
+      "description": "Connecting rod"
+    },
+    {
+      "type": "line",
+      "id": "rail",
+      "p1": "crank_center",
+      "p2": "rail_end",
+      "description": "Piston slide rail (cylinder axis)"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "crank_center",
+      "description": "Crank center is fixed"
+    },
+    {
+      "type": "fixed",
+      "entity": "rail_end",
+      "description": "Rail end is fixed (defines cylinder axis)"
+    },
+    {
+      "type": "distance",
+      "between": ["crank_center", "crank_pin"],
+      "value": "$crank_radius",
+      "description": "Crank radius"
+    },
+    {
+      "type": "distance",
+      "between": ["crank_pin", "piston"],
+      "value": "$conrod_length",
+      "description": "Connecting rod length"
+    },
+    {
+      "type": "point_on_line",
+      "point": "piston",
+      "line": "rail",
+      "description": "Piston constrained to slide on rail"
+    }
+  ]
+}
