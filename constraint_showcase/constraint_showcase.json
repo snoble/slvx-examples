@@ -1,87 +1,330 @@
 {
   "schema": "slvs-json/1",
   "units": "mm",
+  "parameters": {
+    "box_size": 40,
+    "circle_diameter": 30
+  },
   "entities": [
     {
-      "type": "point",
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point2_d",
       "id": "origin",
-      "at": [0, 0, 0]
+      "at": [0, 0],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point2_d",
+      "id": "p_horizontal",
+      "at": [50, 5],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "horizontal_line",
+      "p1": "origin",
+      "p2": "p_horizontal",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point2_d",
+      "id": "p_vertical",
+      "at": [5, 50],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "vertical_line",
+      "p1": "origin",
+      "p2": "p_vertical",
+      "workplane": "xy_plane"
     },
     {
       "type": "point",
-      "id": "p1",
-      "at": [50, 0, 0]
+      "id": "box_a",
+      "at": [80, 0, 0]
     },
     {
       "type": "point",
-      "id": "p2",
-      "at": [25, 25, 0]
+      "id": "box_b",
+      "at": [120, 0, 0]
     },
     {
       "type": "point",
-      "id": "p3",
-      "at": [0, 50, 0]
+      "id": "box_c",
+      "at": [120, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "box_d",
+      "at": [80, 40, 0]
     },
     {
       "type": "line",
-      "id": "guide_line",
-      "p1": "origin",
-      "p2": "p1"
+      "id": "box_ab",
+      "p1": "box_a",
+      "p2": "box_b"
     },
     {
-      "type": "circle",
-      "id": "path_circle",
-      "center": [0, 0, 0],
-      "diameter": 80
+      "type": "line",
+      "id": "box_bc",
+      "p1": "box_b",
+      "p2": "box_c"
+    },
+    {
+      "type": "line",
+      "id": "box_cd",
+      "p1": "box_c",
+      "p2": "box_d"
+    },
+    {
+      "type": "line",
+      "id": "box_da",
+      "p1": "box_d",
+      "p2": "box_a"
     },
     {
       "type": "point",
-      "id": "slider",
-      "at": [30, 0, 0]
+      "id": "line1_start",
+      "at": [0, 80, 0]
     },
     {
       "type": "point",
-      "id": "orbiter",
-      "at": [40, 0, 0]
+      "id": "line1_end",
+      "at": [50, 80, 0]
+    },
+    {
+      "type": "point",
+      "id": "line2_start",
+      "at": [0, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "line2_end",
+      "at": [60, 100, 0]
+    },
+    {
+      "type": "line",
+      "id": "parallel_line1",
+      "p1": "line1_start",
+      "p2": "line1_end"
+    },
+    {
+      "type": "line",
+      "id": "parallel_line2",
+      "p1": "line2_start",
+      "p2": "line2_end"
+    },
+    {
+      "type": "point",
+      "id": "midpoint_a",
+      "at": [80, 80, 0]
+    },
+    {
+      "type": "point",
+      "id": "midpoint_b",
+      "at": [140, 80, 0]
+    },
+    {
+      "type": "point",
+      "id": "midpoint_m",
+      "at": [110, 85, 0]
+    },
+    {
+      "type": "line",
+      "id": "midpoint_line",
+      "p1": "midpoint_a",
+      "p2": "midpoint_b"
+    },
+    {
+      "type": "point",
+      "id": "slider_origin",
+      "at": [0, 130, 0]
+    },
+    {
+      "type": "point",
+      "id": "slider_end",
+      "at": [100, 130, 0]
+    },
+    {
+      "type": "point",
+      "id": "slider_point",
+      "at": [40, 135, 0]
+    },
+    {
+      "type": "line",
+      "id": "slider_rail",
+      "p1": "slider_origin",
+      "p2": "slider_end"
+    },
+    {
+      "type": "point",
+      "id": "angle_center",
+      "at": [150, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "angle_p1",
+      "at": [200, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "angle_p2",
+      "at": [185, 35, 0]
+    },
+    {
+      "type": "line",
+      "id": "angle_line1",
+      "p1": "angle_center",
+      "p2": "angle_p1"
+    },
+    {
+      "type": "line",
+      "id": "angle_line2",
+      "p1": "angle_center",
+      "p2": "angle_p2"
     },
     {
       "type": "circle",
       "id": "circle1",
-      "center": [60, 0, 0],
+      "center": [150, 100, 0],
       "diameter": 30
     },
     {
       "type": "circle",
       "id": "circle2",
-      "center": [60, 30, 0],
-      "diameter": 30
-    },
-    {
-      "type": "line",
-      "id": "tangent_line",
-      "p1": "p2",
-      "p2": "p3"
+      "center": [200, 100, 0],
+      "diameter": 40
     }
   ],
   "constraints": [
     {
       "type": "fixed",
-      "entity": "origin"
+      "entity": "origin",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "horizontal_line",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "distance",
+      "between": ["origin", "p_horizontal"],
+      "value": 50
+    },
+    {
+      "type": "vertical",
+      "entity": "vertical_line",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "distance",
+      "between": ["origin", "p_vertical"],
+      "value": 50
+    },
+    {
+      "type": "fixed",
+      "entity": "box_a"
+    },
+    {
+      "type": "fixed",
+      "entity": "box_b"
+    },
+    {
+      "type": "perpendicular",
+      "a": "box_ab",
+      "b": "box_bc"
+    },
+    {
+      "type": "perpendicular",
+      "a": "box_bc",
+      "b": "box_cd"
+    },
+    {
+      "type": "equal_length",
+      "entities": ["box_ab", "box_bc"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["box_cd", "box_da"]
+    },
+    {
+      "type": "fixed",
+      "entity": "line1_start"
+    },
+    {
+      "type": "fixed",
+      "entity": "line2_start"
+    },
+    {
+      "type": "distance",
+      "between": ["line1_start", "line1_end"],
+      "value": 50
+    },
+    {
+      "type": "parallel",
+      "entities": ["parallel_line1", "parallel_line2"]
+    },
+    {
+      "type": "distance",
+      "between": ["line2_start", "line2_end"],
+      "value": 60
+    },
+    {
+      "type": "fixed",
+      "entity": "midpoint_a"
+    },
+    {
+      "type": "fixed",
+      "entity": "midpoint_b"
+    },
+    {
+      "type": "midpoint",
+      "point": "midpoint_m",
+      "of": "midpoint_line"
+    },
+    {
+      "type": "fixed",
+      "entity": "slider_origin"
+    },
+    {
+      "type": "fixed",
+      "entity": "slider_end"
     },
     {
       "type": "point_on_line",
-      "point": "slider",
-      "line": "guide_line"
+      "point": "slider_point",
+      "line": "slider_rail"
     },
     {
-      "type": "point_on_circle",
-      "point": "orbiter",
-      "circle": "path_circle"
+      "type": "distance",
+      "between": ["slider_origin", "slider_point"],
+      "value": 40
     },
     {
-      "type": "tangent",
-      "a": "circle1",
-      "b": "tangent_line"
+      "type": "fixed",
+      "entity": "angle_center"
+    },
+    {
+      "type": "distance",
+      "between": ["angle_center", "angle_p1"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["angle_center", "angle_p2"],
+      "value": 50
+    },
+    {
+      "type": "angle",
+      "between": ["angle_line1", "angle_line2"],
+      "value": 45
     },
     {
       "type": "equal_radius",

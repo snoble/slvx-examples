@@ -2,663 +2,341 @@
   "schema": "slvs-json/1",
   "units": "mm",
   "parameters": {
-    "ramp_angle": 25,
-    "ramp_length": 100,
     "ramp_width": 15,
-    "marble_radius": 6,
+    "ramp_length": 100,
     "bucket_width": 25,
     "bucket_height": 20,
     "lever_length": 80,
-    "lever_thickness": 4,
     "domino_width": 8,
-    "domino_height": 25,
-    "pulley_radius": 12
+    "domino_height": 25
   },
   "entities": [
     {
-      "type": "point",
-      "id": "origin",
-      "at": [0, 0, 0]
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "ramp_top_left",
-      "at": [10, 50, 0]
+      "at": [10, 50],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "ramp_top_right",
-      "at": [25, 50, 0]
+      "at": [25, 50],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "ramp_bottom_left",
-      "at": [90, 10, 0]
+      "at": [90, 10],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "ramp_bottom_right",
-      "at": [105, 10, 0]
+      "at": [105, 10],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "ramp_left",
       "p1": "ramp_top_left",
-      "p2": "ramp_bottom_left"
+      "p2": "ramp_bottom_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "ramp_right",
       "p1": "ramp_top_right",
-      "p2": "ramp_bottom_right"
+      "p2": "ramp_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "ramp_top",
       "p1": "ramp_top_left",
-      "p2": "ramp_top_right"
+      "p2": "ramp_top_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
-      "id": "ramp_bottom",
-      "p1": "ramp_bottom_left",
-      "p2": "ramp_bottom_right"
-    },
-    {
-      "type": "point",
-      "id": "marble_center",
-      "at": [30, 45, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p1",
-      "at": [36, 45, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p2",
-      "at": [34.24, 49.24, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p3",
-      "at": [30, 51, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p4",
-      "at": [25.76, 49.24, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p5",
-      "at": [24, 45, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p6",
-      "at": [25.76, 40.76, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p7",
-      "at": [30, 39, 0]
-    },
-    {
-      "type": "point",
-      "id": "marble_p8",
-      "at": [34.24, 40.76, 0]
-    },
-    {
-      "type": "line",
-      "id": "marble_l1",
-      "p1": "marble_p1",
-      "p2": "marble_p2"
-    },
-    {
-      "type": "line",
-      "id": "marble_l2",
-      "p1": "marble_p2",
-      "p2": "marble_p3"
-    },
-    {
-      "type": "line",
-      "id": "marble_l3",
-      "p1": "marble_p3",
-      "p2": "marble_p4"
-    },
-    {
-      "type": "line",
-      "id": "marble_l4",
-      "p1": "marble_p4",
-      "p2": "marble_p5"
-    },
-    {
-      "type": "line",
-      "id": "marble_l5",
-      "p1": "marble_p5",
-      "p2": "marble_p6"
-    },
-    {
-      "type": "line",
-      "id": "marble_l6",
-      "p1": "marble_p6",
-      "p2": "marble_p7"
-    },
-    {
-      "type": "line",
-      "id": "marble_l7",
-      "p1": "marble_p7",
-      "p2": "marble_p8"
-    },
-    {
-      "type": "line",
-      "id": "marble_l8",
-      "p1": "marble_p8",
-      "p2": "marble_p1"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "bucket_top_left",
-      "at": [85, -20, 0]
+      "at": [85, -20],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "bucket_top_right",
-      "at": [110, -20, 0]
+      "at": [110, -20],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "bucket_bottom_left",
-      "at": [85, -40, 0]
+      "at": [85, -40],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "bucket_bottom_right",
-      "at": [110, -40, 0]
+      "at": [110, -40],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "bucket_left",
       "p1": "bucket_top_left",
-      "p2": "bucket_bottom_left"
+      "p2": "bucket_bottom_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "bucket_right",
       "p1": "bucket_top_right",
-      "p2": "bucket_bottom_right"
+      "p2": "bucket_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "bucket_bottom",
       "p1": "bucket_bottom_left",
-      "p2": "bucket_bottom_right"
+      "p2": "bucket_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "lever_pivot",
-      "at": [140, -30, 0]
+      "type": "point2_d",
+      "id": "lever_left",
+      "at": [100, -55],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "lever_left_top",
-      "at": [110, -28, 0]
+      "type": "point2_d",
+      "id": "lever_right",
+      "at": [180, -55],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "lever_left_bottom",
-      "at": [110, -32, 0]
+      "type": "line2_d",
+      "id": "lever",
+      "p1": "lever_left",
+      "p2": "lever_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "lever_right_top",
-      "at": [190, -28, 0]
-    },
-    {
-      "type": "point",
-      "id": "lever_right_bottom",
-      "at": [190, -32, 0]
-    },
-    {
-      "type": "line",
-      "id": "lever_top",
-      "p1": "lever_left_top",
-      "p2": "lever_right_top"
-    },
-    {
-      "type": "line",
-      "id": "lever_bottom",
-      "p1": "lever_left_bottom",
-      "p2": "lever_right_bottom"
-    },
-    {
-      "type": "line",
-      "id": "lever_left_edge",
-      "p1": "lever_left_top",
-      "p2": "lever_left_bottom"
-    },
-    {
-      "type": "line",
-      "id": "lever_right_edge",
-      "p1": "lever_right_top",
-      "p2": "lever_right_bottom"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "pivot_triangle_top",
-      "at": [140, -35, 0]
+      "at": [140, -57],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "pivot_triangle_left",
-      "at": [135, -45, 0]
+      "at": [135, -70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "pivot_triangle_right",
-      "at": [145, -45, 0]
+      "at": [145, -70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "pivot_t1",
       "p1": "pivot_triangle_top",
-      "p2": "pivot_triangle_left"
+      "p2": "pivot_triangle_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "pivot_t2",
       "p1": "pivot_triangle_left",
-      "p2": "pivot_triangle_right"
+      "p2": "pivot_triangle_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "pivot_t3",
       "p1": "pivot_triangle_right",
-      "p2": "pivot_triangle_top"
+      "p2": "pivot_triangle_top",
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino1_top_left",
-      "at": [200, -10, 0]
+      "at": [200, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino1_top_right",
-      "at": [208, -10, 0]
+      "at": [208, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino1_bottom_left",
-      "at": [200, -35, 0]
+      "at": [200, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino1_bottom_right",
-      "at": [208, -35, 0]
+      "at": [208, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino1_left",
       "p1": "domino1_top_left",
-      "p2": "domino1_bottom_left"
+      "p2": "domino1_bottom_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino1_right",
       "p1": "domino1_top_right",
-      "p2": "domino1_bottom_right"
+      "p2": "domino1_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
-      "id": "domino1_top",
-      "p1": "domino1_top_left",
-      "p2": "domino1_top_right"
-    },
-    {
-      "type": "line",
-      "id": "domino1_bottom",
-      "p1": "domino1_bottom_left",
-      "p2": "domino1_bottom_right"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino2_top_left",
-      "at": [215, -10, 0]
+      "at": [220, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino2_top_right",
-      "at": [223, -10, 0]
+      "at": [228, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino2_bottom_left",
-      "at": [215, -35, 0]
+      "at": [220, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino2_bottom_right",
-      "at": [223, -35, 0]
+      "at": [228, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino2_left",
       "p1": "domino2_top_left",
-      "p2": "domino2_bottom_left"
+      "p2": "domino2_bottom_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino2_right",
       "p1": "domino2_top_right",
-      "p2": "domino2_bottom_right"
+      "p2": "domino2_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
-      "id": "domino2_top",
-      "p1": "domino2_top_left",
-      "p2": "domino2_top_right"
-    },
-    {
-      "type": "line",
-      "id": "domino2_bottom",
-      "p1": "domino2_bottom_left",
-      "p2": "domino2_bottom_right"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino3_top_left",
-      "at": [230, -10, 0]
+      "at": [240, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino3_top_right",
-      "at": [238, -10, 0]
+      "at": [248, -35],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino3_bottom_left",
-      "at": [230, -35, 0]
+      "at": [240, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "domino3_bottom_right",
-      "at": [238, -35, 0]
+      "at": [248, -60],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino3_left",
       "p1": "domino3_top_left",
-      "p2": "domino3_bottom_left"
+      "p2": "domino3_bottom_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "domino3_right",
       "p1": "domino3_top_right",
-      "p2": "domino3_bottom_right"
+      "p2": "domino3_bottom_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
-      "id": "domino3_top",
-      "p1": "domino3_top_left",
-      "p2": "domino3_top_right"
-    },
-    {
-      "type": "line",
-      "id": "domino3_bottom",
-      "p1": "domino3_bottom_left",
-      "p2": "domino3_bottom_right"
-    },
-    {
-      "type": "point",
-      "id": "pulley_center",
-      "at": [260, 10, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p1",
-      "at": [272, 10, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p2",
-      "at": [268.5, 18.5, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p3",
-      "at": [260, 22, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p4",
-      "at": [251.5, 18.5, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p5",
-      "at": [248, 10, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p6",
-      "at": [251.5, 1.5, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p7",
-      "at": [260, -2, 0]
-    },
-    {
-      "type": "point",
-      "id": "pulley_p8",
-      "at": [268.5, 1.5, 0]
-    },
-    {
-      "type": "line",
-      "id": "pulley_l1",
-      "p1": "pulley_p1",
-      "p2": "pulley_p2"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l2",
-      "p1": "pulley_p2",
-      "p2": "pulley_p3"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l3",
-      "p1": "pulley_p3",
-      "p2": "pulley_p4"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l4",
-      "p1": "pulley_p4",
-      "p2": "pulley_p5"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l5",
-      "p1": "pulley_p5",
-      "p2": "pulley_p6"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l6",
-      "p1": "pulley_p6",
-      "p2": "pulley_p7"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l7",
-      "p1": "pulley_p7",
-      "p2": "pulley_p8"
-    },
-    {
-      "type": "line",
-      "id": "pulley_l8",
-      "p1": "pulley_p8",
-      "p2": "pulley_p1"
-    },
-    {
-      "type": "point",
-      "id": "weight_top_left",
-      "at": [252, -5, 0]
-    },
-    {
-      "type": "point",
-      "id": "weight_top_right",
-      "at": [267, -5, 0]
-    },
-    {
-      "type": "point",
-      "id": "weight_bottom_left",
-      "at": [252, -23, 0]
-    },
-    {
-      "type": "point",
-      "id": "weight_bottom_right",
-      "at": [267, -23, 0]
-    },
-    {
-      "type": "line",
-      "id": "weight_left",
-      "p1": "weight_top_left",
-      "p2": "weight_bottom_left"
-    },
-    {
-      "type": "line",
-      "id": "weight_right",
-      "p1": "weight_top_right",
-      "p2": "weight_bottom_right"
-    },
-    {
-      "type": "line",
-      "id": "weight_top",
-      "p1": "weight_top_left",
-      "p2": "weight_top_right"
-    },
-    {
-      "type": "line",
-      "id": "weight_bottom",
-      "p1": "weight_bottom_left",
-      "p2": "weight_bottom_right"
-    },
-    {
-      "type": "point",
-      "id": "string_top",
-      "at": [260, 22, 0]
-    },
-    {
-      "type": "point",
-      "id": "string_bottom",
-      "at": [260, -5, 0]
-    },
-    {
-      "type": "line",
-      "id": "pulley_string",
-      "p1": "string_top",
-      "p2": "string_bottom"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "bell_top",
-      "at": [320, 20, 0]
+      "at": [290, 20],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "bell_left_top",
-      "at": [305, 15, 0]
+      "type": "point2_d",
+      "id": "bell_left",
+      "at": [270, -15],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "bell_left_mid",
-      "at": [300, 0, 0]
+      "type": "point2_d",
+      "id": "bell_right",
+      "at": [310, -15],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
-      "id": "bell_left_bottom",
-      "at": [305, -15, 0]
-    },
-    {
-      "type": "point",
-      "id": "bell_right_top",
-      "at": [335, 15, 0]
-    },
-    {
-      "type": "point",
-      "id": "bell_right_mid",
-      "at": [340, 0, 0]
-    },
-    {
-      "type": "point",
-      "id": "bell_right_bottom",
-      "at": [335, -15, 0]
-    },
-    {
-      "type": "line",
+      "type": "line2_d",
       "id": "bell_l1",
       "p1": "bell_top",
-      "p2": "bell_left_top"
+      "p2": "bell_left",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "bell_l2",
-      "p1": "bell_left_top",
-      "p2": "bell_left_mid"
+      "p1": "bell_left",
+      "p2": "bell_right",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "bell_l3",
-      "p1": "bell_left_mid",
-      "p2": "bell_left_bottom"
+      "p1": "bell_right",
+      "p2": "bell_top",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
-      "id": "bell_l4",
-      "p1": "bell_left_bottom",
-      "p2": "bell_right_bottom"
-    },
-    {
-      "type": "line",
-      "id": "bell_l5",
-      "p1": "bell_right_bottom",
-      "p2": "bell_right_mid"
-    },
-    {
-      "type": "line",
-      "id": "bell_l6",
-      "p1": "bell_right_mid",
-      "p2": "bell_right_top"
-    },
-    {
-      "type": "line",
-      "id": "bell_l7",
-      "p1": "bell_right_top",
-      "p2": "bell_top"
-    },
-    {
-      "type": "point",
+      "type": "point2_d",
       "id": "clapper",
-      "at": [320, -8, 0]
+      "at": [290, -8],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "clapper_string",
       "p1": "bell_top",
-      "p2": "clapper"
+      "p2": "clapper",
+      "workplane": "xy_plane"
     }
   ],
   "constraints": [
     {
       "type": "fixed",
-      "entity": "origin"
-    },
-    {
-      "type": "fixed",
-      "entity": "ramp_top_left"
+      "entity": "ramp_top_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -666,14 +344,8 @@
       "value": "$ramp_width"
     },
     {
-      "type": "distance",
-      "between": ["ramp_bottom_left", "ramp_bottom_right"],
-      "value": "$ramp_width"
-    },
-    {
       "type": "parallel",
-      "a": "ramp_left",
-      "b": "ramp_right"
+      "entities": ["ramp_left", "ramp_right"]
     },
     {
       "type": "distance",
@@ -681,32 +353,18 @@
       "value": "$ramp_length"
     },
     {
-      "type": "fixed",
-      "entity": "marble_center"
+      "type": "angle",
+      "between": ["ramp_left", "ramp_top"],
+      "value": 115
     },
     {
-      "type": "distance",
-      "between": ["marble_center", "marble_p1"],
-      "value": "$marble_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["marble_center", "marble_p3"],
-      "value": "$marble_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["marble_center", "marble_p5"],
-      "value": "$marble_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["marble_center", "marble_p7"],
-      "value": "$marble_radius"
+      "type": "equal_length",
+      "entities": ["ramp_left", "ramp_right"]
     },
     {
       "type": "fixed",
-      "entity": "bucket_top_left"
+      "entity": "bucket_top_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -720,63 +378,57 @@
     },
     {
       "type": "horizontal",
-      "a": "bucket_bottom"
+      "entity": "bucket_bottom",
+      "workplane": "xy_plane"
     },
     {
       "type": "vertical",
-      "a": "bucket_left"
+      "entity": "bucket_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "vertical",
-      "a": "bucket_right"
+      "entity": "bucket_right",
+      "workplane": "xy_plane"
     },
     {
       "type": "fixed",
-      "entity": "lever_pivot"
+      "entity": "lever_left",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "lever",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
-      "between": ["lever_left_top", "lever_right_top"],
+      "between": ["lever_left", "lever_right"],
       "value": "$lever_length"
     },
     {
-      "type": "distance",
-      "between": ["lever_left_top", "lever_left_bottom"],
-      "value": "$lever_thickness"
-    },
-    {
-      "type": "distance",
-      "between": ["lever_right_top", "lever_right_bottom"],
-      "value": "$lever_thickness"
+      "type": "fixed",
+      "entity": "pivot_triangle_top",
+      "workplane": "xy_plane"
     },
     {
       "type": "horizontal",
-      "a": "lever_top"
+      "entity": "pivot_t2",
+      "workplane": "xy_plane"
     },
     {
-      "type": "horizontal",
-      "a": "lever_bottom"
+      "type": "equal_length",
+      "entities": ["pivot_t1", "pivot_t3"]
     },
     {
-      "type": "coincident",
-      "at": "lever_pivot",
-      "of": ["lever_top"]
-    },
-    {
-      "type": "fixed",
-      "entity": "pivot_triangle_top"
+      "type": "distance",
+      "between": ["pivot_triangle_left", "pivot_triangle_right"],
+      "value": 10
     },
     {
       "type": "fixed",
-      "entity": "pivot_triangle_left"
-    },
-    {
-      "type": "fixed",
-      "entity": "pivot_triangle_right"
-    },
-    {
-      "type": "fixed",
-      "entity": "domino1_top_left"
+      "entity": "domino1_top_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -790,15 +442,18 @@
     },
     {
       "type": "vertical",
-      "a": "domino1_left"
+      "entity": "domino1_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "vertical",
-      "a": "domino1_right"
+      "entity": "domino1_right",
+      "workplane": "xy_plane"
     },
     {
       "type": "fixed",
-      "entity": "domino2_top_left"
+      "entity": "domino2_top_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -812,15 +467,18 @@
     },
     {
       "type": "vertical",
-      "a": "domino2_left"
+      "entity": "domino2_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "vertical",
-      "a": "domino2_right"
+      "entity": "domino2_right",
+      "workplane": "xy_plane"
     },
     {
       "type": "fixed",
-      "entity": "domino3_top_left"
+      "entity": "domino3_top_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -834,93 +492,46 @@
     },
     {
       "type": "vertical",
-      "a": "domino3_left"
+      "entity": "domino3_left",
+      "workplane": "xy_plane"
     },
     {
       "type": "vertical",
-      "a": "domino3_right"
+      "entity": "domino3_right",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "equal_length",
+      "entities": ["domino1_left", "domino2_left", "domino3_left"]
     },
     {
       "type": "fixed",
-      "entity": "pulley_center"
+      "entity": "bell_top",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "bell_l2",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "equal_length",
+      "entities": ["bell_l1", "bell_l3"]
     },
     {
       "type": "distance",
-      "between": ["pulley_center", "pulley_p1"],
-      "value": "$pulley_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["pulley_center", "pulley_p3"],
-      "value": "$pulley_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["pulley_center", "pulley_p5"],
-      "value": "$pulley_radius"
-    },
-    {
-      "type": "distance",
-      "between": ["pulley_center", "pulley_p7"],
-      "value": "$pulley_radius"
-    },
-    {
-      "type": "fixed",
-      "entity": "weight_top_left"
-    },
-    {
-      "type": "distance",
-      "between": ["weight_top_left", "weight_top_right"],
-      "value": "15"
-    },
-    {
-      "type": "distance",
-      "between": ["weight_top_left", "weight_bottom_left"],
-      "value": "18"
+      "between": ["bell_left", "bell_right"],
+      "value": 40
     },
     {
       "type": "vertical",
-      "a": "weight_left"
+      "entity": "clapper_string",
+      "workplane": "xy_plane"
     },
     {
-      "type": "vertical",
-      "a": "weight_right"
-    },
-    {
-      "type": "vertical",
-      "a": "pulley_string"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_top"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_left_top"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_left_mid"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_left_bottom"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_right_top"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_right_mid"
-    },
-    {
-      "type": "fixed",
-      "entity": "bell_right_bottom"
-    },
-    {
-      "type": "fixed",
-      "entity": "clapper"
+      "type": "distance",
+      "between": ["bell_top", "clapper"],
+      "value": 28
     }
   ]
 }

@@ -1,0 +1,108 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "ground_length": 80,
+    "crank_length": 20,
+    "coupler_length": 50,
+    "rocker_length": 50,
+    "crank_angle": 45
+  },
+  "entities": [
+    {
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point2_d",
+      "id": "ground_left",
+      "at": [0, 0],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point2_d",
+      "id": "ground_right",
+      "at": [80, 0],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "ground",
+      "p1": "ground_left",
+      "p2": "ground_right",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point2_d",
+      "id": "crank_end",
+      "at": [14, 14],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "crank",
+      "p1": "ground_left",
+      "p2": "crank_end",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point2_d",
+      "id": "rocker_end",
+      "at": [60, 40],
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "coupler",
+      "p1": "crank_end",
+      "p2": "rocker_end",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "line2_d",
+      "id": "rocker",
+      "p1": "rocker_end",
+      "p2": "ground_right",
+      "workplane": "xy_plane"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "ground_left",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "ground",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "distance",
+      "between": ["ground_left", "ground_right"],
+      "value": "$ground_length"
+    },
+    {
+      "type": "distance",
+      "between": ["ground_left", "crank_end"],
+      "value": "$crank_length"
+    },
+    {
+      "type": "distance",
+      "between": ["crank_end", "rocker_end"],
+      "value": "$coupler_length"
+    },
+    {
+      "type": "distance",
+      "between": ["rocker_end", "ground_right"],
+      "value": "$rocker_length"
+    },
+    {
+      "type": "angle",
+      "between": ["ground", "crank"],
+      "value": "$crank_angle"
+    }
+  ]
+}
