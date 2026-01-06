@@ -1,52 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50.0 -80.0 230.0 160.0" width="800" height="800">
-  <circle id="crank_end" cx="19.628662" cy="22.687345" r="2" fill="black"/>
-  <circle id="rocker_pos3" cx="60.000000" cy="40.000000" r="2" fill="black"/>
-  <line id="trace_l3" x1="58.000000" y1="35.000000" x2="53.000000" y2="38.000000" stroke="black"/>
-  <line id="crank_ghost3" x1="0.000000" y1="0.000000" x2="0.000000" y2="30.000000" stroke="black"/>
-  <circle id="trace_p1" cx="50.000000" cy="33.000000" r="2" fill="black"/>
-  <circle id="pin_A_top" cx="0.000000" cy="5.000000" r="2" fill="black"/>
-  <line id="coupler_trace2" x1="50.000000" y1="33.000000" x2="80.740288" y2="56.824849" stroke="black"/>
-  <circle id="trace_p3" cx="58.000000" cy="35.000000" r="2" fill="black"/>
-  <line id="trace_l5" x1="48.000000" y1="36.000000" x2="45.000000" y2="31.000000" stroke="black"/>
-  <line id="coupler" x1="19.628662" y1="22.687345" x2="80.740288" y2="56.824849" stroke="black"/>
-  <circle id="rocker_mid" cx="90.000000" cy="22.500000" r="2" fill="black"/>
-  <circle id="trace_p4" cx="53.000000" cy="38.000000" r="2" fill="black"/>
-  <line id="coupler_ghost4" x1="-21.210000" y1="21.210000" x2="55.000000" y2="20.000000" stroke="black"/>
-  <circle id="crank_pos3" cx="0.000000" cy="30.000000" r="2" fill="black"/>
-  <line id="crank_ghost2" x1="0.000000" y1="0.000000" x2="30.000000" y2="0.000000" stroke="black"/>
-  <circle id="pin_A_circle" cx="0.000000" cy="0.000000" r="4.000000" fill="none" stroke="black"/>
-  <line id="crank" x1="0.000000" y1="0.000000" x2="19.628662" y2="22.687345" stroke="black"/>
-  <circle id="rocker_end" cx="80.740288" cy="56.824849" r="2" fill="black"/>
-  <line id="rocker_ghost2" x1="70.000000" y1="52.000000" x2="100.000000" y2="0.000000" stroke="black"/>
-  <line id="coupler_ghost2" x1="30.000000" y1="0.000000" x2="70.000000" y2="52.000000" stroke="black"/>
-  <line id="trace_l1" x1="50.000000" y1="33.000000" x2="55.000000" y2="30.000000" stroke="black"/>
-  <circle id="rocker_pos2" cx="70.000000" cy="52.000000" r="2" fill="black"/>
-  <circle id="pin_B_circle" cx="21.210000" cy="21.210000" r="3.000000" fill="none" stroke="black"/>
-  <circle id="rocker_circle" cx="100.000000" cy="0.000000" r="60.000000" fill="none" stroke="black"/>
-  <circle id="trace_p5" cx="48.000000" cy="36.000000" r="2" fill="black"/>
-  <circle id="crank_circle" cx="0.000000" cy="0.000000" r="30.000000" fill="none" stroke="black"/>
-  <line id="rocker_ghost4" x1="55.000000" y1="20.000000" x2="100.000000" y2="0.000000" stroke="black"/>
-  <circle id="pin_D_top" cx="100.000000" cy="5.000000" r="2" fill="black"/>
-  <circle id="crank_pos2" cx="30.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="pin_D_circle" cx="100.000000" cy="0.000000" r="4.000000" fill="none" stroke="black"/>
-  <line id="crank_ghost4" x1="0.000000" y1="0.000000" x2="-21.210000" y2="21.210000" stroke="black"/>
-  <circle id="trace_p2" cx="55.000000" cy="30.000000" r="2" fill="black"/>
-  <circle id="coupler_mid" cx="50.000000" cy="33.000000" r="2" fill="black"/>
-  <circle id="rocker_pos4" cx="55.000000" cy="20.000000" r="2" fill="black"/>
-  <circle id="crank_mid" cx="10.600000" cy="10.600000" r="2" fill="black"/>
-  <circle id="trace_p6" cx="45.000000" cy="31.000000" r="2" fill="black"/>
-  <line id="trace_l2" x1="55.000000" y1="30.000000" x2="58.000000" y2="35.000000" stroke="black"/>
-  <circle id="crank_pos4" cx="-21.210000" cy="21.210000" r="2" fill="black"/>
-  <line id="rocker_ghost3" x1="60.000000" y1="40.000000" x2="100.000000" y2="0.000000" stroke="black"/>
-  <circle id="ground_right" cx="100.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="rocker" x1="80.740288" y1="56.824849" x2="100.000000" y2="0.000000" stroke="black"/>
-  <line id="coupler_trace1" x1="19.628662" y1="22.687345" x2="50.000000" y2="33.000000" stroke="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 140.0 97.0" width="800" height="800">
+  <line id="coupler" x1="21.213203" y1="21.213203" x2="81.356094" y2="57.029858" stroke="black"/>
+  <line id="crank" x1="0.000000" y1="0.000000" x2="21.213203" y2="21.213203" stroke="black"/>
+  <circle id="crank_end" cx="21.213203" cy="21.213203" r="2" fill="black"/>
   <line id="ground" x1="0.000000" y1="0.000000" x2="100.000000" y2="0.000000" stroke="black"/>
   <circle id="ground_left" cx="0.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="coupler_ghost3" x1="0.000000" y1="30.000000" x2="60.000000" y2="40.000000" stroke="black"/>
-  <circle id="pin_A" cx="0.000000" cy="-5.000000" r="2" fill="black"/>
-  <circle id="pin_D" cx="100.000000" cy="-5.000000" r="2" fill="black"/>
-  <circle id="pin_C_circle" cx="80.000000" cy="45.000000" r="3.000000" fill="none" stroke="black"/>
-  <line id="trace_l4" x1="53.000000" y1="38.000000" x2="48.000000" y2="36.000000" stroke="black"/>
-  <line id="trace_l6" x1="45.000000" y1="31.000000" x2="50.000000" y2="33.000000" stroke="black"/>
+  <circle id="ground_right" cx="100.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="rocker" x1="81.356094" y1="57.029858" x2="100.000000" y2="0.000000" stroke="black"/>
+  <circle id="rocker_end" cx="81.356094" cy="57.029858" r="2" fill="black"/>
 </svg>

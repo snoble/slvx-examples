@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120.0 -120.0 240.0 240.0" width="800" height="800">
-  <circle id="p7" cx="0.000000" cy="-70.000000" r="2" fill="black"/>
-  <line id="line4" x1="-49.497475" y1="49.497475" x2="-70.000000" y2="0.000000" stroke="black"/>
-  <circle id="p3" cx="0.000000" cy="70.000000" r="2" fill="black"/>
-  <circle id="p8" cx="49.497475" cy="-49.497475" r="2" fill="black"/>
-  <line id="line2" x1="49.497475" y1="49.497475" x2="0.000000" y2="70.000000" stroke="black"/>
-  <line id="line8" x1="49.497475" y1="-49.497475" x2="70.000000" y2="0.000000" stroke="black"/>
-  <circle id="p1" cx="70.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="line5" x1="-70.000000" y1="0.000000" x2="-49.497475" y2="-49.497475" stroke="black"/>
-  <circle id="p2" cx="49.497475" cy="49.497475" r="2" fill="black"/>
-  <circle id="p4" cx="-49.497475" cy="49.497475" r="2" fill="black"/>
-  <line id="line7" x1="0.000000" y1="-70.000000" x2="49.497475" y2="-49.497475" stroke="black"/>
   <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="inner_circle" cx="40.000000" cy="0.000000" r="30.000000" fill="none" stroke="black"/>
-  <line id="line6" x1="-49.497475" y1="-49.497475" x2="0.000000" y2="-70.000000" stroke="black"/>
-  <circle id="outer_circle" cx="0.000000" cy="0.000000" r="100.000000" fill="none" stroke="black"/>
-  <circle id="pen_point" cx="85.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="line3" x1="0.000000" y1="70.000000" x2="-49.497475" y2="49.497475" stroke="black"/>
   <circle id="inner_center" cx="70.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="p6" cx="-49.497475" cy="-49.497475" r="2" fill="black"/>
+  <circle id="inner_circle" cx="40.000000" cy="0.000000" r="30.000000" fill="none" stroke="black"/>
   <line id="line1" x1="70.000000" y1="0.000000" x2="49.497475" y2="49.497475" stroke="black"/>
+  <line id="line2" x1="49.497475" y1="49.497475" x2="0.000000" y2="70.000000" stroke="black"/>
+  <line id="line3" x1="0.000000" y1="70.000000" x2="-49.497475" y2="49.497475" stroke="black"/>
+  <line id="line4" x1="-49.497475" y1="49.497475" x2="-70.000000" y2="0.000000" stroke="black"/>
+  <line id="line5" x1="-70.000000" y1="0.000000" x2="-49.497475" y2="-49.497475" stroke="black"/>
+  <line id="line6" x1="-49.497475" y1="-49.497475" x2="0.000000" y2="-70.000000" stroke="black"/>
+  <line id="line7" x1="0.000000" y1="-70.000000" x2="49.497475" y2="-49.497475" stroke="black"/>
+  <line id="line8" x1="49.497475" y1="-49.497475" x2="70.000000" y2="0.000000" stroke="black"/>
+  <circle id="outer_circle" cx="0.000000" cy="0.000000" r="100.000000" fill="none" stroke="black"/>
+  <circle id="p1" cx="70.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="p2" cx="49.497475" cy="49.497475" r="2" fill="black"/>
+  <circle id="p3" cx="0.000000" cy="70.000000" r="2" fill="black"/>
+  <circle id="p4" cx="-49.497475" cy="49.497475" r="2" fill="black"/>
   <circle id="p5" cx="-70.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="p6" cx="-49.497475" cy="-49.497475" r="2" fill="black"/>
+  <circle id="p7" cx="0.000000" cy="-70.000000" r="2" fill="black"/>
+  <circle id="p8" cx="49.497475" cy="-49.497475" r="2" fill="black"/>
+  <circle id="pen_point" cx="85.000000" cy="0.000000" r="2" fill="black"/>
 </svg>

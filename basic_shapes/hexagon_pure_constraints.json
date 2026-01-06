@@ -4,33 +4,38 @@
   "entities": [
     {
       "type": "point",
-      "id": "p1",
+      "id": "center",
       "at": [0, 0, 0]
     },
     {
       "type": "point",
-      "id": "p2",
+      "id": "p1",
       "at": [50, 0, 0]
     },
     {
       "type": "point",
+      "id": "p2",
+      "at": [25, 43.3, 0]
+    },
+    {
+      "type": "point",
       "id": "p3",
-      "at": [60, 20, 0]
+      "at": [-25, 43.3, 0]
     },
     {
       "type": "point",
       "id": "p4",
-      "at": [40, 40, 0]
+      "at": [-50, 0, 0]
     },
     {
       "type": "point",
       "id": "p5",
-      "at": [10, 40, 0]
+      "at": [-25, -43.3, 0]
     },
     {
       "type": "point",
       "id": "p6",
-      "at": [-10, 20, 0]
+      "at": [25, -43.3, 0]
     },
     {
       "type": "line",
@@ -67,71 +72,69 @@
       "id": "side6",
       "p1": "p6",
       "p2": "p1"
+    },
+    {
+      "type": "line",
+      "id": "radius1",
+      "p1": "center",
+      "p2": "p1"
     }
   ],
   "constraints": [
     {
       "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
       "entity": "p1"
     },
     {
-      "type": "horizontal",
-      "entity": "side1"
+      "type": "distance",
+      "between": ["center", "p2"],
+      "value": 50
     },
     {
       "type": "distance",
-      "between": ["p1", "p2"],
+      "between": ["center", "p3"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p4"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p5"],
+      "value": 50
+    },
+    {
+      "type": "distance",
+      "between": ["center", "p6"],
       "value": 50
     },
     {
       "type": "equal_length",
-      "a": "side1",
-      "b": "side2"
+      "entities": ["side1", "side2"]
     },
     {
       "type": "equal_length",
-      "a": "side2",
-      "b": "side3"
+      "entities": ["side3", "side4"]
     },
     {
       "type": "equal_length",
-      "a": "side3",
-      "b": "side4"
-    },
-    {
-      "type": "equal_length",
-      "a": "side4",
-      "b": "side5"
-    },
-    {
-      "type": "equal_length",
-      "a": "side5",
-      "b": "side6"
+      "entities": ["side5", "side6"]
     },
     {
       "type": "angle",
       "between": ["side1", "side2"],
-      "value": 120
-    },
-    {
-      "type": "angle",
-      "between": ["side2", "side3"],
-      "value": 120
+      "value": 60
     },
     {
       "type": "angle",
       "between": ["side3", "side4"],
-      "value": 120
-    },
-    {
-      "type": "angle",
-      "between": ["side4", "side5"],
-      "value": 120
-    },
-    {
-      "type": "angle",
-      "between": ["side5", "side6"],
-      "value": 120
+      "value": 60
     }
   ]
 }

@@ -42,23 +42,16 @@
       "entity": "A"
     },
     {
-      "type": "horizontal",
-      "entity": "AB"
-    },
-    {
-      "type": "distance",
-      "between": ["A", "B"],
-      "value": 100
+      "type": "fixed",
+      "entity": "B"
     },
     {
       "type": "equal_length",
-      "a": "AB",
-      "b": "BC"
+      "entities": ["AB", "BC"]
     },
     {
       "type": "equal_length",
-      "a": "BC",
-      "b": "CA"
+      "entities": ["BC", "CA"]
     }
   ]
 }

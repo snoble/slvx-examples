@@ -10,7 +10,7 @@
     {
       "type": "point",
       "id": "B",
-      "at": [100, 10, 0]
+      "at": [50, 0, 0]
     },
     {
       "type": "point",
@@ -53,28 +53,16 @@
       "entity": "A"
     },
     {
-      "type": "horizontal",
-      "entity": "AB"
+      "type": "fixed",
+      "entity": "B"
     },
     {
-      "type": "distance",
-      "between": ["A", "B"],
-      "value": 50
+      "type": "equal_length",
+      "entities": ["AB", "BC"]
     },
     {
-      "type": "distance",
-      "between": ["B", "C"],
-      "value": 50
-    },
-    {
-      "type": "distance",
-      "between": ["C", "D"],
-      "value": 50
-    },
-    {
-      "type": "distance",
-      "between": ["D", "A"],
-      "value": 50
+      "type": "equal_length",
+      "entities": ["CD", "DA"]
     },
     {
       "type": "perpendicular",
@@ -85,11 +73,6 @@
       "type": "perpendicular",
       "a": "BC",
       "b": "CD"
-    },
-    {
-      "type": "perpendicular",
-      "a": "CD",
-      "b": "DA"
     }
   ]
 }

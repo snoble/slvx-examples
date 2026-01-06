@@ -3,190 +3,228 @@
   "units": "mm",
   "parameters": {
     "outer_radius": 100,
-    "inner_radius": 38,
-    "star_points": 8
+    "inner_radius": 38
   },
   "entities": [
     {
-      "type": "point",
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point2_d",
       "id": "center",
-      "at": [0, 0, 0]
+      "at": [0, 0],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer1",
-      "at": [100, 0, 0]
+      "at": [100, 0],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer2",
-      "at": [70, 70, 0]
+      "at": [70, 70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer3",
-      "at": [0, 100, 0]
+      "at": [0, 100],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer4",
-      "at": [-70, 70, 0]
+      "at": [-70, 70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer5",
-      "at": [-100, 0, 0]
+      "at": [-100, 0],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer6",
-      "at": [-70, -70, 0]
+      "at": [-70, -70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer7",
-      "at": [0, -100, 0]
+      "at": [0, -100],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "outer8",
-      "at": [70, -70, 0]
+      "at": [70, -70],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner1",
-      "at": [38, 0, 0]
+      "at": [38, 0],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner2",
-      "at": [27, 27, 0]
+      "at": [27, 27],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner3",
-      "at": [0, 38, 0]
+      "at": [0, 38],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner4",
-      "at": [-27, 27, 0]
+      "at": [-27, 27],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner5",
-      "at": [-38, 0, 0]
+      "at": [-38, 0],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner6",
-      "at": [-27, -27, 0]
+      "at": [-27, -27],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner7",
-      "at": [0, -38, 0]
+      "at": [0, -38],
+      "workplane": "xy_plane"
     },
     {
-      "type": "point",
+      "type": "point2_d",
       "id": "inner8",
-      "at": [27, -27, 0]
+      "at": [27, -27],
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke1",
       "p1": "center",
-      "p2": "outer1"
+      "p2": "outer1",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke2",
       "p1": "center",
-      "p2": "outer2"
+      "p2": "outer2",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke3",
       "p1": "center",
-      "p2": "outer3"
+      "p2": "outer3",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke4",
       "p1": "center",
-      "p2": "outer4"
+      "p2": "outer4",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke5",
       "p1": "center",
-      "p2": "outer5"
+      "p2": "outer5",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke6",
       "p1": "center",
-      "p2": "outer6"
+      "p2": "outer6",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke7",
       "p1": "center",
-      "p2": "outer7"
+      "p2": "outer7",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "spoke8",
       "p1": "center",
-      "p2": "outer8"
+      "p2": "outer8",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star1",
       "p1": "outer1",
-      "p2": "inner3"
+      "p2": "inner3",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star2",
       "p1": "outer2",
-      "p2": "inner4"
+      "p2": "inner4",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star3",
       "p1": "outer3",
-      "p2": "inner5"
+      "p2": "inner5",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star4",
       "p1": "outer4",
-      "p2": "inner6"
+      "p2": "inner6",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star5",
       "p1": "outer5",
-      "p2": "inner7"
+      "p2": "inner7",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star6",
       "p1": "outer6",
-      "p2": "inner8"
+      "p2": "inner8",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star7",
       "p1": "outer7",
-      "p2": "inner1"
+      "p2": "inner1",
+      "workplane": "xy_plane"
     },
     {
-      "type": "line",
+      "type": "line2_d",
       "id": "star8",
       "p1": "outer8",
-      "p2": "inner2"
+      "p2": "inner2",
+      "workplane": "xy_plane"
     },
     {
       "type": "circle",
@@ -204,11 +242,13 @@
   "constraints": [
     {
       "type": "fixed",
-      "entity": "center"
+      "entity": "center",
+      "workplane": "xy_plane"
     },
     {
       "type": "horizontal",
-      "a": "spoke1"
+      "entity": "spoke1",
+      "workplane": "xy_plane"
     },
     {
       "type": "distance",
@@ -271,26 +311,6 @@
       "value": 45
     },
     {
-      "type": "angle",
-      "between": ["spoke5", "spoke6"],
-      "value": 45
-    },
-    {
-      "type": "angle",
-      "between": ["spoke6", "spoke7"],
-      "value": 45
-    },
-    {
-      "type": "angle",
-      "between": ["spoke7", "spoke8"],
-      "value": 45
-    },
-    {
-      "type": "angle",
-      "between": ["spoke8", "spoke1"],
-      "value": 45
-    },
-    {
       "type": "distance",
       "between": ["center", "inner1"],
       "value": "$inner_radius"
@@ -331,44 +351,19 @@
       "value": "$inner_radius"
     },
     {
-      "type": "point_on_line",
-      "point": "inner1",
-      "line": "spoke1"
+      "type": "angle",
+      "between": ["spoke5", "spoke6"],
+      "value": 45
     },
     {
-      "type": "point_on_line",
-      "point": "inner2",
-      "line": "spoke2"
+      "type": "angle",
+      "between": ["spoke6", "spoke7"],
+      "value": 45
     },
     {
-      "type": "point_on_line",
-      "point": "inner3",
-      "line": "spoke3"
-    },
-    {
-      "type": "point_on_line",
-      "point": "inner4",
-      "line": "spoke4"
-    },
-    {
-      "type": "point_on_line",
-      "point": "inner5",
-      "line": "spoke5"
-    },
-    {
-      "type": "point_on_line",
-      "point": "inner6",
-      "line": "spoke6"
-    },
-    {
-      "type": "point_on_line",
-      "point": "inner7",
-      "line": "spoke7"
-    },
-    {
-      "type": "point_on_line",
-      "point": "inner8",
-      "line": "spoke8"
+      "type": "angle",
+      "between": ["spoke7", "spoke8"],
+      "value": 45
     },
     {
       "type": "equal_length",
@@ -376,23 +371,11 @@
     },
     {
       "type": "equal_length",
-      "entities": ["star2", "star3"]
-    },
-    {
-      "type": "equal_length",
       "entities": ["star3", "star4"]
     },
     {
       "type": "equal_length",
-      "entities": ["star4", "star5"]
-    },
-    {
-      "type": "equal_length",
       "entities": ["star5", "star6"]
-    },
-    {
-      "type": "equal_length",
-      "entities": ["star6", "star7"]
     },
     {
       "type": "equal_length",

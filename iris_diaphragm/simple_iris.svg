@@ -1,29 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80.0 -80.0 160.0 160.0" width="800" height="800">
-  <line id="blade5" x1="-30.869745" y1="-51.449576" x2="0.000000" y2="-30.000000" stroke="black"/>
-  <circle id="blade6_tip" cx="30.000000" cy="-30.000000" r="2" fill="black"/>
-  <line id="blade6" x1="30.869745" y1="-51.449576" x2="30.000000" y2="-30.000000" stroke="black"/>
-  <circle id="blade5_tip" cx="0.000000" cy="-30.000000" r="2" fill="black"/>
-  <circle id="pivot2" cx="30.869745" cy="51.449576" r="2" fill="black"/>
-  <circle id="blade4_tip" cx="-30.000000" cy="-30.000000" r="2" fill="black"/>
-  <circle id="pivot_circle" cx="0.000000" cy="0.000000" r="60.000000" fill="none" stroke="black"/>
-  <circle id="aperture_guide" cx="0.000000" cy="0.000000" r="30.000000" fill="none" stroke="black"/>
-  <circle id="blade1_tip" cx="30.000000" cy="30.000000" r="2" fill="black"/>
-  <circle id="pivot1" cx="60.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="radial3" x1="0.000000" y1="0.000000" x2="-30.869745" y2="51.449576" stroke="black"/>
-  <line id="radial4" x1="0.000000" y1="0.000000" x2="-60.000000" y2="0.000000" stroke="black"/>
-  <line id="radial6" x1="0.000000" y1="0.000000" x2="30.869745" y2="-51.449576" stroke="black"/>
-  <line id="radial5" x1="0.000000" y1="0.000000" x2="-30.869745" y2="-51.449576" stroke="black"/>
-  <line id="blade2" x1="30.869745" y1="51.449576" x2="0.000000" y2="30.000000" stroke="black"/>
-  <circle id="blade2_tip" cx="0.000000" cy="30.000000" r="2" fill="black"/>
-  <circle id="pivot3" cx="-30.869745" cy="51.449576" r="2" fill="black"/>
-  <circle id="pivot4" cx="-60.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="blade3" x1="-30.869745" y1="51.449576" x2="-30.000000" y2="30.000000" stroke="black"/>
-  <circle id="pivot5" cx="-30.869745" cy="-51.449576" r="2" fill="black"/>
-  <line id="radial2" x1="0.000000" y1="0.000000" x2="30.869745" y2="51.449576" stroke="black"/>
-  <circle id="pivot6" cx="30.869745" cy="-51.449576" r="2" fill="black"/>
-  <line id="radial1" x1="0.000000" y1="0.000000" x2="60.000000" y2="0.000000" stroke="black"/>
-  <line id="blade1" x1="60.000000" y1="0.000000" x2="30.000000" y2="30.000000" stroke="black"/>
-  <circle id="blade3_tip" cx="-30.000000" cy="30.000000" r="2" fill="black"/>
+  <line id="blade1" x1="60.000000" y1="0.000000" x2="19.750776" y2="20.124612" stroke="black"/>
+  <line id="blade2" x1="30.000000" y1="51.961524" x2="-9.445718" y2="30.304301" stroke="black"/>
+  <line id="blade3" x1="-30.000000" y1="51.961524" x2="-30.000000" y2="6.961524" stroke="black"/>
+  <line id="blade4" x1="-60.000000" y1="0.000000" x2="-19.750776" y2="-20.124612" stroke="black"/>
+  <line id="blade5" x1="-30.000000" y1="-51.961524" x2="9.445718" y2="-30.304301" stroke="black"/>
+  <line id="blade6" x1="30.000000" y1="-51.961524" x2="30.000000" y2="-6.961524" stroke="black"/>
   <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
-  <line id="blade4" x1="-60.000000" y1="0.000000" x2="-30.000000" y2="-30.000000" stroke="black"/>
+  <circle id="pivot1" cx="60.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="pivot2" cx="30.000000" cy="51.961524" r="2" fill="black"/>
+  <circle id="pivot3" cx="-30.000000" cy="51.961524" r="2" fill="black"/>
+  <circle id="pivot4" cx="-60.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="pivot5" cx="-30.000000" cy="-51.961524" r="2" fill="black"/>
+  <circle id="pivot6" cx="30.000000" cy="-51.961524" r="2" fill="black"/>
+  <circle id="pivot_circle" cx="0.000000" cy="0.000000" r="60.000000" fill="none" stroke="black"/>
+  <line id="radial1" x1="0.000000" y1="0.000000" x2="60.000000" y2="0.000000" stroke="black"/>
+  <line id="radial2" x1="0.000000" y1="0.000000" x2="30.000000" y2="51.961524" stroke="black"/>
+  <line id="radial3" x1="0.000000" y1="0.000000" x2="-30.000000" y2="51.961524" stroke="black"/>
+  <line id="radial4" x1="0.000000" y1="0.000000" x2="-60.000000" y2="0.000000" stroke="black"/>
+  <line id="radial5" x1="0.000000" y1="0.000000" x2="-30.000000" y2="-51.961524" stroke="black"/>
+  <line id="radial6" x1="0.000000" y1="0.000000" x2="30.000000" y2="-51.961524" stroke="black"/>
+  <circle id="tip1" cx="19.750776" cy="20.124612" r="2" fill="black"/>
+  <circle id="tip2" cx="-9.445718" cy="30.304301" r="2" fill="black"/>
+  <circle id="tip3" cx="-30.000000" cy="6.961524" r="2" fill="black"/>
+  <circle id="tip4" cx="-19.750776" cy="-20.124612" r="2" fill="black"/>
+  <circle id="tip5" cx="9.445718" cy="-30.304301" r="2" fill="black"/>
+  <circle id="tip6" cx="30.000000" cy="-6.961524" r="2" fill="black"/>
 </svg>
