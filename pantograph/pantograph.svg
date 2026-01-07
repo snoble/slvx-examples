@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24.0 -24.0 187.8 107.0" width="800" height="800">
+  <line id="arm1" x1="0.000000" y1="0.000000" x2="28.284271" y2="28.284271" stroke="black"/>
+  <line id="arm2" x1="28.284271" y1="28.284271" x2="53.294682" y2="59.500923" stroke="black"/>
+  <line id="cross1" x1="28.284271" y1="28.284271" x2="67.823890" y2="22.232946" stroke="black"/>
+  <line id="cross2" x1="53.294682" y1="59.500923" x2="67.823890" y2="22.232946" stroke="black"/>
+  <circle id="joint_a" cx="28.284271" cy="28.284271" r="2" fill="black"/>
+  <circle id="joint_b" cx="67.823890" cy="22.232946" r="2" fill="black"/>
+  <line id="output_line" x1="0.000000" y1="0.000000" x2="143.843712" y2="47.152552" stroke="black"/>
+  <circle id="pen" cx="143.843712" cy="47.152552" r="2" fill="black"/>
+  <line id="pen_arm" x1="67.823890" y1="22.232946" x2="143.843712" y2="47.152552" stroke="black"/>
+  <circle id="pen_marker" cx="120.000000" cy="40.000000" r="3.000000" fill="none" stroke="black"/>
+  <circle id="pivot" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="pivot_hub" cx="0.000000" cy="0.000000" r="4.000000" fill="none" stroke="black"/>
+  <circle id="ref" cx="100.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="ref_line" x1="0.000000" y1="0.000000" x2="100.000000" y2="0.000000" stroke="black"/>
+  <circle id="tracer" cx="53.294682" cy="59.500923" r="2" fill="black"/>
+  <circle id="tracer_marker" cx="60.000000" cy="60.000000" r="3.000000" fill="none" stroke="black"/>
+</svg>

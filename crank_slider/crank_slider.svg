@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 190.0 55.9" width="800" height="800">
+  <line id="conrod" x1="25.428844" y1="15.917723" x2="103.829266" y2="0.000000" stroke="black"/>
+  <line id="crank" x1="0.000000" y1="0.000000" x2="25.428844" y2="15.917723" stroke="black"/>
+  <circle id="crank_center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="crank_pin" cx="25.428844" cy="15.917723" r="2" fill="black"/>
+  <circle id="piston" cx="103.829266" cy="0.000000" r="2" fill="black"/>
+  <line id="rail" x1="0.000000" y1="0.000000" x2="150.000000" y2="0.000000" stroke="black"/>
+  <circle id="rail_end" cx="150.000000" cy="0.000000" r="2" fill="black"/>
+</svg>

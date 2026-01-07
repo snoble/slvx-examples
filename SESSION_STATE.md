@@ -22,17 +22,12 @@ CLI version in MCP: **0.1.6**
 
 ### 3. Created New Examples
 - **peaucellier_linkage/** - First mechanism to convert rotary to exact straight line (1864)
-  - Built incrementally following best practices
-  - Added citations to Wikipedia, SolveSpace examples, AMS
 - **theo_jansen_leg/** - Strandbeest walking mechanism using "holy numbers"
-  - Famous link ratios discovered by genetic algorithm
-  - Added citations to Wikipedia, strandbeest.com, SolveSpace, JavaLab
+- **crank_slider/** - Piston/engine mechanism
+- **scotch_yoke/** - Linear motion from rotation via sliding yoke
 - **whitworth_quick_return/** - Quick return mechanism for shaping machines
-  - Crank pin slides in rocker slot for asymmetric motion
 - **geneva_mechanism/** - 4-slot Maltese cross for intermittent motion
-  - Pin engages slots to rotate Geneva wheel 90° per cycle
-- **pantograph/** - Rhombus linkage for copying/scaling drawings
-  - Pen traces scaled copy of tracer path
+- **pantograph/** - Copy/scale drawing mechanism
 
 ### 4. Filed Issues
 - **#28**: MCP `get_schema` tool fails - CLI missing 'schema' subcommand
@@ -46,7 +41,13 @@ CLI version in MCP: **0.1.6**
 - **#36**: MCP: search_documentation returns limited context
 - **#37**: Example improvement: parametric_flower lacks constraints
 
-### 5. Best Practices Learned from MCP Docs
+### 5. Repo Audit Completed
+- Updated README.md with all examples in organized tables
+- Added READMEs to all example directories
+- Generated missing SVGs for all examples
+- Verified all directories have JSON, SVG, and README files
+
+### 6. Best Practices Learned from MCP Docs
 - Start with fixed reference points
 - Add entities one at a time, test after each
 - Use parameters for dimensions
@@ -66,9 +67,9 @@ CLI version in MCP: **0.1.6**
 | theo_jansen_leg | Works | Strandbeest walking mechanism |
 | crank_slider | Works | Piston/engine mechanism |
 | scotch_yoke | Works | Linear motion from rotation |
-| whitworth_quick_return | **NEW** | Quick return mechanism |
-| geneva_mechanism | **NEW** | 4-slot intermittent motion |
-| pantograph | **NEW** | Copy/scale drawing mechanism |
+| whitworth_quick_return | Works | Quick return mechanism |
+| geneva_mechanism | Works | 4-slot intermittent motion |
+| pantograph | Works | Copy/scale drawing mechanism |
 | gear_mechanism | Works | Two meshing gears |
 | parametric_flower | Works | Needs more constraints (issue #37) |
 | spirograph | Works | Octagon pattern |
@@ -77,10 +78,6 @@ CLI version in MCP: **0.1.6**
 | constraint_showcase | Works | Demos many constraint types |
 | rube_goldberg_machine | **BUG** | Crashes with equal_length >2 entities (bug #25) |
 | 3d_structures/* | Works | Tetrahedron, octahedron, pyramid, truss |
-
-## Ideas for More Examples
-
-All previously planned examples are now implemented!
 
 ## Commands Reference
 

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -65.7 123.7 98.9" width="800" height="800">
+  <circle id="A" cx="7.766540" cy="-12.832804" r="2" fill="black"/>
+  <line id="AB" x1="7.766540" y1="-12.832804" x2="50.485396" y2="13.149871" stroke="black"/>
+  <circle id="B" cx="50.485396" cy="13.149871" r="2" fill="black"/>
+  <line id="BC" x1="50.485396" y1="13.149871" x2="76.434495" y2="-19.236766" stroke="black"/>
+  <line id="BE" x1="50.485396" y1="13.149871" x2="19.899544" y2="-7.133021" stroke="black"/>
+  <line id="BF" x1="50.485396" y1="13.149871" x2="83.681559" y2="-22.891977" stroke="black"/>
+  <circle id="C" cx="76.434495" cy="-19.236766" r="2" fill="black"/>
+  <line id="CD" x1="76.434495" y1="-19.236766" x2="27.322575" y2="-45.725619" stroke="black"/>
+  <circle id="D" cx="27.322575" cy="-45.725619" r="2" fill="black"/>
+  <line id="DE" x1="27.322575" y1="-45.725619" x2="19.899544" y2="-7.133021" stroke="black"/>
+  <circle id="E" cx="19.899544" cy="-7.133021" r="2" fill="black"/>
+  <line id="EF" x1="19.899544" y1="-7.133021" x2="83.681559" y2="-22.891977" stroke="black"/>
+  <circle id="F" cx="83.681559" cy="-22.891977" r="2" fill="black"/>
+  <circle id="M" cx="38.000000" cy="-7.800000" r="2" fill="black"/>
+  <line id="MC" x1="38.000000" y1="-7.800000" x2="76.434495" y2="-19.236766" stroke="black"/>
+  <line id="MD" x1="38.000000" y1="-7.800000" x2="27.322575" y2="-45.725619" stroke="black"/>
+  <circle id="O" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="crank" x1="0.000000" y1="0.000000" x2="7.766540" y2="-12.832804" stroke="black"/>
+</svg>

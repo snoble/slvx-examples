@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24.0 -37.7 244.0 105.7" width="800" height="800">
+  <line id="crank" x1="0.000000" y1="0.000000" x2="17.677670" y2="-17.677670" stroke="black"/>
+  <circle id="crank_center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="crank_pin" cx="17.677670" cy="-17.677670" r="2" fill="black"/>
+  <circle id="crank_pivot_vis" cx="0.000000" cy="0.000000" r="4.000000" fill="none" stroke="black"/>
+  <circle id="crank_ref" cx="25.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="crank_ref_line" x1="0.000000" y1="0.000000" x2="25.000000" y2="0.000000" stroke="black"/>
+  <line id="ground" x1="0.000000" y1="0.000000" x2="50.000000" y2="0.000000" stroke="black"/>
+  <line id="rail" x1="50.000000" y1="0.000000" x2="200.000000" y2="0.000000" stroke="black"/>
+  <circle id="rail_end" cx="200.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="rocker" x1="50.000000" y1="0.000000" x2="137.735520" y2="47.984149" stroke="black"/>
+  <circle id="rocker_end" cx="137.735520" cy="47.984149" r="2" fill="black"/>
+  <circle id="rocker_pivot" cx="50.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="rocker_pivot_vis" cx="50.000000" cy="0.000000" r="4.000000" fill="none" stroke="black"/>
+  <circle id="slider" cx="137.735520" cy="0.000000" r="2" fill="black"/>
+  <line id="slider_link" x1="137.735520" y1="47.984149" x2="137.735520" y2="0.000000" stroke="black"/>
+</svg>

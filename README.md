@@ -1,49 +1,63 @@
 # SLVSX Constraint Solver Examples
 
-A collection of visually impressive examples demonstrating the power of the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
-
-## 📖 **IMPORTANT**: [Visual Design Guide](VISUAL_DESIGN_GUIDE.md)
-**Before creating examples, read the Visual Design Guide to understand what makes a "wow" example.**
+A collection of examples demonstrating the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
 
 ## What is SLVSX?
 
 SLVSX is a command-line interface to the SolveSpace constraint solver. It allows you to define geometric relationships declaratively and have the solver calculate actual positions automatically.
 
-## Showcase Examples
+## Examples
 
-### 🌟 [Islamic Star Pattern](geometric_art/)
-**192 points, 88 lines, 4 parameters**
-- Intricate geometric pattern with perfect mathematical precision
-- Complex intersections calculated automatically
-- Would take hours to calculate by hand
-- **View:** `geometric_art/islamic_star.svg`
+### Mechanical Linkages
 
-### 🔧 [Iris Diaphragm](iris_diaphragm/)  
-**Mechanical aperture with tapered blades**
-- Sophisticated mechanism like a camera aperture
-- Single parameter controls entire mechanism
-- Perpendicular constraints create proper blade geometry
-- **View:** `iris_diaphragm/sophisticated_8blade.svg`
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Four-Bar Linkage](four_bar_linkage/) | Classic planar linkage with parametric crank angle | [SVG](four_bar_linkage/four_bar_linkage.svg) |
+| [Chebyshev Linkage](chebyshev_linkage/) | Approximate straight-line mechanism | [SVG](chebyshev_linkage/chebyshev_linkage.svg) |
+| [Peaucellier Linkage](peaucellier_linkage/) | First mechanism to convert rotary to exact straight line (1864) | [SVG](peaucellier_linkage/peaucellier_linkage.svg) |
+| [Theo Jansen Leg](theo_jansen_leg/) | Strandbeest walking mechanism using "holy numbers" | [SVG](theo_jansen_leg/theo_jansen_leg.svg) |
+| [Crank-Slider](crank_slider/) | Converts rotary to reciprocating motion (piston/engine) | [SVG](crank_slider/crank_slider.svg) |
+| [Scotch Yoke](scotch_yoke/) | Converts rotation to linear motion via sliding yoke | [SVG](scotch_yoke/scotch_yoke.svg) |
+| [Whitworth Quick-Return](whitworth_quick_return/) | Asymmetric motion for shaping machines | [SVG](whitworth_quick_return/whitworth_quick_return.svg) |
+| [Geneva Mechanism](geneva_mechanism/) | Maltese cross for intermittent motion | [SVG](geneva_mechanism/geneva_mechanism.svg) |
+| [Pantograph](pantograph/) | Rhombus linkage for copying/scaling drawings | [SVG](pantograph/pantograph.svg) |
 
-### 🎢 [Rube Goldberg Machine](rube_goldberg_machine/)
-**Chain-reaction machine with visual components**
-- Recognizable mechanical components (marble, bucket, lever, dominoes)
-- Sequential dependencies between mechanisms
-- Shows why manual calculation is impractical
-- **View:** `rube_goldberg_machine/rube_goldberg_machine.svg`
+### Gear Systems
 
-## Additional Examples
-
-### Mechanical Systems
-- [Four-Bar Linkage](four_bar_linkage.json) - Classic mechanical linkage
-- [Gear Mechanism](gear_mechanism.json) - Interlocking gears with proper meshing
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Gear Mechanism](gear_mechanism/) | Two meshing gears with proper tooth spacing | [SVG](gear_mechanism/gear_mechanism.svg) |
 
 ### Artistic Patterns
-- [Parametric Flower](parametric_flower.json) - Organic patterns from constraints
-- [Spirograph](spirograph.json) - Mathematical art patterns
 
-### [Basic Shapes](basic_shapes/)
-Simple learning examples for understanding constraint basics
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Islamic Star Pattern](geometric_art/) | 192 points, 88 lines - intricate geometric precision | [SVG](geometric_art/islamic_star.svg) |
+| [Parametric Flower](parametric_flower/) | Organic patterns from geometric constraints | [SVG](parametric_flower/parametric_flower.svg) |
+| [Spirograph](spirograph/) | Mathematical art patterns | [SVG](spirograph/spirograph.svg) |
+| [Iris Diaphragm](iris_diaphragm/) | Camera-style aperture mechanism | [SVG](iris_diaphragm/sophisticated_8blade.svg) |
+
+### Complex Systems
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Rube Goldberg Machine](rube_goldberg_machine/) | Chain-reaction with marble, bucket, lever, dominoes | [SVG](rube_goldberg_machine/rube_goldberg_machine.svg) |
+| [Constraint Showcase](constraint_showcase/) | Demonstrates many constraint types in one file | [SVG](constraint_showcase/constraint_showcase.svg) |
+
+### 3D Structures
+
+| Example | Description |
+|---------|-------------|
+| [Tetrahedron](3d_structures/) | 4-faced polyhedron |
+| [Octahedron](3d_structures/) | 8-faced polyhedron |
+| [Pyramid](3d_structures/) | Square-based pyramid |
+| [3D Truss](3d_structures/) | Structural truss in 3D |
+
+### Learning Examples
+
+| Example | Description |
+|---------|-------------|
+| [Basic Shapes](basic_shapes/) | Triangle, square, hexagon, pentagon - for learning constraint basics |
 
 ## Quick Start
 
@@ -59,25 +73,23 @@ cd slvx-examples
 
 ### Try It Out
 ```bash
-# Solve the Islamic star pattern
-slvsx solve geometric_art/islamic_star.json
+# Solve a linkage
+slvsx solve four_bar_linkage/four_bar_linkage.json
 
-# Export to SVG and view
-slvsx export -f svg geometric_art/islamic_star.json > star.svg
-open star.svg  # or use your SVG viewer
+# Export to SVG
+slvsx export -f svg four_bar_linkage/four_bar_linkage.json > output.svg
+open output.svg
 ```
 
 ## Creating Your Own Examples
 
-### The Golden Rule
-**Always export to SVG and visually inspect at every step.**
+Read the [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) before creating examples.
 
-### Good Example Checklist
-- [ ] Visually recognizable components (not abstract lines)
-- [ ] Reasonable coordinate system (< 200 units from origin)
-- [ ] Parameters that make sense (human-scale values)
-- [ ] Complex enough to show solver power
-- [ ] SVG output that makes people say "wow"
+### Key Principles
+1. **Build incrementally** - Add entities one at a time, test after each
+2. **Export to SVG** - Visually inspect at every step
+3. **Use parameters** - Make key dimensions parametric
+4. **Provide good initial guesses** - Use `at` fields for points
 
 ### Example Structure
 ```json
@@ -85,14 +97,16 @@ open star.svg  # or use your SVG viewer
   "schema": "slvs-json/1",
   "units": "mm",
   "parameters": {
-    "key_dimension": 50,
+    "link_length": 50,
     "angle": 30
   },
   "entities": [
-    // Points, lines, etc.
+    {"type": "point", "id": "origin", "at": [0, 0, 0]},
+    {"type": "line", "id": "link", "p1": "origin", "p2": "end"}
   ],
   "constraints": [
-    // Relationships between entities
+    {"type": "fixed", "entity": "origin"},
+    {"type": "distance", "between": ["origin", "end"], "value": "$link_length"}
   ]
 }
 ```
@@ -104,40 +118,24 @@ open star.svg  # or use your SVG viewer
 | `fixed` | Anchor a point | Origin, pivot points |
 | `distance` | Set distance between points | Lengths, radii |
 | `angle` | Set angle between lines | Rotations, slopes |
-| `perpendicular` | Make lines 90° | Right angles |
+| `perpendicular` | Make lines 90 degrees | Right angles |
 | `parallel` | Make lines parallel | Rails, guides |
-| `coincident` | Point on line | Intersections |
-| `horizontal`/`vertical` | Align to axes | Level surfaces |
+| `point_on_line` | Point lies on line | Sliders, intersections |
+| `equal_length` | Make segments equal | Regular polygons |
+| `midpoint` | Point at midpoint | Centering |
 
-## Development Workflow
+## Known Issues
 
-1. **Start Simple**: Basic shape with few constraints
-2. **Test Visually**: Export to SVG after each change
-3. **Add Complexity**: Layer additional constraints
-4. **Check Scale**: Ensure viewBox is reasonable
-5. **Parametrize**: Replace hard values with parameters
-6. **Document**: Explain why it needs a solver
+See [GitHub Issues](https://github.com/snoble/slvsx-cli/issues) for current bugs and feature requests.
 
-## Contributing
-
-### What Makes a Good Contribution
-- **Visually Impressive**: Should make viewers say "wow"
-- **Demonstrates Solver Power**: Too complex for manual calculation
-- **Well Documented**: Clear explanation of constraints used
-- **Properly Scaled**: Reasonable coordinate system
-- **Parametric**: Key dimensions controlled by parameters
-
-### Before Submitting
-1. Read the [Visual Design Guide](VISUAL_DESIGN_GUIDE.md)
-2. Test all incremental steps
-3. Ensure SVG output looks impressive
-4. Document why a solver is needed
-5. Use human-scale parameters
+- `equal_length` with >2 entities can cause crashes (bug #25) - use chained constraints instead
+- `symmetric` constraint requires 2D geometry with workplane
+- Circles don't track points - use points for moving parts
 
 ## Resources
 
-- [SLVSX CLI Documentation](https://github.com/snoble/slvsx-cli)
-- [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) - **Must read for contributors**
+- [SLVSX CLI](https://github.com/snoble/slvsx-cli) - The constraint solver
+- [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) - How to create good examples
 - [SolveSpace](https://solvespace.com) - The underlying constraint solver
 
 ## License
