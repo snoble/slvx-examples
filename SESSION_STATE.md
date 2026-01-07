@@ -27,11 +27,24 @@ CLI version in MCP: **0.1.6**
 - **theo_jansen_leg/** - Strandbeest walking mechanism using "holy numbers"
   - Famous link ratios discovered by genetic algorithm
   - Added citations to Wikipedia, strandbeest.com, SolveSpace, JavaLab
+- **whitworth_quick_return/** - Quick return mechanism for shaping machines
+  - Crank pin slides in rocker slot for asymmetric motion
+- **geneva_mechanism/** - 4-slot Maltese cross for intermittent motion
+  - Pin engages slots to rotate Geneva wheel 90° per cycle
+- **pantograph/** - Rhombus linkage for copying/scaling drawings
+  - Pen traces scaled copy of tracer path
 
 ### 4. Filed Issues
 - **#28**: MCP `get_schema` tool fails - CLI missing 'schema' subcommand
 - **#29**: Document 2D geometry entities (point2_d, line2_d) and workplane requirements
 - **#30**: Clarify symmetric constraint syntax and 3D limitations
+- **#31**: Feature request: equal_angle constraint for distributing entities evenly
+- **#32**: Feature request: collinear constraint for 3+ points
+- **#33**: Feature request: Circle center as point reference
+- **#34**: Documentation: point_on_circle constraint missing from reference table
+- **#35**: Feature request: Arc and curve entities
+- **#36**: MCP: search_documentation returns limited context
+- **#37**: Example improvement: parametric_flower lacks constraints
 
 ### 5. Best Practices Learned from MCP Docs
 - Start with fixed reference points
@@ -46,28 +59,28 @@ CLI version in MCP: **0.1.6**
 
 | Example | Status | Notes |
 |---------|--------|-------|
-| basic_shapes/* | Should work | Various triangle, square, hexagon, pentagon |
+| basic_shapes/* | Works | Various triangle, square, hexagon, pentagon |
 | four_bar_linkage | Works | Classic 4-bar with parametric crank angle |
 | chebyshev_linkage | Works | Approximate straight-line linkage |
-| peaucellier_linkage | **NEW** | Exact straight-line linkage |
-| theo_jansen_leg | **NEW** | Strandbeest walking mechanism |
-| gear_mechanism | Needs test | |
-| parametric_flower | Needs test | |
-| spirograph | Needs test | |
-| geometric_art | Needs test | |
-| iris_diaphragm | Needs test | |
-| constraint_showcase | Needs test | Uses 2D geometry, complex |
-| rube_goldberg_machine | Needs test | Uses 2D geometry, complex |
-| 3d_structures/* | Should work | Tetrahedron, octahedron, pyramid, truss |
+| peaucellier_linkage | Works | Exact straight-line linkage |
+| theo_jansen_leg | Works | Strandbeest walking mechanism |
+| crank_slider | Works | Piston/engine mechanism |
+| scotch_yoke | Works | Linear motion from rotation |
+| whitworth_quick_return | **NEW** | Quick return mechanism |
+| geneva_mechanism | **NEW** | 4-slot intermittent motion |
+| pantograph | **NEW** | Copy/scale drawing mechanism |
+| gear_mechanism | Works | Two meshing gears |
+| parametric_flower | Works | Needs more constraints (issue #37) |
+| spirograph | Works | Octagon pattern |
+| geometric_art | Works | Islamic star pattern |
+| iris_diaphragm | Works | 6-blade iris |
+| constraint_showcase | Works | Demos many constraint types |
+| rube_goldberg_machine | **BUG** | Crashes with equal_length >2 entities (bug #25) |
+| 3d_structures/* | Works | Tetrahedron, octahedron, pyramid, truss |
 
 ## Ideas for More Examples
 
-Based on SolveSpace tutorials:
-- **Whitworth quick-return mechanism** - Sliding-pin mechanism
-- **Crank-slider mechanism** - Piston/engine
-- **Geneva mechanism** - Intermittent motion
-- **Scotch yoke** - Another straight-line mechanism
-- **Pantograph** - Copy/scale mechanism
+All previously planned examples are now implemented!
 
 ## Commands Reference
 
