@@ -1,0 +1,155 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Whitworth Quick-Return Mechanism - Converts uniform rotary motion into non-uniform reciprocating motion. The forward stroke is slower than the return stroke, ideal for shaping machines and planers. The crank pin slides in the rocker slot, creating the asymmetric motion.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Quick_return_mechanism",
+    "https://en.wikipedia.org/wiki/Whitworth_quick_return_mechanism"
+  ],
+  "units": "mm",
+  "parameters": {
+    "crank_radius": 25,
+    "rocker_length": 100,
+    "crank_angle": 45
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "crank_center",
+      "at": [0, 0, 0],
+      "description": "Fixed center of driving crank"
+    },
+    {
+      "type": "point",
+      "id": "crank_pin",
+      "at": [18, 18, 0],
+      "description": "Pin that slides in rocker slot"
+    },
+    {
+      "type": "point",
+      "id": "crank_ref",
+      "at": [25, 0, 0],
+      "description": "Reference point for crank angle measurement"
+    },
+    {
+      "type": "point",
+      "id": "rocker_pivot",
+      "at": [50, 0, 0],
+      "description": "Fixed pivot of rocker arm"
+    },
+    {
+      "type": "point",
+      "id": "rocker_end",
+      "at": [100, 60, 0],
+      "description": "End of rocker that drives output"
+    },
+    {
+      "type": "point",
+      "id": "slider",
+      "at": [100, 0, 0],
+      "description": "Output slider"
+    },
+    {
+      "type": "point",
+      "id": "rail_end",
+      "at": [200, 0, 0],
+      "description": "End of output rail"
+    },
+    {
+      "type": "line",
+      "id": "crank",
+      "p1": "crank_center",
+      "p2": "crank_pin"
+    },
+    {
+      "type": "line",
+      "id": "crank_ref_line",
+      "p1": "crank_center",
+      "p2": "crank_ref"
+    },
+    {
+      "type": "line",
+      "id": "rocker",
+      "p1": "rocker_pivot",
+      "p2": "rocker_end"
+    },
+    {
+      "type": "line",
+      "id": "slider_link",
+      "p1": "rocker_end",
+      "p2": "slider"
+    },
+    {
+      "type": "line",
+      "id": "rail",
+      "p1": "rocker_pivot",
+      "p2": "rail_end"
+    },
+    {
+      "type": "line",
+      "id": "ground",
+      "p1": "crank_center",
+      "p2": "rocker_pivot"
+    },
+    {
+      "type": "circle",
+      "id": "crank_pivot_vis",
+      "center": [0, 0, 0],
+      "diameter": 8
+    },
+    {
+      "type": "circle",
+      "id": "rocker_pivot_vis",
+      "center": [50, 0, 0],
+      "diameter": 8
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "crank_center"
+    },
+    {
+      "type": "fixed",
+      "entity": "rocker_pivot"
+    },
+    {
+      "type": "fixed",
+      "entity": "rail_end"
+    },
+    {
+      "type": "fixed",
+      "entity": "crank_ref"
+    },
+    {
+      "type": "distance",
+      "between": ["crank_center", "crank_pin"],
+      "value": "$crank_radius"
+    },
+    {
+      "type": "angle",
+      "between": ["crank_ref_line", "crank"],
+      "value": "$crank_angle"
+    },
+    {
+      "type": "distance",
+      "between": ["rocker_pivot", "rocker_end"],
+      "value": "$rocker_length"
+    },
+    {
+      "type": "point_on_line",
+      "point": "crank_pin",
+      "line": "rocker",
+      "description": "Crank pin slides in rocker slot"
+    },
+    {
+      "type": "point_on_line",
+      "point": "slider",
+      "line": "rail"
+    },
+    {
+      "type": "perpendicular",
+      "a": "slider_link",
+      "b": "rail"
+    }
+  ]
+}

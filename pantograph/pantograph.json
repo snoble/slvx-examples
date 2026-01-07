@@ -1,0 +1,164 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Pantograph - A mechanical linkage that copies and scales drawings. The tracer follows the original, while the pen draws an enlarged or reduced copy. Uses a rhombus (4 equal links) with the pen collinear with the pivot and joint_b. Scale ratio is determined by distance from joint_b to pen vs joint_b to pivot.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Pantograph",
+    "https://www.youtube.com/watch?v=GHR3n9wvXXE"
+  ],
+  "units": "mm",
+  "parameters": {
+    "link_length": 40,
+    "arm_angle": 45,
+    "pen_extension": 80
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "pivot",
+      "at": [0, 0, 0],
+      "description": "Fixed pivot point"
+    },
+    {
+      "type": "point",
+      "id": "joint_a",
+      "at": [30, 30, 0],
+      "description": "Upper joint of rhombus"
+    },
+    {
+      "type": "point",
+      "id": "tracer",
+      "at": [60, 60, 0],
+      "description": "Tracer point - follows original drawing"
+    },
+    {
+      "type": "point",
+      "id": "joint_b",
+      "at": [60, 30, 0],
+      "description": "Lower joint of rhombus (on output line)"
+    },
+    {
+      "type": "point",
+      "id": "pen",
+      "at": [120, 40, 0],
+      "description": "Pen point - draws scaled copy"
+    },
+    {
+      "type": "point",
+      "id": "ref",
+      "at": [100, 0, 0],
+      "description": "Reference for arm angle"
+    },
+    {
+      "type": "line",
+      "id": "arm1",
+      "p1": "pivot",
+      "p2": "joint_a"
+    },
+    {
+      "type": "line",
+      "id": "arm2",
+      "p1": "joint_a",
+      "p2": "tracer"
+    },
+    {
+      "type": "line",
+      "id": "cross1",
+      "p1": "joint_a",
+      "p2": "joint_b"
+    },
+    {
+      "type": "line",
+      "id": "cross2",
+      "p1": "tracer",
+      "p2": "joint_b"
+    },
+    {
+      "type": "line",
+      "id": "pen_arm",
+      "p1": "joint_b",
+      "p2": "pen"
+    },
+    {
+      "type": "line",
+      "id": "output_line",
+      "p1": "pivot",
+      "p2": "pen"
+    },
+    {
+      "type": "line",
+      "id": "ref_line",
+      "p1": "pivot",
+      "p2": "ref"
+    },
+    {
+      "type": "circle",
+      "id": "pivot_hub",
+      "center": [0, 0, 0],
+      "diameter": 8
+    },
+    {
+      "type": "circle",
+      "id": "tracer_marker",
+      "center": [60, 60, 0],
+      "diameter": 6
+    },
+    {
+      "type": "circle",
+      "id": "pen_marker",
+      "center": [120, 40, 0],
+      "diameter": 6
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "pivot"
+    },
+    {
+      "type": "fixed",
+      "entity": "ref"
+    },
+    {
+      "type": "distance",
+      "between": ["pivot", "joint_a"],
+      "value": "$link_length",
+      "description": "Rhombus side 1"
+    },
+    {
+      "type": "distance",
+      "between": ["joint_a", "tracer"],
+      "value": "$link_length",
+      "description": "Rhombus side 2"
+    },
+    {
+      "type": "distance",
+      "between": ["joint_a", "joint_b"],
+      "value": "$link_length",
+      "description": "Rhombus side 3"
+    },
+    {
+      "type": "distance",
+      "between": ["tracer", "joint_b"],
+      "value": "$link_length",
+      "description": "Rhombus side 4"
+    },
+    {
+      "type": "angle",
+      "between": ["ref_line", "arm1"],
+      "value": "$arm_angle",
+      "description": "Arm angle (parametric input)"
+    },
+    {
+      "type": "point_on_line",
+      "point": "joint_b",
+      "line": "output_line",
+      "description": "joint_b, pivot, and pen are collinear - key for scaling"
+    },
+    {
+      "type": "distance",
+      "between": ["joint_b", "pen"],
+      "value": "$pen_extension",
+      "description": "Pen arm length - determines scale ratio"
+    }
+  ]
+}

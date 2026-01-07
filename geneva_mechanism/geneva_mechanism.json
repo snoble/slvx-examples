@@ -1,0 +1,188 @@
+{
+  "schema": "slvs-json/1",
+  "description": "Geneva Mechanism (Maltese Cross) - Converts continuous rotary motion into intermittent rotary motion. The driver wheel has a pin that engages one of four slots on the Geneva cross, rotating it exactly 90 degrees before disengaging. Used in film projectors, watches, and indexing machines.",
+  "references": [
+    "https://en.wikipedia.org/wiki/Geneva_drive",
+    "https://www.youtube.com/watch?v=pJRvjtDqRgE"
+  ],
+  "units": "mm",
+  "parameters": {
+    "driver_radius": 40,
+    "driver_angle": 30,
+    "center_distance": 70,
+    "slot_length": 50
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "driver_center",
+      "at": [0, 0, 0],
+      "description": "Center of driving wheel"
+    },
+    {
+      "type": "point",
+      "id": "driver_pin",
+      "at": [30, 20, 0],
+      "description": "Pin that engages Geneva slots"
+    },
+    {
+      "type": "point",
+      "id": "driver_ref",
+      "at": [40, 0, 0],
+      "description": "Reference for driver angle"
+    },
+    {
+      "type": "point",
+      "id": "geneva_center",
+      "at": [70, 0, 0],
+      "description": "Center of Geneva cross (driven)"
+    },
+    {
+      "type": "point",
+      "id": "slot1_end",
+      "at": [70, 50, 0],
+      "description": "End of slot 1 (engaged)"
+    },
+    {
+      "type": "point",
+      "id": "slot2_end",
+      "at": [120, 0, 0],
+      "description": "End of slot 2"
+    },
+    {
+      "type": "point",
+      "id": "slot3_end",
+      "at": [70, -50, 0],
+      "description": "End of slot 3"
+    },
+    {
+      "type": "point",
+      "id": "slot4_end",
+      "at": [20, 0, 0],
+      "description": "End of slot 4"
+    },
+    {
+      "type": "line",
+      "id": "driver_arm",
+      "p1": "driver_center",
+      "p2": "driver_pin"
+    },
+    {
+      "type": "line",
+      "id": "driver_ref_line",
+      "p1": "driver_center",
+      "p2": "driver_ref"
+    },
+    {
+      "type": "line",
+      "id": "slot1",
+      "p1": "geneva_center",
+      "p2": "slot1_end",
+      "description": "Slot currently engaged by pin"
+    },
+    {
+      "type": "line",
+      "id": "slot2",
+      "p1": "geneva_center",
+      "p2": "slot2_end"
+    },
+    {
+      "type": "line",
+      "id": "slot3",
+      "p1": "geneva_center",
+      "p2": "slot3_end"
+    },
+    {
+      "type": "line",
+      "id": "slot4",
+      "p1": "geneva_center",
+      "p2": "slot4_end"
+    },
+    {
+      "type": "line",
+      "id": "ground",
+      "p1": "driver_center",
+      "p2": "geneva_center"
+    },
+    {
+      "type": "circle",
+      "id": "driver_hub",
+      "center": [0, 0, 0],
+      "diameter": 20
+    },
+    {
+      "type": "circle",
+      "id": "geneva_hub",
+      "center": [70, 0, 0],
+      "diameter": 20
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "driver_center"
+    },
+    {
+      "type": "fixed",
+      "entity": "driver_ref"
+    },
+    {
+      "type": "fixed",
+      "entity": "geneva_center"
+    },
+    {
+      "type": "distance",
+      "between": ["driver_center", "driver_pin"],
+      "value": "$driver_radius",
+      "description": "Pin orbit radius"
+    },
+    {
+      "type": "angle",
+      "between": ["driver_ref_line", "driver_arm"],
+      "value": "$driver_angle",
+      "description": "Driver rotation angle (parametric input)"
+    },
+    {
+      "type": "distance",
+      "between": ["geneva_center", "slot1_end"],
+      "value": "$slot_length"
+    },
+    {
+      "type": "distance",
+      "between": ["geneva_center", "slot2_end"],
+      "value": "$slot_length"
+    },
+    {
+      "type": "distance",
+      "between": ["geneva_center", "slot3_end"],
+      "value": "$slot_length"
+    },
+    {
+      "type": "distance",
+      "between": ["geneva_center", "slot4_end"],
+      "value": "$slot_length"
+    },
+    {
+      "type": "perpendicular",
+      "a": "slot1",
+      "b": "slot2",
+      "description": "Slots are 90 degrees apart"
+    },
+    {
+      "type": "perpendicular",
+      "a": "slot2",
+      "b": "slot3"
+    },
+    {
+      "type": "perpendicular",
+      "a": "slot3",
+      "b": "slot4"
+    },
+    {
+      "type": "point_on_line",
+      "point": "driver_pin",
+      "line": "slot1",
+      "description": "Pin engages slot 1"
+    }
+  ]
+}
