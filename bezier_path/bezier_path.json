@@ -1,0 +1,93 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "handle_length": 40,
+    "curve_width": 80
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "start",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "ctrl1",
+      "at": [0, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "ctrl2",
+      "at": [80, -40, 0]
+    },
+    {
+      "type": "point",
+      "id": "end",
+      "at": [80, 0, 0]
+    },
+    {
+      "type": "cubic",
+      "id": "s_curve",
+      "control_points": ["start", "ctrl1", "ctrl2", "end"]
+    },
+    {
+      "type": "line",
+      "id": "handle_start",
+      "p1": "start",
+      "p2": "ctrl1"
+    },
+    {
+      "type": "line",
+      "id": "handle_end",
+      "p1": "ctrl2",
+      "p2": "end"
+    },
+    {
+      "type": "point",
+      "id": "ref_right",
+      "at": [40, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "reference",
+      "p1": "start",
+      "p2": "ref_right"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "start"
+    },
+    {
+      "type": "fixed",
+      "entity": "ref_right"
+    },
+    {
+      "type": "distance",
+      "between": ["start", "end"],
+      "value": "$curve_width"
+    },
+    {
+      "type": "distance",
+      "between": ["start", "ctrl1"],
+      "value": "$handle_length"
+    },
+    {
+      "type": "distance",
+      "between": ["ctrl2", "end"],
+      "value": "$handle_length"
+    },
+    {
+      "type": "perpendicular",
+      "a": "handle_start",
+      "b": "reference"
+    },
+    {
+      "type": "perpendicular",
+      "a": "handle_end",
+      "b": "reference"
+    }
+  ]
+}

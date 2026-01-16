@@ -1,0 +1,240 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "wheel_diameter": 100,
+    "cabin_size": 15,
+    "rotation_angle": 30
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "hub",
+      "at": [0, 60, 0]
+    },
+    {
+      "type": "circle",
+      "id": "wheel_rim",
+      "center": "hub",
+      "diameter": 100
+    },
+    {
+      "type": "point",
+      "id": "spoke1_end",
+      "at": [0, 110, 0]
+    },
+    {
+      "type": "point",
+      "id": "spoke2_end",
+      "at": [43.3, 85, 0]
+    },
+    {
+      "type": "point",
+      "id": "spoke3_end",
+      "at": [43.3, 35, 0]
+    },
+    {
+      "type": "point",
+      "id": "spoke4_end",
+      "at": [0, 10, 0]
+    },
+    {
+      "type": "point",
+      "id": "spoke5_end",
+      "at": [-43.3, 35, 0]
+    },
+    {
+      "type": "point",
+      "id": "spoke6_end",
+      "at": [-43.3, 85, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke1",
+      "p1": "hub",
+      "p2": "spoke1_end"
+    },
+    {
+      "type": "line",
+      "id": "spoke2",
+      "p1": "hub",
+      "p2": "spoke2_end"
+    },
+    {
+      "type": "line",
+      "id": "spoke3",
+      "p1": "hub",
+      "p2": "spoke3_end"
+    },
+    {
+      "type": "line",
+      "id": "spoke4",
+      "p1": "hub",
+      "p2": "spoke4_end"
+    },
+    {
+      "type": "line",
+      "id": "spoke5",
+      "p1": "hub",
+      "p2": "spoke5_end"
+    },
+    {
+      "type": "line",
+      "id": "spoke6",
+      "p1": "hub",
+      "p2": "spoke6_end"
+    },
+    {
+      "type": "circle",
+      "id": "cabin1",
+      "center": "spoke1_end",
+      "diameter": 15
+    },
+    {
+      "type": "circle",
+      "id": "cabin2",
+      "center": "spoke2_end",
+      "diameter": 15
+    },
+    {
+      "type": "circle",
+      "id": "cabin3",
+      "center": "spoke3_end",
+      "diameter": 15
+    },
+    {
+      "type": "circle",
+      "id": "cabin4",
+      "center": "spoke4_end",
+      "diameter": 15
+    },
+    {
+      "type": "circle",
+      "id": "cabin5",
+      "center": "spoke5_end",
+      "diameter": 15
+    },
+    {
+      "type": "circle",
+      "id": "cabin6",
+      "center": "spoke6_end",
+      "diameter": 15
+    },
+    {
+      "type": "point",
+      "id": "ground_left",
+      "at": [-20, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "ground_right",
+      "at": [20, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "support_left",
+      "p1": "ground_left",
+      "p2": "hub"
+    },
+    {
+      "type": "line",
+      "id": "support_right",
+      "p1": "ground_right",
+      "p2": "hub"
+    },
+    {
+      "type": "point",
+      "id": "ref_point",
+      "at": [50, 60, 0]
+    },
+    {
+      "type": "line",
+      "id": "reference_horizontal",
+      "p1": "hub",
+      "p2": "ref_point"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "hub"
+    },
+    {
+      "type": "fixed",
+      "entity": "ground_left"
+    },
+    {
+      "type": "fixed",
+      "entity": "ground_right"
+    },
+    {
+      "type": "fixed",
+      "entity": "ref_point"
+    },
+    {
+      "type": "diameter",
+      "circle": "wheel_rim",
+      "value": "$wheel_diameter"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke1_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke2_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke3_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke4_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke5_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "spoke6_end",
+      "circle": "wheel_rim"
+    },
+    {
+      "type": "angle",
+      "between": ["reference_horizontal", "spoke1"],
+      "value": "$rotation_angle"
+    },
+    {
+      "type": "angle",
+      "between": ["spoke1", "spoke2"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke2", "spoke3"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke3", "spoke4"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke4", "spoke5"],
+      "value": 60
+    },
+    {
+      "type": "angle",
+      "between": ["spoke5", "spoke6"],
+      "value": 60
+    }
+  ]
+}

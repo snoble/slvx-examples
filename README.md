@@ -21,12 +21,21 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 | [Whitworth Quick-Return](whitworth_quick_return/) | Asymmetric motion for shaping machines | [SVG](whitworth_quick_return/whitworth_quick_return.svg) |
 | [Geneva Mechanism](geneva_mechanism/) | Maltese cross for intermittent motion | [SVG](geneva_mechanism/geneva_mechanism.svg) |
 | [Pantograph](pantograph/) | Rhombus linkage for copying/scaling drawings | [SVG](pantograph/pantograph.svg) |
+| [Cam Follower](cam_follower/) | Radial cam with roller follower on vertical guide | [SVG](cam_follower/cam_follower.svg) |
+| [Ferris Wheel](ferris_wheel/) | Six-cabin wheel with radial symmetry and support structure | [SVG](ferris_wheel/ferris_wheel.svg) |
 
 ### Gear Systems
 
 | Example | Description | Preview |
 |---------|-------------|---------|
 | [Gear Mechanism](gear_mechanism/) | Two meshing gears with proper tooth spacing | [SVG](gear_mechanism/gear_mechanism.svg) |
+
+### Curves & Paths
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Bezier Path](bezier_path/) | Cubic Bezier S-curve with perpendicular control handles | [SVG](bezier_path/bezier_path.svg) |
+| [Tangent Arc Chain](tangent_arc_chain/) | Arc-to-line tangent constraint for smooth transitions | [SVG](tangent_arc_chain/tangent_arc_chain.svg) |
 
 ### Artistic Patterns
 
@@ -36,6 +45,12 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 | [Parametric Flower](parametric_flower/) | Organic patterns from geometric constraints | [SVG](parametric_flower/parametric_flower.svg) |
 | [Spirograph](spirograph/) | Mathematical art patterns | [SVG](spirograph/spirograph.svg) |
 | [Iris Diaphragm](iris_diaphragm/) | Camera-style aperture mechanism | [SVG](iris_diaphragm/sophisticated_8blade.svg) |
+
+### Mechanical Parts
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Symmetric Bracket](symmetric_bracket/) | Bracket with notch and mounting holes, demonstrating symmetry via parallel constraints | [SVG](symmetric_bracket/symmetric_bracket.svg) |
 
 ### Complex Systems
 
@@ -123,13 +138,18 @@ Read the [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) before creating examples.
 | `point_on_line` | Point lies on line | Sliders, intersections |
 | `equal_length` | Make segments equal | Regular polygons |
 | `midpoint` | Point at midpoint | Centering |
+| `point_on_circle` | Point lies on circle | Wheels, orbits |
+| `diameter` | Set circle diameter | Sizing circles |
+| `tangent` | Make arc/line tangent | Smooth transitions |
 
 ## Known Issues
 
 See [GitHub Issues](https://github.com/snoble/slvsx-cli/issues) for current bugs and feature requests.
 
 - `equal_length` with >2 entities can cause crashes (bug #25) - use chained constraints instead
-- `symmetric` constraint requires 2D geometry with workplane
+- `point_on_line` fails with 2D entities (issue #44) - use 3D points/lines as workaround
+- `symmetric_vertical`/`symmetric_horizontal` collapse points (issue #49) - use parallel + fixed as workaround
+- Arc and cubic Bezier entities don't render in SVG export (issues #45, #46)
 - Circles don't track points - use points for moving parts
 
 ## Resources

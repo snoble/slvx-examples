@@ -1,0 +1,116 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "cam_radius": 40,
+    "cam_angle": 30,
+    "guide_x": 55,
+    "follower_arm_length": 25
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "cam_center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "contact_point",
+      "at": [34.64, 20, 0]
+    },
+    {
+      "type": "line",
+      "id": "cam_radius_line",
+      "p1": "cam_center",
+      "p2": "contact_point"
+    },
+    {
+      "type": "point",
+      "id": "ref_point",
+      "at": [40, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "reference_horizontal",
+      "p1": "cam_center",
+      "p2": "ref_point"
+    },
+    {
+      "type": "point",
+      "id": "guide_bottom",
+      "at": [55, -20, 0]
+    },
+    {
+      "type": "point",
+      "id": "guide_top",
+      "at": [55, 60, 0]
+    },
+    {
+      "type": "line",
+      "id": "follower_guide",
+      "p1": "guide_bottom",
+      "p2": "guide_top"
+    },
+    {
+      "type": "point",
+      "id": "follower_center",
+      "at": [55, 30, 0]
+    },
+    {
+      "type": "line",
+      "id": "follower_arm",
+      "p1": "contact_point",
+      "p2": "follower_center"
+    },
+    {
+      "type": "circle",
+      "id": "cam_circle",
+      "center": "cam_center",
+      "diameter": 80
+    },
+    {
+      "type": "circle",
+      "id": "follower_roller",
+      "center": "follower_center",
+      "diameter": 15
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "cam_center"
+    },
+    {
+      "type": "fixed",
+      "entity": "ref_point"
+    },
+    {
+      "type": "fixed",
+      "entity": "guide_bottom"
+    },
+    {
+      "type": "fixed",
+      "entity": "guide_top"
+    },
+    {
+      "type": "distance",
+      "between": ["cam_center", "contact_point"],
+      "value": "$cam_radius"
+    },
+    {
+      "type": "angle",
+      "between": ["reference_horizontal", "cam_radius_line"],
+      "value": "$cam_angle"
+    },
+    {
+      "type": "point_on_line",
+      "point": "follower_center",
+      "line": "follower_guide"
+    },
+    {
+      "type": "distance",
+      "between": ["contact_point", "follower_center"],
+      "value": "$follower_arm_length"
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "half_width": 40,
+    "height": 50,
+    "notch_half_width": 15,
+    "notch_depth": 15
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "bottom_left",
+      "at": [-40, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bottom_right",
+      "at": [40, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "top_left",
+      "at": [-40, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "top_right",
+      "at": [40, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "notch_tl",
+      "at": [-15, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "notch_tr",
+      "at": [15, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "notch_bl",
+      "at": [-15, 35, 0]
+    },
+    {
+      "type": "point",
+      "id": "notch_br",
+      "at": [15, 35, 0]
+    },
+    {
+      "type": "line",
+      "id": "bottom",
+      "p1": "bottom_left",
+      "p2": "bottom_right"
+    },
+    {
+      "type": "line",
+      "id": "left_side",
+      "p1": "bottom_left",
+      "p2": "top_left"
+    },
+    {
+      "type": "line",
+      "id": "right_side",
+      "p1": "bottom_right",
+      "p2": "top_right"
+    },
+    {
+      "type": "line",
+      "id": "top_left_seg",
+      "p1": "top_left",
+      "p2": "notch_tl"
+    },
+    {
+      "type": "line",
+      "id": "top_right_seg",
+      "p1": "notch_tr",
+      "p2": "top_right"
+    },
+    {
+      "type": "line",
+      "id": "notch_left",
+      "p1": "notch_tl",
+      "p2": "notch_bl"
+    },
+    {
+      "type": "line",
+      "id": "notch_right",
+      "p1": "notch_tr",
+      "p2": "notch_br"
+    },
+    {
+      "type": "line",
+      "id": "notch_bottom",
+      "p1": "notch_bl",
+      "p2": "notch_br"
+    },
+    {
+      "type": "circle",
+      "id": "hole_left",
+      "center": "bottom_left",
+      "diameter": 10
+    },
+    {
+      "type": "circle",
+      "id": "hole_right",
+      "center": "bottom_right",
+      "diameter": 10
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "bottom_left"
+    },
+    {
+      "type": "fixed",
+      "entity": "bottom_right"
+    },
+    {
+      "type": "fixed",
+      "entity": "notch_tl"
+    },
+    {
+      "type": "fixed",
+      "entity": "notch_tr"
+    },
+    {
+      "type": "distance",
+      "between": ["bottom_left", "top_left"],
+      "value": "$height"
+    },
+    {
+      "type": "distance",
+      "between": ["bottom_right", "top_right"],
+      "value": "$height"
+    },
+    {
+      "type": "distance",
+      "between": ["notch_tl", "notch_bl"],
+      "value": "$notch_depth"
+    },
+    {
+      "type": "distance",
+      "between": ["notch_tr", "notch_br"],
+      "value": "$notch_depth"
+    },
+    {
+      "type": "parallel",
+      "entities": ["left_side", "right_side"]
+    },
+    {
+      "type": "parallel",
+      "entities": ["notch_left", "notch_right"]
+    }
+  ]
+}

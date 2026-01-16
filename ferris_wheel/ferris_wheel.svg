@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70.8 -20.0 141.6 157.5" width="800" height="800">
+  <circle id="cabin1" cx="43.301270" cy="85.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="cabin2" cx="43.301270" cy="35.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="cabin3" cx="0.000000" cy="10.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="cabin4" cx="-43.301270" cy="35.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="cabin5" cx="-43.301270" cy="85.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="cabin6" cx="0.000000" cy="110.000000" r="7.500000" fill="none" stroke="black"/>
+  <circle id="ground_left" cx="-20.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="ground_right" cx="20.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="hub" cx="0.000000" cy="60.000000" r="2" fill="black"/>
+  <circle id="ref_point" cx="50.000000" cy="60.000000" r="2" fill="black"/>
+  <line id="reference_horizontal" x1="0.000000" y1="60.000000" x2="50.000000" y2="60.000000" stroke="black"/>
+  <line id="spoke1" x1="0.000000" y1="60.000000" x2="43.301270" y2="85.000000" stroke="black"/>
+  <circle id="spoke1_end" cx="43.301270" cy="85.000000" r="2" fill="black"/>
+  <line id="spoke2" x1="0.000000" y1="60.000000" x2="43.301270" y2="35.000000" stroke="black"/>
+  <circle id="spoke2_end" cx="43.301270" cy="35.000000" r="2" fill="black"/>
+  <line id="spoke3" x1="0.000000" y1="60.000000" x2="0.000000" y2="10.000000" stroke="black"/>
+  <circle id="spoke3_end" cx="0.000000" cy="10.000000" r="2" fill="black"/>
+  <line id="spoke4" x1="0.000000" y1="60.000000" x2="-43.301270" y2="35.000000" stroke="black"/>
+  <circle id="spoke4_end" cx="-43.301270" cy="35.000000" r="2" fill="black"/>
+  <line id="spoke5" x1="0.000000" y1="60.000000" x2="-43.301270" y2="85.000000" stroke="black"/>
+  <circle id="spoke5_end" cx="-43.301270" cy="85.000000" r="2" fill="black"/>
+  <line id="spoke6" x1="0.000000" y1="60.000000" x2="0.000000" y2="110.000000" stroke="black"/>
+  <circle id="spoke6_end" cx="0.000000" cy="110.000000" r="2" fill="black"/>
+  <line id="support_left" x1="-20.000000" y1="0.000000" x2="0.000000" y2="60.000000" stroke="black"/>
+  <line id="support_right" x1="20.000000" y1="0.000000" x2="0.000000" y2="60.000000" stroke="black"/>
+  <circle id="wheel_rim" cx="0.000000" cy="60.000000" r="50.000000" fill="none" stroke="black"/>
+</svg>

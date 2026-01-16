@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60.0 -60.0 142.5 140.0" width="800" height="800">
+  <circle id="cam_center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="cam_circle" cx="0.000000" cy="0.000000" r="40.000000" fill="none" stroke="black"/>
+  <line id="cam_radius_line" x1="0.000000" y1="0.000000" x2="34.641016" y2="20.000000" stroke="black"/>
+  <circle id="contact_point" cx="34.641016" cy="20.000000" r="2" fill="black"/>
+  <line id="follower_arm" x1="34.641016" y1="20.000000" x2="55.000000" y2="34.509024" stroke="black"/>
+  <circle id="follower_center" cx="55.000000" cy="34.509024" r="2" fill="black"/>
+  <line id="follower_guide" x1="55.000000" y1="-20.000000" x2="55.000000" y2="60.000000" stroke="black"/>
+  <circle id="follower_roller" cx="55.000000" cy="34.509024" r="7.500000" fill="none" stroke="black"/>
+  <circle id="guide_bottom" cx="55.000000" cy="-20.000000" r="2" fill="black"/>
+  <circle id="guide_top" cx="55.000000" cy="60.000000" r="2" fill="black"/>
+  <circle id="ref_point" cx="40.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="reference_horizontal" x1="0.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+</svg>

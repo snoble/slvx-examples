@@ -1,0 +1,63 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "arc_radius": 30
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "start",
+      "at": [30, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "end",
+      "at": [0, 30, 0]
+    },
+    {
+      "type": "arc",
+      "id": "quarter_arc",
+      "center": "center",
+      "start": "start",
+      "end": "end",
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point",
+      "id": "tangent_end",
+      "at": [-30, 30, 0]
+    },
+    {
+      "type": "line",
+      "id": "tangent_line",
+      "p1": "end",
+      "p2": "tangent_end"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
+      "entity": "start"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "end"],
+      "value": "$arc_radius"
+    },
+    {
+      "type": "tangent",
+      "a": "quarter_arc",
+      "b": "tangent_line"
+    }
+  ]
+}

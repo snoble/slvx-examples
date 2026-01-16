@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-65.0 -25.0 130.0 95.0" width="800" height="584">
+  <line id="bottom" x1="-40.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+  <circle id="bottom_left" cx="-40.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="bottom_right" cx="40.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="hole_left" cx="-40.000000" cy="0.000000" r="5.000000" fill="none" stroke="black"/>
+  <circle id="hole_right" cx="40.000000" cy="0.000000" r="5.000000" fill="none" stroke="black"/>
+  <line id="left_side" x1="-40.000000" y1="0.000000" x2="-40.000000" y2="50.000000" stroke="black"/>
+  <circle id="notch_bl" cx="-15.000000" cy="35.000000" r="2" fill="black"/>
+  <line id="notch_bottom" x1="-15.000000" y1="35.000000" x2="15.000000" y2="35.000000" stroke="black"/>
+  <circle id="notch_br" cx="15.000000" cy="35.000000" r="2" fill="black"/>
+  <line id="notch_left" x1="-15.000000" y1="50.000000" x2="-15.000000" y2="35.000000" stroke="black"/>
+  <line id="notch_right" x1="15.000000" y1="50.000000" x2="15.000000" y2="35.000000" stroke="black"/>
+  <circle id="notch_tl" cx="-15.000000" cy="50.000000" r="2" fill="black"/>
+  <circle id="notch_tr" cx="15.000000" cy="50.000000" r="2" fill="black"/>
+  <line id="right_side" x1="40.000000" y1="0.000000" x2="40.000000" y2="50.000000" stroke="black"/>
+  <circle id="top_left" cx="-40.000000" cy="50.000000" r="2" fill="black"/>
+  <line id="top_left_seg" x1="-40.000000" y1="50.000000" x2="-15.000000" y2="50.000000" stroke="black"/>
+  <circle id="top_right" cx="40.000000" cy="50.000000" r="2" fill="black"/>
+  <line id="top_right_seg" x1="15.000000" y1="50.000000" x2="40.000000" y2="50.000000" stroke="black"/>
+</svg>

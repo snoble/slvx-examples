@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -20 100 70" width="800" height="560">
+  <!-- Arc (manually added - arc entity doesn't render automatically yet) -->
+  <path d="M 30,0 A 30,30 0 0,1 -14.12,26.47" stroke="blue" stroke-width="2" fill="none"/>
+
+  <!-- Tangent line -->
+  <line id="tangent_line" x1="-14.12" y1="26.47" x2="-14.12" y2="45" stroke="blue" stroke-width="2"/>
+
+  <!-- Center point and radius indicator -->
+  <circle id="center" cx="0" cy="0" r="3" fill="red"/>
+  <line x1="0" y1="0" x2="-14.12" y2="26.47" stroke="gray" stroke-dasharray="4" stroke-width="1"/>
+
+  <!-- Start point -->
+  <circle id="start" cx="30" cy="0" r="3" fill="green"/>
+
+  <!-- Tangent point (end of arc) -->
+  <circle id="end" cx="-14.12" cy="26.47" r="3" fill="orange"/>
+
+  <!-- Line end point -->
+  <circle id="tangent_end" cx="-14.12" cy="45" r="3" fill="green"/>
+
+  <!-- Labels -->
+  <text x="0" y="-5" font-size="6" text-anchor="middle" fill="red">center</text>
+  <text x="30" y="-5" font-size="6" text-anchor="middle" fill="green">start</text>
+  <text x="-25" y="26" font-size="6" text-anchor="middle" fill="orange">tangent point</text>
+</svg>
