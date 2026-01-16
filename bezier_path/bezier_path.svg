@@ -1,18 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -60.0 120.0 120.0" width="800" height="800">
-  <!-- S-curve Bezier path (manually added - cubic entity doesn't render automatically yet) -->
-  <path d="M 0,0 C 0,40 80,-40 80,0" stroke="blue" stroke-width="2" fill="none"/>
-
-  <!-- Control points -->
-  <circle id="start" cx="0.000000" cy="0.000000" r="3" fill="green"/>
-  <circle id="ctrl1" cx="0.000000" cy="40.000000" r="2" fill="red"/>
-  <circle id="ctrl2" cx="80.000000" cy="-40.000000" r="2" fill="red"/>
-  <circle id="end" cx="80.000000" cy="0.000000" r="3" fill="green"/>
-
-  <!-- Control handles -->
-  <line id="handle_start" x1="0.000000" y1="0.000000" x2="0.000000" y2="40.000000" stroke="gray" stroke-dasharray="4"/>
-  <line id="handle_end" x1="80.000000" y1="-40.000000" x2="80.000000" y2="0.000000" stroke="gray" stroke-dasharray="4"/>
-
-  <!-- Reference line -->
-  <line id="reference" x1="0.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="lightgray" stroke-dasharray="2"/>
-  <circle id="ref_right" cx="40.000000" cy="0.000000" r="1.5" fill="lightgray"/>
+  <circle id="ctrl1" cx="0.000000" cy="40.000000" r="2" fill="black"/>
+  <circle id="ctrl2" cx="80.000000" cy="-40.000000" r="2" fill="black"/>
+  <circle id="end" cx="80.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="handle_end" x1="80.000000" y1="-40.000000" x2="80.000000" y2="0.000000" stroke="black"/>
+  <line id="handle_start" x1="0.000000" y1="0.000000" x2="0.000000" y2="40.000000" stroke="black"/>
+  <circle id="ref_right" cx="40.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="reference" x1="0.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+  <circle id="start" cx="0.000000" cy="0.000000" r="2" fill="black"/>
 </svg>

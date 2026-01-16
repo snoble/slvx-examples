@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100.0 -100.0 200.0 200.0" width="800" height="800">
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="inner0_1" x1="40.000000" y1="0.000000" x2="34.641016" y2="20.000000" stroke="black"/>
+  <line id="inner10_11" x1="20.000000" y1="-34.641016" x2="34.641016" y2="-20.000000" stroke="black"/>
+  <line id="inner11_0" x1="34.641016" y1="-20.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+  <line id="inner1_2" x1="34.641016" y1="20.000000" x2="20.000000" y2="34.641016" stroke="black"/>
+  <line id="inner2_3" x1="20.000000" y1="34.641016" x2="0.000000" y2="40.000000" stroke="black"/>
+  <line id="inner3_4" x1="0.000000" y1="40.000000" x2="-20.000000" y2="34.641016" stroke="black"/>
+  <line id="inner4_5" x1="-20.000000" y1="34.641016" x2="-34.641016" y2="20.000000" stroke="black"/>
+  <line id="inner5_6" x1="-34.641016" y1="20.000000" x2="-40.000000" y2="0.000000" stroke="black"/>
+  <line id="inner6_7" x1="-40.000000" y1="0.000000" x2="-34.641016" y2="-20.000000" stroke="black"/>
+  <line id="inner7_8" x1="-34.641016" y1="-20.000000" x2="-20.000000" y2="-34.641016" stroke="black"/>
+  <line id="inner8_9" x1="-20.000000" y1="-34.641016" x2="0.000000" y2="-40.000000" stroke="black"/>
+  <line id="inner9_10" x1="0.000000" y1="-40.000000" x2="20.000000" y2="-34.641016" stroke="black"/>
+  <line id="petal0_1" x1="80.000000" y1="0.000000" x2="69.281524" y2="40.000880" stroke="black"/>
+  <line id="petal10_11" x1="40.000880" y1="-69.281524" x2="69.281524" y2="-40.000880" stroke="black"/>
+  <line id="petal11_0" x1="69.281524" y1="-40.000880" x2="80.000000" y2="0.000000" stroke="black"/>
+  <line id="petal1_2" x1="69.281524" y1="40.000880" x2="40.000880" y2="69.281524" stroke="black"/>
+  <line id="petal2_3" x1="40.000880" y1="69.281524" x2="0.000000" y2="80.000000" stroke="black"/>
+  <line id="petal3_4" x1="0.000000" y1="80.000000" x2="-40.000880" y2="69.281524" stroke="black"/>
+  <line id="petal4_5" x1="-40.000880" y1="69.281524" x2="-69.281524" y2="40.000880" stroke="black"/>
+  <line id="petal5_6" x1="-69.281524" y1="40.000880" x2="-80.000000" y2="0.000000" stroke="black"/>
+  <line id="petal6_7" x1="-80.000000" y1="0.000000" x2="-69.281524" y2="-40.000880" stroke="black"/>
+  <line id="petal7_8" x1="-69.281524" y1="-40.000880" x2="-40.000880" y2="-69.281524" stroke="black"/>
+  <line id="petal8_9" x1="-40.000880" y1="-69.281524" x2="0.000000" y2="-80.000000" stroke="black"/>
+  <line id="petal9_10" x1="0.000000" y1="-80.000000" x2="40.000880" y2="-69.281524" stroke="black"/>
+  <circle id="ring1" cx="0.000000" cy="0.000000" r="20.000000" fill="none" stroke="black"/>
+  <circle id="ring2" cx="0.000000" cy="0.000000" r="40.000000" fill="none" stroke="black"/>
+  <circle id="ring3" cx="0.000000" cy="0.000000" r="60.000000" fill="none" stroke="black"/>
+  <circle id="ring4" cx="0.000000" cy="0.000000" r="80.000000" fill="none" stroke="black"/>
+  <circle id="s0_r2" cx="40.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="s0_r4" cx="80.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="s10_r2" cx="20.000000" cy="-34.641016" r="2" fill="black"/>
+  <circle id="s10_r4" cx="40.000880" cy="-69.281524" r="2" fill="black"/>
+  <circle id="s11_r2" cx="34.641016" cy="-20.000000" r="2" fill="black"/>
+  <circle id="s11_r4" cx="69.281524" cy="-40.000880" r="2" fill="black"/>
+  <circle id="s1_r2" cx="34.641016" cy="20.000000" r="2" fill="black"/>
+  <circle id="s1_r4" cx="69.281524" cy="40.000880" r="2" fill="black"/>
+  <circle id="s2_r2" cx="20.000000" cy="34.641016" r="2" fill="black"/>
+  <circle id="s2_r4" cx="40.000880" cy="69.281524" r="2" fill="black"/>
+  <circle id="s3_r2" cx="0.000000" cy="40.000000" r="2" fill="black"/>
+  <circle id="s3_r4" cx="0.000000" cy="80.000000" r="2" fill="black"/>
+  <circle id="s4_r2" cx="-20.000000" cy="34.641016" r="2" fill="black"/>
+  <circle id="s4_r4" cx="-40.000880" cy="69.281524" r="2" fill="black"/>
+  <circle id="s5_r2" cx="-34.641016" cy="20.000000" r="2" fill="black"/>
+  <circle id="s5_r4" cx="-69.281524" cy="40.000880" r="2" fill="black"/>
+  <circle id="s6_r2" cx="-40.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="s6_r4" cx="-80.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="s7_r2" cx="-34.641016" cy="-20.000000" r="2" fill="black"/>
+  <circle id="s7_r4" cx="-69.281524" cy="-40.000880" r="2" fill="black"/>
+  <circle id="s8_r2" cx="-20.000000" cy="-34.641016" r="2" fill="black"/>
+  <circle id="s8_r4" cx="-40.000880" cy="-69.281524" r="2" fill="black"/>
+  <circle id="s9_r2" cx="0.000000" cy="-40.000000" r="2" fill="black"/>
+  <circle id="s9_r4" cx="0.000000" cy="-80.000000" r="2" fill="black"/>
+  <line id="spoke0_inner" x1="0.000000" y1="0.000000" x2="40.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke0_outer" x1="40.000000" y1="0.000000" x2="80.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke10_inner" x1="0.000000" y1="0.000000" x2="20.000000" y2="-34.641016" stroke="black"/>
+  <line id="spoke10_outer" x1="20.000000" y1="-34.641016" x2="40.000880" y2="-69.281524" stroke="black"/>
+  <line id="spoke11_inner" x1="0.000000" y1="0.000000" x2="34.641016" y2="-20.000000" stroke="black"/>
+  <line id="spoke11_outer" x1="34.641016" y1="-20.000000" x2="69.281524" y2="-40.000880" stroke="black"/>
+  <line id="spoke1_inner" x1="0.000000" y1="0.000000" x2="34.641016" y2="20.000000" stroke="black"/>
+  <line id="spoke1_outer" x1="34.641016" y1="20.000000" x2="69.281524" y2="40.000880" stroke="black"/>
+  <line id="spoke2_inner" x1="0.000000" y1="0.000000" x2="20.000000" y2="34.641016" stroke="black"/>
+  <line id="spoke2_outer" x1="20.000000" y1="34.641016" x2="40.000880" y2="69.281524" stroke="black"/>
+  <line id="spoke3_inner" x1="0.000000" y1="0.000000" x2="0.000000" y2="40.000000" stroke="black"/>
+  <line id="spoke3_outer" x1="0.000000" y1="40.000000" x2="0.000000" y2="80.000000" stroke="black"/>
+  <line id="spoke4_inner" x1="0.000000" y1="0.000000" x2="-20.000000" y2="34.641016" stroke="black"/>
+  <line id="spoke4_outer" x1="-20.000000" y1="34.641016" x2="-40.000880" y2="69.281524" stroke="black"/>
+  <line id="spoke5_inner" x1="0.000000" y1="0.000000" x2="-34.641016" y2="20.000000" stroke="black"/>
+  <line id="spoke5_outer" x1="-34.641016" y1="20.000000" x2="-69.281524" y2="40.000880" stroke="black"/>
+  <line id="spoke6_inner" x1="0.000000" y1="0.000000" x2="-40.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke6_outer" x1="-40.000000" y1="0.000000" x2="-80.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke7_inner" x1="0.000000" y1="0.000000" x2="-34.641016" y2="-20.000000" stroke="black"/>
+  <line id="spoke7_outer" x1="-34.641016" y1="-20.000000" x2="-69.281524" y2="-40.000880" stroke="black"/>
+  <line id="spoke8_inner" x1="0.000000" y1="0.000000" x2="-20.000000" y2="-34.641016" stroke="black"/>
+  <line id="spoke8_outer" x1="-20.000000" y1="-34.641016" x2="-40.000880" y2="-69.281524" stroke="black"/>
+  <line id="spoke9_inner" x1="0.000000" y1="0.000000" x2="0.000000" y2="-40.000000" stroke="black"/>
+  <line id="spoke9_outer" x1="0.000000" y1="-40.000000" x2="0.000000" y2="-80.000000" stroke="black"/>
+</svg>

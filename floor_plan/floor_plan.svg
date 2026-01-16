@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 240.0 190.0" width="800" height="800">
+  <circle id="bath_ne" cx="50.000000" cy="70.002038" r="2" fill="black"/>
+  <line id="bath_north_wall" x1="7.999642" y1="70.001972" x2="50.000000" y2="70.002038" stroke="black"/>
+  <circle id="bath_nw" cx="7.999642" cy="70.001972" r="2" fill="black"/>
+  <circle id="bed2_se" cx="50.000000" cy="100.001202" r="2" fill="black"/>
+  <line id="bed2_south" x1="7.999595" y1="100.001137" x2="50.000000" y2="100.001202" stroke="black"/>
+  <circle id="bed2_sw" cx="7.999595" cy="100.001137" r="2" fill="black"/>
+  <circle id="closet_ne" cx="160.000440" cy="142.005413" r="2" fill="black"/>
+  <circle id="closet_nw" cx="160.000505" cy="100.000000" r="2" fill="black"/>
+  <line id="closet_wall" x1="160.000505" y1="100.000000" x2="160.000440" y2="142.005413" stroke="black"/>
+  <circle id="ext_bl" cx="0.000979" cy="0.001146" r="2" fill="black"/>
+  <circle id="ext_br" cx="200.000979" cy="0.001458" r="2" fill="black"/>
+  <line id="ext_east" x1="200.000979" y1="0.001458" x2="200.000745" y2="150.001458" stroke="black"/>
+  <line id="ext_north" x1="200.000745" y1="150.001458" x2="0.000745" y2="150.001146" stroke="black"/>
+  <line id="ext_south" x1="0.000979" y1="0.001146" x2="200.000979" y2="0.001458" stroke="black"/>
+  <circle id="ext_tl" cx="0.000745" cy="150.001146" r="2" fill="black"/>
+  <circle id="ext_tr" cx="200.000745" cy="150.001458" r="2" fill="black"/>
+  <line id="ext_west" x1="0.000745" y1="150.001146" x2="0.000979" y2="0.001146" stroke="black"/>
+  <circle id="hall2_se" cx="125.000000" cy="75.000039" r="2" fill="black"/>
+  <circle id="hall2_sw" cx="75.000000" cy="74.999961" r="2" fill="black"/>
+  <line id="hall_cross" x1="75.000000" y1="74.999961" x2="125.000000" y2="75.000039" stroke="black"/>
+  <line id="hall_east_wall" x1="124.998694" y1="7.997324" x2="124.998589" y2="75.000000" stroke="black"/>
+  <circle id="hall_ne" cx="124.998589" cy="75.000000" r="2" fill="black"/>
+  <circle id="hall_nw" cx="74.998589" cy="75.000000" r="2" fill="black"/>
+  <circle id="hall_se" cx="124.998694" cy="7.997324" r="2" fill="black"/>
+  <circle id="hall_sw" cx="74.998694" cy="7.997246" r="2" fill="black"/>
+  <line id="hall_west_wall" x1="74.998694" y1="7.997246" x2="74.998589" y2="75.000000" stroke="black"/>
+  <circle id="int_bl" cx="7.999739" cy="7.997141" r="2" fill="black"/>
+  <circle id="int_br" cx="192.002195" cy="7.997429" r="2" fill="black"/>
+  <line id="int_east" x1="192.002195" y1="7.997429" x2="192.001985" y2="142.005463" stroke="black"/>
+  <line id="int_north" x1="192.001985" y1="142.005463" x2="7.999529" y2="142.005175" stroke="black"/>
+  <line id="int_south" x1="7.999739" y1="7.997141" x2="192.002195" y2="7.997429" stroke="black"/>
+  <circle id="int_tl" cx="7.999529" cy="142.005175" r="2" fill="black"/>
+  <circle id="int_tr" cx="192.001985" cy="142.005463" r="2" fill="black"/>
+  <line id="int_west" x1="7.999529" y1="142.005175" x2="7.999739" y2="7.997141" stroke="black"/>
+  <circle id="kit_ne" cx="149.997851" cy="75.000000" r="2" fill="black"/>
+  <circle id="kit_nw" cx="149.997955" cy="7.997363" r="2" fill="black"/>
+  <line id="kit_west_wall" x1="149.997955" y1="7.997363" x2="149.997851" y2="75.000000" stroke="black"/>
+  <line id="living_east_wall" x1="75.001761" y1="100.000000" x2="75.001695" y2="142.005280" stroke="black"/>
+  <circle id="living_ne" cx="75.001695" cy="142.005280" r="2" fill="black"/>
+  <circle id="living_se" cx="75.001761" cy="100.000000" r="2" fill="black"/>
+  <circle id="master_se" cx="192.002051" cy="99.997491" r="2" fill="black"/>
+  <line id="master_south_wall" x1="125.000000" y1="99.997386" x2="192.002051" y2="99.997491" stroke="black"/>
+  <circle id="master_sw" cx="125.000000" cy="99.997386" r="2" fill="black"/>
+  <line id="win1" x1="24.999443" y1="0.001185" x2="24.999430" y2="7.997168" stroke="black"/>
+  <circle id="win1_n" cx="24.999430" cy="7.997168" r="2" fill="black"/>
+  <circle id="win1_s" cx="24.999443" cy="0.001185" r="2" fill="black"/>
+  <line id="win2" x1="169.995489" y1="0.001411" x2="169.995476" y2="7.997394" stroke="black"/>
+  <circle id="win2_n" cx="169.995476" cy="7.997394" r="2" fill="black"/>
+  <circle id="win2_s" cx="169.995489" cy="0.001411" r="2" fill="black"/>
+  <line id="win3" x1="0.000792" y1="120.001273" x2="7.999564" y2="120.001286" stroke="black"/>
+  <circle id="win3_e" cx="7.999564" cy="120.001286" r="2" fill="black"/>
+  <circle id="win3_w" cx="0.000792" cy="120.001273" r="2" fill="black"/>
+  <line id="win4" x1="192.002145" y1="39.998214" x2="200.000917" y2="39.998226" stroke="black"/>
+  <circle id="win4_e" cx="200.000917" cy="39.998226" r="2" fill="black"/>
+  <circle id="win4_w" cx="192.002145" cy="39.998214" r="2" fill="black"/>
+  <line id="win5" x1="192.002020" y1="119.994209" x2="200.000792" y2="119.994221" stroke="black"/>
+  <circle id="win5_e" cx="200.000792" cy="119.994221" r="2" fill="black"/>
+  <circle id="win5_w" cx="192.002020" cy="119.994209" r="2" fill="black"/>
+</svg>

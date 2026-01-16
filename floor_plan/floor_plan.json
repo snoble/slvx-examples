@@ -1,0 +1,567 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "wall_thickness": 8,
+    "total_width": 200,
+    "total_height": 150
+  },
+  "entities": [
+    {
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point",
+      "id": "ext_bl",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "ext_br",
+      "at": [200, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "ext_tr",
+      "at": [200, 150, 0]
+    },
+    {
+      "type": "point",
+      "id": "ext_tl",
+      "at": [0, 150, 0]
+    },
+    {
+      "type": "line",
+      "id": "ext_south",
+      "p1": "ext_bl",
+      "p2": "ext_br"
+    },
+    {
+      "type": "line",
+      "id": "ext_east",
+      "p1": "ext_br",
+      "p2": "ext_tr"
+    },
+    {
+      "type": "line",
+      "id": "ext_north",
+      "p1": "ext_tr",
+      "p2": "ext_tl"
+    },
+    {
+      "type": "line",
+      "id": "ext_west",
+      "p1": "ext_tl",
+      "p2": "ext_bl"
+    },
+    {
+      "type": "point",
+      "id": "int_bl",
+      "at": [8, 8, 0]
+    },
+    {
+      "type": "point",
+      "id": "int_br",
+      "at": [192, 8, 0]
+    },
+    {
+      "type": "point",
+      "id": "int_tr",
+      "at": [192, 142, 0]
+    },
+    {
+      "type": "point",
+      "id": "int_tl",
+      "at": [8, 142, 0]
+    },
+    {
+      "type": "line",
+      "id": "int_south",
+      "p1": "int_bl",
+      "p2": "int_br"
+    },
+    {
+      "type": "line",
+      "id": "int_east",
+      "p1": "int_br",
+      "p2": "int_tr"
+    },
+    {
+      "type": "line",
+      "id": "int_north",
+      "p1": "int_tr",
+      "p2": "int_tl"
+    },
+    {
+      "type": "line",
+      "id": "int_west",
+      "p1": "int_tl",
+      "p2": "int_bl"
+    },
+    {
+      "type": "point",
+      "id": "hall_sw",
+      "at": [75, 8, 0]
+    },
+    {
+      "type": "point",
+      "id": "hall_nw",
+      "at": [75, 75, 0]
+    },
+    {
+      "type": "point",
+      "id": "hall_se",
+      "at": [125, 8, 0]
+    },
+    {
+      "type": "point",
+      "id": "hall_ne",
+      "at": [125, 75, 0]
+    },
+    {
+      "type": "line",
+      "id": "hall_west_wall",
+      "p1": "hall_sw",
+      "p2": "hall_nw"
+    },
+    {
+      "type": "line",
+      "id": "hall_east_wall",
+      "p1": "hall_se",
+      "p2": "hall_ne"
+    },
+    {
+      "type": "point",
+      "id": "bath_ne",
+      "at": [50, 70, 0]
+    },
+    {
+      "type": "point",
+      "id": "bath_nw",
+      "at": [8, 70, 0]
+    },
+    {
+      "type": "line",
+      "id": "bath_north_wall",
+      "p1": "bath_nw",
+      "p2": "bath_ne"
+    },
+    {
+      "type": "point",
+      "id": "kit_nw",
+      "at": [150, 8, 0]
+    },
+    {
+      "type": "point",
+      "id": "kit_ne",
+      "at": [150, 75, 0]
+    },
+    {
+      "type": "line",
+      "id": "kit_west_wall",
+      "p1": "kit_nw",
+      "p2": "kit_ne"
+    },
+    {
+      "type": "point",
+      "id": "living_se",
+      "at": [75, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "living_ne",
+      "at": [75, 142, 0]
+    },
+    {
+      "type": "line",
+      "id": "living_east_wall",
+      "p1": "living_se",
+      "p2": "living_ne"
+    },
+    {
+      "type": "point",
+      "id": "master_sw",
+      "at": [125, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "master_se",
+      "at": [192, 100, 0]
+    },
+    {
+      "type": "line",
+      "id": "master_south_wall",
+      "p1": "master_sw",
+      "p2": "master_se"
+    },
+    {
+      "type": "point",
+      "id": "closet_nw",
+      "at": [160, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "closet_ne",
+      "at": [160, 142, 0]
+    },
+    {
+      "type": "line",
+      "id": "closet_wall",
+      "p1": "closet_nw",
+      "p2": "closet_ne"
+    },
+    {
+      "type": "point",
+      "id": "hall2_sw",
+      "at": [75, 75, 0]
+    },
+    {
+      "type": "point",
+      "id": "hall2_se",
+      "at": [125, 75, 0]
+    },
+    {
+      "type": "line",
+      "id": "hall_cross",
+      "p1": "hall2_sw",
+      "p2": "hall2_se"
+    },
+    {
+      "type": "point",
+      "id": "bed2_sw",
+      "at": [8, 100, 0]
+    },
+    {
+      "type": "point",
+      "id": "bed2_se",
+      "at": [50, 100, 0]
+    },
+    {
+      "type": "line",
+      "id": "bed2_south",
+      "p1": "bed2_sw",
+      "p2": "bed2_se"
+    },
+    {
+      "type": "point",
+      "id": "win1_s",
+      "at": [25, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "win1_n",
+      "at": [25, 8, 0]
+    },
+    {
+      "type": "line",
+      "id": "win1",
+      "p1": "win1_s",
+      "p2": "win1_n"
+    },
+    {
+      "type": "point",
+      "id": "win2_s",
+      "at": [170, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "win2_n",
+      "at": [170, 8, 0]
+    },
+    {
+      "type": "line",
+      "id": "win2",
+      "p1": "win2_s",
+      "p2": "win2_n"
+    },
+    {
+      "type": "point",
+      "id": "win3_w",
+      "at": [0, 120, 0]
+    },
+    {
+      "type": "point",
+      "id": "win3_e",
+      "at": [8, 120, 0]
+    },
+    {
+      "type": "line",
+      "id": "win3",
+      "p1": "win3_w",
+      "p2": "win3_e"
+    },
+    {
+      "type": "point",
+      "id": "win4_w",
+      "at": [192, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "win4_e",
+      "at": [200, 40, 0]
+    },
+    {
+      "type": "line",
+      "id": "win4",
+      "p1": "win4_w",
+      "p2": "win4_e"
+    },
+    {
+      "type": "point",
+      "id": "win5_w",
+      "at": [192, 120, 0]
+    },
+    {
+      "type": "point",
+      "id": "win5_e",
+      "at": [200, 120, 0]
+    },
+    {
+      "type": "line",
+      "id": "win5",
+      "p1": "win5_w",
+      "p2": "win5_e"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "ext_bl",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "ext_south",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "vertical",
+      "entity": "ext_east",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "ext_north",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "vertical",
+      "entity": "ext_west",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "distance",
+      "between": ["ext_bl", "ext_br"],
+      "value": "$total_width"
+    },
+    {
+      "type": "distance",
+      "between": ["ext_bl", "ext_tl"],
+      "value": "$total_height"
+    },
+    {
+      "type": "parallel",
+      "entities": ["ext_south", "int_south"]
+    },
+    {
+      "type": "parallel",
+      "entities": ["ext_east", "int_east"]
+    },
+    {
+      "type": "parallel",
+      "entities": ["ext_north", "int_north"]
+    },
+    {
+      "type": "parallel",
+      "entities": ["ext_west", "int_west"]
+    },
+    {
+      "type": "distance",
+      "between": ["ext_bl", "int_bl"],
+      "value": 11.31
+    },
+    {
+      "type": "distance",
+      "between": ["ext_br", "int_br"],
+      "value": 11.31
+    },
+    {
+      "type": "distance",
+      "between": ["ext_tr", "int_tr"],
+      "value": 11.31
+    },
+    {
+      "type": "distance",
+      "between": ["ext_tl", "int_tl"],
+      "value": 11.31
+    },
+    {
+      "type": "vertical",
+      "entity": "hall_west_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "vertical",
+      "entity": "hall_east_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "hall_sw",
+      "line": "int_south"
+    },
+    {
+      "type": "point_on_line",
+      "point": "hall_se",
+      "line": "int_south"
+    },
+    {
+      "type": "distance",
+      "between": ["hall_sw", "hall_se"],
+      "value": 50
+    },
+    {
+      "type": "horizontal",
+      "entity": "bath_north_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bath_nw",
+      "line": "int_west"
+    },
+    {
+      "type": "vertical",
+      "entity": "kit_west_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "kit_nw",
+      "line": "int_south"
+    },
+    {
+      "type": "vertical",
+      "entity": "living_east_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "living_ne",
+      "line": "int_north"
+    },
+    {
+      "type": "horizontal",
+      "entity": "master_south_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "master_se",
+      "line": "int_east"
+    },
+    {
+      "type": "vertical",
+      "entity": "closet_wall",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "closet_ne",
+      "line": "int_north"
+    },
+    {
+      "type": "horizontal",
+      "entity": "hall_cross",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "bed2_south",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bed2_sw",
+      "line": "int_west"
+    },
+    {
+      "type": "vertical",
+      "entity": "win1",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win1_s",
+      "line": "ext_south"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win1_n",
+      "line": "int_south"
+    },
+    {
+      "type": "vertical",
+      "entity": "win2",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win2_s",
+      "line": "ext_south"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win2_n",
+      "line": "int_south"
+    },
+    {
+      "type": "horizontal",
+      "entity": "win3",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win3_w",
+      "line": "ext_west"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win3_e",
+      "line": "int_west"
+    },
+    {
+      "type": "horizontal",
+      "entity": "win4",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win4_w",
+      "line": "int_east"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win4_e",
+      "line": "ext_east"
+    },
+    {
+      "type": "horizontal",
+      "entity": "win5",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win5_w",
+      "line": "int_east"
+    },
+    {
+      "type": "point_on_line",
+      "point": "win5_e",
+      "line": "ext_east"
+    }
+  ]
+}

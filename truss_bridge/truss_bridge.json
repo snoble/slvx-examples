@@ -1,0 +1,357 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point",
+      "id": "bot0",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot1",
+      "at": [30, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot2",
+      "at": [60, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot3",
+      "at": [90, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot4",
+      "at": [120, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot5",
+      "at": [150, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot6",
+      "at": [180, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot7",
+      "at": [210, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "bot8",
+      "at": [240, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "top0",
+      "at": [15, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top1",
+      "at": [45, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top2",
+      "at": [75, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top3",
+      "at": [105, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top4",
+      "at": [135, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top5",
+      "at": [165, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top6",
+      "at": [195, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "top7",
+      "at": [225, 40, 0]
+    },
+    {
+      "type": "line",
+      "id": "bottom_chord",
+      "p1": "bot0",
+      "p2": "bot8"
+    },
+    {
+      "type": "line",
+      "id": "top_chord",
+      "p1": "top0",
+      "p2": "top7"
+    },
+    {
+      "type": "line",
+      "id": "diag_up0",
+      "p1": "bot0",
+      "p2": "top0"
+    },
+    {
+      "type": "line",
+      "id": "diag_down0",
+      "p1": "top0",
+      "p2": "bot1"
+    },
+    {
+      "type": "line",
+      "id": "diag_up1",
+      "p1": "bot1",
+      "p2": "top1"
+    },
+    {
+      "type": "line",
+      "id": "diag_down1",
+      "p1": "top1",
+      "p2": "bot2"
+    },
+    {
+      "type": "line",
+      "id": "diag_up2",
+      "p1": "bot2",
+      "p2": "top2"
+    },
+    {
+      "type": "line",
+      "id": "diag_down2",
+      "p1": "top2",
+      "p2": "bot3"
+    },
+    {
+      "type": "line",
+      "id": "diag_up3",
+      "p1": "bot3",
+      "p2": "top3"
+    },
+    {
+      "type": "line",
+      "id": "diag_down3",
+      "p1": "top3",
+      "p2": "bot4"
+    },
+    {
+      "type": "line",
+      "id": "diag_up4",
+      "p1": "bot4",
+      "p2": "top4"
+    },
+    {
+      "type": "line",
+      "id": "diag_down4",
+      "p1": "top4",
+      "p2": "bot5"
+    },
+    {
+      "type": "line",
+      "id": "diag_up5",
+      "p1": "bot5",
+      "p2": "top5"
+    },
+    {
+      "type": "line",
+      "id": "diag_down5",
+      "p1": "top5",
+      "p2": "bot6"
+    },
+    {
+      "type": "line",
+      "id": "diag_up6",
+      "p1": "bot6",
+      "p2": "top6"
+    },
+    {
+      "type": "line",
+      "id": "diag_down6",
+      "p1": "top6",
+      "p2": "bot7"
+    },
+    {
+      "type": "line",
+      "id": "diag_up7",
+      "p1": "bot7",
+      "p2": "top7"
+    },
+    {
+      "type": "line",
+      "id": "diag_down7",
+      "p1": "top7",
+      "p2": "bot8"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "bot0",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "bottom_chord",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "horizontal",
+      "entity": "top_chord",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "distance",
+      "between": ["bot0", "bot8"],
+      "value": 240
+    },
+    {
+      "type": "distance",
+      "between": ["bot0", "top0"],
+      "value": 42.72
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot1",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot2",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot3",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot4",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot5",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot6",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "bot7",
+      "line": "bottom_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top1",
+      "line": "top_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top2",
+      "line": "top_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top3",
+      "line": "top_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top4",
+      "line": "top_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top5",
+      "line": "top_chord"
+    },
+    {
+      "type": "point_on_line",
+      "point": "top6",
+      "line": "top_chord"
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up0", "diag_down0"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up1", "diag_down1"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up2", "diag_down2"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up3", "diag_down3"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up4", "diag_down4"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up5", "diag_down5"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up6", "diag_down6"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up7", "diag_down7"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up0", "diag_up1"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up1", "diag_up2"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up2", "diag_up3"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up3", "diag_up4"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up4", "diag_up5"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up5", "diag_up6"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["diag_up6", "diag_up7"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-20.0 -20.0 280.0 80.0" width="800" height="800">
+  <circle id="bot0" cx="0.000134" cy="0.000866" r="2" fill="black"/>
+  <circle id="bot1" cx="29.999866" cy="0.000639" r="2" fill="black"/>
+  <circle id="bot2" cx="59.999866" cy="0.000412" r="2" fill="black"/>
+  <circle id="bot3" cx="89.999866" cy="0.000185" r="2" fill="black"/>
+  <circle id="bot4" cx="119.999866" cy="0.000042" r="2" fill="black"/>
+  <circle id="bot5" cx="149.999866" cy="0.000268" r="2" fill="black"/>
+  <circle id="bot6" cx="179.999866" cy="0.000495" r="2" fill="black"/>
+  <circle id="bot7" cx="209.999866" cy="0.000722" r="2" fill="black"/>
+  <circle id="bot8" cx="239.999866" cy="0.000949" r="2" fill="black"/>
+  <line id="bottom_chord" x1="0.000134" y1="0.000866" x2="239.999866" y2="0.000949" stroke="black"/>
+  <line id="diag_down0" x1="15.000168" y1="40.000732" x2="29.999866" y2="0.000639" stroke="black"/>
+  <line id="diag_down1" x1="45.000168" y1="40.000506" x2="59.999866" y2="0.000412" stroke="black"/>
+  <line id="diag_down2" x1="75.000168" y1="40.000279" x2="89.999866" y2="0.000185" stroke="black"/>
+  <line id="diag_down3" x1="105.000168" y1="40.000052" x2="119.999866" y2="0.000042" stroke="black"/>
+  <line id="diag_down4" x1="135.000168" y1="39.999825" x2="149.999866" y2="0.000268" stroke="black"/>
+  <line id="diag_down5" x1="165.000168" y1="39.999598" x2="179.999866" y2="0.000495" stroke="black"/>
+  <line id="diag_down6" x1="195.000168" y1="39.999371" x2="209.999866" y2="0.000722" stroke="black"/>
+  <line id="diag_down7" x1="225.000168" y1="39.999144" x2="239.999866" y2="0.000949" stroke="black"/>
+  <line id="diag_up0" x1="0.000134" y1="0.000866" x2="15.000168" y2="40.000732" stroke="black"/>
+  <line id="diag_up1" x1="29.999866" y1="0.000639" x2="45.000168" y2="40.000506" stroke="black"/>
+  <line id="diag_up2" x1="59.999866" y1="0.000412" x2="75.000168" y2="40.000279" stroke="black"/>
+  <line id="diag_up3" x1="89.999866" y1="0.000185" x2="105.000168" y2="40.000052" stroke="black"/>
+  <line id="diag_up4" x1="119.999866" y1="0.000042" x2="135.000168" y2="39.999825" stroke="black"/>
+  <line id="diag_up5" x1="149.999866" y1="0.000268" x2="165.000168" y2="39.999598" stroke="black"/>
+  <line id="diag_up6" x1="179.999866" y1="0.000495" x2="195.000168" y2="39.999371" stroke="black"/>
+  <line id="diag_up7" x1="209.999866" y1="0.000722" x2="225.000168" y2="39.999144" stroke="black"/>
+  <circle id="top0" cx="15.000168" cy="40.000732" r="2" fill="black"/>
+  <circle id="top1" cx="45.000168" cy="40.000506" r="2" fill="black"/>
+  <circle id="top2" cx="75.000168" cy="40.000279" r="2" fill="black"/>
+  <circle id="top3" cx="105.000168" cy="40.000052" r="2" fill="black"/>
+  <circle id="top4" cx="135.000168" cy="39.999825" r="2" fill="black"/>
+  <circle id="top5" cx="165.000168" cy="39.999598" r="2" fill="black"/>
+  <circle id="top6" cx="195.000168" cy="39.999371" r="2" fill="black"/>
+  <circle id="top7" cx="225.000168" cy="39.999144" r="2" fill="black"/>
+  <line id="top_chord" x1="15.000168" y1="40.000732" x2="225.000168" y2="39.999144" stroke="black"/>
+</svg>

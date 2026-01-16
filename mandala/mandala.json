@@ -1,0 +1,699 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {
+      "type": "plane",
+      "id": "xy_plane",
+      "origin": [0, 0, 0],
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "circle",
+      "id": "ring1",
+      "center": "center",
+      "diameter": 40,
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "circle",
+      "id": "ring2",
+      "center": "center",
+      "diameter": 80,
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "circle",
+      "id": "ring3",
+      "center": "center",
+      "diameter": 120,
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "circle",
+      "id": "ring4",
+      "center": "center",
+      "diameter": 160,
+      "normal": [0, 0, 1]
+    },
+    {
+      "type": "point",
+      "id": "s0_r2",
+      "at": [40, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "s0_r4",
+      "at": [80, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke0_inner",
+      "p1": "center",
+      "p2": "s0_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke0_outer",
+      "p1": "s0_r2",
+      "p2": "s0_r4"
+    },
+    {
+      "type": "point",
+      "id": "s1_r2",
+      "at": [34.64, 20, 0]
+    },
+    {
+      "type": "point",
+      "id": "s1_r4",
+      "at": [69.28, 40, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke1_inner",
+      "p1": "center",
+      "p2": "s1_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke1_outer",
+      "p1": "s1_r2",
+      "p2": "s1_r4"
+    },
+    {
+      "type": "point",
+      "id": "s2_r2",
+      "at": [20, 34.64, 0]
+    },
+    {
+      "type": "point",
+      "id": "s2_r4",
+      "at": [40, 69.28, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke2_inner",
+      "p1": "center",
+      "p2": "s2_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke2_outer",
+      "p1": "s2_r2",
+      "p2": "s2_r4"
+    },
+    {
+      "type": "point",
+      "id": "s3_r2",
+      "at": [0, 40, 0]
+    },
+    {
+      "type": "point",
+      "id": "s3_r4",
+      "at": [0, 80, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke3_inner",
+      "p1": "center",
+      "p2": "s3_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke3_outer",
+      "p1": "s3_r2",
+      "p2": "s3_r4"
+    },
+    {
+      "type": "point",
+      "id": "s4_r2",
+      "at": [-20, 34.64, 0]
+    },
+    {
+      "type": "point",
+      "id": "s4_r4",
+      "at": [-40, 69.28, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke4_inner",
+      "p1": "center",
+      "p2": "s4_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke4_outer",
+      "p1": "s4_r2",
+      "p2": "s4_r4"
+    },
+    {
+      "type": "point",
+      "id": "s5_r2",
+      "at": [-34.64, 20, 0]
+    },
+    {
+      "type": "point",
+      "id": "s5_r4",
+      "at": [-69.28, 40, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke5_inner",
+      "p1": "center",
+      "p2": "s5_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke5_outer",
+      "p1": "s5_r2",
+      "p2": "s5_r4"
+    },
+    {
+      "type": "point",
+      "id": "s6_r2",
+      "at": [-40, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "s6_r4",
+      "at": [-80, 0, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke6_inner",
+      "p1": "center",
+      "p2": "s6_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke6_outer",
+      "p1": "s6_r2",
+      "p2": "s6_r4"
+    },
+    {
+      "type": "point",
+      "id": "s7_r2",
+      "at": [-34.64, -20, 0]
+    },
+    {
+      "type": "point",
+      "id": "s7_r4",
+      "at": [-69.28, -40, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke7_inner",
+      "p1": "center",
+      "p2": "s7_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke7_outer",
+      "p1": "s7_r2",
+      "p2": "s7_r4"
+    },
+    {
+      "type": "point",
+      "id": "s8_r2",
+      "at": [-20, -34.64, 0]
+    },
+    {
+      "type": "point",
+      "id": "s8_r4",
+      "at": [-40, -69.28, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke8_inner",
+      "p1": "center",
+      "p2": "s8_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke8_outer",
+      "p1": "s8_r2",
+      "p2": "s8_r4"
+    },
+    {
+      "type": "point",
+      "id": "s9_r2",
+      "at": [0, -40, 0]
+    },
+    {
+      "type": "point",
+      "id": "s9_r4",
+      "at": [0, -80, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke9_inner",
+      "p1": "center",
+      "p2": "s9_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke9_outer",
+      "p1": "s9_r2",
+      "p2": "s9_r4"
+    },
+    {
+      "type": "point",
+      "id": "s10_r2",
+      "at": [20, -34.64, 0]
+    },
+    {
+      "type": "point",
+      "id": "s10_r4",
+      "at": [40, -69.28, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke10_inner",
+      "p1": "center",
+      "p2": "s10_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke10_outer",
+      "p1": "s10_r2",
+      "p2": "s10_r4"
+    },
+    {
+      "type": "point",
+      "id": "s11_r2",
+      "at": [34.64, -20, 0]
+    },
+    {
+      "type": "point",
+      "id": "s11_r4",
+      "at": [69.28, -40, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke11_inner",
+      "p1": "center",
+      "p2": "s11_r2"
+    },
+    {
+      "type": "line",
+      "id": "spoke11_outer",
+      "p1": "s11_r2",
+      "p2": "s11_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal0_1",
+      "p1": "s0_r4",
+      "p2": "s1_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal1_2",
+      "p1": "s1_r4",
+      "p2": "s2_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal2_3",
+      "p1": "s2_r4",
+      "p2": "s3_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal3_4",
+      "p1": "s3_r4",
+      "p2": "s4_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal4_5",
+      "p1": "s4_r4",
+      "p2": "s5_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal5_6",
+      "p1": "s5_r4",
+      "p2": "s6_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal6_7",
+      "p1": "s6_r4",
+      "p2": "s7_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal7_8",
+      "p1": "s7_r4",
+      "p2": "s8_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal8_9",
+      "p1": "s8_r4",
+      "p2": "s9_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal9_10",
+      "p1": "s9_r4",
+      "p2": "s10_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal10_11",
+      "p1": "s10_r4",
+      "p2": "s11_r4"
+    },
+    {
+      "type": "line",
+      "id": "petal11_0",
+      "p1": "s11_r4",
+      "p2": "s0_r4"
+    },
+    {
+      "type": "line",
+      "id": "inner0_1",
+      "p1": "s0_r2",
+      "p2": "s1_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner1_2",
+      "p1": "s1_r2",
+      "p2": "s2_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner2_3",
+      "p1": "s2_r2",
+      "p2": "s3_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner3_4",
+      "p1": "s3_r2",
+      "p2": "s4_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner4_5",
+      "p1": "s4_r2",
+      "p2": "s5_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner5_6",
+      "p1": "s5_r2",
+      "p2": "s6_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner6_7",
+      "p1": "s6_r2",
+      "p2": "s7_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner7_8",
+      "p1": "s7_r2",
+      "p2": "s8_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner8_9",
+      "p1": "s8_r2",
+      "p2": "s9_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner9_10",
+      "p1": "s9_r2",
+      "p2": "s10_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner10_11",
+      "p1": "s10_r2",
+      "p2": "s11_r2"
+    },
+    {
+      "type": "line",
+      "id": "inner11_0",
+      "p1": "s11_r2",
+      "p2": "s0_r2"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center",
+      "workplane": "xy_plane"
+    },
+    {
+      "type": "diameter",
+      "circle": "ring1",
+      "value": 40
+    },
+    {
+      "type": "diameter",
+      "circle": "ring2",
+      "value": 80
+    },
+    {
+      "type": "diameter",
+      "circle": "ring3",
+      "value": 120
+    },
+    {
+      "type": "diameter",
+      "circle": "ring4",
+      "value": 160
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s0_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s0_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s1_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s1_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s2_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s2_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s3_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s3_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s4_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s4_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s5_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s5_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s6_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s6_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s7_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s7_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s8_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s8_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s9_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s9_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s10_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s10_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s11_r2",
+      "circle": "ring2"
+    },
+    {
+      "type": "point_on_circle",
+      "point": "s11_r4",
+      "circle": "ring4"
+    },
+    {
+      "type": "angle",
+      "between": ["spoke0_inner", "spoke1_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke1_inner", "spoke2_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke2_inner", "spoke3_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke3_inner", "spoke4_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke4_inner", "spoke5_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke5_inner", "spoke6_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke6_inner", "spoke7_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke7_inner", "spoke8_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke8_inner", "spoke9_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke9_inner", "spoke10_inner"],
+      "value": 30
+    },
+    {
+      "type": "angle",
+      "between": ["spoke10_inner", "spoke11_inner"],
+      "value": 30
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke0_outer", "spoke1_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke1_outer", "spoke2_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke2_outer", "spoke3_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke3_outer", "spoke4_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke4_outer", "spoke5_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke5_outer", "spoke6_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke6_outer", "spoke7_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke7_outer", "spoke8_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke8_outer", "spoke9_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke9_outer", "spoke10_outer"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["spoke10_outer", "spoke11_outer"]
+    }
+  ]
+}
