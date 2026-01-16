@@ -502,7 +502,11 @@
     },
     {
       "type": "equal_length",
-      "entities": ["domino1_left", "domino2_left", "domino3_left"]
+      "entities": ["domino1_left", "domino2_left"]
+    },
+    {
+      "type": "equal_length",
+      "entities": ["domino2_left", "domino3_left"]
     },
     {
       "type": "fixed",

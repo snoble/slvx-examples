@@ -1,28 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-70.8 -20.0 141.6 157.5" width="800" height="800">
-  <circle id="cabin1" cx="43.301270" cy="85.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="cabin2" cx="43.301270" cy="35.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="cabin3" cx="0.000000" cy="10.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="cabin4" cx="-43.301270" cy="35.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="cabin5" cx="-43.301270" cy="85.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="cabin6" cx="0.000000" cy="110.000000" r="7.500000" fill="none" stroke="black"/>
-  <circle id="ground_left" cx="-20.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="ground_right" cx="20.000000" cy="0.000000" r="2" fill="black"/>
-  <circle id="hub" cx="0.000000" cy="60.000000" r="2" fill="black"/>
-  <circle id="ref_point" cx="50.000000" cy="60.000000" r="2" fill="black"/>
-  <line id="reference_horizontal" x1="0.000000" y1="60.000000" x2="50.000000" y2="60.000000" stroke="black"/>
-  <line id="spoke1" x1="0.000000" y1="60.000000" x2="43.301270" y2="85.000000" stroke="black"/>
-  <circle id="spoke1_end" cx="43.301270" cy="85.000000" r="2" fill="black"/>
-  <line id="spoke2" x1="0.000000" y1="60.000000" x2="43.301270" y2="35.000000" stroke="black"/>
-  <circle id="spoke2_end" cx="43.301270" cy="35.000000" r="2" fill="black"/>
-  <line id="spoke3" x1="0.000000" y1="60.000000" x2="0.000000" y2="10.000000" stroke="black"/>
-  <circle id="spoke3_end" cx="0.000000" cy="10.000000" r="2" fill="black"/>
-  <line id="spoke4" x1="0.000000" y1="60.000000" x2="-43.301270" y2="35.000000" stroke="black"/>
-  <circle id="spoke4_end" cx="-43.301270" cy="35.000000" r="2" fill="black"/>
-  <line id="spoke5" x1="0.000000" y1="60.000000" x2="-43.301270" y2="85.000000" stroke="black"/>
-  <circle id="spoke5_end" cx="-43.301270" cy="85.000000" r="2" fill="black"/>
-  <line id="spoke6" x1="0.000000" y1="60.000000" x2="0.000000" y2="110.000000" stroke="black"/>
-  <circle id="spoke6_end" cx="0.000000" cy="110.000000" r="2" fill="black"/>
-  <line id="support_left" x1="-20.000000" y1="0.000000" x2="0.000000" y2="60.000000" stroke="black"/>
-  <line id="support_right" x1="20.000000" y1="0.000000" x2="0.000000" y2="60.000000" stroke="black"/>
-  <circle id="wheel_rim" cx="0.000000" cy="60.000000" r="50.000000" fill="none" stroke="black"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 -30 160 170" width="800" height="850">
+  <!-- Sky background -->
+  <rect x="-80" y="-30" width="160" height="170" fill="#e3f2fd"/>
+
+  <!-- Ground -->
+  <rect x="-80" y="125" width="160" height="20" fill="#8d6e63"/>
+
+  <!-- Support structure -->
+  <polygon points="-20,0 20,0 0,60" fill="none" stroke="#37474f" stroke-width="3"/>
+  <line x1="-20" y1="0" x2="0" y2="60" stroke="#37474f" stroke-width="3"/>
+  <line x1="20" y1="0" x2="0" y2="60" stroke="#37474f" stroke-width="3"/>
+  <line x1="-15" y1="20" x2="15" y2="20" stroke="#37474f" stroke-width="2"/>
+
+  <!-- Wheel rim -->
+  <circle cx="0" cy="60" r="50" fill="none" stroke="#1565c0" stroke-width="3"/>
+
+  <!-- Inner decorative rim -->
+  <circle cx="0" cy="60" r="45" fill="none" stroke="#1565c0" stroke-width="1" stroke-dasharray="8,4"/>
+
+  <!-- Hub -->
+  <circle cx="0" cy="60" r="6" fill="#1565c0"/>
+  <circle cx="0" cy="60" r="3" fill="#fff"/>
+
+  <!-- Spokes -->
+  <g stroke="#1565c0" stroke-width="2">
+    <line x1="0" y1="60" x2="43.30" y2="85"/>
+    <line x1="0" y1="60" x2="43.30" y2="35"/>
+    <line x1="0" y1="60" x2="0" y2="10"/>
+    <line x1="0" y1="60" x2="-43.30" y2="35"/>
+    <line x1="0" y1="60" x2="-43.30" y2="85"/>
+    <line x1="0" y1="60" x2="0" y2="110"/>
+  </g>
+
+  <!-- Cabins -->
+  <g>
+    <!-- Cabin 1 (top right) -->
+    <rect x="35.80" y="77.5" width="15" height="20" rx="3" fill="#ffeb3b" stroke="#f9a825" stroke-width="2"/>
+    <line x1="43.30" y1="75" x2="43.30" y2="77.5" stroke="#333" stroke-width="1"/>
+
+    <!-- Cabin 2 (right) -->
+    <rect x="35.80" y="27.5" width="15" height="20" rx="3" fill="#4caf50" stroke="#2e7d32" stroke-width="2"/>
+    <line x1="43.30" y1="25" x2="43.30" y2="27.5" stroke="#333" stroke-width="1"/>
+
+    <!-- Cabin 3 (bottom) -->
+    <rect x="-7.5" y="2.5" width="15" height="20" rx="3" fill="#e91e63" stroke="#ad1457" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="2.5" stroke="#333" stroke-width="1"/>
+
+    <!-- Cabin 4 (left) -->
+    <rect x="-50.80" y="27.5" width="15" height="20" rx="3" fill="#2196f3" stroke="#1565c0" stroke-width="2"/>
+    <line x1="-43.30" y1="25" x2="-43.30" y2="27.5" stroke="#333" stroke-width="1"/>
+
+    <!-- Cabin 5 (top left) -->
+    <rect x="-50.80" y="77.5" width="15" height="20" rx="3" fill="#9c27b0" stroke="#6a1b9a" stroke-width="2"/>
+    <line x1="-43.30" y1="75" x2="-43.30" y2="77.5" stroke="#333" stroke-width="1"/>
+
+    <!-- Cabin 6 (top) -->
+    <rect x="-7.5" y="112.5" width="15" height="20" rx="3" fill="#ff5722" stroke="#d84315" stroke-width="2"/>
+    <line x1="0" y1="110" x2="0" y2="112.5" stroke="#333" stroke-width="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="0" y="-15" font-size="10" text-anchor="middle" fill="#1565c0" font-weight="bold">Ferris Wheel</text>
+
+  <!-- Rotation indicator -->
+  <path d="M 15,60 A 15,15 0 0,1 10.6,70.6" stroke="#4caf50" stroke-width="2" fill="none"/>
+  <polygon points="8,72 14,70 12,64" fill="#4caf50"/>
 </svg>
