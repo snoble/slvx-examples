@@ -51,6 +51,7 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 | Example | Description | Preview |
 |---------|-------------|---------|
 | [Symmetric Bracket](symmetric_bracket/) | Bracket with notch and mounting holes, demonstrating symmetry via parallel constraints | [SVG](symmetric_bracket/symmetric_bracket.svg) |
+| [Parametric Hinge](parametric_hinge/) | 3D-printable hinge joint with configurable dimensions | [SVG](parametric_hinge/parametric_hinge.svg) |
 
 ### Complex Systems
 
@@ -67,6 +68,21 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 | [Octahedron](3d_structures/) | 8-faced polyhedron |
 | [Pyramid](3d_structures/) | Square-based pyramid |
 | [3D Truss](3d_structures/) | Structural truss in 3D |
+
+### New Constraint Demos (v0.2.8)
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Collinear Demo](collinear_demo/) | Points constrained to a single line using new `collinear` constraint | [SVG](collinear_demo/collinear_demo.svg) |
+| [Equal Angles Demo](equal_angles_demo/) | Radial spokes with equal angular spacing using new `equal_angles` constraint | [SVG](equal_angles_demo/equal_angles_demo.svg) |
+
+### Architecture
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Floor Plan](floor_plan/) | Room layout with dimensional constraints | [SVG](floor_plan/floor_plan.svg) |
+| [Mandala](mandala/) | Radial symmetry pattern | [SVG](mandala/mandala.svg) |
+| [Truss Bridge](truss_bridge/) | Structural bridge with triangulated support | [SVG](truss_bridge/truss_bridge.svg) |
 
 ### Learning Examples
 
@@ -141,15 +157,21 @@ Read the [Visual Design Guide](VISUAL_DESIGN_GUIDE.md) before creating examples.
 | `point_on_circle` | Point lies on circle | Wheels, orbits |
 | `diameter` | Set circle diameter | Sizing circles |
 | `tangent` | Make arc/line tangent | Smooth transitions |
+| `collinear` | 3+ points on same line | Rail alignment (v0.2.8+) |
+| `equal_angles` | Equal angles between lines | Radial patterns (v0.2.8+) |
 
-## Known Issues
+## Known Issues (v0.2.8)
 
 See [GitHub Issues](https://github.com/snoble/slvsx-cli/issues) for current bugs and feature requests.
 
-- `equal_length` with >2 entities can cause crashes (bug #25) - use chained constraints instead
-- `point_on_line` fails with 2D entities (issue #44) - use 3D points/lines as workaround
+**Fixed in v0.2.8:**
+- ~~`equal_length` with >2 entities~~ - FIXED! No longer crashes
+- ~~`point_on_line` fails with 2D entities~~ - FIXED in PR #50
+
+**Still Open:**
 - `symmetric_vertical`/`symmetric_horizontal` collapse points (issue #49) - use parallel + fixed as workaround
-- Arc and cubic Bezier entities don't render in SVG export (issues #45, #46)
+- Arc and cubic Bezier entities don't render in SVG export (issue #51) - entities solve correctly but SVG output doesn't show curves
+- `rube_goldberg_machine` example fails with "Invalid solver system" (issue #52)
 - Circles don't track points - use points for moving parts
 
 ## Resources

@@ -2,95 +2,122 @@
 
 ## Current Status
 
-CLI version in MCP: **Latest (post 0.1.6)**
+CLI version: **v0.2.8** (installed 2026-01-27)
+MCP version: **@sknoble/slvsx-mcp-server 0.2.8**
 
-**Last Action:** Added 5 new examples showcasing previously unused features
+**Last Action:** Systematic testing of all 33 demos with v0.2.8, filed 2 new issues, created 3 new demos
 
 ## What We've Done This Session
 
-### 1. Tested MCP Tools
-- All MCP tools working: solve_constraints, validate_constraints, export_to_svg, create_example, search_documentation, get_schema, list_constraints, list_entities
+### 1. Updated to v0.2.8
+- Downloaded and installed CLI binary from GitHub release
+- Verified version: `slvsx --version` → 0.2.8
+- MCP tools confirmed working with same version
 
-### 2. Created New Examples
+### 2. Tested All 33 Existing Demos
 
-| Example | Features Demonstrated | Status |
-|---------|----------------------|--------|
-| **cam_follower/** | point_on_line (3D), angle, circles | Works |
-| **ferris_wheel/** | point_on_circle, diameter, angle chains | Works |
-| **bezier_path/** | cubic (Bezier curve), perpendicular | Solves (SVG doesn't render curve) |
-| **tangent_arc_chain/** | arc, tangent | Solves (SVG doesn't render arc) |
-| **symmetric_bracket/** | parallel, equal constraints for symmetry | Works |
+| Category | Count | Result |
+|----------|-------|--------|
+| Basic Shapes | 5 | All pass |
+| Mechanical Linkages | 11 | All pass |
+| Architecture | 3 | All pass |
+| Artistic Patterns | 4 | All pass |
+| 3D Structures | 4 | All pass |
+| Gear/Mechanical | 2 | All pass |
+| Curves/Paths | 2 | Solve but SVG doesn't render curves |
+| Complex Systems | 2 | 1 pass, 1 fail (rube_goldberg) |
 
-### 3. Filed Issues
+### 3. New Issues Filed
 
 | Issue | Title | Status |
 |-------|-------|--------|
-| #44 | point_on_line fails with 2D entities | Open |
-| #45 | Cubic Bezier curves not rendered in SVG export | Open |
-| #46 | Arc entities not rendered in SVG export | Open |
-| #49 | symmetric_vertical and symmetric_horizontal collapse points | Open |
+| #51 | Cubic and Arc entities not rendered in SVG export (v0.2.8) | Open |
+| #52 | rube_goldberg_machine example fails with 'Invalid solver system' | Open |
 
-### 4. Updated Documentation
-- README.md: Added new examples to tables, added new constraint types, updated known issues
-- Each new example has JSON, SVG, and README files
+**Note:** PR #48 claimed to fix arc/cubic SVG rendering, but testing shows it's still not working in v0.2.8.
 
-## Features Tested
+### 4. Issues Confirmed Fixed in v0.2.8
+- **equal_length with >2 entities** - Bug #25 is FIXED! Tested with 3+ lines successfully.
+- **point_on_line with 2D entities** - Bug #44 was fixed in PR #50
+
+### 5. New Features Tested
+
+| Feature | Status | Notes |
+|---------|--------|-------|
+| `collinear` constraint | Works | New convenience constraint for 3+ points on a line |
+| `equal_angles` constraint | Works | New convenience constraint for equal angles between lines |
+
+### 6. Created 3 New Demos
+
+| Example | Features Demonstrated | Status |
+|---------|----------------------|--------|
+| **collinear_demo/** | collinear, distance | Works |
+| **equal_angles_demo/** | equal_angles, distance | Works |
+| **parametric_hinge/** | angle, parallel, perpendicular, diameter, circle | Works |
+
+## Features Status (v0.2.8)
 
 ### Working Features
-- `point_on_circle` - Constrains points to circles (ferris_wheel)
-- `diameter` - Sets circle diameter (ferris_wheel)
-- `tangent` - Arc-to-line tangency (tangent_arc_chain)
-- `arc` entity - Circular arcs (tangent_arc_chain)
-- `cubic` entity - Bezier curves (bezier_path)
-- `parallel` - Multiple lines parallel (symmetric_bracket)
-- `perpendicular` - Lines at right angles (bezier_path)
+- `collinear` - NEW! Ensures 3+ points lie on same line
+- `equal_angles` - NEW! Equal angles between consecutive lines
+- `equal_length` with >2 entities - FIXED! Was bug #25
+- `point_on_line` with 2D entities - FIXED! Was bug #44 (PR #50)
+- `point_on_circle` - Works
+- `diameter` - Works
+- `tangent` - Works (arc-to-line)
+- `arc` entity - Solves correctly
+- `cubic` entity - Solves correctly
+- `parallel`, `perpendicular`, `distance`, `angle`, `fixed` - All work
 
-### Broken Features (Issues Filed)
-- `point_on_line` with point2_d/line2_d - "Invalid solver system" (#44)
-- `symmetric_vertical` / `symmetric_horizontal` - Points collapse to same location (#49)
-- SVG rendering of `arc` entities (#46)
-- SVG rendering of `cubic` entities (#45)
+### Broken Features
+- **SVG rendering of arc entities** - Issue #51 (supposed to be fixed in PR #48 but isn't)
+- **SVG rendering of cubic entities** - Issue #51
+- **rube_goldberg_machine.json** - "Invalid solver system" - Issue #52
+- `symmetric_vertical` / `symmetric_horizontal` - Points collapse (Issue #49)
 
 ## Existing Examples Status
 
 | Example | Status | Notes |
 |---------|--------|-------|
-| basic_shapes/* | Works | Various triangle, square, hexagon, pentagon |
-| four_bar_linkage | Works | Classic 4-bar with parametric crank angle |
-| chebyshev_linkage | Works | Approximate straight-line linkage |
-| peaucellier_linkage | Works | Exact straight-line linkage |
-| theo_jansen_leg | Works | Strandbeest walking mechanism |
-| crank_slider | Works | Piston/engine mechanism |
-| scotch_yoke | Works | Linear motion from rotation |
-| whitworth_quick_return | Works | Quick return mechanism |
-| geneva_mechanism | Works | 4-slot intermittent motion |
-| pantograph | Works | Copy/scale drawing mechanism |
-| gear_mechanism | Works | Two meshing gears |
-| parametric_flower | Works | Needs more constraints (issue #37) |
-| spirograph | Works | Octagon pattern |
-| geometric_art | Works | Islamic star pattern |
-| iris_diaphragm | Works | 6-blade iris |
-| constraint_showcase | Works | Demos many constraint types |
-| rube_goldberg_machine | **BUG** | Crashes with equal_length >2 entities (bug #25) |
-| 3d_structures/* | Works | Tetrahedron, octahedron, pyramid, truss |
-| **cam_follower** | **NEW** | Cam mechanism with point_on_line |
-| **ferris_wheel** | **NEW** | Radial symmetry with point_on_circle |
-| **bezier_path** | **NEW** | Cubic Bezier curves |
-| **tangent_arc_chain** | **NEW** | Arc-line tangent constraints |
-| **symmetric_bracket** | **NEW** | Manual symmetry using parallel |
-
-## Best Practices Learned
-
-1. **Use 3D entities (point, line) instead of 2D (point2_d, line2_d)** for point_on_line constraints
-2. **Avoid symmetric_horizontal/symmetric_vertical** - use parallel + fixed points instead
-3. **Arcs and cubics work in solver** but don't render in SVG - add manual paths to SVG
-4. **Build incrementally** - Add one constraint at a time to identify issues
-5. **Provide good initial guesses** - Important for convergence
+| basic_shapes/* | Works | 5 examples |
+| four_bar_linkage | Works | |
+| chebyshev_linkage | Works | |
+| peaucellier_linkage | Works | |
+| theo_jansen_leg | Works | |
+| crank_slider | Works | |
+| scotch_yoke | Works | |
+| whitworth_quick_return | Works | |
+| geneva_mechanism | Works | |
+| pantograph | Works | |
+| cam_follower | Works | |
+| ferris_wheel | Works | |
+| gear_mechanism | Works | |
+| symmetric_bracket | Works | |
+| parametric_flower | Works | |
+| spirograph | Works | |
+| geometric_art/islamic_star | Works | |
+| iris_diaphragm | Works | |
+| floor_plan | Works | |
+| mandala | Works | |
+| truss_bridge | Works | |
+| constraint_showcase | Works | |
+| bezier_path | Solves | SVG doesn't render cubic curve |
+| tangent_arc_chain | Solves | SVG doesn't render arc |
+| rube_goldberg_machine | **FAILS** | Issue #52 |
+| 3d_structures/* | Works | 4 examples |
+| **collinear_demo** | **NEW** | |
+| **equal_angles_demo** | **NEW** | |
+| **parametric_hinge** | **NEW** | 3D-printable design |
 
 ## Commands Reference
 
 ```bash
-# Using MCP tools (via Claude)
+# CLI
+~/.local/bin/slvsx solve path/to/example.json
+~/.local/bin/slvsx validate path/to/example.json
+~/.local/bin/slvsx export -f svg path/to/example.json
+
+# MCP tools (via Claude)
 mcp__slvsx__solve_constraints
 mcp__slvsx__validate_constraints
 mcp__slvsx__export_to_svg
@@ -99,15 +126,14 @@ mcp__slvsx__search_documentation
 mcp__slvsx__list_constraints
 mcp__slvsx__list_entities
 
-# Direct CLI
-slvsx solve path/to/example.json
-slvsx validate path/to/example.json
-slvsx export path/to/example.json -o output.svg
+# File issues
+gh issue create --repo snoble/slvsx-cli --title "..." --body "..."
 ```
 
 ## Working Directory
 `/Users/steven/Documents/Code/slvx-examples`
 
 ## Git Status
-- Branch: main
-- Uncommitted: 5 new examples + README updates
+- Branch: feat/slvsx-v0.2.8-demo-sweep
+- New files: collinear_demo/, equal_angles_demo/, parametric_hinge/
+- Modified: SESSION_STATE.md

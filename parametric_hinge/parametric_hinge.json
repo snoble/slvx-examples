@@ -1,0 +1,198 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "leaf_width": 30,
+    "leaf_length": 50,
+    "hinge_radius": 5,
+    "mounting_hole_offset": 10,
+    "open_angle": 45
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "hinge_center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf1_corner1",
+      "at": [-30, -5, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf1_corner2",
+      "at": [-30, 5, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf1_corner3",
+      "at": [-30, -50, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf1_corner4",
+      "at": [-30, -55, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf1_hole",
+      "at": [-15, -25, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf2_corner1",
+      "at": [5, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf2_corner2",
+      "at": [-5, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf2_corner3",
+      "at": [50, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf2_corner4",
+      "at": [55, 30, 0]
+    },
+    {
+      "type": "point",
+      "id": "leaf2_hole",
+      "at": [25, 15, 0]
+    },
+    {
+      "type": "line",
+      "id": "leaf1_inner",
+      "p1": "leaf1_corner1",
+      "p2": "leaf1_corner2"
+    },
+    {
+      "type": "line",
+      "id": "leaf1_side1",
+      "p1": "leaf1_corner1",
+      "p2": "leaf1_corner3"
+    },
+    {
+      "type": "line",
+      "id": "leaf1_side2",
+      "p1": "leaf1_corner2",
+      "p2": "leaf1_corner4"
+    },
+    {
+      "type": "line",
+      "id": "leaf1_outer",
+      "p1": "leaf1_corner3",
+      "p2": "leaf1_corner4"
+    },
+    {
+      "type": "line",
+      "id": "leaf2_inner",
+      "p1": "leaf2_corner1",
+      "p2": "leaf2_corner2"
+    },
+    {
+      "type": "line",
+      "id": "leaf2_side1",
+      "p1": "leaf2_corner1",
+      "p2": "leaf2_corner3"
+    },
+    {
+      "type": "line",
+      "id": "leaf2_side2",
+      "p1": "leaf2_corner2",
+      "p2": "leaf2_corner4"
+    },
+    {
+      "type": "line",
+      "id": "leaf2_outer",
+      "p1": "leaf2_corner3",
+      "p2": "leaf2_corner4"
+    },
+    {
+      "type": "line",
+      "id": "hinge_to_leaf1",
+      "p1": "hinge_center",
+      "p2": "leaf1_corner1"
+    },
+    {
+      "type": "line",
+      "id": "hinge_to_leaf2",
+      "p1": "hinge_center",
+      "p2": "leaf2_corner2"
+    },
+    {
+      "type": "circle",
+      "id": "hinge_pin",
+      "center": "hinge_center",
+      "diameter": 10
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "hinge_center"
+    },
+    {
+      "type": "distance",
+      "between": ["hinge_center", "leaf1_corner1"],
+      "value": "$hinge_radius"
+    },
+    {
+      "type": "distance",
+      "between": ["hinge_center", "leaf2_corner2"],
+      "value": "$hinge_radius"
+    },
+    {
+      "type": "distance",
+      "between": ["leaf1_corner1", "leaf1_corner2"],
+      "value": "$leaf_width"
+    },
+    {
+      "type": "distance",
+      "between": ["leaf2_corner1", "leaf2_corner2"],
+      "value": "$leaf_width"
+    },
+    {
+      "type": "parallel",
+      "entities": ["leaf1_side1", "leaf1_side2"]
+    },
+    {
+      "type": "parallel",
+      "entities": ["leaf2_side1", "leaf2_side2"]
+    },
+    {
+      "type": "perpendicular",
+      "a": "leaf1_inner",
+      "b": "leaf1_side1"
+    },
+    {
+      "type": "perpendicular",
+      "a": "leaf2_inner",
+      "b": "leaf2_side1"
+    },
+    {
+      "type": "distance",
+      "between": ["leaf1_corner1", "leaf1_corner3"],
+      "value": "$leaf_length"
+    },
+    {
+      "type": "distance",
+      "between": ["leaf2_corner1", "leaf2_corner3"],
+      "value": "$leaf_length"
+    },
+    {
+      "type": "angle",
+      "between": ["hinge_to_leaf1", "hinge_to_leaf2"],
+      "value": "$open_angle"
+    },
+    {
+      "type": "diameter",
+      "circle": "hinge_pin",
+      "value": 10
+    }
+  ]
+}
