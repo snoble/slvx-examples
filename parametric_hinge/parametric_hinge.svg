@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-71.7 -78.2 160.2 132.3" width="800" height="800">
+  <circle id="hinge_center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="hinge_pin" cx="0.000000" cy="0.000000" r="5.000000" fill="none" stroke="black"/>
+  <line id="hinge_to_leaf1" x1="0.000000" y1="0.000000" x2="-4.898060" y2="1.004496" stroke="black"/>
+  <line id="hinge_to_leaf2" x1="0.000000" y1="0.000000" x2="-2.753165" y2="4.173737" stroke="black"/>
+  <circle id="leaf1_corner1" cx="-4.898060" cy="1.004496" r="2" fill="black"/>
+  <circle id="leaf1_corner2" cx="-33.893096" cy="8.704355" r="2" fill="black"/>
+  <circle id="leaf1_corner3" cx="-17.731159" cy="-47.320566" r="2" fill="black"/>
+  <circle id="leaf1_corner4" cx="-51.652285" cy="-58.170672" r="2" fill="black"/>
+  <circle id="leaf1_hole" cx="-15.000000" cy="-25.000000" r="2" fill="black"/>
+  <line id="leaf1_inner" x1="-4.898060" y1="1.004496" x2="-33.893096" y2="8.704355" stroke="black"/>
+  <line id="leaf1_outer" x1="-17.731159" y1="-47.320566" x2="-51.652285" y2="-58.170672" stroke="black"/>
+  <line id="leaf1_side1" x1="-4.898060" y1="1.004496" x2="-17.731159" y2="-47.320566" stroke="black"/>
+  <line id="leaf1_side2" x1="-33.893096" y1="8.704355" x2="-51.652285" y2="-58.170672" stroke="black"/>
+  <circle id="leaf2_corner1" cx="-2.299056" cy="34.170300" r="2" fill="black"/>
+  <circle id="leaf2_corner2" cx="-2.753165" cy="4.173737" r="2" fill="black"/>
+  <circle id="leaf2_corner3" cx="47.695216" cy="33.413451" r="2" fill="black"/>
+  <circle id="leaf2_corner4" cx="68.578223" cy="3.093872" r="2" fill="black"/>
+  <circle id="leaf2_hole" cx="25.000000" cy="15.000000" r="2" fill="black"/>
+  <line id="leaf2_inner" x1="-2.299056" y1="34.170300" x2="-2.753165" y2="4.173737" stroke="black"/>
+  <line id="leaf2_outer" x1="47.695216" y1="33.413451" x2="68.578223" y2="3.093872" stroke="black"/>
+  <line id="leaf2_side1" x1="-2.299056" y1="34.170300" x2="47.695216" y2="33.413451" stroke="black"/>
+  <line id="leaf2_side2" x1="-2.753165" y1="4.173737" x2="68.578223" y2="3.093872" stroke="black"/>
+</svg>
