@@ -64,7 +64,7 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 
 | Example | Description | Preview |
 |---------|-------------|---------|
-| [3D Scissor Lift](scissor_lift_3d/) | 3-stage scissor mechanism with true 3D depth (51 entities) | [SVG](scissor_lift_3d/scissor_lift_3d.svg) |
+| [3D Scissor Lift](scissor_lift_3d/) | 3-stage scissor with thick 3D bars (136 entities - largest demo!) | [SVG](scissor_lift_3d/scissor_lift_3d.svg) |
 | [Tetrahedron](3d_structures/) | 4-faced polyhedron | |
 | [Octahedron](3d_structures/) | 8-faced polyhedron | |
 | [Pyramid](3d_structures/) | Square-based pyramid | |
