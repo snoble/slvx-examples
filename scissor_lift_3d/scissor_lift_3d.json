@@ -1,0 +1,75 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "entities": [
+    {"type": "point", "id": "g1f", "at": [-25, 0, 0]},
+    {"type": "point", "id": "g2f", "at": [25, 0, 0]},
+    {"type": "point", "id": "g1b", "at": [-20, 5, 10]},
+    {"type": "point", "id": "g2b", "at": [30, 5, 10]},
+
+    {"type": "point", "id": "m1f", "at": [-25, 40, 0]},
+    {"type": "point", "id": "m2f", "at": [25, 40, 0]},
+    {"type": "point", "id": "m1b", "at": [-20, 45, 10]},
+    {"type": "point", "id": "m2b", "at": [30, 45, 10]},
+
+    {"type": "point", "id": "u1f", "at": [-25, 80, 0]},
+    {"type": "point", "id": "u2f", "at": [25, 80, 0]},
+    {"type": "point", "id": "u1b", "at": [-20, 85, 10]},
+    {"type": "point", "id": "u2b", "at": [30, 85, 10]},
+
+    {"type": "point", "id": "t1f", "at": [-25, 120, 0]},
+    {"type": "point", "id": "t2f", "at": [25, 120, 0]},
+    {"type": "point", "id": "t1b", "at": [-20, 125, 10]},
+    {"type": "point", "id": "t2b", "at": [30, 125, 10]},
+
+    {"type": "point", "id": "piv1", "at": [0, 20, 5]},
+    {"type": "point", "id": "piv2", "at": [0, 60, 5]},
+    {"type": "point", "id": "piv3", "at": [0, 100, 5]},
+
+    {"type": "line", "id": "s1af", "p1": "g1f", "p2": "m2f"},
+    {"type": "line", "id": "s1bf", "p1": "g2f", "p2": "m1f"},
+    {"type": "line", "id": "s1ab", "p1": "g1b", "p2": "m2b"},
+    {"type": "line", "id": "s1bb", "p1": "g2b", "p2": "m1b"},
+
+    {"type": "line", "id": "s2af", "p1": "m1f", "p2": "u2f"},
+    {"type": "line", "id": "s2bf", "p1": "m2f", "p2": "u1f"},
+    {"type": "line", "id": "s2ab", "p1": "m1b", "p2": "u2b"},
+    {"type": "line", "id": "s2bb", "p1": "m2b", "p2": "u1b"},
+
+    {"type": "line", "id": "s3af", "p1": "u1f", "p2": "t2f"},
+    {"type": "line", "id": "s3bf", "p1": "u2f", "p2": "t1f"},
+    {"type": "line", "id": "s3ab", "p1": "u1b", "p2": "t2b"},
+    {"type": "line", "id": "s3bb", "p1": "u2b", "p2": "t1b"},
+
+    {"type": "line", "id": "d_g1", "p1": "g1f", "p2": "g1b"},
+    {"type": "line", "id": "d_g2", "p1": "g2f", "p2": "g2b"},
+    {"type": "line", "id": "d_m1", "p1": "m1f", "p2": "m1b"},
+    {"type": "line", "id": "d_m2", "p1": "m2f", "p2": "m2b"},
+    {"type": "line", "id": "d_u1", "p1": "u1f", "p2": "u1b"},
+    {"type": "line", "id": "d_u2", "p1": "u2f", "p2": "u2b"},
+    {"type": "line", "id": "d_t1", "p1": "t1f", "p2": "t1b"},
+    {"type": "line", "id": "d_t2", "p1": "t2f", "p2": "t2b"},
+
+    {"type": "line", "id": "ground_f", "p1": "g1f", "p2": "g2f"},
+    {"type": "line", "id": "ground_b", "p1": "g1b", "p2": "g2b"},
+    {"type": "line", "id": "ground_l", "p1": "g1f", "p2": "g1b"},
+    {"type": "line", "id": "ground_r", "p1": "g2f", "p2": "g2b"},
+
+    {"type": "line", "id": "mid1_f", "p1": "m1f", "p2": "m2f"},
+    {"type": "line", "id": "mid1_b", "p1": "m1b", "p2": "m2b"},
+    {"type": "line", "id": "mid2_f", "p1": "u1f", "p2": "u2f"},
+    {"type": "line", "id": "mid2_b", "p1": "u1b", "p2": "u2b"},
+
+    {"type": "line", "id": "platform_f", "p1": "t1f", "p2": "t2f"},
+    {"type": "line", "id": "platform_b", "p1": "t1b", "p2": "t2b"},
+    {"type": "line", "id": "platform_l", "p1": "t1f", "p2": "t1b"},
+    {"type": "line", "id": "platform_r", "p1": "t2f", "p2": "t2b"}
+  ],
+  "constraints": [
+    {"type": "fixed", "entity": "g1f"},
+    {"type": "fixed", "entity": "g2f"},
+    {"type": "fixed", "entity": "g1b"},
+    {"type": "fixed", "entity": "g2b"},
+    {"type": "equal_length", "entities": ["s1af", "s1bf", "s1ab", "s1bb", "s2af", "s2bf", "s2ab", "s2bb", "s3af", "s3bf", "s3ab", "s3bb"]}
+  ]
+}
