@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLVSX 3D Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #eee;
+      overflow: hidden;
+    }
+    #container { width: 100vw; height: 100vh; }
+    #controls {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 300px;
+    }
+    #controls h1 { font-size: 18px; margin-bottom: 10px; }
+    #controls select, #controls button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 4px;
+      border: none;
+      font-size: 14px;
+    }
+    #controls select { background: #333; color: #fff; }
+    #controls button { background: #4a9eff; color: #fff; cursor: pointer; }
+    #controls button:hover { background: #3a8eef; }
+    #info {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    #info span { color: #4a9eff; }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <div id="controls">
+    <h1>SLVSX 3D Viewer</h1>
+    <select id="example-select">
+      <option value="">-- Select Example --</option>
+      <optgroup label="3D Structures">
+        <option value="scissor_lift_3d/scissor_lift_3d.json">3D Scissor Lift (136 entities)</option>
+        <option value="3d_structures/tetrahedron.json">Tetrahedron</option>
+        <option value="3d_structures/octahedron.json">Octahedron</option>
+        <option value="3d_structures/square_pyramid.json">Pyramid</option>
+        <option value="3d_structures/space_truss.json">Space Truss</option>
+      </optgroup>
+      <optgroup label="Linkages">
+        <option value="four_bar_linkage/four_bar_linkage.json">Four-Bar Linkage</option>
+        <option value="chebyshev_linkage/chebyshev_linkage.json">Chebyshev Linkage</option>
+        <option value="peaucellier_linkage/peaucellier_linkage.json">Peaucellier Linkage</option>
+        <option value="theo_jansen_leg/theo_jansen_leg.json">Theo Jansen Leg</option>
+      </optgroup>
+      <optgroup label="Four-Bar Animation">
+        <option value="four_bar_animation/angle_000.json">Crank @ 0°</option>
+        <option value="four_bar_animation/angle_060.json">Crank @ 60°</option>
+        <option value="four_bar_animation/angle_120.json">Crank @ 120°</option>
+        <option value="four_bar_animation/angle_180.json">Crank @ 180°</option>
+        <option value="four_bar_animation/angle_240.json">Crank @ 240°</option>
+        <option value="four_bar_animation/angle_300.json">Crank @ 300°</option>
+      </optgroup>
+      <optgroup label="Prime Stars">
+        <option value="prime_stars/star_03.json">3-Point Star</option>
+        <option value="prime_stars/star_05.json">5-Point Star</option>
+        <option value="prime_stars/star_07.json">7-Point Star</option>
+        <option value="prime_stars/star_11.json">11-Point Star</option>
+        <option value="prime_stars/star_13.json">13-Point Star</option>
+      </optgroup>
+    </select>
+    <button id="reset-view">Reset View</button>
+  </div>
+
+  <div id="info">
+    Drag to rotate | Scroll to zoom | <span id="stats">Select an example</span>
+  </div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+    // Scene setup
+    const container = document.getElementById('container');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a1a2e);
+
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(100, 100, 100);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    container.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+
+    // Grid and axes
+    const gridHelper = new THREE.GridHelper(200, 20, 0x444444, 0x333333);
+    scene.add(gridHelper);
+
+    const axesHelper = new THREE.AxesHelper(50);
+    scene.add(axesHelper);
+
+    // Current model group
+    let modelGroup = new THREE.Group();
+    scene.add(modelGroup);
+
+    // Try to load solved version first, fall back to original
+    async function fetchWithFallback(path) {
+      const solvedPath = path.replace('.json', '_solved.json');
+      try {
+        const response = await fetch('../' + solvedPath);
+        if (response.ok) {
+          return { data: await response.json(), solved: true };
+        }
+      } catch (e) { /* fall through */ }
+      const response = await fetch('../' + path);
+      return { data: await response.json(), solved: false };
+    }
+
+    // Convert [x, y, z] to Three.js Vector3 (swap Y/Z for coordinate system)
+    function toVector3(coords) {
+      return new THREE.Vector3(
+        coords[0] || 0,
+        coords[2] || 0,  // Z becomes Y in Three.js
+        coords[1] || 0   // Y becomes Z in Three.js
+      );
+    }
+
+    // Load and render JSON
+    async function loadExample(path) {
+      if (!path) return;
+
+      try {
+        const { data, solved } = await fetchWithFallback(path);
+
+        // Clear previous model
+        while (modelGroup.children.length > 0) {
+          modelGroup.remove(modelGroup.children[0]);
+        }
+
+        const points = {};
+        const lineSegments = [];
+        let pointCount = 0;
+        let lineCount = 0;
+
+        if (solved && data.entities && !Array.isArray(data.entities)) {
+          // Solved format: entities is object with inline coordinates
+          for (const [id, entity] of Object.entries(data.entities)) {
+            if (entity.at) {
+              // Point entity
+              points[id] = toVector3(entity.at);
+              pointCount++;
+            } else if (entity.p1 && entity.p2) {
+              // Line entity with inline coordinates
+              lineSegments.push({
+                start: toVector3(entity.p1),
+                end: toVector3(entity.p2)
+              });
+              lineCount++;
+            }
+          }
+        } else {
+          // Original format: entities is array with type and references
+          const entityList = data.entities || [];
+          const lineRefs = [];
+
+          for (const entity of entityList) {
+            if (entity.type === 'point' || entity.type === 'point2_d') {
+              const at = entity.at || [0, 0, 0];
+              points[entity.id] = toVector3(at);
+              pointCount++;
+            }
+            if (entity.type === 'line' || entity.type === 'line2_d') {
+              lineRefs.push({ p1: entity.p1, p2: entity.p2 });
+              lineCount++;
+            }
+          }
+
+          // Resolve line references to coordinates
+          for (const line of lineRefs) {
+            const p1 = points[line.p1];
+            const p2 = points[line.p2];
+            if (p1 && p2) {
+              lineSegments.push({ start: p1, end: p2 });
+            }
+          }
+        }
+
+        // Render points
+        const pointGeometry = new THREE.SphereGeometry(1.5, 16, 16);
+        const pointMaterial = new THREE.MeshBasicMaterial({ color: 0x4a9eff });
+
+        for (const pos of Object.values(points)) {
+          const sphere = new THREE.Mesh(pointGeometry, pointMaterial);
+          sphere.position.copy(pos);
+          modelGroup.add(sphere);
+        }
+
+        // Render lines
+        const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 2 });
+
+        for (const seg of lineSegments) {
+          const geometry = new THREE.BufferGeometry().setFromPoints([seg.start, seg.end]);
+          const lineObj = new THREE.Line(geometry, lineMaterial);
+          modelGroup.add(lineObj);
+        }
+
+        // Center camera on model
+        const box = new THREE.Box3().setFromObject(modelGroup);
+        const center = box.getCenter(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+
+        controls.target.copy(center);
+        camera.position.set(center.x + maxDim, center.y + maxDim * 0.7, center.z + maxDim);
+        controls.update();
+
+        // Update stats
+        const solvedLabel = solved ? ' (solved)' : '';
+        document.getElementById('stats').textContent =
+          `${pointCount} points, ${lineCount} lines${solvedLabel}`;
+
+      } catch (err) {
+        console.error('Failed to load:', err);
+        document.getElementById('stats').textContent = 'Error loading file';
+      }
+    }
+
+    // Event listeners
+    document.getElementById('example-select').addEventListener('change', (e) => {
+      loadExample(e.target.value);
+    });
+
+    document.getElementById('reset-view').addEventListener('click', () => {
+      const box = new THREE.Box3().setFromObject(modelGroup);
+      const center = box.getCenter(new THREE.Vector3());
+      const size = box.getSize(new THREE.Vector3());
+      const maxDim = Math.max(size.x, size.y, size.z) || 100;
+
+      controls.target.copy(center);
+      camera.position.set(center.x + maxDim, center.y + maxDim * 0.7, center.z + maxDim);
+      controls.update();
+    });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // Animation loop
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Load default example
+    loadExample('scissor_lift_3d/scissor_lift_3d.json');
+    document.getElementById('example-select').value = 'scissor_lift_3d/scissor_lift_3d.json';
+  </script>
+</body>
+</html>
