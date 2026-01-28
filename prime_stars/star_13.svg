@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-68.6 -69.6 138.6 139.3" width="800" height="800">
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="spoke1" x1="0.000000" y1="0.000000" x2="50.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke10" x1="0.000000" y1="0.000000" x2="-17.779204" y2="-46.732215" stroke="black"/>
+  <line id="spoke11" x1="0.000000" y1="0.000000" x2="5.969062" y2="-49.642424" stroke="black"/>
+  <line id="spoke12" x1="0.000000" y1="0.000000" x2="28.350534" y2="-41.185522" stroke="black"/>
+  <line id="spoke13" x1="0.000000" y1="0.000000" x2="44.240306" y2="-23.297968" stroke="black"/>
+  <line id="spoke2" x1="0.000000" y1="0.000000" x2="44.275505" y2="23.231006" stroke="black"/>
+  <line id="spoke3" x1="0.000000" y1="0.000000" x2="28.412815" y2="41.142581" stroke="black"/>
+  <line id="spoke4" x1="0.000000" y1="0.000000" x2="6.044164" y2="49.633336" stroke="black"/>
+  <line id="spoke5" x1="0.000000" y1="0.000000" x2="-17.708478" y2="46.759061" stroke="black"/>
+  <line id="spoke6" x1="0.000000" y1="0.000000" x2="-37.406237" y2="33.177906" stroke="black"/>
+  <line id="spoke7" x1="0.000000" y1="0.000000" x2="-48.538723" y2="11.999681" stroke="black"/>
+  <line id="spoke8" x1="0.000000" y1="0.000000" x2="-48.556823" y2="-11.926228" stroke="black"/>
+  <line id="spoke9" x1="0.000000" y1="0.000000" x2="-37.456392" y2="-33.121272" stroke="black"/>
+  <circle id="tip1" cx="50.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="tip10" cx="-17.779204" cy="-46.732215" r="2" fill="black"/>
+  <circle id="tip11" cx="5.969062" cy="-49.642424" r="2" fill="black"/>
+  <circle id="tip12" cx="28.350534" cy="-41.185522" r="2" fill="black"/>
+  <circle id="tip13" cx="44.240306" cy="-23.297968" r="2" fill="black"/>
+  <circle id="tip2" cx="44.275505" cy="23.231006" r="2" fill="black"/>
+  <circle id="tip3" cx="28.412815" cy="41.142581" r="2" fill="black"/>
+  <circle id="tip4" cx="6.044164" cy="49.633336" r="2" fill="black"/>
+  <circle id="tip5" cx="-17.708478" cy="46.759061" r="2" fill="black"/>
+  <circle id="tip6" cx="-37.406237" cy="33.177906" r="2" fill="black"/>
+  <circle id="tip7" cx="-48.538723" cy="11.999681" r="2" fill="black"/>
+  <circle id="tip8" cx="-48.556823" cy="-11.926228" r="2" fill="black"/>
+  <circle id="tip9" cx="-37.456392" cy="-33.121272" r="2" fill="black"/>
+</svg>

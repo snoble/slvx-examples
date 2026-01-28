@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-35.0 -58.4 155.0 78.4" width="800" height="800">
+  <line id="coupler" x1="-15.000000" y1="-25.980762" x2="53.890920" y2="-38.392092" stroke="black"/>
+  <line id="crank" x1="0.000000" y1="0.000000" x2="-15.000000" y2="-25.980762" stroke="black"/>
+  <circle id="crank_end" cx="-15.000000" cy="-25.980762" r="2" fill="black"/>
+  <line id="ground" x1="0.000000" y1="0.000000" x2="100.000000" y2="0.000000" stroke="black"/>
+  <circle id="ground_left" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="ground_right" cx="100.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="rocker" x1="53.890920" y1="-38.392092" x2="100.000000" y2="0.000000" stroke="black"/>
+  <circle id="rocker_end" cx="53.890920" cy="-38.392092" r="2" fill="black"/>
+</svg>

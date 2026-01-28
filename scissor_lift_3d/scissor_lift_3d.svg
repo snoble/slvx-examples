@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50.0 -23.0 102.0 171.0" width="800" height="800">
+  <line id="bar1_bb" x1="-25.000000" y1="3.000000" x2="-21.000000" y2="3.000000" stroke="black"/>
+  <circle id="bar1_bbl" cx="-25.000000" cy="3.000000" r="2" fill="black"/>
+  <circle id="bar1_bbr" cx="-21.000000" cy="3.000000" r="2" fill="black"/>
+  <line id="bar1_bf" x1="-27.000000" y1="0.000000" x2="-23.000000" y2="0.000000" stroke="black"/>
+  <circle id="bar1_bfl" cx="-27.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="bar1_bfr" cx="-23.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="bar1_bl" x1="-27.000000" y1="0.000000" x2="-25.000000" y2="3.000000" stroke="black"/>
+  <line id="bar1_br" x1="-23.000000" y1="0.000000" x2="-21.000000" y2="3.000000" stroke="black"/>
+  <line id="bar1_e1" x1="-27.000000" y1="0.000000" x2="23.000000" y2="38.000000" stroke="black"/>
+  <line id="bar1_e2" x1="-23.000000" y1="0.000000" x2="27.000000" y2="38.000000" stroke="black"/>
+  <line id="bar1_e3" x1="-25.000000" y1="3.000000" x2="25.000000" y2="41.000000" stroke="black"/>
+  <line id="bar1_e4" x1="-21.000000" y1="3.000000" x2="29.000000" y2="41.000000" stroke="black"/>
+  <line id="bar1_tb" x1="25.000000" y1="41.000000" x2="29.000000" y2="41.000000" stroke="black"/>
+  <circle id="bar1_tbl" cx="25.000000" cy="41.000000" r="2" fill="black"/>
+  <circle id="bar1_tbr" cx="29.000000" cy="41.000000" r="2" fill="black"/>
+  <line id="bar1_tf" x1="23.000000" y1="38.000000" x2="27.000000" y2="38.000000" stroke="black"/>
+  <circle id="bar1_tfl" cx="23.000000" cy="38.000000" r="2" fill="black"/>
+  <circle id="bar1_tfr" cx="27.000000" cy="38.000000" r="2" fill="black"/>
+  <line id="bar1_tl" x1="23.000000" y1="38.000000" x2="25.000000" y2="41.000000" stroke="black"/>
+  <line id="bar1_tr" x1="27.000000" y1="38.000000" x2="29.000000" y2="41.000000" stroke="black"/>
+  <line id="bar2_bb" x1="25.000000" y1="3.000000" x2="29.000000" y2="3.000000" stroke="black"/>
+  <circle id="bar2_bbl" cx="25.000000" cy="3.000000" r="2" fill="black"/>
+  <circle id="bar2_bbr" cx="29.000000" cy="3.000000" r="2" fill="black"/>
+  <line id="bar2_bf" x1="23.000000" y1="0.000000" x2="27.000000" y2="0.000000" stroke="black"/>
+  <circle id="bar2_bfl" cx="23.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="bar2_bfr" cx="27.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="bar2_bl" x1="23.000000" y1="0.000000" x2="25.000000" y2="3.000000" stroke="black"/>
+  <line id="bar2_br" x1="27.000000" y1="0.000000" x2="29.000000" y2="3.000000" stroke="black"/>
+  <line id="bar2_e1" x1="23.000000" y1="0.000000" x2="-27.000000" y2="38.000000" stroke="black"/>
+  <line id="bar2_e2" x1="27.000000" y1="0.000000" x2="-23.000000" y2="38.000000" stroke="black"/>
+  <line id="bar2_e3" x1="25.000000" y1="3.000000" x2="-25.000000" y2="41.000000" stroke="black"/>
+  <line id="bar2_e4" x1="29.000000" y1="3.000000" x2="-21.000000" y2="41.000000" stroke="black"/>
+  <line id="bar2_tb" x1="-25.000000" y1="41.000000" x2="-21.000000" y2="41.000000" stroke="black"/>
+  <circle id="bar2_tbl" cx="-25.000000" cy="41.000000" r="2" fill="black"/>
+  <circle id="bar2_tbr" cx="-21.000000" cy="41.000000" r="2" fill="black"/>
+  <line id="bar2_tf" x1="-27.000000" y1="38.000000" x2="-23.000000" y2="38.000000" stroke="black"/>
+  <circle id="bar2_tfl" cx="-27.000000" cy="38.000000" r="2" fill="black"/>
+  <circle id="bar2_tfr" cx="-23.000000" cy="38.000000" r="2" fill="black"/>
+  <line id="bar2_tl" x1="-27.000000" y1="38.000000" x2="-25.000000" y2="41.000000" stroke="black"/>
+  <line id="bar2_tr" x1="-23.000000" y1="38.000000" x2="-21.000000" y2="41.000000" stroke="black"/>
+  <line id="bar3_bb" x1="-25.000000" y1="45.000000" x2="-21.000000" y2="45.000000" stroke="black"/>
+  <circle id="bar3_bbl" cx="-25.000000" cy="45.000000" r="2" fill="black"/>
+  <circle id="bar3_bbr" cx="-21.000000" cy="45.000000" r="2" fill="black"/>
+  <line id="bar3_bf" x1="-27.000000" y1="42.000000" x2="-23.000000" y2="42.000000" stroke="black"/>
+  <circle id="bar3_bfl" cx="-27.000000" cy="42.000000" r="2" fill="black"/>
+  <circle id="bar3_bfr" cx="-23.000000" cy="42.000000" r="2" fill="black"/>
+  <line id="bar3_bl" x1="-27.000000" y1="42.000000" x2="-25.000000" y2="45.000000" stroke="black"/>
+  <line id="bar3_br" x1="-23.000000" y1="42.000000" x2="-21.000000" y2="45.000000" stroke="black"/>
+  <line id="bar3_e1" x1="-27.000000" y1="42.000000" x2="23.000000" y2="80.000000" stroke="black"/>
+  <line id="bar3_e2" x1="-23.000000" y1="42.000000" x2="27.000000" y2="80.000000" stroke="black"/>
+  <line id="bar3_e3" x1="-25.000000" y1="45.000000" x2="25.000000" y2="83.000000" stroke="black"/>
+  <line id="bar3_e4" x1="-21.000000" y1="45.000000" x2="29.000000" y2="83.000000" stroke="black"/>
+  <line id="bar3_tb" x1="25.000000" y1="83.000000" x2="29.000000" y2="83.000000" stroke="black"/>
+  <circle id="bar3_tbl" cx="25.000000" cy="83.000000" r="2" fill="black"/>
+  <circle id="bar3_tbr" cx="29.000000" cy="83.000000" r="2" fill="black"/>
+  <line id="bar3_tf" x1="23.000000" y1="80.000000" x2="27.000000" y2="80.000000" stroke="black"/>
+  <circle id="bar3_tfl" cx="23.000000" cy="80.000000" r="2" fill="black"/>
+  <circle id="bar3_tfr" cx="27.000000" cy="80.000000" r="2" fill="black"/>
+  <line id="bar3_tl" x1="23.000000" y1="80.000000" x2="25.000000" y2="83.000000" stroke="black"/>
+  <line id="bar3_tr" x1="27.000000" y1="80.000000" x2="29.000000" y2="83.000000" stroke="black"/>
+  <line id="bar4_bb" x1="25.000000" y1="45.000000" x2="29.000000" y2="45.000000" stroke="black"/>
+  <circle id="bar4_bbl" cx="25.000000" cy="45.000000" r="2" fill="black"/>
+  <circle id="bar4_bbr" cx="29.000000" cy="45.000000" r="2" fill="black"/>
+  <line id="bar4_bf" x1="23.000000" y1="42.000000" x2="27.000000" y2="42.000000" stroke="black"/>
+  <circle id="bar4_bfl" cx="23.000000" cy="42.000000" r="2" fill="black"/>
+  <circle id="bar4_bfr" cx="27.000000" cy="42.000000" r="2" fill="black"/>
+  <line id="bar4_bl" x1="23.000000" y1="42.000000" x2="25.000000" y2="45.000000" stroke="black"/>
+  <line id="bar4_br" x1="27.000000" y1="42.000000" x2="29.000000" y2="45.000000" stroke="black"/>
+  <line id="bar4_e1" x1="23.000000" y1="42.000000" x2="-27.000000" y2="80.000000" stroke="black"/>
+  <line id="bar4_e2" x1="27.000000" y1="42.000000" x2="-23.000000" y2="80.000000" stroke="black"/>
+  <line id="bar4_e3" x1="25.000000" y1="45.000000" x2="-25.000000" y2="83.000000" stroke="black"/>
+  <line id="bar4_e4" x1="29.000000" y1="45.000000" x2="-21.000000" y2="83.000000" stroke="black"/>
+  <line id="bar4_tb" x1="-25.000000" y1="83.000000" x2="-21.000000" y2="83.000000" stroke="black"/>
+  <circle id="bar4_tbl" cx="-25.000000" cy="83.000000" r="2" fill="black"/>
+  <circle id="bar4_tbr" cx="-21.000000" cy="83.000000" r="2" fill="black"/>
+  <line id="bar4_tf" x1="-27.000000" y1="80.000000" x2="-23.000000" y2="80.000000" stroke="black"/>
+  <circle id="bar4_tfl" cx="-27.000000" cy="80.000000" r="2" fill="black"/>
+  <circle id="bar4_tfr" cx="-23.000000" cy="80.000000" r="2" fill="black"/>
+  <line id="bar4_tl" x1="-27.000000" y1="80.000000" x2="-25.000000" y2="83.000000" stroke="black"/>
+  <line id="bar4_tr" x1="-23.000000" y1="80.000000" x2="-21.000000" y2="83.000000" stroke="black"/>
+  <line id="bar5_bb" x1="-25.000000" y1="87.000000" x2="-21.000000" y2="87.000000" stroke="black"/>
+  <circle id="bar5_bbl" cx="-25.000000" cy="87.000000" r="2" fill="black"/>
+  <circle id="bar5_bbr" cx="-21.000000" cy="87.000000" r="2" fill="black"/>
+  <line id="bar5_bf" x1="-27.000000" y1="84.000000" x2="-23.000000" y2="84.000000" stroke="black"/>
+  <circle id="bar5_bfl" cx="-27.000000" cy="84.000000" r="2" fill="black"/>
+  <circle id="bar5_bfr" cx="-23.000000" cy="84.000000" r="2" fill="black"/>
+  <line id="bar5_bl" x1="-27.000000" y1="84.000000" x2="-25.000000" y2="87.000000" stroke="black"/>
+  <line id="bar5_br" x1="-23.000000" y1="84.000000" x2="-21.000000" y2="87.000000" stroke="black"/>
+  <line id="bar5_e1" x1="-27.000000" y1="84.000000" x2="23.000000" y2="122.000000" stroke="black"/>
+  <line id="bar5_e2" x1="-23.000000" y1="84.000000" x2="27.000000" y2="122.000000" stroke="black"/>
+  <line id="bar5_e3" x1="-25.000000" y1="87.000000" x2="25.000000" y2="125.000000" stroke="black"/>
+  <line id="bar5_e4" x1="-21.000000" y1="87.000000" x2="29.000000" y2="125.000000" stroke="black"/>
+  <line id="bar5_tb" x1="25.000000" y1="125.000000" x2="29.000000" y2="125.000000" stroke="black"/>
+  <circle id="bar5_tbl" cx="25.000000" cy="125.000000" r="2" fill="black"/>
+  <circle id="bar5_tbr" cx="29.000000" cy="125.000000" r="2" fill="black"/>
+  <line id="bar5_tf" x1="23.000000" y1="122.000000" x2="27.000000" y2="122.000000" stroke="black"/>
+  <circle id="bar5_tfl" cx="23.000000" cy="122.000000" r="2" fill="black"/>
+  <circle id="bar5_tfr" cx="27.000000" cy="122.000000" r="2" fill="black"/>
+  <line id="bar5_tl" x1="23.000000" y1="122.000000" x2="25.000000" y2="125.000000" stroke="black"/>
+  <line id="bar5_tr" x1="27.000000" y1="122.000000" x2="29.000000" y2="125.000000" stroke="black"/>
+  <line id="bar6_bb" x1="25.000000" y1="87.000000" x2="29.000000" y2="87.000000" stroke="black"/>
+  <circle id="bar6_bbl" cx="25.000000" cy="87.000000" r="2" fill="black"/>
+  <circle id="bar6_bbr" cx="29.000000" cy="87.000000" r="2" fill="black"/>
+  <line id="bar6_bf" x1="23.000000" y1="84.000000" x2="27.000000" y2="84.000000" stroke="black"/>
+  <circle id="bar6_bfl" cx="23.000000" cy="84.000000" r="2" fill="black"/>
+  <circle id="bar6_bfr" cx="27.000000" cy="84.000000" r="2" fill="black"/>
+  <line id="bar6_bl" x1="23.000000" y1="84.000000" x2="25.000000" y2="87.000000" stroke="black"/>
+  <line id="bar6_br" x1="27.000000" y1="84.000000" x2="29.000000" y2="87.000000" stroke="black"/>
+  <line id="bar6_e1" x1="23.000000" y1="84.000000" x2="-27.000000" y2="122.000000" stroke="black"/>
+  <line id="bar6_e2" x1="27.000000" y1="84.000000" x2="-23.000000" y2="122.000000" stroke="black"/>
+  <line id="bar6_e3" x1="25.000000" y1="87.000000" x2="-25.000000" y2="125.000000" stroke="black"/>
+  <line id="bar6_e4" x1="29.000000" y1="87.000000" x2="-21.000000" y2="125.000000" stroke="black"/>
+  <line id="bar6_tb" x1="-25.000000" y1="125.000000" x2="-21.000000" y2="125.000000" stroke="black"/>
+  <circle id="bar6_tbl" cx="-25.000000" cy="125.000000" r="2" fill="black"/>
+  <circle id="bar6_tbr" cx="-21.000000" cy="125.000000" r="2" fill="black"/>
+  <line id="bar6_tf" x1="-27.000000" y1="122.000000" x2="-23.000000" y2="122.000000" stroke="black"/>
+  <circle id="bar6_tfl" cx="-27.000000" cy="122.000000" r="2" fill="black"/>
+  <circle id="bar6_tfr" cx="-23.000000" cy="122.000000" r="2" fill="black"/>
+  <line id="bar6_tl" x1="-27.000000" y1="122.000000" x2="-25.000000" y2="125.000000" stroke="black"/>
+  <line id="bar6_tr" x1="-23.000000" y1="122.000000" x2="-21.000000" y2="125.000000" stroke="black"/>
+  <line id="gnd_b" x1="-28.000000" y1="0.000000" x2="32.000000" y2="0.000000" stroke="black"/>
+  <circle id="gnd_bl" cx="-28.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="gnd_br" cx="32.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="gnd_f" x1="-30.000000" y1="-3.000000" x2="30.000000" y2="-3.000000" stroke="black"/>
+  <circle id="gnd_fl" cx="-30.000000" cy="-3.000000" r="2" fill="black"/>
+  <circle id="gnd_fr" cx="30.000000" cy="-3.000000" r="2" fill="black"/>
+  <line id="gnd_l" x1="-30.000000" y1="-3.000000" x2="-28.000000" y2="0.000000" stroke="black"/>
+  <line id="gnd_r" x1="30.000000" y1="-3.000000" x2="32.000000" y2="0.000000" stroke="black"/>
+  <line id="plat_b" x1="-28.000000" y1="128.000000" x2="32.000000" y2="128.000000" stroke="black"/>
+  <circle id="plat_bl" cx="-28.000000" cy="128.000000" r="2" fill="black"/>
+  <circle id="plat_br" cx="32.000000" cy="128.000000" r="2" fill="black"/>
+  <line id="plat_f" x1="-30.000000" y1="125.000000" x2="30.000000" y2="125.000000" stroke="black"/>
+  <circle id="plat_fl" cx="-30.000000" cy="125.000000" r="2" fill="black"/>
+  <circle id="plat_fr" cx="30.000000" cy="125.000000" r="2" fill="black"/>
+  <line id="plat_l" x1="-30.000000" y1="125.000000" x2="-28.000000" y2="128.000000" stroke="black"/>
+  <line id="plat_r" x1="30.000000" y1="125.000000" x2="32.000000" y2="128.000000" stroke="black"/>
+</svg>
