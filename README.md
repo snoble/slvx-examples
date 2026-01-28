@@ -2,6 +2,8 @@
 
 A collection of examples demonstrating the [SLVSX](https://github.com/snoble/slvsx-cli) constraint solver for parametric design and mechanical systems.
 
+**[View Interactive 3D Examples](https://snoble.github.io/slvx-examples/viewer/)**
+
 ## What is SLVSX?
 
 SLVSX is a command-line interface to the SolveSpace constraint solver. It allows you to define geometric relationships declaratively and have the solver calculate actual positions automatically.
