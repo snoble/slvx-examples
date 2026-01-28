@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-65.1 -68.8 135.1 137.5" width="800" height="800">
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="spoke1" x1="0.000000" y1="0.000000" x2="50.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke2" x1="0.000000" y1="0.000000" x2="31.170763" y2="39.094546" stroke="black"/>
+  <line id="spoke3" x1="0.000000" y1="0.000000" x2="-11.135340" y2="48.744273" stroke="black"/>
+  <line id="spoke4" x1="0.000000" y1="0.000000" x2="-45.054646" y2="21.681303" stroke="black"/>
+  <line id="spoke5" x1="0.000000" y1="0.000000" x2="-45.040168" y2="-21.711363" stroke="black"/>
+  <line id="spoke6" x1="0.000000" y1="0.000000" x2="-11.102811" y2="-48.751693" stroke="black"/>
+  <line id="spoke7" x1="0.000000" y1="0.000000" x2="31.196844" y2="-39.073737" stroke="black"/>
+  <circle id="tip1" cx="50.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="tip2" cx="31.170763" cy="39.094546" r="2" fill="black"/>
+  <circle id="tip3" cx="-11.135340" cy="48.744273" r="2" fill="black"/>
+  <circle id="tip4" cx="-45.054646" cy="21.681303" r="2" fill="black"/>
+  <circle id="tip5" cx="-45.040168" cy="-21.711363" r="2" fill="black"/>
+  <circle id="tip6" cx="-11.102811" cy="-48.751693" r="2" fill="black"/>
+  <circle id="tip7" cx="31.196844" cy="-39.073737" r="2" fill="black"/>
+</svg>

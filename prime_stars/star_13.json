@@ -1,0 +1,231 @@
+{
+  "schema": "slvs-json/1",
+  "units": "mm",
+  "parameters": {
+    "spoke_length": 50
+  },
+  "entities": [
+    {
+      "type": "point",
+      "id": "center",
+      "at": [0, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip1",
+      "at": [50, 0, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip2",
+      "at": [44, 23, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip3",
+      "at": [29, 41, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip4",
+      "at": [6, 50, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip5",
+      "at": [-18, 47, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip6",
+      "at": [-38, 32, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip7",
+      "at": [-50, 9, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip8",
+      "at": [-50, -9, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip9",
+      "at": [-38, -32, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip10",
+      "at": [-18, -47, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip11",
+      "at": [6, -50, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip12",
+      "at": [29, -41, 0]
+    },
+    {
+      "type": "point",
+      "id": "tip13",
+      "at": [44, -23, 0]
+    },
+    {
+      "type": "line",
+      "id": "spoke1",
+      "p1": "center",
+      "p2": "tip1"
+    },
+    {
+      "type": "line",
+      "id": "spoke2",
+      "p1": "center",
+      "p2": "tip2"
+    },
+    {
+      "type": "line",
+      "id": "spoke3",
+      "p1": "center",
+      "p2": "tip3"
+    },
+    {
+      "type": "line",
+      "id": "spoke4",
+      "p1": "center",
+      "p2": "tip4"
+    },
+    {
+      "type": "line",
+      "id": "spoke5",
+      "p1": "center",
+      "p2": "tip5"
+    },
+    {
+      "type": "line",
+      "id": "spoke6",
+      "p1": "center",
+      "p2": "tip6"
+    },
+    {
+      "type": "line",
+      "id": "spoke7",
+      "p1": "center",
+      "p2": "tip7"
+    },
+    {
+      "type": "line",
+      "id": "spoke8",
+      "p1": "center",
+      "p2": "tip8"
+    },
+    {
+      "type": "line",
+      "id": "spoke9",
+      "p1": "center",
+      "p2": "tip9"
+    },
+    {
+      "type": "line",
+      "id": "spoke10",
+      "p1": "center",
+      "p2": "tip10"
+    },
+    {
+      "type": "line",
+      "id": "spoke11",
+      "p1": "center",
+      "p2": "tip11"
+    },
+    {
+      "type": "line",
+      "id": "spoke12",
+      "p1": "center",
+      "p2": "tip12"
+    },
+    {
+      "type": "line",
+      "id": "spoke13",
+      "p1": "center",
+      "p2": "tip13"
+    }
+  ],
+  "constraints": [
+    {
+      "type": "fixed",
+      "entity": "center"
+    },
+    {
+      "type": "fixed",
+      "entity": "tip1"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip2"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip3"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip4"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip5"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip6"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip7"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip8"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip9"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip10"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip11"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip12"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "distance",
+      "between": ["center", "tip13"],
+      "value": "$spoke_length"
+    },
+    {
+      "type": "equal_angles",
+      "lines": ["spoke1", "spoke2", "spoke3", "spoke4", "spoke5", "spoke6", "spoke7", "spoke8", "spoke9", "spoke10", "spoke11", "spoke12", "spoke13"]
+    }
+  ]
+}

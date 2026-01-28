@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-68.0 -69.4 138.0 139.0" width="800" height="800">
+  <circle id="center" cx="0.000000" cy="0.000000" r="2" fill="black"/>
+  <line id="spoke1" x1="0.000000" y1="0.000000" x2="50.000000" y2="0.000000" stroke="black"/>
+  <line id="spoke10" x1="0.000000" y1="0.000000" x2="20.449462" y2="-45.626960" stroke="black"/>
+  <line id="spoke11" x1="0.000000" y1="0.000000" x2="41.849551" y2="-27.360832" stroke="black"/>
+  <line id="spoke2" x1="0.000000" y1="0.000000" x2="42.083847" y2="26.999070" stroke="black"/>
+  <line id="spoke3" x1="0.000000" y1="0.000000" x2="20.842008" y2="45.448990" stroke="black"/>
+  <line id="spoke4" x1="0.000000" y1="0.000000" x2="-6.999371" y2="49.507664" stroke="black"/>
+  <line id="spoke5" x1="0.000000" y1="0.000000" x2="-32.624427" y2="37.889929" stroke="black"/>
+  <line id="spoke6" x1="0.000000" y1="0.000000" x2="-47.919086" y2="14.274496" stroke="black"/>
+  <line id="spoke7" x1="0.000000" y1="0.000000" x2="-48.040352" y2="-13.860901" stroke="black"/>
+  <line id="spoke8" x1="0.000000" y1="0.000000" x2="-32.949828" y2="-37.607297" stroke="black"/>
+  <line id="spoke9" x1="0.000000" y1="0.000000" x2="-7.425870" y2="-49.445490" stroke="black"/>
+  <circle id="tip1" cx="50.000000" cy="0.000000" r="2" fill="black"/>
+  <circle id="tip10" cx="20.449462" cy="-45.626960" r="2" fill="black"/>
+  <circle id="tip11" cx="41.849551" cy="-27.360832" r="2" fill="black"/>
+  <circle id="tip2" cx="42.083847" cy="26.999070" r="2" fill="black"/>
+  <circle id="tip3" cx="20.842008" cy="45.448990" r="2" fill="black"/>
+  <circle id="tip4" cx="-6.999371" cy="49.507664" r="2" fill="black"/>
+  <circle id="tip5" cx="-32.624427" cy="37.889929" r="2" fill="black"/>
+  <circle id="tip6" cx="-47.919086" cy="14.274496" r="2" fill="black"/>
+  <circle id="tip7" cx="-48.040352" cy="-13.860901" r="2" fill="black"/>
+  <circle id="tip8" cx="-32.949828" cy="-37.607297" r="2" fill="black"/>
+  <circle id="tip9" cx="-7.425870" cy="-49.445490" r="2" fill="black"/>
+</svg>

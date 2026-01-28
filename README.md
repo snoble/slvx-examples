@@ -91,6 +91,15 @@ SLVSX is a command-line interface to the SolveSpace constraint solver. It allows
 |---------|-------------|
 | [Basic Shapes](basic_shapes/) | Triangle, square, hexagon, pentagon - for learning constraint basics |
 
+### Parametric Showcases
+
+Examples showing the same design solved at different parameter values:
+
+| Example | Description | Preview |
+|---------|-------------|---------|
+| [Four-Bar Animation](four_bar_animation/) | Same linkage at 6 crank angles (0°, 60°, 120°, 180°, 240°, 300°) | [SVG](four_bar_animation/angle_000.svg) |
+| [Prime Stars](prime_stars/) | Radial patterns with 3, 5, 7, 11, 13 points using `equal_angles` | [SVG](prime_stars/star_05.svg) |
+
 ## Quick Start
 
 ### Installation
